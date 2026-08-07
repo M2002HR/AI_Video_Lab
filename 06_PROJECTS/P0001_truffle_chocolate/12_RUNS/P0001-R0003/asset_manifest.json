@@ -1,0 +1,15 @@
+{
+  "run_id": "P0001-R0003",
+  "assets": [
+    {
+      "name": "1000015956.png",
+      "role": "output",
+      "media_type": "image/png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "714b234d7d73e28e59dbb893f23737fb2ad30aba3b7fab3c8cd6d988329235c7",
+      "binary_committed_to_git": false,
+      "availability": "current_chat_attachment"
+    }
+  ]
+}
