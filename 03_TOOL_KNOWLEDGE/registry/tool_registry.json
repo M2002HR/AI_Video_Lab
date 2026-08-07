@@ -1,4 +1,21 @@
 {
   "schema_version": "1.0",
-  "tools": []
+  "tools": [
+    {
+      "tool_id": "TOOL-VID-FLOW-OMNI-FLASH",
+      "tool_name": "Google Flow / Gemini Omni Flash",
+      "category": "video_generation",
+      "verification_status": "mixed_official_and_operational",
+      "last_verified": "2026-08-07",
+      "path": "03_TOOL_KNOWLEDGE/video_generation/google_flow_gemini_omni_flash.md"
+    },
+    {
+      "tool_id": "TOOL-IMG-CHATGPT-IMAGE",
+      "tool_name": "ChatGPT Image",
+      "category": "image_generation",
+      "verification_status": "internal_observation_only",
+      "last_verified": "2026-08-07",
+      "path": "03_TOOL_KNOWLEDGE/image_generation/chatgpt_image.md"
+    }
+  ]
 }
