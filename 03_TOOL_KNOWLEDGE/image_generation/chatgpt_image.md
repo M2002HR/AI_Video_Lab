@@ -29,6 +29,6 @@ Before recommending ChatGPT Image over another tool for product multiview/refere
 - controlled comparison against another tool such as Nano Banana Pro when practical.
 
 ## Linked evidence
-- `OBS-0001`
+- `OBS-0002`
 - `P0001-R0001`
 - `P0001-R0002`
