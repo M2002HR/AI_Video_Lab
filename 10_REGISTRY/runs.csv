@@ -5,3 +5,5 @@ P0001-R0003,P0001,STAGE_04_REFERENCE_ASSET_CREATION,product_reference_edit_top_c
 P0001-R0004,P0001,STAGE_04_REFERENCE_ASSET_CREATION,product_reference_edit_top_clean,ChatGPT Image,unknown,passed,4.7,False
 P0001-R0005,P0001,STAGE_04_REFERENCE_ASSET_CREATION,product_reference_generation_macro,ChatGPT Image,unknown,pass_with_caveats,4.4,False
 P0001-R0006,P0001,STAGE_04_REFERENCE_ASSET_CREATION,product_reference_generation_macro,ChatGPT Image,unknown,pass_with_caveats,4.5,True
+P0001-R0007,P0001,STAGE_04_REFERENCE_ASSET_CREATION,product_reference_generation_assortment_detail,ChatGPT Image,unknown,pass_with_caveats,4.1,False
+P0001-R0008,P0001,STAGE_04_REFERENCE_ASSET_CREATION,product_reference_generation_assortment_detail,ChatGPT Image,unknown,passed,4.5,True
