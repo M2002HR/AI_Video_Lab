@@ -1,14 +1,15 @@
 # Project status — P0001
 
-- Current stage: `STAGE_04_REFERENCE_ASSET_CREATION`
-- Product identity: operationally locked v1; visual validation continues during reference QA.
+- Current stage: `STAGE_04_REFERENCE_ASSET_CREATION` with Stage 05 QA completed for HERO-45 candidates.
+- Product identity: `product_identity.md` + active injection `identity_lock_v02.md`.
 - Source prompt analysis: completed v1.
-- Reference strategy: completed v1.
+- Active reference strategy: `04_REFERENCE_STRATEGY/reference_plan_v02.md`.
 - Creative direction: tiny chocolatiers + premium macro food-commercial; provisional hybrid Workshop/Gift Box direction.
-- Approved reference set: none yet.
-- Generated candidates: `P0001-R0001` and `P0001-R0002` for `REF-PROD-HERO-45`, created externally with ChatGPT Image using the same source image/prompt.
-- User observation: both candidates look very similar to each other; recorded as `OBS-0002` and **not** yet treated as proof of product fidelity.
-- Blocked: direct visual QA cannot be completed until the two generated images are attached/ingested; the shared ChatGPT URL was not retrievable by the current operator session.
-- Next action: user attaches both candidate images directly. Perform Stage 05 Reference QA and decide PASS / prompt revision / tool comparison. Do not generate the rest of Slots 2–4 before this baseline is visually checked.
+- Approved/selected evidence so far: `P0001-R0002` selected provisionally as `REF-PROD-HERO-45` **secondary geometry reference**, score ~4.3/5; `P0001-R0001` retained as alternate/evidence.
+- Primary identity reference is **not yet approved**. Strategy changed so the conservative cleaned real top-down image will be primary identity authority.
+- HERO-45 finding: ChatGPT Image showed strong repeatability/category/coating fidelity but mild handmade→factory regularization and inferred box-thickness drift (`OBS-0002`, `OBS-0003`).
+- Current blocker: none.
+- Next action: generate exactly two `REF-PROD-TOP-CLEAN` candidates from the original real product image using `11_PROMPT_PACKAGES/PKG_REFERENCE_IMAGES_V02/REF_PROD_TOP_CLEAN_PROMPT.md`; then attach both for QA.
+- Do not proceed to Macro/Assortment until TOP-CLEAN passes because it anchors the reference hierarchy.
 - Target video workflow: Google Flow / Gemini Omni Flash / Ingredients-to-Video / 10s / 16:9.
-- Ingredient budget policy: operational hard cap 7 image references for Omni Flash; production target 4–6 active references, with 1–2 slots kept free unless evidence justifies filling all slots.
+- Ingredient budget policy: operational hard cap 7; target 4–6 active refs with headroom.
