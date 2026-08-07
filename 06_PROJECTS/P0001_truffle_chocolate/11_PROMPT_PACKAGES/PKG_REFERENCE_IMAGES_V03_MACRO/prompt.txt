@@ -1,0 +1,301 @@
+REFERENCE HIERARCHY — STRICT PRODUCT IDENTITY
+
+Use the uploaded ORIGINAL REAL PRODUCT PHOTOGRAPH as the highest-priority and authoritative source for product identity.
+
+If a second cleaned top-down reference is also uploaded, use it only as supporting evidence for clearer shape, coating and paper-cup visibility. The cleaned reference must never override the original real photograph.
+
+Do not use any generated 45-degree hero image as identity authority for this task.
+
+
+TASK
+
+Create ONE clean photorealistic macro reference photograph of ONE representative finished handmade chocolate truffle from the supplied real assortment.
+
+This image will later be used as a texture/material ingredient for an AI-generated product video.
+
+The purpose is NOT to invent a prettier truffle or create an exaggerated advertising fantasy.
+
+The purpose is to teach the later video model what the real truffle, edible coating and dark fluted paper cup should look like at close range.
+
+
+TARGET TRUFFLE
+
+Choose a representative truffle from the supplied real assortment that is densely coated with SMALL ROUND MULTICOLOR EDIBLE NONPAREILS.
+
+Prefer a truffle visually consistent with the multicolor round-nonpareil examples visible in the original product box.
+
+Do not substitute elongated rod-shaped sprinkles for this specific macro reference.
+
+Do not invent a coating style that does not exist in the real product.
+
+
+HANDMADE GEOMETRY — CRITICAL
+
+The truffle is a handmade chocolate confection.
+
+It is approximately spherical, but it must NOT be a mathematically perfect ball.
+
+Preserve believable artisan irregularity:
+- slight asymmetry in the sphere;
+- tiny unevenness in the outer contour;
+- naturally irregular coating density;
+- minor variation in the visible surface;
+- no machine-perfect circular silhouette.
+
+The product should feel hand-rolled and hand-decorated by a small chocolatier, not injection-molded or factory-standardized.
+
+Do NOT make it look like:
+- a perfect CGI sphere;
+- a plastic toy ball;
+- a hard-shell bonbon;
+- a cake pop;
+- a lollipop;
+- a glossy candy sphere.
+
+No stick.
+
+
+CHOCOLATE BODY
+
+The underlying body is dark chocolate.
+
+The decoration is attached directly to the chocolate surface.
+
+Where naturally plausible, allow tiny microscopic gaps between individual nonpareils to reveal small areas of dark chocolate underneath.
+
+Do not expose a large bare chocolate patch.
+
+Do not cover the product with a separate glossy candy shell.
+
+The chocolate should have believable edible matte-to-soft-satin material response, with restrained soft highlights rather than lacquered shine.
+
+
+NONPAREIL SCALE AND PHYSICS — EXTREMELY IMPORTANT
+
+The round decorations are TINY EDIBLE SUGAR NONPAREILS.
+
+They must remain physically small relative to the truffle.
+
+Each individual particle should read as a very small confectionery decoration, not as a marble, bead, pearl, gemstone or toy pellet.
+
+Preserve dense irregular attachment across the chocolate surface.
+
+Individual particles should have:
+- tiny natural size variation;
+- non-uniform placement;
+- realistic contact with neighboring particles;
+- very small contact shadows;
+- matte-to-slightly-satin edible sugar surfaces;
+- no glass transparency;
+- no plastic gloss;
+- no metallic reflections.
+
+The nonpareils must follow the curved truffle surface naturally.
+
+They must not float above it.
+
+They must not merge into a single melted texture.
+
+They must not become oversized decorative balls.
+
+
+COLOR BEHAVIOR
+
+Use a multicolor coating palette supported by the real product reference.
+
+Include small edible nonpareils in a believable assortment of colors such as:
+- blue;
+- pink/red;
+- white;
+- yellow;
+- green;
+- orange;
+- small darker accents where supported.
+
+Keep the color distribution naturally random and handmade.
+
+Do not create a mathematically repeating pattern.
+
+Do not arrange colors into stripes, logos, symbols or deliberate geometric patterns.
+
+Do not oversaturate the image into neon candy colors beyond the source product character.
+
+
+PAPER CUP — IDENTITY-CRITICAL
+
+The finished truffle sits naturally inside ONE small dark charcoal-gray fluted paper candy cup.
+
+The cup is part of the product presentation and must remain clearly visible around the lower portion of the truffle.
+
+It must look like:
+- thin folded confectionery paper;
+- matte charcoal/dark gray;
+- softly textured;
+- naturally pleated/fluted;
+- slightly compressed by the weight and shape of the truffle.
+
+Do NOT turn it into:
+- glossy black plastic;
+- metallic foil;
+- silicone;
+- a large cupcake liner;
+- a decorative flower-shaped wrapper.
+
+The scale relationship must remain believable: the cup is sized for one small handmade truffle.
+
+
+COMPOSITION
+
+Show ONE truffle only.
+
+The full rounded truffle should be visible.
+
+Do not crop away so much of the subject that the overall handmade geometry becomes ambiguous.
+
+The truffle should occupy approximately 65–80% of the image height.
+
+Show enough of the upper portion of the dark fluted cup to clearly understand how the truffle sits inside it.
+
+Use a natural slight three-quarter macro viewing angle, approximately 15–30 degrees above the truffle's horizontal midline, rather than a perfectly flat side view or a direct top-down view.
+
+The angle should reveal:
+- rounded volume;
+- surface decoration depth;
+- contact with the paper cup;
+- a small amount of lower silhouette.
+
+Do not create multiple truffles.
+
+Do not create a group arrangement.
+
+Do not create a contact sheet.
+
+Do not create inset detail panels.
+
+
+BACKGROUND
+
+Use a simple seamless dark neutral studio background consistent with the approved clean product references.
+
+Preferred background:
+soft charcoal-gray to near-black matte studio surface/background.
+
+No box is required in this macro image.
+
+No wooden tabletop.
+
+No utensils.
+
+No ingredients.
+
+No cocoa powder pile.
+
+No melted chocolate.
+
+No chefs.
+
+No miniature characters.
+
+No props.
+
+No text.
+
+No logo.
+
+No watermark.
+
+No decorative graphic elements.
+
+
+LIGHTING
+
+Use restrained premium macro food-photography lighting.
+
+Primary light:
+a large soft diffused key from upper-front-left.
+
+Secondary illumination:
+very subtle soft fill from the opposite side to prevent the dark chocolate and charcoal paper cup from becoming unreadable.
+
+Optional very subtle edge separation may be used only if necessary.
+
+Lighting must reveal:
+- tiny nonpareil shape;
+- individual contact shadows;
+- dark chocolate glimpses;
+- handmade surface variation;
+- paper-cup folds.
+
+Do not create hard specular highlights.
+
+Do not make the nonpareils look wet, glassy or plastic.
+
+Do not make the chocolate look lacquered.
+
+
+DEPTH OF FIELD
+
+Use shallow-to-moderate macro depth of field, not extreme razor-thin focus.
+
+The front and central surface of the truffle should be sharply readable.
+
+Most of the silhouette and a meaningful portion of the paper cup should remain sufficiently legible to serve as reference evidence.
+
+Avoid excessive cinematic blur that hides identity information.
+
+Avoid dreamy bokeh shapes or stylized lens effects.
+
+
+CAMERA / IMAGE CHARACTER
+
+Photorealistic premium food macro photography.
+
+Natural lens rendering.
+
+No fisheye distortion.
+
+No extreme wide angle.
+
+No surreal perspective.
+
+No CGI-perfect symmetry.
+
+No illustration/cartoon appearance.
+
+The result should look like a real macro photograph of the same handmade product family shown in the uploaded source image.
+
+
+REFERENCE CLEANLINESS
+
+ONE truffle.
+ONE paper cup.
+Simple dark background.
+Nothing else.
+
+No duplicated product.
+No extra wrapper.
+No floating sprinkles.
+No loose decorative particles suspended in the air.
+No branding.
+No labels.
+No typography.
+No border.
+No collage.
+
+
+FINAL QUALITY PRIORITY
+
+Priority order:
+1. product-category fidelity;
+2. realistic edible decoration scale;
+3. handmade irregularity;
+4. paper-cup fidelity;
+5. material realism;
+6. clean reference readability;
+7. visual beauty.
+
+If realism and beauty conflict, choose realism.
+
+If perfect symmetry and handmade fidelity conflict, choose handmade fidelity.
+
+If the generated image begins to resemble a plastic candy ball instead of a handmade chocolate truffle, the result is incorrect.
