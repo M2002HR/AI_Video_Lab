@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.1.1 — 2026-08-07
+### Added
+- اولین پروژه واقعی `P0001_truffle_chocolate` با brief، input provenance، source-prompt transcription/analysis، product identity، reference strategy، prompt package و handoff.
+- tool card برای Google Flow / Gemini Omni Flash با capabilityهای رسمی و operational seven-reference rule.
+- `OBS-0001` برای محدودیت عملیاتی 7 Ingredient و `HYP-0001` برای separate-vs-collage reference strategy.
+- `EXP-0001` برای A/B test کردن referenceهای جدا در برابر multi-view contact sheet.
+
+### Changed
+- Reference-image production default: one target view per Run؛ product references تمیز و single-purpose باشند و همه slotها صرفاً به دلیل موجود بودن پر نشوند.
+- Omni Flash ingredient budget policy: سقف عملیاتی 7، هدف اولیه 4–6 reference با 1–2 slot رزرو.
+
+### Learning-derived changes
+- multi-view collage فعلاً production default نیست؛ این نتیجه یک inference از Google best practices است و تا اجرای EXP-0001 به‌عنوان hypothesis باقی می‌ماند.
+- عدد 7 توسط تجربه کاربر و مستند third-party Flow API corroborate شده، اما Help رسمی Google که در این نسخه بررسی شد عدد را صریح ذکر نمی‌کند؛ بنابراین provisional و نیازمند re-verification است.
+
 ## 1.1.0 — 2026-08-07
 ### Added
 - `AI_START_HERE.md` برای context recovery در chat/session جدید.
@@ -23,7 +38,7 @@
 - dependency عملیاتی به حافظه chat قبلی حذف شد؛ repo باید context لازم برای session بعدی را نگه دارد.
 
 ### Learning-derived changes
-- فعلاً این تغییر معماری بر اساس نیاز عملیاتی صریح کاربر است، نه نتیجه benchmark؛ به‌عنوان system design decision ثبت شده است.
+- این تغییر معماری بر اساس نیاز عملیاتی صریح کاربر است، نه نتیجه benchmark؛ به‌عنوان system design decision ثبت شده است.
 
 ## 1.0.0 — 2026-08-07
 ### Added
