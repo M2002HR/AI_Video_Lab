@@ -4,17 +4,18 @@
 - Primary operator: ChatGPT / AI operator architecture
 - Active projects: 1
 - Project current stages: `P0001` → STAGE_04 Reference Asset Creation
-- Pending approvals: `P0001-R0001` and `P0001-R0002` (`REF-PROD-HERO-45`) require direct visual QA
+- P0001 HERO-45 QA: completed. `R0002` selected provisionally as secondary geometry reference (~4.3/5); `R0001` alternate (~4.2/5).
+- Pending approval: `REF-PROD-TOP-CLEAN` primary identity reference; then Macro and Assortment Detail.
 - Open experiments: 1 (`EXP-0001` separate ingredients vs contact sheet; planned, non-blocking)
-- Prompt candidates awaiting validation: no new global candidate; P0001 has a project-specific reference-image package awaiting Run evidence
+- Prompt candidates awaiting validation: project package `PKG_REFERENCE_IMAGES_V02` now incorporates HERO QA evidence; no global canonical prompt promotion yet.
 - Recent validated learnings: 0
 - Open observations/hypotheses:
   - `OBS-0001` Flow seven-ingredient operational limit
-  - `OBS-0002` two ChatGPT Image hero-45 candidates reported as highly similar to each other; product fidelity not yet scored
+  - `OBS-0002` ChatGPT Image low inter-run variance confirmed for P0001 HERO-45
+  - `OBS-0003` novel-angle generation regularized handmade geometry / inferred packaging
   - `HYP-0001` separate single-role ingredients outperform collage
-- Pending system change proposals: 0
-- Recent failures by category: none classified yet; reference visual QA pending
+- Recent failure tags: mild `proportion_drift`, `packaging_drift`, `style_drift` on HERO-45 candidates.
 - Cross-chat readiness: enabled via `AI_START_HERE.md` + project `HANDOFF.md`
-- Next recommended action: attach P0001-R0001 and P0001-R0002 directly, execute Stage 05 Reference QA, then decide whether the hero-45 baseline passes before generating additional reference roles.
+- Next recommended action: generate two `REF-PROD-TOP-CLEAN` candidates from the real original using `PKG_REFERENCE_IMAGES_V02/REF_PROD_TOP_CLEAN_PROMPT.md`, then perform QA before Macro/Assortment.
 
 Generated/maintained dashboard; not source of truth. Project truth lives in project metadata/status/handoff and underlying evidence.
