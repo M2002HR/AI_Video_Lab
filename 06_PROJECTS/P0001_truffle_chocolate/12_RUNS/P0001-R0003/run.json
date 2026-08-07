@@ -1,0 +1,32 @@
+{
+  "run_id": "P0001-R0003",
+  "project_id": "P0001",
+  "stage": "STAGE_04_REFERENCE_ASSET_CREATION",
+  "task": "product_reference_edit_top_clean",
+  "execution_mode": "external_manual",
+  "tool": "ChatGPT Image",
+  "model": "unknown",
+  "prompt_id": null,
+  "prompt_version": "PKG_REFERENCE_IMAGES_V02/REF-PROD-TOP-CLEAN",
+  "prompt_language": "en",
+  "reference_assets": ["SESSION-ASSET-P0001-IMG-002"],
+  "settings": {},
+  "outputs": [
+    {
+      "session_asset": "1000015956.png",
+      "role": "REF-PROD-TOP-CLEAN",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "714b234d7d73e28e59dbb893f23737fb2ad30aba3b7fab3c8cd6d988329235c7"
+    }
+  ],
+  "output_asset_status": "session_attached_not_committed_binary",
+  "evaluation": {
+    "status": "passed",
+    "overall_score": 4.8
+  },
+  "failure_tags": ["minor_style_drift"],
+  "selected": true,
+  "selection_role": "primary_product_identity_top_clean",
+  "notes": "Direct visual QA completed. Strong preservation of the original 25-truffle layout, color/coating families, dark fluted cups and diamond-oriented kraft box while removing the wooden background/watermark. Minor residual AI cleanup/regularization remains, but fidelity is high enough for the primary clean identity ingredient. Selected over R0004 because the product occupies more of the frame and therefore carries more identity detail per ingredient slot."
+}
