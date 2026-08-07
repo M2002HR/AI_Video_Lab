@@ -1,30 +1,28 @@
-# OBS-0002 — Low inter-run variance reported for ChatGPT Image reference generation
+# OBS-0002 — Low inter-run variance in ChatGPT Image HERO-45 reference generation
 
 - Date: 2026-08-07
 - Project: `P0001`
 - Runs: `P0001-R0001`, `P0001-R0002`
 - Task: `product_reference_generation_hero_45`
 - Tool: ChatGPT Image
-- Evidence level: anecdotal / user-reported pending direct visual QA
+- Evidence level: direct project visual QA; still only one product/task.
 
 ## Observation
-The user generated two `REF-PROD-HERO-45` candidates with ChatGPT Image using the same original product reference and the same prompt package, and reported that the two outputs looked very similar to each other.
+Two candidates generated from the same original product reference and the same prompt are strongly similar in composition, product interpretation, color/coating families, box treatment and overall quality. Direct inspection confirms the user's initial report of low inter-run variance.
 
-## What this may indicate
-Possible low inter-run variance / strong repeatability for this particular prompt-reference combination.
+## Positive signal
+For this particular prompt/reference combination, ChatGPT Image produced repeatable outputs with stable product category and clean presentation.
+
+## Shared error tendency
+The two Runs also share the same mild bias: handmade truffle geometry is regularized toward more uniform spheres/sizes and the kraft box is reconstructed somewhat more thickly/polished than the original. Repeatability therefore includes both strengths and shared reconstruction bias.
+
+See `OBS-0003` for the artisan-regularization finding.
 
 ## What this does NOT establish
-- fidelity to the original product;
-- superiority over Nano Banana Pro or another image model;
-- general performance across other product categories or camera angles;
-- absence of shared identity errors across both outputs.
-
-Two similar outputs can be consistently good or consistently wrong.
-
-## Next evidence
-1. visually inspect both candidate images directly;
-2. score product identity, geometry, coating types, paper cups, kraft-box structure, material realism and artifacts;
-3. if useful, run the identical source image + prompt through Nano Banana Pro and compare under a controlled experiment.
+- global superiority over Nano Banana Pro or another image model;
+- fidelity on unseen angles/products;
+- that repeatability is always desirable;
+- that two similar outputs constitute independent proof of factual geometry.
 
 ## Promotion status
-Do not promote to a global tool recommendation. Keep as observation until visual QA and comparative evidence exist.
+Keep as project evidence. Comparative tool recommendation requires additional tasks/products or a controlled experiment.
