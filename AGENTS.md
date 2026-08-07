@@ -1,5 +1,28 @@
-# Operating rules for Codex
+# AI operator rules
 
-مخزن حقیقت پایدار است؛ START_HERE.md و 00_SYSTEM/INDEX.md را بخوان. پیش از تغییر workflow/prompt/checklist/tool recommendation evidence و learning مرتبط را بررسی کن. اصل‌ها، Runها و promptهای تاریخی را overwrite نکن؛ هر تولید معنی‌دار Run و هر تغییر canonical prompt نسخهٔ تازه دارد.
+این repository حافظه و **source of truth پایدار** برای AI Video Ad Lab است. ChatGPT در این workflow اپراتور اصلی است، اما قواعد برای هر AI agent آینده نیز معتبرند.
 
-یک anecdote معمولاً observation است، نه قانون جهانی. metadata را sync، registry را rebuild و پیش از پایان کار مهم validation را اجرا کن. قابلیت ابزار را جعل نکن؛ رسانهٔ خارجی را بدون استفادهٔ واقعی/ورودی کاربر تولیدشده ادعا نکن. پاسخ فارسی و عملیاتی: کار، یافته، فایل، stage، next action. prompt تولیدی پیش‌فرض English است. remote push یا حذف رسانه فقط با اجازهٔ صریح. جزئیات: 00_SYSTEM/CODEX_OPERATING_MANUAL.md.
+## شروع هر chat/session جدید
+1. اول `AI_START_HERE.md` را بخوان.
+2. سپس `START_HERE.md`، `DASHBOARD.md` و `00_SYSTEM/INDEX.md` را بخوان.
+3. اگر پروژه active وجود دارد، `project.json`، `STATUS.md` و `HANDOFF.md` همان پروژه را قبل از ادامه کار بخوان.
+4. فقط اسناد مرحله فعلی را load کن: SOP، checklist، canonical prompt، tool knowledge و learning مرتبط.
+5. chat history را حافظه پایدار فرض نکن؛ تصمیم/feedback/نتیجه مهم باید در repo ثبت شود.
+
+## قواعد غیرقابل‌مذاکره
+- original input، Run تاریخی و prompt version تاریخی را overwrite نکن.
+- هر تولید معنی‌دار AI باید provenance قابل‌ردیابی داشته باشد.
+- هر reference نقش صریح داشته باشد؛ product identity بر style مقدم است.
+- یک تجربه منفرد معمولاً `observation` است، نه قانون جهانی.
+- تغییر canonical prompt/workflow/rubric/checklist/preferred tool طبق evidence و `CHANGE_PROMOTION_POLICY.md` انجام شود.
+- مقدار نامعلوم را حدس نزن؛ `unknown`/`null` ثبت کن.
+- capability ابزار را جعل نکن؛ vendor claim و evidence داخلی را جدا نگه دار.
+- بعد از تغییرات مهم، metadata/registry/dashboard را sync و integrity را بررسی کن.
+
+## اجازه تغییر GitHub
+کاربر اجازه داده ChatGPT در جریان تولید پروژه، تغییرات لازم، کم‌ریسک، مستند و قابل‌بازگشت را در repo انجام دهد و commit بزند. commitها باید موضوعی و خوانا باشند. برای حذف داده، force/rewrite history، تغییر معماری گسترده، انتشار اطلاعات حساس یا اقدام destructive approval صریح بگیر.
+
+## UX
+پاسخ کاربر پیش‌فرض فارسی و عملیاتی باشد: `کار انجام‌شده → یافته → فایل/Run → stage → next action`. prompt تولیدی پیش‌فرض English است مگر evidence یا درخواست پروژه خلافش را نشان دهد.
+
+راهنمای کامل: `00_SYSTEM/AI_OPERATOR_MANUAL.md`.

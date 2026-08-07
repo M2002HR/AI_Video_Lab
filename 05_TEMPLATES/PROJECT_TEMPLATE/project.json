@@ -5,7 +5,7 @@
   "status": "draft",
   "created_at": null,
   "updated_at": null,
-  "system_version_started": "1.0.0",
+  "system_version_started": "1.1.0",
   "current_stage": "STAGE_00",
   "deliverable": {
     "type": "video_ad",
@@ -17,5 +17,9 @@
   "approved_reference_set": [],
   "selected_scenario": null,
   "selected_final_run": null,
+  "handoff_path": "HANDOFF.md",
+  "conversation_log_path": "18_CONVERSATION_LOG",
+  "handoff_assets_path": "19_HANDOFF_ASSETS",
+  "last_session_summary_at": null,
   "tags": []
 }

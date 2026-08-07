@@ -1,3 +1,11 @@
-# CODEX OPERATING MANUAL
+# CODEX OPERATING MANUAL — Legacy pointer
 
-برای هر درخواست: پروژه/stage/task را تشخیص بده؛ STATUS/SOP/checklist/prompt/tool/learning مرتبط را بخوان؛ کار را انجام بده؛ فایل/metadata/Run/STATUS را ثبت کن؛ registry+validation؛ خلاصه فارسی. assumption قابل بازگشت را ثبت کن و فقط برای تصمیم حیاتی/destructive سؤال بپرس.
+این فایل از v1.1.0 legacy است. سیستم دیگر Codex-specific نیست.
+
+قواعد جاری برای ChatGPT و هر AI operator:
+
+- `../AI_START_HERE.md`
+- `AI_OPERATOR_MANUAL.md`
+- `CHAT_CONTINUITY_PROTOCOL.md`
+
+این فایل برای حفظ linkهای تاریخی نگه داشته شده و نباید به‌عنوان منبع اصلی قواعد اپراتور استفاده شود.
