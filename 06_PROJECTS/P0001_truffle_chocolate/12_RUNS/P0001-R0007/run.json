@@ -1,0 +1,34 @@
+{
+  "run_id": "P0001-R0007",
+  "project_id": "P0001",
+  "stage": "STAGE_04_REFERENCE_ASSET_CREATION",
+  "task": "product_reference_generation_assortment_detail",
+  "execution_mode": "external_manual",
+  "tool": "ChatGPT Image",
+  "model": "unknown",
+  "prompt_version": "PKG_REFERENCE_IMAGES_V04_ASSORTMENT",
+  "prompt_language": "en",
+  "reference_assets": [
+    "SESSION-ASSET-P0001-IMG-002",
+    "P0001-R0003",
+    "P0001-R0006"
+  ],
+  "settings": {},
+  "outputs": [
+    {
+      "filename": "1000015960.png",
+      "sha256": "28e334d630ad03b99c5e3af4c9ecb45f3753e60267edbf4ec7f894d2cbf55f2d",
+      "width": 1402,
+      "height": 1122,
+      "bytes": 3517606,
+      "storage": "chat_attachment_not_committed"
+    }
+  ],
+  "evaluation": {
+    "status": "pass_with_caveats",
+    "overall_score": 4.1
+  },
+  "failure_tags": ["background_contamination", "geometry_regularization"],
+  "selected": false,
+  "notes": "Exactly six truffles and both coating families are represented. However, the generated image reintroduced the original wooden tabletop despite the dark-neutral background requirement. Retained as evidence/alternate, not selected for Flow ingredient use."
+}
