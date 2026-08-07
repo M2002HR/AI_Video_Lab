@@ -1,0 +1,21 @@
+{
+  "experiment_id": "EXP-0001",
+  "status": "planned",
+  "task": "flow_reference_collage_vs_separate_ingredients",
+  "confidence": "hypothesis",
+  "linked_project": "P0001",
+  "independent_variable": "reference_packaging_strategy",
+  "variants": [
+    "same product views uploaded as separate ingredients",
+    "same product views combined into one clean multi-view contact sheet"
+  ],
+  "primary_metrics": [
+    "product_identity_stability",
+    "geometry_stability",
+    "object_duplication",
+    "reference_contamination",
+    "prompt_adherence",
+    "commercial_usability"
+  ],
+  "blocking": false
+}
