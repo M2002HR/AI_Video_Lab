@@ -23,7 +23,7 @@ The user generated two first-pass `REF-PROD-HERO-45` candidates with **ChatGPT I
 - `P0001-R0001`
 - `P0001-R0002`
 
-Both used the same original product reference and the same project prompt. User feedback: **the two outputs look very similar to each other**. This is recorded as `OBS-0001` as possible evidence of low inter-run variance, but does not yet prove that either output is faithful to the source product.
+Both used the same original product reference and the same project prompt. User feedback: **the two outputs look very similar to each other**. This is recorded as `OBS-0002` as possible evidence of low inter-run variance, but does not yet prove that either output is faithful to the source product.
 
 Shared generation URL:
 https://chatgpt.com/s/m_6a76360f676c8191872d12bfe552c957
@@ -50,7 +50,7 @@ Ask the user to attach both generated images directly in chat. Then:
 9. `12_RUNS/P0001-R0001/run.json`
 10. `12_RUNS/P0001-R0002/run.json`
 11. `18_CONVERSATION_LOG/FEEDBACK_LOG.md`
-12. `09_LEARNING/observations/OBS-0001.md` (repo-global)
+12. `09_LEARNING/observations/OBS-0002_chatgpt_image_low_inter_run_variance.md` (repo-global)
 13. `03_TOOL_KNOWLEDGE/image_generation/chatgpt_image.md` (repo-global)
 
 ## Media re-attach note for a future chat
