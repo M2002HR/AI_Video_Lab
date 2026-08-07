@@ -1,0 +1,22 @@
+{
+  "run_id": "P0000-R0000",
+  "project_id": "P0000",
+  "stage": "STAGE_00",
+  "task": "unknown",
+  "execution_mode": "external_manual",
+  "tool": "unknown",
+  "model": "unknown",
+  "prompt_id": null,
+  "prompt_version": null,
+  "prompt_language": "en",
+  "reference_assets": [],
+  "settings": {},
+  "outputs": [],
+  "evaluation": {
+    "status": "pending",
+    "overall_score": null
+  },
+  "failure_tags": [],
+  "selected": false,
+  "notes": ""
+}

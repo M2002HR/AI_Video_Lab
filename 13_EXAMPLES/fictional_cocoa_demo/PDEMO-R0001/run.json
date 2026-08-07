@@ -1,0 +1,14 @@
+{
+  "run_id": "PDEMO-R0001",
+  "demonstration_data": true,
+  "project_id": "PDEMO",
+  "stage": "STAGE_16",
+  "task": "video_generation",
+  "tool": "fictional",
+  "model": "fictional",
+  "evaluation": {
+    "status": "complete",
+    "overall_score": 4
+  },
+  "selected": false
+}

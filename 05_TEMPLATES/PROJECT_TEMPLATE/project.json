@@ -1,0 +1,21 @@
+{
+  "project_id": "P0000",
+  "slug": "replace_me",
+  "title": "Replace me",
+  "status": "draft",
+  "created_at": null,
+  "updated_at": null,
+  "system_version_started": "1.0.0",
+  "current_stage": "STAGE_00",
+  "deliverable": {
+    "type": "video_ad",
+    "duration_seconds": 10,
+    "aspect_ratio": "16:9"
+  },
+  "primary_product_reference": null,
+  "source_prompt_path": null,
+  "approved_reference_set": [],
+  "selected_scenario": null,
+  "selected_final_run": null,
+  "tags": []
+}

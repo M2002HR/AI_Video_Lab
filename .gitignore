@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.mp4
+*.mov
+*.wav
+06_PROJECTS/**/05_REFERENCE_ASSETS/**/*
+06_PROJECTS/**/10_KEYFRAMES/**/*
+06_PROJECTS/**/12_RUNS/**/outputs/*
+06_PROJECTS/**/15_FINAL/media/*
+07_EXPERIMENTS/**/inputs/*
+07_EXPERIMENTS/**/outputs/*
+!**/.gitkeep

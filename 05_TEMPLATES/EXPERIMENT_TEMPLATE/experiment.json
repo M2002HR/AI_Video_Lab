@@ -1,0 +1,18 @@
+{
+  "experiment_id": "EXP-0000",
+  "status": "planned",
+  "hypothesis": null,
+  "linked_observations": [],
+  "task": "unknown",
+  "controlled_variables": [],
+  "independent_variable": null,
+  "inputs": [],
+  "comparisons": [],
+  "evaluation_rubric": null,
+  "runs": [],
+  "result": null,
+  "confidence": "anecdotal",
+  "regressions": [],
+  "conclusion": null,
+  "system_change_recommendation": null
+}
