@@ -1,0 +1,34 @@
+{
+  "run_id": "P0001-R0008",
+  "project_id": "P0001",
+  "stage": "STAGE_04_REFERENCE_ASSET_CREATION",
+  "task": "product_reference_generation_assortment_detail",
+  "execution_mode": "external_manual",
+  "tool": "ChatGPT Image",
+  "model": "unknown",
+  "prompt_version": "PKG_REFERENCE_IMAGES_V04_ASSORTMENT",
+  "prompt_language": "en",
+  "reference_assets": [
+    "SESSION-ASSET-P0001-IMG-002",
+    "P0001-R0003",
+    "P0001-R0006"
+  ],
+  "settings": {},
+  "outputs": [
+    {
+      "filename": "1000015961.png",
+      "sha256": "5ab6fec6f7808e33221b582e8c6aa6dc9518af6c16af1fe5498afe441ea7377d",
+      "width": 1402,
+      "height": 1122,
+      "bytes": 3121541,
+      "storage": "chat_attachment_not_committed"
+    }
+  ],
+  "evaluation": {
+    "status": "passed",
+    "overall_score": 4.5
+  },
+  "failure_tags": ["geometry_regularization"],
+  "selected": true,
+  "notes": "Selected REF-PROD-ASSORTMENT-DETAIL. Exactly six truffles, both coating families, supported color diversity and dark fluted cups on a clean dark-neutral background. Shape is somewhat more regular/perfect than the real handmade source, so this reference has diversity/coating-family authority but does not override original/R0003 for geometry."
+}
