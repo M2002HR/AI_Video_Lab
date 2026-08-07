@@ -1,0 +1,274 @@
+REFERENCE ROLE — CHARACTER DESIGN ONLY
+
+Use the uploaded miniature-chef / cheesecake creative reference ONLY for the visual language of the tiny chef characters: their compact stylized proportions, round friendly faces, red chef uniforms, red chef hats and premium miniature-diorama photographic feeling.
+
+IGNORE and DO NOT reproduce the cheesecake, cherries, chocolate cake, ladders, carts, utensils, dessert geometry, decoration, background composition or any other product/scene object from that old reference.
+
+This generation is specifically intended to replace the contaminated old creative reference with a clean CHARACTER-ONLY ingredient for later Google Flow video generation.
+
+TASK
+
+Create ONE clean photorealistic-stylized miniature character reference showing EXACTLY THREE recurring tiny adult chocolatiers standing together as a coherent team.
+
+They are premium miniature food-commercial characters: friendly, compact, slightly chubby, expressive and stylized, but rendered with believable physical miniature-figurine materials and realistic studio photography rather than flat illustration or cheap plastic-toy appearance.
+
+The three characters must belong to the same visual world, share the same uniform design and remain easy for a video model to reuse consistently.
+
+EXACT CHARACTER COUNT
+
+Show EXACTLY THREE characters.
+
+Not two.
+Not four.
+Not five.
+
+All three full bodies must be visible from chef hat to shoes.
+
+Do not hide one character behind another.
+Do not merge bodies.
+Do not crop off feet, hands or hats.
+
+CHARACTER STYLE
+
+Preserve the broad visual DNA of the tiny chefs in the supplied creative reference:
+- adult miniature chefs;
+- compact slightly chubby proportions;
+- larger expressive heads relative to body than a fully realistic human;
+- warm friendly round faces;
+- premium stylized 3D / miniature-diorama appearance;
+- cheerful but focused food-craft personality.
+
+Do NOT make them:
+- children;
+- babies;
+- photoreal full-scale humans;
+- flat cartoon drawings;
+- anime characters;
+- clay blobs;
+- cheap glossy plastic toys;
+- extreme caricatures.
+
+They should feel like high-quality physical miniature characters photographed for a premium commercial.
+
+UNIFORM — CONSISTENT ACROSS ALL THREE
+
+All three chocolatiers wear the SAME core uniform design:
+- rich deep-red double-breasted chef jacket;
+- matching tall red chef toque / chef hat;
+- dark charcoal or near-black trousers;
+- small practical dark work shoes;
+- subtle dark buttons on the jacket;
+- no logos;
+- no text;
+- no brand marks.
+
+The red should feel rich and premium rather than neon.
+
+Fabric should have believable miniature textile texture with restrained folds and soft highlights.
+
+Do not randomly change uniform color between characters.
+Do not give one a white chef coat.
+Do not add aprons unless all three share the same understated design; default is NO apron.
+Do not add patterned clothing.
+
+DISTINCT BUT COHERENT IDENTITIES
+
+The three characters should be visually distinguishable enough to remain recurring individuals, while clearly belonging to the same team.
+
+CHARACTER A — FOREMAN
+- slightly broader round face;
+- small neat brown/dark moustache;
+- confident friendly expression;
+- slightly stockier build.
+
+CHARACTER B — CLEAN-SHAVEN CHOCOLATIER
+- clean-shaven round face;
+- warm focused smile;
+- similar overall body scale to Character A;
+- subtly different eyebrow/hair/face shape, without changing the overall style.
+
+CHARACTER C — DETAIL SPECIALIST
+- round friendly face;
+- very small neat dark goatee or short chin beard as a simple distinguishing feature;
+- attentive upbeat expression;
+- same overall uniform and scale.
+
+Do not exaggerate facial-hair detail to the point that it becomes visually noisy.
+
+ANATOMY — CRITICAL
+
+Each character has:
+- one head;
+- two eyes;
+- one nose;
+- one mouth;
+- two arms;
+- two hands;
+- five coherent fingers per hand where individually visible;
+- two legs;
+- two feet.
+
+No extra limbs.
+No missing arms.
+No fused hands.
+No merged bodies.
+No duplicate faces.
+No detached fingers.
+No floating body parts.
+
+Hands should be simple and coherent rather than over-detailed.
+
+POSES
+
+Use simple neutral standing poses designed for identity reference rather than storytelling.
+
+Character A may stand with hands relaxed near the waist.
+Character B may have one arm slightly bent in a natural neutral gesture.
+Character C may hold both hands relaxed at the sides or gently together.
+
+Do NOT give them tools for this reference.
+Do NOT create action poses.
+Do NOT make them climb, run, carry or cook.
+
+Neutral poses make character identity easier for the later video model to understand.
+
+FACIAL EXPRESSION
+
+Friendly, confident, focused and slightly cheerful.
+
+Avoid:
+- extreme open-mouth laughter;
+- exaggerated surprise;
+- angry expressions;
+- clown faces;
+- grotesque smiles.
+
+Use subtle premium-commercial expressions.
+
+MATERIAL / RENDERING CHARACTER
+
+The characters should feel like premium stylized miniature physical figures captured with macro studio photography.
+
+Skin/face material:
+- softly matte;
+- subtle natural warmth;
+- not waxy;
+- not porcelain;
+- not glossy plastic.
+
+Uniform fabric:
+- miniature woven/fabric impression;
+- restrained folds;
+- soft matte-to-satin response.
+
+Chef hats:
+- same red fabric language as jackets;
+- soft structured folds;
+- not plastic helmets.
+
+Shoes:
+- simple dark miniature work shoes;
+- low gloss.
+
+GROUP COMPOSITION
+
+Place the three characters side-by-side in ONE coherent photographic scene.
+
+Character A slightly left.
+Character B center.
+Character C slightly right.
+
+Leave a small amount of clean separation between bodies so each silhouette is independently understandable.
+
+Do not arrange them as three separate panels.
+Do not create a contact sheet.
+Do not create turnarounds or multiple angles in one image.
+
+All three should stand on the same ground plane.
+
+Keep their heights similar; subtle natural differences are acceptable.
+
+BACKGROUND
+
+Use a clean seamless neutral charcoal-gray to near-black matte studio background and floor.
+
+No kitchen.
+No bakery.
+No table.
+No wooden planks.
+No cake.
+No cheesecake.
+No cherries.
+No chocolate product.
+No truffles.
+No product box.
+No ladders.
+No carts.
+No bowls.
+No whisks.
+No spoons.
+No tools.
+No props.
+No text.
+No logo.
+No watermark.
+
+This must be a CHARACTER-ONLY reference.
+
+LIGHTING
+
+Use soft premium miniature-studio lighting compatible with the dark luxury food-commercial world planned for the final video.
+
+Large diffused key light from upper-front-left.
+Subtle fill from the opposite side.
+Very gentle rim/separation where needed against the dark background.
+
+Keep red uniforms clearly readable without clipping saturation.
+Keep facial features readable.
+Avoid deep black crushed shadows.
+Avoid harsh specular toy-like highlights.
+
+CAMERA
+
+Straightforward character-reference camera at approximately miniature eye level with a very slight elevated angle if necessary to keep full bodies readable.
+
+Natural moderate perspective.
+No fisheye.
+No extreme wide-angle distortion.
+No dramatic low-angle hero shot.
+No dutch angle.
+
+Use moderate depth of field so ALL THREE characters are simultaneously sharp and readable.
+
+Do not blur one character to create cinematic depth.
+
+REFERENCE CLEANLINESS
+
+Exactly three characters.
+One coherent group.
+No products.
+No props.
+No food.
+No old dessert elements.
+No duplicated chefs in background.
+No reflections creating extra apparent characters.
+No text.
+No labels.
+No collage.
+No multi-panel layout.
+
+FINAL QUALITY PRIORITY
+
+Priority order:
+1. exactly three coherent recurring characters;
+2. consistent red chef uniform design;
+3. strong match to the supplied tiny-chef character style DNA;
+4. correct anatomy and separate readable silhouettes;
+5. distinct but coherent individual identities;
+6. premium physical-miniature realism;
+7. clean dark character-only reference environment;
+8. visual beauty.
+
+If visual drama conflicts with reference clarity, choose reference clarity.
+
+The final image should look like a premium studio cast photograph of the three recurring miniature chocolatiers who will appear throughout the truffle commercial, with absolutely no cheesecake or other product contamination.
