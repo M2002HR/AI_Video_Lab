@@ -1,84 +1,87 @@
-# P0001 Reference Strategy v1
+# P0001 Reference Strategy v2
 
 ## Target generation mode
 Google Flow → Video → Ingredients/References → Gemini Omni Flash → 10 seconds → 16:9.
 
 ## Ingredient budget
-- Operational maximum for Omni Flash: **7 image-reference slots**. This is corroborated by current third-party Flow API documentation exposing `referenceImage_1..7`; the current official Google Flow Help confirms Omni Flash Ingredients/References supports 4s/6s/8s/10s but does not currently state the numeric 7-slot limit on the Help page.
-- Treat 7 as a provisional operational limit that should be re-verified when Flow UI/model behavior changes.
-- **Do not fill all seven automatically.** Default production target is 4–6 high-information, non-conflicting references and 1–2 spare slots for later iteration.
+- Operational maximum for Omni Flash: **7 image-reference slots**.
+- Treat 7 as a provisional operational limit and re-verify after major Flow/model changes.
+- Do not fill all seven automatically. Default production target remains 4–6 high-information, non-conflicting references with headroom reserved.
 
-## Official Google best-practice constraints
-Google Flow Help currently advises:
-1. product/subject ingredients should use plain or segmented backgrounds;
-2. location/style references should avoid extra subjects unless intentional;
-3. text prompts should complement rather than contradict visual inputs;
-4. prompt should explicitly reference the supplied ingredients;
-5. ingredient images with a consistent look/feel blend more effectively.
+## Core authority rule
+For identity-sensitive products, distinguish **source authority** from **generated supporting evidence**.
 
-Sources verified 2026-08-07:
-- https://support.google.com/flow/answer/16353334?hl=en
-- https://support.google.com/flow/answer/16352836?hl=en
+Current P0001 authority order:
+1. original real product photograph — ultimate source authority;
+2. `P0001-R0003` — selected primary clean top identity ingredient;
+3. `P0001-R0004` — approved alternate clean top identity ingredient;
+4. `P0001-R0002` — selected secondary 45-degree geometry reference;
+5. `P0001-R0001` — alternate 45-degree geometry evidence.
 
-Operational corroboration for 7 refs (not an official Google source):
-- https://useapi.net/docs/articles/omni-flash-bash — documents Omni Flash `referenceImage_1..7` and a combined seven-image reference budget.
+Generated novel views must never override the real source when they disagree about handmade irregularity, box construction, assortment structure or coating identity.
+
+## Why the authority order changed
+Direct QA showed that the conservative top-clean edits (`R0003`, `R0004`) preserve the original 25-truffle layout, color/coating distribution, cups and packaging much more faithfully than the synthesized 45-degree views (`R0001`, `R0002`). The 45-degree views remain useful because they provide inferred depth, but that same inference mildly regularized the handmade product and polished the box.
+
+Linked evidence: `OBS-0003` and `13_EVALUATION/reports/reference_qa_top_clean_v01.md`.
 
 ## Collage / contact-sheet policy
-**Default: do not combine multiple product views into one collage to save ingredient slots.**
+Default remains: **do not combine multiple product views into one collage as a production shortcut.** Separate single-role ingredients are easier to assign and less likely to introduce duplication/reference ambiguity. This is a working hypothesis pending `EXP-0001`, not an official Google prohibition.
 
-Reasoning:
-- Google recommends clean single-subject/product references and warns against extra subjects in style/location references.
-- A multi-view contact sheet contains several visual instances of the product inside one image; the model can interpret them as multiple scene objects/composition rather than independent identity evidence.
-- It also makes reference-role assignment less explicit and may increase duplication or geometry ambiguity.
-- Therefore a collage is not considered equivalent to several independent ingredient slots.
+If later tested, keep collage product-only, neutral, 2–4 views maximum, no style elements, and compare against the same views uploaded separately.
 
-This is an inference from Google's published best practices, not an explicit Google prohibition. We will test it later as `EXP-0001` rather than treat it as universal fact.
+## Current P0001 candidate reference pack
 
-If a collage must be tested:
-- keep it product-only;
-- neutral consistent background;
-- no style reference mixed into the same sheet;
-- no labels/arrows/text unless necessary;
-- 2–4 orthogonal views maximum;
-- use it as a secondary experimental reference, not the primary identity source;
-- A/B test it against the same views uploaded separately.
+### Ingredient A — `REF-PROD-TOP-CLEAN` — APPROVED
+Role: `product_identity_primary` + `composition_only`.
+Selected: `P0001-R0003`.
+Alternate: `P0001-R0004`.
+Purpose: highest-fidelity cleaned representation of the real assortment for Flow. Preserves the visible count/layout and removes watermark/wooden-background contamination.
 
-## P0001 candidate reference pack
+### Ingredient B — `REF-PROD-HERO-45` — PASS WITH CAVEATS
+Role: `geometry_view` + secondary product identity evidence.
+Selected: `P0001-R0002`.
+Alternate: `P0001-R0001`.
+Purpose: show box depth, truffle height and cup geometry unavailable in the original overhead source. Never override the clean top/original source on product identity.
 
-### Slot 1 — `REF-PROD-HERO-45`
-Role: `product_identity_primary` + `geometry_view`.
-Clean 3/4 45-degree hero view of the full open kraft box. Shows box depth, truffle height, paper cups and assortment.
-
-### Slot 2 — `REF-PROD-TOP`
-Role: `product_identity_secondary` + `composition_only`.
-Cleaned top-down version of the original product photo, with watermark/table distractions removed while preserving the assortment identity.
-
-### Slot 3 — `REF-PROD-MACRO`
+### Ingredient C — `REF-PROD-MACRO` — NEXT
 Role: `texture_detail`.
-Macro close-up of one representative truffle in its dark fluted cup; must clearly show chocolate beneath nonpareils/sprinkles and food-scale surface realism.
+Macro close-up of one representative truffle in its dark fluted cup. Must teach realistic edible particle scale, dark chocolate beneath the coating, paper-cup texture and handmade surface irregularity.
 
-### Slot 4 — `REF-PROD-ASSORTMENT-DETAIL`
-Role: `product_identity_secondary`.
-Close 3/4 group of 4–6 truffles showing the main coating/color families together. Helps prevent the model from collapsing the assortment into one color/style.
+### Ingredient D — `REF-PROD-ASSORTMENT-DETAIL` — PENDING
+Role: `product_identity_secondary` + diversity evidence.
+Close 3/4 group of 4–6 truffles showing multiple coating/color families together.
 
-### Slot 5 — `REF-CHAR-CHOCOLATIERS`
+### Ingredient E — `REF-CHAR-CHOCOLATIERS` — PENDING
 Role: `character_only`.
-Clean project-specific reference of the miniature chocolatiers: same red uniforms/hats, proportions and premium miniature realism, but **no cheesecake or old dessert**.
+Project-specific clean reference of recurring miniature chocolatiers; no cheesecake or old-product contamination.
 
-### Slot 6 — `REF-SCENE-KEYFRAME`
+### Ingredient F — `REF-SCENE-KEYFRAME` — PENDING
 Role: `scene_only` / `composition_only`.
-Created later after scenario/shot design: a project-specific keyframe that already combines the correct truffle product, tiny chocolatiers and target black studio scene.
+Created after scenario/shot design; combines correct truffle product, tiny chocolatiers and target dark-studio composition.
 
-### Slot 7 — RESERVED
-Do not fill during first pass. Possible later uses: a second scene keyframe, packaging geometry reference or repair-specific ingredient if evaluation shows a concrete need.
+### Ingredient G — RESERVED
+Do not fill until QA identifies a concrete need. Potential use: second scene keyframe, repair-specific reference, or packaging geometry evidence.
 
-## Reference creation order
-1. Generate/clean Slots 1–4 first.
-2. Run Reference QA against the original product.
-3. Reject identity-drifting images before they can contaminate downstream generations.
-4. Generate Slot 5 character reference separately.
-5. After final shot design, generate Slot 6 scene keyframe.
-6. Build the final active ingredient set from approved assets only.
+## Current first-pass Flow budget recommendation
+Do not upload every approved/alternate asset simultaneously. Proposed first video ingredient set after remaining creation:
+1. `R0003` clean top identity;
+2. `R0002` 45-degree geometry;
+3. approved macro;
+4. approved assortment detail;
+5. approved chocolatier character reference;
+6. approved scene keyframe;
+7. reserved.
+
+This intentionally uses six active roles, not seven redundant references.
+
+## Reference creation order from here
+1. `REF-PROD-MACRO` — generate two controlled candidates and QA.
+2. `REF-PROD-ASSORTMENT-DETAIL` — generate two candidates and QA.
+3. Generate character reference.
+4. Lock final scenario/shot timeline.
+5. Generate scene keyframe.
+6. Build final Flow ingredient set from approved winners only.
 
 ## Current gate
-Stage 04 passes only when Slots 1–4 have at least one approved candidate each. Slot 5 is required before final video generation. Slot 6 is created after storyboard/keyframe design.
+`REF-PROD-TOP-CLEAN` is approved. `REF-PROD-HERO-45` is usable as secondary geometry evidence. Stage 04 does not pass until Macro and Assortment Detail also have approved candidates.
