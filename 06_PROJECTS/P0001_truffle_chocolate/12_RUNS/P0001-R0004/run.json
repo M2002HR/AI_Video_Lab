@@ -1,0 +1,32 @@
+{
+  "run_id": "P0001-R0004",
+  "project_id": "P0001",
+  "stage": "STAGE_04_REFERENCE_ASSET_CREATION",
+  "task": "product_reference_edit_top_clean",
+  "execution_mode": "external_manual",
+  "tool": "ChatGPT Image",
+  "model": "unknown",
+  "prompt_id": null,
+  "prompt_version": "PKG_REFERENCE_IMAGES_V02/REF-PROD-TOP-CLEAN",
+  "prompt_language": "en",
+  "reference_assets": ["SESSION-ASSET-P0001-IMG-002"],
+  "settings": {},
+  "outputs": [
+    {
+      "session_asset": "1000015957.png",
+      "role": "REF-PROD-TOP-CLEAN",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "f898b14307ecfb42a84a49a3caf94c78ddb0296ea12fdb20405638270d672222"
+    }
+  ],
+  "output_asset_status": "session_attached_not_committed_binary",
+  "evaluation": {
+    "status": "passed",
+    "overall_score": 4.7
+  },
+  "failure_tags": ["minor_style_drift"],
+  "selected": false,
+  "selection_role": "alternate_top_clean",
+  "notes": "Direct visual QA completed. Strong source fidelity and essentially the same useful cleaned identity information as R0003. Retained as alternate; R0003 is selected because the box/product occupies more of the frame and therefore provides slightly denser identity information for an ingredient slot."
+}
