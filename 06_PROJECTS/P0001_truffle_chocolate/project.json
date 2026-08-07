@@ -4,7 +4,7 @@
   "title": "Colorful Chocolate Truffle Miniature Commercial",
   "status": "active",
   "created_at": "2026-08-07T21:41:00+03:30",
-  "updated_at": "2026-08-07T23:18:00+03:30",
+  "updated_at": "2026-08-07T23:27:00+03:30",
   "system_version_started": "1.1.0",
   "current_stage": "STAGE_04",
   "deliverable": {
@@ -16,12 +16,18 @@
   },
   "primary_product_reference": "SESSION-ASSET-P0001-IMG-002",
   "source_prompt_path": "01_INPUTS/source_prompt/source_prompt_transcription.md",
+  "active_identity_lock": "03_PRODUCT_IDENTITY/identity_lock_v02.md",
+  "active_reference_plan": "04_REFERENCE_STRATEGY/reference_plan_v02.md",
   "approved_reference_set": [],
+  "provisional_reference_set": [
+    {
+      "role": "REF-PROD-HERO-45",
+      "run_id": "P0001-R0002",
+      "authority": "secondary_geometry"
+    }
+  ],
   "selected_scenario": "provisional_hybrid_workshop_gift_box",
   "selected_final_run": null,
-  "latest_runs": [
-    "P0001-R0001",
-    "P0001-R0002"
-  ],
+  "latest_runs": ["P0001-R0001", "P0001-R0002"],
   "tags": ["food", "chocolate", "truffle", "miniature", "tiny_chocolatiers", "product_ad"]
 }
