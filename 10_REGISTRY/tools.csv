@@ -1,1 +1,3 @@
 tool_id,tool_name,category,verification_status,last_verified
+TOOL-VID-FLOW-OMNI-FLASH,Google Flow / Gemini Omni Flash,video_generation,mixed_official_and_operational,2026-08-07
+TOOL-IMG-CHATGPT-IMAGE,ChatGPT Image,image_generation,internal_observation_only,2026-08-07
