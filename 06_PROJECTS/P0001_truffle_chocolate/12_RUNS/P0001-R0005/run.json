@@ -1,0 +1,37 @@
+{
+  "run_id": "P0001-R0005",
+  "project_id": "P0001",
+  "stage": "STAGE_04_REFERENCE_ASSET_CREATION",
+  "task": "product_reference_generation_macro",
+  "execution_mode": "external_manual",
+  "tool": "ChatGPT Image",
+  "model": "unknown",
+  "prompt_id": null,
+  "prompt_version": "PKG_REFERENCE_IMAGES_V03_MACRO",
+  "prompt_language": "en",
+  "reference_assets": [
+    "SESSION-ASSET-P0001-IMG-002",
+    "P0001-R0003"
+  ],
+  "settings": {},
+  "outputs": [
+    {
+      "attachment_file_id": "file_0000000061b881f4adfab0c5cbf2511f",
+      "local_filename": "1000015958.png",
+      "sha256": "311b5016894e9220dab3637e8478bcb2472f0ad6fb20fd137a39362099271315",
+      "width": 1254,
+      "height": 1254
+    }
+  ],
+  "output_asset_status": "attached_in_chat_not_committed_binary",
+  "evaluation": {
+    "status": "pass_with_caveats",
+    "overall_score": 4.4
+  },
+  "failure_tags": [
+    "paper_cup_material_drift",
+    "mild_surface_gloss_drift"
+  ],
+  "selected": false,
+  "notes": "First macro candidate. Strong handmade irregularity and useful nonpareil/chocolate texture evidence. Cup reads somewhat too glossy/translucent and more plastic-like than the real dark matte fluted paper cup. Retain as alternate macro evidence."
+}
