@@ -4,7 +4,7 @@
   "title": "Colorful Chocolate Truffle Miniature Commercial",
   "status": "active",
   "created_at": "2026-08-07T21:41:00+03:30",
-  "updated_at": "2026-08-07T23:31:00+03:30",
+  "updated_at": "2026-08-07T23:38:00+03:30",
   "system_version_started": "1.1.0",
   "current_stage": "STAGE_04",
   "deliverable": {
@@ -23,6 +23,11 @@
       "role": "REF-PROD-TOP-CLEAN",
       "run_id": "P0001-R0003",
       "authority": "primary_clean_identity"
+    },
+    {
+      "role": "REF-PROD-MACRO",
+      "run_id": "P0001-R0006",
+      "authority": "texture_material_only"
     }
   ],
   "provisional_reference_set": [
@@ -38,13 +43,24 @@
       "run_id": "P0001-R0004"
     },
     {
+      "role": "REF-PROD-MACRO",
+      "run_id": "P0001-R0005"
+    },
+    {
       "role": "REF-PROD-HERO-45",
       "run_id": "P0001-R0001"
     }
   ],
   "selected_scenario": "provisional_hybrid_workshop_gift_box",
   "selected_final_run": null,
-  "latest_runs": ["P0001-R0001", "P0001-R0002", "P0001-R0003", "P0001-R0004"],
-  "next_planned_task": "REF-PROD-MACRO",
+  "latest_runs": [
+    "P0001-R0001",
+    "P0001-R0002",
+    "P0001-R0003",
+    "P0001-R0004",
+    "P0001-R0005",
+    "P0001-R0006"
+  ],
+  "next_planned_task": "REF-PROD-ASSORTMENT-DETAIL",
   "tags": ["food", "chocolate", "truffle", "miniature", "tiny_chocolatiers", "product_ad"]
 }
