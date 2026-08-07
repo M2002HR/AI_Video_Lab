@@ -2,56 +2,44 @@
 
 ## Project
 - ID: `P0001`
-- Title: Colorful Chocolate Truffle Miniature Commercial
 - Deliverable: 10s, 16:9 AI product ad
 - Target: Google Flow / Gemini Omni Flash / Ingredients-to-Video
 - Current stage: `STAGE_04_REFERENCE_ASSET_CREATION`
 
 ## Context
-The project adapts a supplied 10-second tiny-chef chocolate-cherry-cheesecake template to the user's real handmade colorful chocolate truffles. We preserve the template's miniature-worker, premium macro commercial and timed-storytelling DNA while removing all cheesecake/cherry/process content. Product identity, source-prompt analysis, reference strategy and the first reference prompt package are documented.
+The project adapts a tiny-chef cheesecake template to the user's handmade colorful chocolate truffles. Product identity, source-prompt analysis and reference strategy are established. Two real HERO-45 reference generations from ChatGPT Image have now been directly reviewed.
 
-## Locked / operationally accepted
-- Product category: handmade chocolate truffles.
-- Identity-critical presentation: colorful nonpareils/elongated sprinkles, dark fluted paper cups, open natural kraft box, handmade near-spherical geometry.
-- Source watermark is not identity and must not appear downstream.
-- Old cheesecake storyboard has style/creative authority only, never product-identity authority.
-- Reference-collage default: do not use as production shortcut; separate single-role ingredients are the current default pending EXP-0001.
-- Omni ingredient planning limit: 7 operational slots, but target 4–6 active refs and reserve headroom.
-
-## Latest real generation evidence
-The user generated two first-pass `REF-PROD-HERO-45` candidates with **ChatGPT Image**, not Nano Banana Pro:
-- `P0001-R0001`
-- `P0001-R0002`
-
-Both used the same original product reference and the same project prompt. User feedback: **the two outputs look very similar to each other**. This is recorded as `OBS-0002` as possible evidence of low inter-run variance, but does not yet prove that either output is faithful to the source product.
-
-Shared generation URL:
-https://chatgpt.com/s/m_6a76360f676c8191872d12bfe552c957
-
-The current operator could not retrieve that shared URL, so visual QA is pending.
+## Current locked / active decisions
+- Highest authority remains the **original real product photo**.
+- Active identity injection: `03_PRODUCT_IDENTITY/identity_lock_v02.md`.
+- Active strategy: `04_REFERENCE_STRATEGY/reference_plan_v02.md`.
+- Generated novel-angle references are supporting evidence, not replacements for visible source facts.
+- `P0001-R0002` is provisional `REF-PROD-HERO-45` secondary geometry reference (~4.3/5).
+- `P0001-R0001` is alternate evidence (~4.2/5).
+- HERO QA found good category/coating repeatability but mild factory-perfect regularization and inferred box geometry (`OBS-0002`, `OBS-0003`).
+- Therefore `REF-PROD-TOP-CLEAN` is promoted to the future `product_identity_primary` role.
+- Separate Ingredients remain preferred over collage pending `EXP-0001`.
+- Operational Omni ingredient cap: 7; default target 4–6.
 
 ## Exact next action
-Ask the user to attach both generated images directly in chat. Then:
-1. compare each against the original product photo;
-2. score product category, geometry/proportion, coating types, color diversity, paper cups, kraft-box structure, material realism, artifacts and usefulness as Flow ingredient;
-3. compare R0001 vs R0002;
-4. decide `PASS`, `MINOR PROMPT FIX`, `STRUCTURAL STRATEGY CHANGE`, or controlled `ChatGPT Image vs Nano Banana Pro` test;
-5. only after baseline approval continue to Slots 2–4.
+Generate **two** `REF-PROD-TOP-CLEAN` candidates using only the original real product photo and:
+`11_PROMPT_PACKAGES/PKG_REFERENCE_IMAGES_V02/REF_PROD_TOP_CLEAN_PROMPT.md`
 
-## Important files
-1. `STATUS.md`
-2. `00_BRIEF/brief.md`
-3. `01_INPUTS/input_manifest.md`
-4. `01_INPUTS/source_prompt/source_prompt_transcription.md`
-5. `02_SOURCE_ANALYSIS/source_prompt_analysis.md`
-6. `03_PRODUCT_IDENTITY/product_identity.md`
-7. `04_REFERENCE_STRATEGY/reference_plan.md`
-8. `11_PROMPT_PACKAGES/PKG_REFERENCE_IMAGES_V01/REFERENCE_IMAGE_PROMPT_PACKAGE.md`
-9. `12_RUNS/P0001-R0001/run.json`
-10. `12_RUNS/P0001-R0002/run.json`
-11. `18_CONVERSATION_LOG/FEEDBACK_LOG.md`
-12. `09_LEARNING/observations/OBS-0002_chatgpt_image_low_inter_run_variance.md` (repo-global)
-13. `03_TOOL_KNOWLEDGE/image_generation/chatgpt_image.md` (repo-global)
+Preferred method order:
+1. non-generative cleanup/segmentation if practical;
+2. otherwise conservative image edit;
+3. do not free-regenerate from text alone.
 
-## Media re-attach note for a future chat
-Original and generated binary media are not necessarily committed to normal Git. For the immediate next step, the two ChatGPT Image candidates must be attached directly if the connector cannot access them. Do not ask the user to re-explain the project.
+After the two outputs are attached, register them as `P0001-R0003` and `P0001-R0004`, perform Stage 05 QA, and select the primary identity reference. Do not move to Macro/Assortment until TOP-CLEAN passes.
+
+## Key evidence files
+- `13_EVALUATION/reports/reference_qa_hero45_v01.md`
+- `12_RUNS/P0001-R0001/`
+- `12_RUNS/P0001-R0002/`
+- `03_PRODUCT_IDENTITY/identity_lock_v02.md`
+- `04_REFERENCE_STRATEGY/reference_plan_v02.md`
+- `11_PROMPT_PACKAGES/PKG_REFERENCE_IMAGES_V02/REF_PROD_TOP_CLEAN_PROMPT.md`
+- repo-global `OBS-0002`, `OBS-0003`, and ChatGPT Image tool card.
+
+## Media continuity
+Generated binaries are not committed to normal Git; hashes are stored in Run metadata. If a new session needs direct visual comparison and cannot access the attachments, ask only for the needed candidate images, not for project re-explanation.
