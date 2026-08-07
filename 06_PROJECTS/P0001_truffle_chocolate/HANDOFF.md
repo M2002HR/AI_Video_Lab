@@ -7,54 +7,51 @@
 - Current stage: `STAGE_04_REFERENCE_ASSET_CREATION`
 
 ## Context
-The project adapts a tiny-chef cheesecake template to the user's handmade colorful chocolate truffles. Product identity, source-prompt analysis and reference strategy are established. HERO-45 and TOP-CLEAN reference candidates have now been generated and directly QA'd.
+The project adapts a tiny-chef cheesecake template to the user's handmade colorful chocolate truffles. Product identity, source-prompt analysis and reference strategy are established. HERO-45, TOP-CLEAN and MACRO reference roles have now been generated and directly QA'd.
 
-## Locked / active decisions
-- Ultimate identity authority: original real product photo.
-- Active identity injection: `03_PRODUCT_IDENTITY/identity_lock_v02.md`.
-- Active strategy: `04_REFERENCE_STRATEGY/reference_plan.md` (v2 content).
-- Separate Ingredients remain preferred over collage pending `EXP-0001`.
-- Operational Omni ingredient cap: 7; current first-pass design targets six distinct roles and reserves one slot.
+## Current reference hierarchy
+1. **Original real product photograph** — ultimate source authority.
+2. `P0001-R0003` — selected `REF-PROD-TOP-CLEAN`, primary clean identity ingredient (~4.8/5).
+3. `P0001-R0006` — selected `REF-PROD-MACRO`, texture/material-scale authority only (~4.5/5).
+4. `P0001-R0002` — selected provisional `REF-PROD-HERO-45`, secondary inferred geometry reference (~4.3/5).
 
-## Current approved references
-### Primary clean identity
-`P0001-R0003` → `REF-PROD-TOP-CLEAN` — APPROVED / SELECTED (~4.8/5).
-- visually preserves the same 25-truffle layout and source color/coating arrangement;
-- watermark and wooden background removed;
-- high product information density.
+Approved alternates: R0004 TOP-CLEAN, R0005 MACRO, R0001 HERO-45.
 
-`P0001-R0004` → approved TOP-CLEAN alternate (~4.7/5).
-
-### Secondary geometry
-`P0001-R0002` → `REF-PROD-HERO-45` — PASS WITH CAVEATS / selected secondary geometry (~4.3/5).
-`P0001-R0001` → alternate HERO-45 (~4.2/5).
-
-45-degree generation showed mild handmade→factory regularization, so generated novel views may support depth but must not override the original/clean-top identity (`OBS-0003`).
+## Important learning
+- Novel-angle generation can regularize handmade geometry and infer unsupported packaging thickness (`OBS-0003`).
+- Macro generation can provide useful particle/material evidence while still introducing shape or wrapper interpretation; macro refs therefore get explicit texture/material-only authority (`OBS-0004`).
+- Lower-authority references must not override visible facts from higher-authority sources.
 
 ## Exact next action
-Generate **two** `REF-PROD-MACRO` candidates using:
-`11_PROMPT_PACKAGES/PKG_REFERENCE_IMAGES_V03_MACRO/prompt.txt`
+Generate exactly two `REF-PROD-ASSORTMENT-DETAIL` candidates using:
+`11_PROMPT_PACKAGES/PKG_REFERENCE_IMAGES_V04_ASSORTMENT/prompt.txt`
 
-Preferred image inputs if multiple references are supported by the chosen image tool:
-1. original real product photo — highest authority;
-2. `P0001-R0003` — clean top supporting reference.
+Preferred inputs:
+1. original real product photo;
+2. R0003 clean top;
+3. R0006 macro only as particle/material-scale support.
 
-Do NOT use R0001/R0002 as macro input.
+Do not use R0002/R0001 HERO-45 for this pass. Keep prompt and inputs identical across the two runs. After attachment, register as `P0001-R0007` and `P0001-R0008`, perform Stage 05 QA and select one assortment-diversity ingredient before character generation.
 
-Keep prompt and inputs identical for both candidate generations. Expected future Runs: `P0001-R0005`, `P0001-R0006`.
-
-After upload:
-1. register/hash both assets;
-2. score edible particle scale, handmade geometry, dark-chocolate behavior, paper cup, material realism and artifacts;
-3. select macro winner or revise prompt;
-4. only then proceed to `REF-PROD-ASSORTMENT-DETAIL`.
+## What QA should test next
+- exactly six truffles;
+- both round nonpareils and elongated sprinkles;
+- supported distinct color families;
+- handmade variation without cloned geometry;
+- correct dark fluted cups;
+- realistic edible particle scale;
+- no invented coating families;
+- clean 3/4 group readability.
 
 ## Key evidence files
 - `13_EVALUATION/reports/reference_qa_hero45_v01.md`
 - `13_EVALUATION/reports/reference_qa_top_clean_v01.md`
-- `12_RUNS/P0001-R0001..R0004/`
-- `09_LEARNING/observations/OBS-0003_top_clean_edit_preserves_identity_better_than_novel_view.md`
-- `11_PROMPT_PACKAGES/PKG_REFERENCE_IMAGES_V03_MACRO/`
+- `13_EVALUATION/reports/reference_qa_macro_v01.md`
+- `12_RUNS/P0001-R0001` ... `P0001-R0006`
+- `03_PRODUCT_IDENTITY/identity_lock_v02.md`
+- `04_REFERENCE_STRATEGY/reference_plan.md`
+- `11_PROMPT_PACKAGES/PKG_REFERENCE_IMAGES_V04_ASSORTMENT/`
+- repo-global `OBS-0002`, `OBS-0003`, `OBS-0004`.
 
 ## Media continuity
-Generated binaries are not committed to normal Git; hashes and filenames are stored in Run metadata. A future session should ask only for any specific media required for visual QA, not for project re-explanation.
+Generated binaries are not committed to normal Git; hashes and attachment IDs are stored in Run metadata where available. If a new session needs visual comparison and cannot access the attachments, ask only for the needed images, not for project re-explanation.
