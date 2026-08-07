@@ -1,0 +1,36 @@
+{
+  "run_id": "P0001-R0006",
+  "project_id": "P0001",
+  "stage": "STAGE_04_REFERENCE_ASSET_CREATION",
+  "task": "product_reference_generation_macro",
+  "execution_mode": "external_manual",
+  "tool": "ChatGPT Image",
+  "model": "unknown",
+  "prompt_id": null,
+  "prompt_version": "PKG_REFERENCE_IMAGES_V03_MACRO",
+  "prompt_language": "en",
+  "reference_assets": [
+    "SESSION-ASSET-P0001-IMG-002",
+    "P0001-R0003"
+  ],
+  "settings": {},
+  "outputs": [
+    {
+      "attachment_file_id": "file_00000000641c81f49c15b6f41414521d",
+      "local_filename": "1000015959.png",
+      "sha256": "7ca657a905995b1d46ed6f2e3e85a15f33ad68e4ea159104ee543bc4c0cadd43",
+      "width": 1284,
+      "height": 1225
+    }
+  ],
+  "output_asset_status": "attached_in_chat_not_committed_binary",
+  "evaluation": {
+    "status": "pass_with_caveats",
+    "overall_score": 4.5
+  },
+  "failure_tags": [
+    "mild_geometry_regularization"
+  ],
+  "selected": true,
+  "notes": "Second macro candidate. Selected as primary texture/material reference because the dark fluted holder reads more convincingly as matte paper and the nonpareil scale/material is clean and usable. Main caveat is slightly too regular/spherical truffle geometry; the original and TOP-CLEAN references remain higher identity authority."
+}
