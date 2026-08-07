@@ -1,3 +1,3 @@
 run_id,project_id,stage,task,tool,model,evaluation_status,overall_score,selected
-P0001-R0001,P0001,STAGE_04_REFERENCE_ASSET_CREATION,product_reference_generation_hero_45,ChatGPT Image,unknown,pending_visual_qa,,False
-P0001-R0002,P0001,STAGE_04_REFERENCE_ASSET_CREATION,product_reference_generation_hero_45,ChatGPT Image,unknown,pending_visual_qa,,False
+P0001-R0001,P0001,STAGE_04_REFERENCE_ASSET_CREATION,product_reference_generation_hero_45,ChatGPT Image,unknown,pass_with_caveats,4.2,False
+P0001-R0002,P0001,STAGE_04_REFERENCE_ASSET_CREATION,product_reference_generation_hero_45,ChatGPT Image,unknown,pass_with_caveats,4.3,True
