@@ -9,18 +9,24 @@
   "prompt_id": null,
   "prompt_version": "PKG_REFERENCE_IMAGES_V01/RUN_1",
   "prompt_language": "en",
-  "reference_assets": [
-    "SESSION-ASSET-P0001-IMG-002"
-  ],
+  "reference_assets": ["SESSION-ASSET-P0001-IMG-002"],
   "settings": {},
   "external_share_url": "https://chatgpt.com/s/m_6a76360f676c8191872d12bfe552c957",
-  "outputs": [],
-  "output_asset_status": "not_ingested",
+  "outputs": [
+    {
+      "asset_id": "SESSION-ASSET-P0001-R0002-OUTPUT-01",
+      "storage": "chat_attachment_not_committed",
+      "sha256": "5a34729bb49b1a4f96f2e0a2671439cba1150f0dd2016b9d803bfe229a6d9f76"
+    }
+  ],
+  "output_asset_status": "visually_reviewed_not_committed",
   "evaluation": {
-    "status": "pending_visual_qa",
-    "overall_score": null
+    "status": "pass_with_caveats",
+    "overall_score": 4.3,
+    "scale": "0-5"
   },
-  "failure_tags": [],
-  "selected": false,
-  "notes": "Second ChatGPT Image candidate for REF-PROD-HERO-45. User reports this output and sibling P0001-R0001 look very similar to each other. Shared URL could not be fetched by the current ChatGPT session; direct visual QA requires image upload/attachment."
+  "failure_tags": ["proportion_drift", "packaging_drift", "style_drift"],
+  "selected": true,
+  "reference_role": "REF-PROD-HERO-45 provisional geometry_view",
+  "notes": "Direct QA completed after attachment. Preferred over R0001 for clearer depth/height evidence. Must remain secondary to original/source-derived top identity reference because novel-angle generation regularized handmade geometry and inferred box structure."
 }
