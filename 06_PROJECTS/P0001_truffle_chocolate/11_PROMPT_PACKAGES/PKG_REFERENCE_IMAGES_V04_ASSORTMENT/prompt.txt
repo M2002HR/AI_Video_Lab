@@ -1,0 +1,250 @@
+REFERENCE HIERARCHY — STRICT ROLE SEPARATION
+
+Use the uploaded ORIGINAL REAL PRODUCT PHOTOGRAPH as the highest-priority and authoritative source for product identity, assortment diversity, supported colors, coating families, handmade character and packaging language.
+
+If the selected clean top-down reference P0001-R0003 is also uploaded, use it only as supporting product-identity evidence and for clearer reading of the assortment.
+
+If the selected macro reference P0001-R0006 is also uploaded, use it ONLY for micro-scale material evidence: the approximate size, contact, matte/satin edible appearance and physical attachment of tiny round nonpareils to dark chocolate, plus the matte folded-paper character of the dark fluted cup.
+
+The macro reference has NO authority to make every truffle a multicolor round-nonpareil sphere. The original real product photograph remains the authority for variety.
+
+Do not use generated HERO-45 references as identity authority for this task.
+
+TASK
+
+Create ONE clean photorealistic close three-quarter product-reference photograph showing a compact group of SIX representative finished handmade chocolate truffles from the same real assortment.
+
+This is a diversity/assortment reference for later AI video generation.
+
+Its purpose is to teach the later video model that the product is an intentionally varied handmade collection containing different coating types and color families while all pieces remain members of the same truffle product family.
+
+Do not create a new product line. Do not redesign the truffles. Do not create a stylized candy collection.
+
+SUBJECT COUNT — EXACTLY SIX TRUFFLES
+
+Show exactly SIX finished truffles.
+
+Each truffle sits in its own small dark charcoal-gray fluted paper candy cup.
+
+All six belong to the same real product family and have approximately consistent real-world size, but they must retain small natural handmade differences.
+
+Do not show a full box of 20+ truffles.
+Do not show fewer than six.
+Do not show more than six.
+Do not duplicate one truffle to fill the group.
+
+REQUIRED ASSORTMENT DIVERSITY
+
+Use only coating/color families that are clearly supported by the original real product photograph.
+
+The six-truffle group should visibly include a balanced selection such as:
+
+1. one PINK truffle densely covered in tiny ROUND nonpareils;
+2. one BLUE or BLUE-DOMINANT truffle densely covered in tiny ROUND nonpareils;
+3. one PURPLE truffle densely covered in tiny ROUND nonpareils;
+4. one MULTICOLOR / RAINBOW truffle densely covered in tiny ROUND nonpareils;
+5. one truffle coated mainly with THIN ELONGATED SPRINKLES in a supported yellow/lime or orange/brown family;
+6. one additional supported contrasting truffle, preferably WHITE round nonpareils or RED-GREEN-WHITE round nonpareils.
+
+This list defines the diversity intent, not a demand for artificial color perfection.
+
+Preserve natural handmade variation and source-supported color relationships.
+
+Do not invent:
+- metallic decorations;
+- chocolate drizzle patterns;
+- nuts;
+- coconut flakes;
+- powdered sugar;
+- candy shells;
+- pearls larger than source nonpareils;
+- frosting;
+- fruit pieces;
+- logos or edible printing.
+
+COATING-FAMILY ACCURACY — CRITICAL
+
+The collection contains TWO important decoration families:
+
+A. tiny ROUND edible sugar nonpareils;
+B. thin ELONGATED edible sprinkles.
+
+Both must be clearly represented in this image.
+
+Do not convert all six truffles into one coating type.
+
+Do not turn elongated sprinkles into round beads.
+Do not turn round nonpareils into rods.
+
+The decorations are attached directly to dark chocolate.
+They are not separate hard candy shells.
+
+NONPAREIL AND SPRINKLE SCALE
+
+Keep individual decorations physically small relative to each truffle.
+
+Round nonpareils must look like tiny edible sugar particles, not pearls, marbles, toy beads or gemstones.
+
+Elongated sprinkles must be thin, short confectionery rods, not large sticks or plastic cylinders.
+
+Use realistic irregular placement, slight size variation, tiny contact shadows and believable attachment to the curved chocolate surfaces.
+
+No floating particles.
+No perfectly tiled patterns.
+No mathematically even spacing.
+
+HANDMADE GEOMETRY
+
+Each truffle is approximately spherical but hand-made.
+
+Preserve subtle differences in:
+- roundness;
+- diameter;
+- surface contour;
+- coating density;
+- seating angle in the cup.
+
+Do not make six cloned perfect spheres.
+
+Do not create extreme size variation either: all six should still read as members of the same boxed assortment.
+
+The visual result should feel hand-rolled and hand-decorated by an artisan chocolatier, not mass-produced by a factory.
+
+CHOCOLATE MATERIAL
+
+Where naturally visible through tiny gaps between decorations, show dark chocolate underneath.
+
+Chocolate must look edible, matte-to-soft-satin, with restrained food-like highlights.
+
+Do not create lacquered glossy bonbon shells.
+Do not make the truffles look plastic, ceramic or toy-like.
+
+PAPER CUPS — IDENTITY-CRITICAL
+
+Every truffle sits in ONE individual dark charcoal-gray fluted confectionery paper cup.
+
+The cups should be:
+- matte;
+- thin folded paper;
+- naturally pleated/fluted;
+- slightly rough in texture;
+- appropriately sized for one truffle.
+
+Do not make them glossy plastic.
+Do not make them metallic foil.
+Do not make them giant cupcake liners.
+Do not make them flower-shaped luxury wrappers.
+
+PACKAGING CONTEXT
+
+A small, restrained amount of natural kraft-brown cardboard may be visible around or beneath the group to communicate that these truffles belong in the real kraft gift box.
+
+However, do NOT show a newly designed luxury box.
+Do NOT invent a lid, insert, ribbon, label, logo or plastic window.
+
+The frame should remain focused on the six truffles and their diversity rather than packaging design.
+
+COMPOSITION
+
+Arrange the six truffles naturally close together in a compact group, as if they are occupying one portion of the original kraft box.
+
+Use a close three-quarter viewing angle approximately 30–40 degrees above the group.
+
+The camera should clearly show:
+- the rounded height of several truffles;
+- differences between round nonpareils and elongated sprinkles;
+- multiple color families;
+- the dark fluted cups;
+- enough surface detail to judge texture.
+
+Do not arrange them into a perfect hexagon.
+Do not create a rigid grid.
+Do not create excessive symmetry.
+Do not stack truffles on top of each other.
+
+All six should remain individually readable.
+
+BACKGROUND
+
+Use the same clean dark-neutral studio language as the approved references:
+
+soft charcoal-gray to near-black matte background/surface.
+
+No wooden planks.
+No props.
+No utensils.
+No bowls.
+No cocoa piles.
+No loose ingredients.
+No chefs.
+No miniature characters.
+No hands.
+No text.
+No logo.
+No watermark.
+No borders.
+No arrows.
+No contact-sheet layout.
+
+LIGHTING
+
+Use soft controlled premium food-photography lighting consistent with the other approved references.
+
+Large diffused key from upper-front-left.
+Subtle fill from the opposite side.
+Gentle separation only where needed.
+
+Lighting must keep all six color families readable while preserving believable chocolate, sugar-particle and paper-cup materials.
+
+Do not use harsh glossy highlights.
+Do not make nonpareils wet or glassy.
+Do not crush dark detail in the paper cups.
+
+DEPTH OF FIELD
+
+Use moderate depth of field.
+
+Several truffles across the group should be simultaneously readable.
+
+Do not use extreme macro blur where only one truffle is sharp and the rest become unusable.
+
+This image is a reference asset, so identity information matters more than cinematic blur.
+
+CAMERA / IMAGE CHARACTER
+
+Photorealistic premium food product photography.
+Natural perspective.
+No fisheye.
+No extreme wide angle.
+No dramatic dutch angle.
+No illustration/cartoon style.
+No CGI-perfect symmetry.
+
+REFERENCE CLEANLINESS
+
+Exactly six truffles.
+Exactly six individual paper cups.
+One coherent compact group.
+No duplicated floating truffles.
+No separate product panels.
+No collage.
+No labels.
+No captions.
+
+FINAL QUALITY PRIORITY
+
+Priority order:
+
+1. correct real product family;
+2. correct diversity of supported coating/color families;
+3. both round-nonpareil and elongated-sprinkle representation;
+4. realistic edible decoration scale;
+5. handmade variation;
+6. dark paper-cup fidelity;
+7. material realism;
+8. clean reference readability;
+9. aesthetic beauty.
+
+If a more beautiful result requires inventing new coating styles, making the group more symmetrical, cloning shapes, changing decoration scale or redesigning the product, reject that beautification.
+
+The final image must look like a credible close product photograph of six pieces selected from the same real truffle box shown in the original reference.
