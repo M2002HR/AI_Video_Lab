@@ -2,6 +2,12 @@
 
 این پوشه فقط پروژه‌های واقعی را نگه می‌دارد. پروژه demo در `13_EXAMPLES/` است و نباید وارد آمار واقعی شود.
 
+## Active projects
+
+| Project | Title | Status | Current stage | Next action |
+|---|---|---|---|---|
+| `P0001_truffle_chocolate` | Colorful Chocolate Truffle Miniature Commercial | active | STAGE_04 Reference Asset Creation | Generate Slots 1–4 from the reference-image prompt package, register Runs, then Reference QA |
+
 ## New project
 پروژه جدید از `05_TEMPLATES/PROJECT_TEMPLATE/` ساخته می‌شود. وقتی user product image + source/template prompt می‌دهد، `00_SYSTEM/FAST_START_PROTOCOL.md` اجرا شود.
 
