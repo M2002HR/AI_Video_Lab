@@ -1,0 +1,18 @@
+{
+  "run_id": "P0001-R0023",
+  "project_id": "P0001",
+  "stage": "STAGE_16_VIDEO_GENERATION",
+  "task": "flow_omni_video_baseline_v01",
+  "execution_mode": "external_manual",
+  "tool": "Google Flow",
+  "model": "Gemini Omni Flash",
+  "prompt_version": "PKG_FLOW_OMNI_VIDEO_V01",
+  "prompt_language": "en",
+  "reference_assets": ["P0001-R0016", "P0001-R0015", "P0001-R0020", "P0001-R0003", "P0001-R0010"],
+  "settings": {"duration_seconds": 10, "aspect_ratio": "16:9", "fps": 24, "resolution": "1280x720", "ingredient_count": 5},
+  "outputs": [{"filename": "153891504_1786175808814350.mp4", "sha256": "33cb5b1100a56f3385f72abb1f89c652ff0ff543b359cc87bdf965ef79216fbd", "width": 1280, "height": 720, "duration_seconds": 10.0, "fps": 24, "bytes": 2711228, "storage": "chat_attachment_not_committed"}],
+  "evaluation": {"status": "failed_gate_character_duplication", "overall_score": 3.6},
+  "failure_tags": ["duplicate_character", "object_count_instability", "offscreen_population_hallucination", "minor_shape_regularization"],
+  "selected": false,
+  "notes": "Camera path, product identity and hero-truffle continuity are otherwise strong, but an additional fourth red-uniform chef becomes visible from the far-right edge during the reveal (already partially visible around 2.4s, clear by ~3.0s) and persists through the final frame. This violates the exact-three-character hard gate and makes the run unusable without repair."
+}
