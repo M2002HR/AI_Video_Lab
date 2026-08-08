@@ -1,3 +1,3 @@
-# uncertainty log
+# Uncertainty Log
 
-Unknownها و روش رفع‌شان.
+Record unknowns, impact, confidence, and method for resolution.

@@ -1,86 +1,62 @@
-# AI START HERE — New Chat / New Agent Context Loader
+# AI Start Here
 
-این فایل نقطه ورود هر ChatGPT/AI agent جدید است. هدف: بدون نیاز به chat قبلی، در چند دقیقه بفهمد سیستم چیست، پروژه کجاست و مرحله بعد چیست.
+This is the entry point for every new ChatGPT/AI-agent session. The goal is to recover system and project context from the repository without relying on previous chat history.
 
-## مأموریت سیستم
-AI Video Ad Lab یک production + R&D system برای ساخت تبلیغات AI از ورودی‌هایی مثل **عکس محصول + prompt/template اولیه** است. خروجی مهم فقط ویدیو نیست؛ promptها، checklistها، SOPها، failure knowledge و tool knowledge باید بعد از هر پروژه بهتر شوند.
+## System mission
+AI Video Ad Lab is a production + R&D system for creating AI advertisements from inputs such as **product images + a source/template prompt**. Final media matters, but so do prompt quality, checklists, SOPs, failure knowledge, tool knowledge, and reusable learning.
 
-## پروتکل اجباری Context Load
-در session جدید این ترتیب را انجام بده:
+## Mandatory context-load protocol
+1. Inspect the repository/default branch and current head.
+2. Read `AGENTS.md`, `START_HERE.md`, `README.md`, `DASHBOARD.md`, `00_SYSTEM/INDEX.md`, and `00_SYSTEM/AI_OPERATOR_MANUAL.md`.
+3. Inspect `06_PROJECTS/INDEX.md` and/or project registry.
+4. If exactly one relevant active project exists, read its `project.json`, `STATUS.md`, `HANDOFF.md`, and files for the current stage without asking for a recap.
+5. If several projects are active and user context does not disambiguate, ask only which project is intended.
+6. If there is no active project and the user supplied product image(s) + source/template prompt, execute `00_SYSTEM/FAST_START_PROTOCOL.md`.
+7. Load only knowledge relevant to the current task; do not summarize the entire repository without purpose.
+8. Before continuing, give a short Context Snapshot: project, stage, approved items, blockers, next action.
 
-1. repository/default branch و آخرین commit را بررسی کن.
-2. این فایل‌ها را بخوان: `AGENTS.md`، `START_HERE.md`، `README.md`، `DASHBOARD.md`، `00_SYSTEM/INDEX.md`، `00_SYSTEM/AI_OPERATOR_MANUAL.md`.
-3. `06_PROJECTS/INDEX.md` یا registry پروژه‌ها را بررسی کن.
-4. اگر دقیقاً یک پروژه active است، بدون سؤال اضافی این‌ها را بخوان: `project.json`، `STATUS.md`، `HANDOFF.md` و فایل‌های مرحله فعلی.
-5. اگر چند پروژه active است و context کاربر مشخص نمی‌کند کدام را می‌خواهد، فقط نام/ID پروژه لازم را بپرس.
-6. اگر پروژه active نیست و کاربر عکس محصول + source/template prompt فرستاده، `00_SYSTEM/FAST_START_PROTOCOL.md` را اجرا کن؛ سؤال عمومی setup نپرس.
-7. فقط knowledge مرتبط با task فعلی را load کن؛ کل repo را بی‌هدف خلاصه نکن.
-8. قبل از ادامه، یک Context Snapshot کوتاه به کاربر بده: پروژه، stage، approved items، blocker، next action.
+## Scenario / multi-clip routing
+For scenario choice or 10/20/30/40-second work, read `00_SYSTEM/SCENARIO_ARCHITECTURE_SYSTEM.md`, `01_SOPS/SOP_07_SCENARIO_GENERATION.md`, and `04_CHECKLISTS/CHK_SCENARIO_ARCHITECTURE_MENU.md` before storyboard/prompt production.
 
-## Scenario / duration routing
+For 2–4 clips also read `00_SYSTEM/MULTI_CLIP_ARCHITECTURE.md`, `01_SOPS/SOP_MULTI_CLIP_SEQUENCE.md`, and `04_CHECKLISTS/CHK_MULTI_CLIP_CONTINUITY.md`.
 
-اگر کاربر درباره انتخاب سناریو، 10/20/30/40 ثانیه، یا ساخت 2/3/4 کلیپ صحبت می‌کند، قبل از storyboard/prompt این‌ها را بخوان:
-- `00_SYSTEM/SCENARIO_ARCHITECTURE_SYSTEM.md`
-- `01_SOPS/SOP_07_SCENARIO_GENERATION.md`
-- `04_CHECKLISTS/CHK_SCENARIO_ARCHITECTURE_MENU.md`
+The system must build an adaptive Scenario Architecture Menu and present only meaningful candidates. Do not recommend four clips merely because four are supported.
 
-اگر بیش از یک clip انتخاب شد، additionally:
-- `00_SYSTEM/MULTI_CLIP_ARCHITECTURE.md`
-- `01_SOPS/SOP_MULTI_CLIP_SEQUENCE.md`
-- `04_CHECKLISTS/CHK_MULTI_CLIP_CONTINUITY.md`
+## Fastest new-project input
+Required minimum:
+- at least one original product image;
+- source/template/reference prompt as text or file.
 
-سیستم باید ابتدا Scenario Architecture Menu adaptive بسازد و فقط گزینه‌های واقعاً معنادار را پیشنهاد کند؛ 4 clips صرفاً چون پشتیبانی می‌شود نباید پیشنهاد شود.
+Optional but useful:
+- target duration / clip count;
+- aspect ratio;
+- platform;
+- creative constraints;
+- style references;
+- verified process information.
 
-## وقتی کاربر فقط می‌گوید «خودت برو در جریان قرار بگیر»
-این را اجازه برای **خواندن repo و بازیابی context** در نظر بگیر. ابتدا پروتکل بالا را اجرا کن؛ از کاربر نخواه تاریخچه گفتگو را دوباره توضیح دهد مگر اطلاعات واقعاً در repo ثبت نشده باشد.
+Record low-risk assumptions and ask only when a decision is genuinely blocking or could waste substantial work.
 
-## سریع‌ترین شروع پروژه جدید
-Minimum viable inputs:
-- حداقل یک تصویر اصلی محصول؛
-- source/template/reference prompt به صورت متن یا فایل.
+## Media persistence across chats
+For meaningful, non-sensitive media that is locally accessible:
+1. record provenance and hash when possible;
+2. create a low-resolution proxy using `00_SYSTEM/MEDIA_PROXY_PIPELINE.md`;
+3. commit it under `19_HANDOFF_ASSETS/git_previews/`;
+4. update `proxy_manifest.json` and `HANDOFF.md` as needed.
 
-اختیاری ولی مفید:
-- مدت ویدیو یا clip count؛
-- aspect ratio؛
-- پلتفرم؛
-- creative constraints؛
-- style references؛
-- process اطلاعات واقعی.
+Default profiles are WebP up to 1280px long edge at approximately quality 72, and MP4/H.264 up to 1280px long edge at approximately 24fps / CRF 30. Full-resolution originals stay outside normal Git by default. A proxy is not source of truth.
 
-اگر optionalها وجود ندارند، assumption کم‌ریسک را ثبت کن و فقط وقتی تصمیم blocker است سؤال بپرس.
+In a new chat, inspect available Git proxies first. Request re-attachment only when original/full-resolution detail is actually required.
 
-## Media persistence بین chatها
+## End-of-session protocol
+Before leaving an active project after meaningful work:
+- update `STATUS.md`;
+- update `HANDOFF.md`;
+- persist important feedback/decisions in `18_CONVERSATION_LOG/`;
+- register new Runs/prompts/evaluations;
+- sync required media proxies/manifest or document why metadata-only was used;
+- persist reusable workflow discoveries through the Documentation Contract;
+- commit meaningful changes.
 
-سیستم از نسخه 1.3 به بعد برای media غیرحساس از **low-resolution Git proxies** استفاده می‌کند.
-
-وقتی تصویر/ویدیوی مهم locally accessible است:
-1. original metadata/hash را ثبت کن؛
-2. طبق `00_SYSTEM/MEDIA_PROXY_PIPELINE.md` یک proxy کم‌حجم بساز؛
-3. آن را در `19_HANDOFF_ASSETS/git_previews/` commit کن؛
-4. `proxy_manifest.json` و HANDOFF را sync کن.
-
-Default proxy:
-- image: WebP ≤1280px long edge, quality≈72؛
-- video: MP4/H.264 ≤1280px long edge, ≈24fps, CRF≈30.
-
-Original/full-resolution همچنان خارج Git معمولی می‌ماند و proxy source of truth نیست.
-
-Repository ممکن است public باشد؛ low quality به معنی private نیست. asset حساس یا `do_not_publish` باید metadata-only بماند.
-
-در chat جدید ابتدا Git proxy را برای visual context استفاده کن. فقط وقتی full-resolution/detail واقعی لازم است original را از user بخواه دوباره attach کند.
-
-جزئیات:
-- `00_SYSTEM/STORAGE_POLICY.md`
-- `00_SYSTEM/MEDIA_PROXY_PIPELINE.md`
-
-## پایان هر session مهم
-قبل از رها کردن یک پروژه فعال:
-- `STATUS.md` را به‌روز کن؛
-- `HANDOFF.md` را به‌روز کن؛
-- feedback/decision مهم را در `18_CONVERSATION_LOG/` ثبت کن؛
-- Run/prompt/evaluation جدید را ثبت کن؛
-- media proxy/manifest لازم را sync کن یا دلیل metadata-only را ثبت کن؛
-- workflow discovery یا system knowledge را طبق `DOCUMENTATION_CONTRACT.md` ثبت کن؛
-- تغییرات لازم را commit کن.
-
-هدف این است که session بعدی بتواند تا حد ممکن فقط با repo کار را ادامه دهد.
+## English-only repository rule
+All persisted repository text must be English. This includes documentation, prompts, templates, examples, comments, handoffs, feedback translations, JSON string values, and operational logs. User-facing chat may use the user’s preferred language. Run `python 11_TOOLS/check_english_docs.py` or rely on the CI guard before declaring a language migration complete.

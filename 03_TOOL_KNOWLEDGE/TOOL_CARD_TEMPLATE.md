@@ -1,15 +1,14 @@
----
-tool_id: TOOL-UNKNOWN-001
-tool_name: unknown
-category: unknown
-verification_status: unverified
-last_verified: null
----
+# Tool Card Template
 
-## Official references
+## Identity
+- Tool/vendor:
+- Category:
+- Last verified:
 
-ندارد؛ URL و تاریخ فقط پس از سند رسمی ثبت می‌شود.
+## Vendor evidence
+No capability claim is recorded without an official/reliable source URL and verification date.
 
-## Internal evidence and recommendation
+## Internal evidence
+Record strengths, weaknesses, prompt/reference behavior, output constraints, preferred tasks, Run/experiment links, and confidence. Until evidence exists, use `unknown` / `unverified` rather than guessing.
 
-strength، weakness، prompt/reference behavior، output constraint و preferred task تا evidence unknown است. observation را با Run/EXP پیوند دهید و از claim vendor جدا کنید. confidence: unverified.
+Keep vendor claims and internal observations separate.

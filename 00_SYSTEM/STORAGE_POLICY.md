@@ -1,138 +1,68 @@
-# STORAGE POLICY
+# Storage Policy
 
-## اصل
-media اصلی و تولیدی بخشی از evidence پروژه است. **Original/full-resolution media به‌صورت خودکار داخل Git معمولی ذخیره نمی‌شود.** در عوض، برای continuity بین chatها سیستم از preview/proxy کم‌حجم version-controlled استفاده می‌کند و metadata، prompt، evaluation، decision، handoff و hash نیز version-controlled می‌مانند.
+## Principle
+Original and generated media are project evidence. Full-resolution media is **not automatically stored in normal Git**. For cross-chat continuity, the default system uses low-resolution version-controlled proxies plus metadata, hashes, and provenance.
 
-## وضعیت فعلی repository
-Repository در زمان آخرین بررسی `public` است.
+## Public repository warning
+The repository may be public. Lowering quality does not make an asset private. Sensitive, confidential, client, or `do_not_publish` media must not be uploaded even as a proxy unless the user explicitly selects a safe private storage policy.
 
-این نکته حیاتی است: **کم‌کردن کیفیت، فایل را private نمی‌کند.** هر previewی که در این repo commit شود برای عموم قابل مشاهده است.
+## Storage modes
+### `metadata_only`
+Use for sensitive media or when binary access/processing is unavailable. Git stores text metadata/hash/location only.
 
-بنابراین:
-- preview رسانه‌های غیرحساس می‌تواند طبق policy زیر به‌صورت خودکار commit شود؛
-- asset محرمانه، فایل مشتری، محتوای دارای اطلاعات حساس یا هر چیزی که کاربر explicitly `do_not_publish` اعلام کند نباید حتی به‌صورت preview در repo public ذخیره شود؛
-- در صورت شک درباره حساسیت، operator قبل از publication سؤال می‌پرسد یا metadata-only ثبت می‌کند.
+### `git_previews` — default for publishable meaningful media
+For every meaningful, non-sensitive, locally accessible project media item, create a low-resolution proxy under `19_HANDOFF_ASSETS/git_previews/` and register it in `proxy_manifest.json`.
 
-## بسیار مهم — Chat upload → Proxy Git Sync
+Meaningful media includes original/source images used by the project, registered generated-image candidates, approved references/keyframes, video Runs that receive real QA, and selected final media. Disposable unregistered scratch outputs do not require proxies.
 
-تصویر یا ویدیویی که کاربر داخل ChatGPT attach می‌کند همچنان مستقیماً همان binary را به GitHub منتقل نمی‌کند. workflow جدید این است:
+### Optional future modes
+Git LFS in a private repository, DVC/object storage, NAS, or synced private storage may hold originals/full-res when explicitly configured. Proxy mode alone does not authorize full-resolution Git storage.
 
-`CHAT/TOOL MEDIA → register original metadata/hash → generate low-res proxy → commit proxy + manifest → use proxy for cross-chat continuity`
-
-Original منبع حقیقت است؛ Git proxy فقط برای context، visual recall و QA سبک است.
-
-جزئیات عملی: `00_SYSTEM/MEDIA_PROXY_PIPELINE.md`.
-
-## Media storage modes
-
-### MODE A — Metadata-only
-برای media حساس یا زمانی که binary قابل دسترسی/پردازش نیست. Git فقط text/metadata/hash را نگه می‌دارد.
-
-### MODE B — Git previews — CURRENT SYSTEM DEFAULT FOR NON-SENSITIVE MEDIA
-ChatGPT/AI operator باید برای هر **media معنی‌دار پروژه که locally accessible است** یک proxy کم‌حجم بسازد و در project `19_HANDOFF_ASSETS/git_previews/` commit کند.
-
-معنی‌دار یعنی یکی از این موارد:
-- original/source image مورد استفاده در پروژه؛
-- generated image candidate که به Run ثبت شده؛
-- approved reference/keyframe؛
-- generated video Run که QA/مقایسه می‌شود؛
-- selected/final media.
-
-برای scratch خروجی‌ای که نه Run شده، نه بررسی شده و نه روی تصمیم اثر دارد proxy اجباری نیست.
-
-### MODE C — Git LFS
-برای originals/full-res یا پروژه‌های بسیار media-heavy در repo خصوصی قابل بررسی است. قبل از فعال‌سازی تصمیم صریح user لازم است.
-
-### MODE D — External private media store
-DVC / cloud object storage / NAS / synced private folder؛ Git manifest/hash/path و proxyهای لازم را نگه می‌دارد.
-
-## Proxy profiles — default
-
+## Default proxy profiles
 ### Images
-- output: `WebP`
-- maximum long edge: `1280 px`
-- quality target: `72`
-- EXIF/metadata stripped
-- no upscaling
-- preserve aspect ratio
-- target typical size: roughly `100–600 KB`
+- WebP;
+- maximum long edge 1280px, no upscaling;
+- quality approximately 72;
+- normalize orientation / RGB when possible;
+- strip EXIF/metadata;
+- record dimensions, bytes, SHA-256, and actual profile.
 
-اگر text/label micro-detail برای cross-chat judgment حیاتی است، operator می‌تواند به‌طور مستدل profile را تا 1600px افزایش دهد و در manifest ثبت کند.
+A justified 1600px profile may be used when cross-chat micro-detail is necessary.
 
 ### Videos
-- output: `MP4 / H.264 / yuv420p`
-- maximum long edge: `1280 px` (برای 16:9 معمولاً 1280×720)
-- frame rate: cap/normalize near `24 fps` برای proxy
-- quality: approximately `CRF 30`
-- audio: AAC approximately `96 kbps` در صورت وجود
-- `faststart` enabled
-- target typical size for a 10s clip: preferably below about `8 MB`
+- MP4 / H.264;
+- preserve aspect ratio;
+- maximum long edge 1280px, no upscaling;
+- normalize/cap near 24fps;
+- CRF approximately 30;
+- AAC approximately 96kbps if audio is retained;
+- record duration, fps, dimensions, bytes, SHA-256, and profile.
 
-اگر proxy از budget بزرگ‌تر شد، fallback به CRF 32 یا maximum long edge 960/720 مجاز است و profile واقعی باید manifest شود.
+If proxy size is excessive, CRF 32 or 960/720 maximum dimensions are acceptable fallbacks when recorded in the manifest.
 
-## Naming
+## Naming and manifest
+Proxy filenames must be traceable to a project asset/Run, not ambiguous names such as `final2.jpg`.
 
-Proxyها باید به asset/Run قابل ردیابی باشند:
+Each project should maintain `19_HANDOFF_ASSETS/proxy_manifest.json` with source asset/Run ID, role, source location/filename, original hash when available, proxy path/hash, dimensions, duration/fps for video, compression profile, creation time, publication/privacy status, and `source_of_truth: false`.
 
-`<SOURCE_ID>__<ROLE>__preview.webp`
+## Definition of Done for media persistence
+When meaningful media affects a project decision and proxy sync is allowed:
+1. register Run/asset metadata;
+2. create the proxy;
+3. store it in `19_HANDOFF_ASSETS/git_previews/`;
+4. update the manifest;
+5. commit the proxy and metadata;
+6. update `HANDOFF.md` when cross-chat visibility matters.
 
-`<RUN_ID>__video__preview.mp4`
+## Git safety
+`.gitignore` should keep originals and heavy media excluded and re-include only the standard proxy path/formats. Binary media outside that path should not enter normal Git accidentally.
 
-مثال:
-- `P0002-R0014__KF01__preview.webp`
-- `P0002-R0031__video__preview.mp4`
+## New-chat use
+A new session should inspect Git proxies first for visual context. Request original/full-resolution media only when pixel-level QA, fine texture/typography, final delivery judgment, or generation input requires it. A proxy is not automatically an authoritative generation ingredient.
 
-نام مبهم مانند `final2.jpg` ممنوع است.
-
-## Proxy manifest
-
-هر پروژه باید `19_HANDOFF_ASSETS/proxy_manifest.json` یا معادل مستند داشته باشد و تا حد امکان شامل این موارد باشد:
-- source asset ID / run ID؛
-- role؛
-- original filename/location description؛
-- original SHA-256 وقتی قابل محاسبه است؛
-- proxy path؛
-- proxy SHA-256؛
-- proxy width/height؛
-- duration/fps برای video؛
-- compression profile؛
-- created_at؛
-- privacy/publication status؛
-- `source_of_truth: false` برای proxy.
-
-## Commit contract
-
-وقتی media جدید روی تصمیم پروژه اثر می‌گذارد و proxy sync مجاز است، task تا زمانی که این موارد انجام نشده کامل نیست:
-1. Run/asset metadata ثبت شود؛
-2. proxy ساخته شود؛
-3. proxy در `19_HANDOFF_ASSETS/git_previews/` ذخیره شود؛
-4. manifest به‌روز شود؛
-5. Git commit زده شود؛
-6. `HANDOFF.md` در صورت اهمیت cross-chat به proxy اشاره کند.
-
-در صورت batch کوچک، proxy و metadata مرتبط ترجیحاً در یک commit موضوعی باشند.
-
-## Git rule
-
-`.gitignore` originals و media سنگین را همچنان ignore می‌کند، ولی فقط مسیر استاندارد `06_PROJECTS/**/19_HANDOFF_ASSETS/git_previews/` برای `*.webp` و `*.mp4` re-include می‌شود.
-
-بنابراین media binary خارج از آن مسیر نباید اتفاقی وارد Git شود.
-
-## استفاده در chat جدید
-
-Chat جدید ابتدا proxy موجود در Git را برای context می‌خواند. اگر تصمیم نیازمند جزئیات full-resolution، pixel-level QA یا generation input با کیفیت اصلی است، operator باید original را دوباره attach/request کند.
-
-**Proxy جای original generation ingredient را نمی‌گیرد مگر کاربر یا tool limitation صریحاً این را ایجاب کند.**
-
-## Media classes
-1. **Original/source**: هرگز overwrite نشود؛ full-res به‌صورت پیش‌فرض خارج Git.
-2. **Generated candidate**: Run provenance + proxy در صورت meaningful بودن.
-3. **Approved reference**: role/approval + proxy.
-4. **Final media**: final metadata + proxy؛ master full-res خارج Git مگر storage mode دیگری انتخاب شود.
-5. **Handoff proxy**: کم‌حجم، version-controlled، `source_of_truth=false`.
-
-## Hashing
-`hash-assets` در صورت دسترسی محلی SHA-256 می‌سازد تا دقیقاً معلوم باشد کدام media در Run استفاده شده است. proxy نیز hash مستقل دارد.
-
-## آینده / change rule
-Git LFS، DVC، NAS، cloud object storage یا synced private storage می‌توانند بعداً اضافه شوند. originals/full-res نباید صرفاً به دلیل فعال بودن proxy mode وارد Git معمولی شوند.
+## Provenance classes
+1. Original/source — never overwrite; full-res outside Git by default.
+2. Generated candidate — Run provenance plus proxy if meaningful.
+3. Approved reference/keyframe — explicit status plus proxy.
+4. Final media — final metadata plus proxy; master full-res outside Git unless another storage mode is chosen.
+5. Handoff proxy — low-resolution, version-controlled, `source_of_truth=false`.

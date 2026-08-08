@@ -1,66 +1,41 @@
-# شروع از اینجا
+# Start Here
 
-این repo طوری طراحی شده که لازم نباشد مسیرها، IDها یا جزئیات session قبلی را حفظ کنید. **ChatGPT باید bookkeeping را انجام دهد و repo حافظه پایدار باشد.**
+This repository is designed so the user does not need to remember paths, IDs, or details from a prior session. **ChatGPT handles the bookkeeping and the repository is persistent memory.**
 
-## شروع سریع پروژه جدید
-دو ورودی اصلی کافی است:
-1. عکس/عکس‌های اصلی محصول؛
-2. prompt/template/reference prompt اولیه.
+## Fast start for a new project
+Two inputs are normally enough:
+1. at least one original product image;
+2. a source/template/reference prompt.
 
-آن‌ها را در chat بفرستید و بگویید:
+Send them in chat and ask the operator to start a new project, read the repository, register the inputs, and execute Fast Start. The operator should avoid an unnecessary questionnaire, create the project ID, preserve source inputs, analyze the source prompt, build an initial identity lock and reference strategy, update `STATUS.md`/`HANDOFF.md`, and stop only at a real decision gate or external-generation step.
 
-> «با این عکس محصول و این پرامپت یک پروژه جدید شروع کن؛ خودت repo را بخوان، ورودی‌ها را ثبت کن و طبق سیستم مرحله اول را جلو ببر.»
+## Choosing scenario and duration
+If duration is not known, ask the operator to assess the product/template capacity for 1–4 clips and present only genuinely distinct scenario architectures. The system supports 10s, 20s, 30s, and 40s patterns when the tool uses 10-second clips, but longer is not automatically better.
 
-ChatGPT باید بدون questionnaire غیرضروری:
-- context repo را load کند؛
-- project ID بسازد؛
-- original inputs را immutable ثبت کند؛
-- source prompt را reverse-engineer کند؛
-- product identity اولیه را بسازد؛
-- reference strategy را مشخص کند؛
-- `STATUS.md` و `HANDOFF.md` را به‌روز کند؛
-- در اولین gate واقعی یا نیاز به generation خارجی توقف کند.
+If duration is already known, state it directly, for example: “I want a 30-second ad made from 3x10s clips. Show me the best distinct scenario architectures first.” The operator must present a compact Scenario Architecture Menu before heavy production.
 
-## انتخاب سناریو و مدت
-اگر هنوز نمی‌دانید 10، 20، 30 یا 40 ثانیه بهتر است، بگویید:
+## Starting a fresh chat mid-project
+Provide the repository and say: “This is our project repository. Read `AI_START_HERE.md`, recover the current context yourself, and tell me where we are.”
 
-> «ظرفیت این محصول و template را بررسی کن و برای 1 تا 4 کلیپ، فقط سناریوهای واقعاً معنادار را در یک منوی قابل انتخاب پیشنهاد بده؛ زیاده‌روی نکن.»
+Do not restate the entire previous chat. If a specific full-resolution asset is unavailable and genuinely required, the operator should request only that asset.
 
-سیستم باید `SCENARIO_ARCHITECTURE_SYSTEM.md` را اجرا کند، ظرفیت durationها را بسنجد و candidateهای distinct ارائه دهد. 4 کلیپ صرفاً چون سیستم پشتیبانی می‌کند پیشنهاد نمی‌شود.
+## Common requests
+- New project: “Create a project for this product and run Fast Start.”
+- Scenario menu: “Build a Scenario Architecture Menu with only distinct options.”
+- 2 clips: “Suggest meaningful 2x10s / 20s architectures.”
+- 3 clips: “Suggest meaningful 3x10s / 30s architectures.”
+- 4 clips: “Check whether this product truly supports 4x10s; recommend a shorter sequence if not.”
+- Continue: “Read project status and execute the next logical stage.”
+- Prompt package: “Instantiate the best current validated/active prompt for the next stage.”
+- Register external output: “Register this output as a Run with its prompt, references, settings, and tool/model.”
+- Compare Runs: “Compare these Runs using the system rubric and assign failure tags.”
+- Feedback: “Record this feedback and decide whether it is an observation or has enough evidence for a system change.”
+- End session: “Complete project handoff and commit all required documentation.”
 
-اگر از قبل duration را می‌دانید:
+## Images and videos
+Chat attachments are not automatically identical to repository media. For meaningful, non-sensitive media that is locally accessible, the operator should create a low-resolution proxy, store it in the project `19_HANDOFF_ASSETS/git_previews/`, update `proxy_manifest.json`, and commit it. Full-resolution originals stay outside normal Git unless an explicit storage policy says otherwise.
 
-> «برای این محصول یک تبلیغ 30 ثانیه‌ای سه‌کلیپی می‌خواهم. سناریوهای مناسب 3×10s را پیشنهاد بده تا انتخاب کنم.»
+Low resolution is not a privacy control. This repository may be public. Sensitive or `do_not_publish` media must remain metadata-only unless the user explicitly chooses a safe private storage mode.
 
-بعد از انتخاب، سیستم Master Sequence و Clip Contractها را می‌سازد.
-
-## شروع یک chat جدید در میانه پروژه
-repo را در اختیار ChatGPT قرار دهید و فقط بگویید:
-
-> «این repo پروژه ماست. `AI_START_HERE.md` را بخوان، خودت برو در جریان قرار بگیر و بگو الان کجای کاریم.»
-
-لازم نیست chat قبلی را دوباره توضیح دهید. اگر media خاصی از session قبلی از طریق repo قابل مشاهده نباشد، ChatGPT فقط همان asset لازم را برای re-attach درخواست می‌کند.
-
-## کارهای رایج
-- شروع پروژه: «برای این محصول پروژه جدید بساز و Fast Start را اجرا کن.»
-- سناریو: «Scenario Architecture Menu بساز و فقط گزینه‌های distinct را بده.»
-- 2 کلیپ: «برای 20 ثانیه 2×10s سناریوهای مناسب را پیشنهاد بده.»
-- 3 کلیپ: «برای 30 ثانیه 3×10s سناریوهای مناسب را پیشنهاد بده.»
-- 4 کلیپ: «بررسی کن آیا این محصول واقعاً ظرفیت 4×10s دارد؛ اگر دارد سناریو پیشنهاد بده، اگر نه کوتاه‌تر را توصیه کن.»
-- ادامه: «وضعیت پروژه را بخوان و مرحله منطقی بعدی را انجام بده.»
-- ساخت prompt package: «برای مرحله بعد بهترین prompt تاییدشده/فعال فعلی را instantiate کن و package بده.»
-- ثبت خروجی خارجی: «این خروجی ابزار X است؛ prompt/reference/settings را به عنوان Run ثبت کن.»
-- مقایسه: «این Runها را با rubric سیستم مقایسه کن و failure tag بده.»
-- feedback: «این نکته را ثبت کن؛ مشخص کن observation است یا evidence کافی برای تغییر استاندارد داریم.»
-- بهبود prompt: «بر اساس Runهای اخیر ببین prompt فعلی چه چیزی کم دارد و candidate version بساز.»
-- پایان session: «handoff پروژه را کامل کن و تغییرات لازم را commit کن.»
-
-## درباره عکس‌ها و ویدیوها
-attachmentهایی که در ChatGPT می‌فرستید **خودکار داخل GitHub ذخیره نمی‌شوند**. repo فعلاً text/metadata/prompt/evaluation را version می‌کند و binary media طبق `.gitignore` به‌طور پیش‌فرض خارج Git است. جزئیات و گزینه‌های Git LFS / previews / external storage در `00_SYSTEM/STORAGE_POLICY.md` است.
-
-## اصل مهم
-ورودی اصلی، Runها و نسخه‌های تاریخی overwrite نمی‌شوند. سیستم باید بتواند بعداً توضیح دهد هر خروجی با چه prompt، reference، tool/model و تصمیماتی ساخته شده و دقیقاً چرا prompt/checklist/SOP بعدی بهتر شده است.
-
-برای AI جدید: `AI_START_HERE.md`  
-نقشه سیستم: `00_SYSTEM/INDEX.md`  
-قواعد اپراتور: `AGENTS.md` و `00_SYSTEM/AI_OPERATOR_MANUAL.md`
+## Language policy
+All persisted repository documentation, logs, prompts, templates, examples, comments, and metadata text must be English. User-facing chat may use the user’s preferred language.

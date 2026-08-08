@@ -1,17 +1,13 @@
-# CHK CREATIVE DIRECTION
-
-## نسخه
-
-1.0.0
+# Creative Direction
 
 ## Gate
+All required items must pass or be marked N/A with rationale.
 
-همهٔ requiredها pass یا N/A مستدل.
+## Checklist
+- [ ] Brief/campaign goal is explicit
+- [ ] Emotion/metaphor/realism/scale/environment are coherent
+- [ ] Camera/lighting/rhythm are intentional
+- [ ] Product remains the commercial priority
 
-## موارد
-
-- [ ] campaign/emotion/metaphor/realism/scale/environment/camera/light/rhythm/product priority و سازگاری brief
-
-## ثبت
-
-نتیجه، استثنا، Run/فایل و تصمیم را در STATUS یا review ثبت کنید.
+## Record
+Persist result, exceptions, relevant Run/file IDs, and decision in the project review/STATUS as appropriate.

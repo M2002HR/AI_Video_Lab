@@ -1,3 +1,3 @@
-# timeline
+# Timeline
 
-زمان، beat، action، camera، continuity، final hero.
+Record time range, beat, action, camera, continuity requirements, audio cue, and final hero state.

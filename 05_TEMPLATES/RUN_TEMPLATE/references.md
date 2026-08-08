@@ -1,1 +1,1 @@
-هر reference: relative path، role و hash.
+For each reference record relative path/source, role, authority, and hash when available.

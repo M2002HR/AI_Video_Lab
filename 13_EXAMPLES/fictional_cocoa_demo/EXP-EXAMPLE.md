@@ -1,1 +1,1 @@
-Hypothesis demo: سه beat در 10s از هفت beat پایدارتر است. controls: product/prompt/tool؛ variable: beat count؛ hypothetical.
+Demo hypothesis/experiment: three beats in 10 seconds may be more stable than seven. Controls: product/prompt/tool; variable: beat count. Hypothetical only.

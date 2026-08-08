@@ -1,15 +1,3 @@
----
-tool_id: TOOL-UNKNOWN-001
-tool_name: unknown
-category: unknown
-verification_status: unverified
-last_verified: null
----
+# Tool Card Template
 
-## Official references
-
-ندارد؛ URL و تاریخ فقط پس از سند رسمی ثبت می‌شود.
-
-## Internal evidence and recommendation
-
-strength، weakness، prompt/reference behavior، output constraint و preferred task تا evidence unknown است. observation را با Run/EXP پیوند دهید و از claim vendor جدا کنید. confidence: unverified.
+Record vendor/tool identity, official claims with URL/date, internal evidence, strengths/weaknesses, constraints, preferred tasks, and confidence. Unknown remains unknown.

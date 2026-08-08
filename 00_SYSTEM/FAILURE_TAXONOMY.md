@@ -1,178 +1,72 @@
-# Failure taxonomy
+# Failure Taxonomy
 
-هر tag نشانه است نه علت قطعی؛ Run باید symptoms، cause محتمل، stage منشأ و fix را ثبت کند.
+A failure tag describes a symptom, not a proven root cause. Every tagged Run should record visible symptoms, likely cause(s), origin stage, severity, and repair/regenerate decision.
 
 ## Product identity
+- `product_identity_drift` — output no longer matches locked product identity.
+- `wrong_product_category` — product becomes another category.
+- `geometry_morphing` — shape changes unexpectedly across frame/time.
+- `proportion_drift` — dimensions/ratios deviate.
+- `texture_drift` — surface treatment/material changes.
+- `color_drift` — unsupported color shift.
+- `packaging_drift` — package geometry/material/style changes.
+- `component_count_error` — incorrect count of product/package components.
+- `logo_corruption` — logo is malformed or inconsistent.
+- `text_corruption` — required visible text is malformed/invented.
 
-### product_identity_drift
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
+## Temporal continuity
+- `object_teleportation` — object changes position without plausible motion.
+- `object_duplication` — extra copy appears.
+- `object_disappearance` — required object vanishes.
+- `scale_instability` — apparent physical scale pumps independently of camera.
+- `continuity_break` — scene state cannot be reconciled across time.
+- `sudden_pose_change` — character/object pose changes discontinuously.
+- `temporal_texture_flicker` — texture or decoration flickers.
 
-### wrong_product_category
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### geometry_morphing
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### proportion_drift
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### texture_drift
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### color_drift
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### packaging_drift
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### component_count_error
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### logo_corruption
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### text_corruption
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-## Temporal
-
-### object_teleportation
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### object_duplication
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### object_disappearance
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### scale_instability
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### continuity_break
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### sudden_pose_change
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### temporal_texture_flicker
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-## Physics interaction
-
-### bad_contact
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### intersecting_geometry
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### floating_object
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### incorrect_gravity
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### impossible_deformation
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### liquid_behavior_error
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### tool_interaction_error
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
+## Physics / interaction
+- `bad_contact` — contact point is visually/physically wrong.
+- `intersecting_geometry` — objects pass through each other.
+- `floating_object` — unsupported object floats.
+- `incorrect_gravity` — motion contradicts gravity.
+- `impossible_deformation` — implausible shape deformation.
+- `liquid_behavior_error` — liquid flow/contact is implausible.
+- `tool_interaction_error` — tool/hand/object mechanics are incorrect.
 
 ## Character
+- `bad_hands` — malformed hands/fingers.
+- `extra_limbs` — extra or missing limbs.
+- `duplicate_character` — extra copy of a character appears.
+- `character_identity_drift` — face/body identity changes.
+- `clothing_drift` — wardrobe changes unexpectedly.
+- `task_confusion` — character performs the wrong action/role.
 
-### bad_hands
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
+## Camera / focus
+- `camera_jump` — camera state changes discontinuously.
+- `unintended_zoom` — digital/optical zoom not requested.
+- `unstable_framing` — jitter or inconsistent composition.
+- `excessive_camera_motion` — motion overwhelms the intended action/product.
+- `focus_error` — important subject becomes unintentionally unreadable.
 
-### extra_limbs
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
+## Lighting / scene
+- `lighting_flicker` — lighting intensity/color changes over time.
+- `shadow_inconsistency` — shadows contradict object/light continuity.
+- `background_morph` — background/environment reconstructs unexpectedly.
+- `reference_contamination` — unwanted content from a reference leaks into output.
+- `unwanted_prop` — undeclared prop appears.
+- `environment_drift` — world/location/material language changes.
 
-### duplicate_character
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
+## Prompt / planning
+- `contradictory_instruction` — prompt contains incompatible requirements.
+- `over_complex_timeline` — too many actions/state changes for duration/model.
+- `ambiguous_reference_role` — reference influence is unclear or competing.
+- `insufficient_identity_lock` — product/character identity constraints are underspecified.
+- `reference_overload` — too many competing references degrade control.
+- `missing_end_state` — final frame/state is not explicitly constrained.
 
-### character_identity_drift
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
+## Audio / delivery
+- `audio_mismatch` — audio does not match action/brief.
+- `format_error` — wrong aspect, duration, codec, resolution, or delivery format.
+- `branding_error` — required branding placement/state is wrong.
 
-### clothing_drift
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### task_confusion
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-## Camera
-
-### camera_jump
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### unintended_zoom
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### unstable_framing
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### excessive_camera_motion
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### focus_error
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-## Lighting scene
-
-### lighting_flicker
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### shadow_inconsistency
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### background_morph
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### reference_contamination
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### unwanted_prop
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### style_drift
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-## Prompt planning
-
-### prompt_contradiction
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### underspecified_reference_role
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### overcomplex_timeline
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### too_many_simultaneous_actions
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### ambiguous_subject
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### conflicting_camera_instructions
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### insufficient_identity_lock
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-## Operational
-
-### model_capability_limit
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### unsupported_setting
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### upload_reference_limit
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### generation_failure
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
-
-### unknown_external_factor
-Definition: ناسازگاری با brief یا identity. Symptoms: ظاهر/رفتار غیرمنتظره. Likely causes: prompt، reference، complexity یا tool. Origin: planning تا QA. Fix: scope local/structural را تعیین و repair، regenerate یا بازگشت stage را مستند کنید.
+## Repair rule
+For every failure determine whether it is local/cosmetic or structural. Repair local issues when feasible. Regenerate or return to the likely root stage for identity, structural, continuity, or repeated stochastic failures. Record the decision and evidence.

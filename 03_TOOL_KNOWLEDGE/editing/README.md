@@ -1,3 +1,3 @@
-# editing
+# Editing
 
-کارت ابزارهای این دسته اینجاست؛ تا verification، capability و recommendation unknown است.
+Tool cards for this category live here. Until verified, capabilities and recommendations remain `unknown` / `unverified`.

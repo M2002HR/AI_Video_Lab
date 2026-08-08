@@ -1,3 +1,3 @@
-# reference roles
+# Reference Roles
 
-asset، role، allowable influence، status.
+For each asset record role, allowed influence, prohibited influence, authority priority, and status.

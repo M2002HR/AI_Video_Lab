@@ -1,3 +1,3 @@
-# Generated registries
+# Registry
 
-CSVها generated view هستند؛ edit دستی نکنید. python 11_TOOLS/lab.py rebuild-registry.
+CSV files are generated views and should not be manually edited. Rebuild with `python 11_TOOLS/lab.py rebuild-registry`.

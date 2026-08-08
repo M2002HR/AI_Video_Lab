@@ -1,1 +1,1 @@
-فقط setting تأییدشده؛ unknown را حدس نزنید.
+Record only verified/known settings. Do not guess unknown values.

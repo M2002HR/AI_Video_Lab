@@ -1,17 +1,15 @@
-# CHK VIDEO FRAME BY FRAME QA
-
-## نسخه
-
-1.0.0
+# Video Frame By Frame Qa
 
 ## Gate
+All required items must pass or be marked N/A with rationale.
 
-همهٔ requiredها pass یا N/A مستدل.
+## Checklist
+- [ ] Identity checked across time
+- [ ] Object/character count checked
+- [ ] Morphing/teleportation/disappearance checked
+- [ ] Contact/physics/gravity checked
+- [ ] Camera/focus/lighting stability checked
+- [ ] Final hero/end-state checked
 
-## موارد
-
-- [ ] identity/morph/geometry/count/teleport/contact/gravity/anatomy/camera/light/background/logo/text/artifact/hero
-
-## ثبت
-
-نتیجه، استثنا، Run/فایل و تصمیم را در STATUS یا review ثبت کنید.
+## Record
+Persist result, exceptions, relevant Run/file IDs, and decision in the project review/STATUS as appropriate.

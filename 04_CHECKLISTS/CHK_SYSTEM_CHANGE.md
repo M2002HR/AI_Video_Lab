@@ -1,20 +1,15 @@
-# CHK SYSTEM CHANGE
-
-## نسخه
-
-1.0.0
+# System Change
 
 ## Gate
+All required items must pass or be marked N/A with rationale.
 
-همهٔ requiredها pass یا N/A مستدل.
+## Checklist
+- [ ] Evidence linked
+- [ ] Scope and affected files identified
+- [ ] Benefit stated
+- [ ] Risk/regression considered
+- [ ] Validation plan/result recorded
+- [ ] Decision/approval and changelog updated
 
-## موارد
-
-- [ ] OBS/HYP/EXP/LRN
-- [ ] files/beneﬁt/risk/regression
-- [ ] approval/DEC
-- [ ] version/changelog/validation/registry
-
-## ثبت
-
-نتیجه، استثنا، Run/فایل و تصمیم را در STATUS یا review ثبت کنید.
+## Record
+Persist result, exceptions, relevant Run/file IDs, and decision in the project review/STATUS as appropriate.

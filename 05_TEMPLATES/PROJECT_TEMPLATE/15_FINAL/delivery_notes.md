@@ -1,3 +1,3 @@
-# delivery notes
+# Delivery Notes
 
-فرمت، نسخه، کاربرد، note و limitation.
+Record format, version, intended use, notes, known limitations, and source master location.

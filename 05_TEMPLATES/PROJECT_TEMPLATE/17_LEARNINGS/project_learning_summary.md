@@ -1,3 +1,3 @@
-# project learning summary
+# Project Learning Summary
 
-OBSها، evidence، confidence و action بعدی.
+List observations/learnings with evidence, confidence, scope, and next action.

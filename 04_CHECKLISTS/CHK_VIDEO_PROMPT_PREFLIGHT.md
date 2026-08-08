@@ -1,23 +1,17 @@
-# CHK VIDEO PROMPT PREFLIGHT
-
-## نسخه
-
-1.0.0
+# Video Prompt Preflight
 
 ## Gate
+All required items must pass or be marked N/A with rationale.
 
-همهٔ requiredها pass یا N/A مستدل.
+## Checklist
+- [ ] Prompt resolves exact task/duration/aspect
+- [ ] Identity and reference hierarchy are explicit
+- [ ] Camera instructions do not conflict
+- [ ] Timeline fits duration
+- [ ] Count/contact/physics constraints cover high-risk actions
+- [ ] Complexity is limited
+- [ ] Final state/hold defined
+- [ ] Known failure modes addressed
 
-## موارد
-
-- [ ] duration/aspect
-- [ ] beat
-- [ ] camera بی‌تناقض
-- [ ] physics/contact/count
-- [ ] start/end/hero
-- [ ] role reference
-- [ ] complexity محدود
-
-## ثبت
-
-نتیجه، استثنا، Run/فایل و تصمیم را در STATUS یا review ثبت کنید.
+## Record
+Persist result, exceptions, relevant Run/file IDs, and decision in the project review/STATUS as appropriate.

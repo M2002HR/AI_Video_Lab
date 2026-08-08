@@ -1,21 +1,14 @@
-# CHK SOURCE PROMPT ANALYSIS
-
-## نسخه
-
-1.0.0
+# Source Prompt Analysis
 
 ## Gate
+All required items must pass or be marked N/A with rationale.
 
-همهٔ requiredها pass یا N/A مستدل.
+## Checklist
+- [ ] Source prompt preserved unchanged
+- [ ] Structural DNA identified
+- [ ] KEEP/ADAPT/REMOVE matrix recorded
+- [ ] Old-product leakage identified
+- [ ] Contradictions and risks documented
 
-## موارد
-
-- [ ] اصل حفظ
-- [ ] DNA ساختاری
-- [ ] KEEP/ADAPT/REMOVE
-- [ ] leakage محصول قدیم
-- [ ] contradiction و risk
-
-## ثبت
-
-نتیجه، استثنا، Run/فایل و تصمیم را در STATUS یا review ثبت کنید.
+## Record
+Persist result, exceptions, relevant Run/file IDs, and decision in the project review/STATUS as appropriate.

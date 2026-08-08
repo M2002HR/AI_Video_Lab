@@ -1,20 +1,14 @@
-# CHK REPAIR DECISION
-
-## نسخه
-
-1.0.0
+# Repair Decision
 
 ## Gate
+All required items must pass or be marked N/A with rationale.
 
-همهٔ requiredها pass یا N/A مستدل.
+## Checklist
+- [ ] Failure classified local vs structural
+- [ ] Likely root stage identified
+- [ ] Repair vs regenerate rationale recorded
+- [ ] Evidence and verification plan defined
+- [ ] Repeated stochastic failure triggers architecture/root-stage reconsideration
 
-## موارد
-
-- [ ] local یا structural
-- [ ] root cause
-- [ ] repair/regenerate/earlier-stage
-- [ ] evidence و verification
-
-## ثبت
-
-نتیجه، استثنا، Run/فایل و تصمیم را در STATUS یا review ثبت کنید.
+## Record
+Persist result, exceptions, relevant Run/file IDs, and decision in the project review/STATUS as appropriate.

@@ -1,21 +1,15 @@
-# CHK SCENARIO QA
-
-## نسخه
-
-1.0.0
+# Scenario Qa
 
 ## Gate
+All required items must pass or be marked N/A with rationale.
 
-همهٔ requiredها pass یا N/A مستدل.
+## Checklist
+- [ ] Commercial premise is clear
+- [ ] Duration fits action count
+- [ ] Simultaneous actions are limited
+- [ ] Identity remains central
+- [ ] Process truth status is explicit
+- [ ] Final payoff is clear
 
-## موارد
-
-- [ ] focus/clarity/pacing
-- [ ] action هم‌زمان
-- [ ] identity/physics/character/camera risk
-- [ ] references/capability
-- [ ] hero score
-
-## ثبت
-
-نتیجه، استثنا، Run/فایل و تصمیم را در STATUS یا review ثبت کنید.
+## Record
+Persist result, exceptions, relevant Run/file IDs, and decision in the project review/STATUS as appropriate.

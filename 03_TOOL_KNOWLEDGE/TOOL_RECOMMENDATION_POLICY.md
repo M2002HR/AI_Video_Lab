@@ -1,3 +1,3 @@
-# Tool recommendation policy
+# Tool Recommendation Policy
 
-unverified capability قطعی ندارد. vendor URL+last_verified، evidence ما Run/EXP. preferred task پس از evidence قابل‌مقایسه و confidence ثبت می‌شود.
+Do not state unverified capabilities as facts. Vendor claims require source URL + last_verified date; internal claims require Run/EXP evidence. Mark a tool as preferred for a task only after comparable evidence and explicit confidence are recorded.

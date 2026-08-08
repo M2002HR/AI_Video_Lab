@@ -1,19 +1,14 @@
-# CHK POSTMORTEM
-
-## نسخه
-
-1.0.0
+# Postmortem
 
 ## Gate
+All required items must pass or be marked N/A with rationale.
 
-همهٔ requiredها pass یا N/A مستدل.
+## Checklist
+- [ ] Successes and failures recorded
+- [ ] Retries and best Run/prompt/tool recorded
+- [ ] Recurring failures identified
+- [ ] Next experiment/learning proposed
+- [ ] Promotion only with sufficient evidence
 
-## موارد
-
-- [ ] موفقیت/شکست/retry/best prompt/tool/recurring failure/experiment/learning
-- [ ] evidence link
-- [ ] promotion فقط با شواهد
-
-## ثبت
-
-نتیجه، استثنا، Run/فایل و تصمیم را در STATUS یا review ثبت کنید.
+## Record
+Persist result, exceptions, relevant Run/file IDs, and decision in the project review/STATUS as appropriate.

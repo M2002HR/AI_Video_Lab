@@ -1,3 +1,3 @@
-# LEARNING LOOP
+# Learning Loop
 
-Project → Run → evaluation/failure → feedback → OBS → HYP → EXP با یک variable → evidence → LRN → CHG/DEC → prompt/SOP/checklist/tool. confidence: anecdotal، provisional، validated، strongly_validated.
+Project -> Run -> evaluation/failure -> feedback -> OBS -> HYP -> EXP with controlled variables -> evidence -> LRN -> CHG/DEC -> prompt/SOP/checklist/tool update. Confidence levels: anecdotal, provisional, validated, strongly_validated.

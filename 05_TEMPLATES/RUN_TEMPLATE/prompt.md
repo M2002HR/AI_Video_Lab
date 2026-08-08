@@ -1,1 +1,1 @@
-Prompt ID/version و full resolved prompt.
+Prompt ID/version and full resolved prompt.

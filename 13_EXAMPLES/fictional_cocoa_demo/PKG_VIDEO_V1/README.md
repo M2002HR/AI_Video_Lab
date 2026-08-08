@@ -1,1 +1,1 @@
-Demo package؛ اجرای واقعی نیست.
+Demo package only; not a real execution.

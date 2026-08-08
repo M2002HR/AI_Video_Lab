@@ -1,154 +1,76 @@
 # Media Proxy Pipeline
 
-## هدف
+## Purpose
+Ensure important project media does not exist only inside one chat. For meaningful publishable images/videos, the AI operator creates a compact proxy, commits it with provenance, and keeps the original/full-resolution source outside normal Git.
 
-این pipeline تضمین می‌کند که media مهم پروژه فقط داخل یک chat باقی نماند. ChatGPT/AI operator برای تصاویر و ویدیوهای معنی‌دار یک نسخه کم‌حجم تولید می‌کند، آن را با provenance به Git commit می‌کند و original/full-resolution را خارج Git نگه می‌دارد.
+## Trigger conditions
+Run proxy sync when an important original/reference image is attached, a generated image is registered as a Run, an approved/rejected reference/keyframe provides useful evidence, a generated video is submitted for QA, or a final Run is selected.
 
-## Trigger
+First confirm that the media is locally accessible and publishable.
 
-هر زمان یکی از این اتفاق‌ها رخ دهد:
-- user یک original/reference image مهم attach می‌کند؛
-- یک generated image candidate به Run ثبت می‌شود؛
-- یک keyframe/reference approve یا reject می‌شود ولی evidence مفید دارد؛
-- یک generated video برای QA وارد می‌شود؛
-- یک final run انتخاب می‌شود؛
+## Privacy/publication gate
+- Sensitive/client/confidential/`do_not_publish` -> `metadata_only`.
+- Non-sensitive + project mode `git_previews` -> proxy sync.
+- Genuine uncertainty -> ask a short publication/privacy question or use metadata-only.
 
-operator باید بررسی کند آیا media locally accessible و publishable است. اگر بله، proxy sync انجام شود.
+Low quality is not a privacy control.
 
-## Privacy gate
+## Image procedure
+1. Read the source without overwriting it.
+2. Normalize EXIF orientation.
+3. Convert to RGB/sRGB when practical.
+4. Resize long edge to at most 1280px without upscaling.
+5. Encode WebP around quality 72.
+6. Remove metadata/EXIF.
+7. Record dimensions, bytes, SHA-256, and profile.
 
-Repository ممکن است public باشد. قبل از upload binary:
-- اگر asset sensitive/client/confidential است یا user گفته publish نشود → `metadata_only`؛
-- اگر non-sensitive و project policy `git_previews` است → proxy sync؛
-- اگر uncertainty واقعی وجود دارد → از user یک سؤال کوتاه بپرس.
+## Video procedure
+1. Read the source without overwriting it.
+2. Preserve aspect ratio.
+3. Resize long edge to at most 1280px without upscaling.
+4. Normalize/cap frame rate near 24fps.
+5. Encode H.264 MP4 around CRF 30.
+6. Use a broadly compatible pixel format such as yuv420p.
+7. Retain audio only when useful, e.g. AAC around 96kbps.
+8. Use fast-start metadata when practical.
+9. If a 10s proxy is much larger than the project budget, fall back to CRF 32 or 960/720 dimensions.
+10. Record duration/fps/dimensions/bytes/SHA-256/profile.
 
-کیفیت پایین privacy control محسوب نمی‌شود.
+## Repository path
+`06_PROJECTS/<PROJECT>/19_HANDOFF_ASSETS/git_previews/`
 
-## Image pipeline
+Manifest:
+`06_PROJECTS/<PROJECT>/19_HANDOFF_ASSETS/proxy_manifest.json`
 
-Default profile: `IMG-PROXY-1280-WEBP-Q72`.
+## Commit methods
+With a local checkout, generate the proxy, update manifest/docs, stage only related proxy+metadata files, and make a focused commit.
 
-1. source را بدون overwrite بخوان.
-2. EXIF orientation را normalize کن.
-3. رنگ را در صورت امکان به sRGB/RGB تبدیل کن.
-4. long edge را حداکثر 1280px کن؛ upscale نکن.
-5. WebP quality≈72 تولید کن.
-6. metadata/EXIF را حذف کن.
-7. dimensions/bytes/SHA-256 را ثبت کن.
-8. path:
-   `06_PROJECTS/<PROJECT>/19_HANDOFF_ASSETS/git_previews/<ID>__<ROLE>__preview.webp`
+With a GitHub connector, use binary-capable blob/tree/commit operations when available. If direct binary upload is unavailable but the repository contains an approved decoder workflow, a temporary base64 payload may be staged and decoded by CI; remove the staging payload after decoding. Never pretend a binary commit succeeded if it did not.
 
-اگر micro-detail برای visual recall حیاتی است، profile 1600px مجاز است اما باید دلیل/نام profile در manifest ثبت شود.
+## Required manifest fields
+At minimum: source/run ID, role, media type, original hash when available, proxy path/hash, dimensions, bytes, profile, publication/privacy status, and `source_of_truth=false`; for video also duration/fps/audio status.
 
-## Video pipeline
+## What should be proxied
+- original product reference used by the project;
+- approved reference images;
+- selected keyframes;
+- every video Run that receives meaningful QA;
+- rejected outputs when they are useful failure evidence;
+- selected final media.
 
-Default profile: `VID-PROXY-H264-720P-CRF30-24FPS`.
+## What may be skipped
+- unregistered throwaway scratch generations;
+- exact duplicates with no new evidence;
+- media marked private/no-public;
+- inaccessible media when only metadata can be persisted.
 
-1. source را بدون overwrite بخوان.
-2. aspect ratio را preserve کن.
-3. maximum long edge=1280px؛ upscale نکن.
-4. H.264 + yuv420p.
-5. approximately CRF 30.
-6. normalize/cap proxy fps near 24.
-7. audio در صورت وجود AAC≈96kbps.
-8. enable faststart.
-9. اگر برای 10s خروجی بسیار بزرگ‌تر از ~8MB شد، fallback CRF32 یا max dimension 960/720.
-10. duration/fps/dimensions/bytes/SHA-256 را ثبت کن.
-11. path:
-   `06_PROJECTS/<PROJECT>/19_HANDOFF_ASSETS/git_previews/<RUN_ID>__video__preview.mp4`
+## New-session usage
+1. Load `proxy_manifest.json` and `HANDOFF.md`.
+2. Inspect Git preview first.
+3. Do not request re-attachment if proxy quality is sufficient for current planning/recall.
+4. Request original/full-res only for tasks where proxy detail is insufficient.
 
-## Git commit procedure
+Proxy is suitable for scene recognition, object count, composition, character continuity, broad product identity, and general motion/flicker review. It is not authoritative for micro-texture, fine label typography, exact compression artifacts, or final delivery quality.
 
-### اگر local checkout موجود است
-- proxy را در مسیر استاندارد تولید کن؛
-- manifest/docs را update کن؛
-- `git add` فقط proxy + metadata مرتبط؛
-- commit موضوعی بزن.
-
-### اگر ChatGPT از GitHub connector استفاده می‌کند
-Binary را با action binary-capable مثل blob/tree/commit upload کن. از text-only file action برای binary استفاده نکن.
-
-High-level:
-1. local proxy bytes → base64؛
-2. create binary blob؛
-3. add blob path to tree based on current branch tree؛
-4. create commit؛
-5. fast-forward branch ref؛
-6. commit manifest/docs metadata در همان commit یا commit موضوعی بلافاصله بعد.
-
-اگر binary upload capability در session موجود نیست، failure را ثبت کن و metadata-only ادامه بده؛ وانمود نکن proxy commit شده است.
-
-## Manifest schema example
-
-```json
-{
-  "schema_version": "1.0",
-  "proxies": [
-    {
-      "source_id": "P0002-R0014",
-      "role": "KF01",
-      "media_type": "image",
-      "original_sha256": "unknown",
-      "proxy_path": "19_HANDOFF_ASSETS/git_previews/P0002-R0014__KF01__preview.webp",
-      "proxy_sha256": "...",
-      "width": 1280,
-      "height": 720,
-      "bytes": 284103,
-      "profile": "IMG-PROXY-1280-WEBP-Q72",
-      "privacy_status": "public_non_sensitive",
-      "source_of_truth": false
-    }
-  ]
-}
-```
-
-## What gets proxied?
-
-### Mandatory when available + publishable
-- original product reference used by project؛
-- all approved reference images؛
-- selected keyframes؛
-- every video Run that receives meaningful QA؛
-- selected/final media.
-
-### Recommended
-- rejected image/video Run if it provides reusable failure evidence.
-
-### Optional / skip
-- throwaway scratch generations never registered as Run؛
-- duplicate outputs with no new evidence؛
-- media user marks private/no-public؛
-- binary inaccessible to operator.
-
-## Cross-chat behavior
-
-New ChatGPT session:
-1. load `proxy_manifest.json` and HANDOFF؛
-2. inspect Git preview first؛
-3. do not ask user to reattach media if proxy is enough for current planning/recall؛
-4. request original only when full-resolution accuracy or generation upload requires it.
-
-## QA limitations
-
-Proxy مناسب است برای:
-- شناخت صحنه؛
-- object count؛
-- composition؛
-- character continuity؛
-- broad product identity؛
-- video motion/flicker review در سطح عمومی.
-
-Proxy به‌تنهایی برای این موارد authority نیست:
-- texture micro-detail؛
-- fine label typography؛
-- exact compression/artifact judgment؛
-- final delivery quality؛
-- color-critical mastering.
-
-## Definition of Done
-
-Media-related milestone تا وقتی این موارد روشن نشده کامل نیست:
-- original provenance ثبت شده؟
-- proxy ساخته/commit شده یا دلیل metadata-only ثبت شده؟
-- manifest sync است؟
-- HANDOFF می‌داند session بعدی چه چیزی را می‌تواند از Git ببیند؟
+## Media documentation gate
+A media-related milestone is incomplete until provenance is recorded, proxy is committed or a metadata-only exception is documented, manifest is synchronized, and `HANDOFF.md` accurately states what a future session can see.

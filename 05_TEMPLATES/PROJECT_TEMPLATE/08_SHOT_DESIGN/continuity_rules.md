@@ -1,3 +1,3 @@
-# continuity rules
+# Continuity Rules
 
-قوانین ثابت identity/scale/light/count/contact.
+Record fixed identity, scale, lighting, object/character count, contact, environment, and boundary rules.

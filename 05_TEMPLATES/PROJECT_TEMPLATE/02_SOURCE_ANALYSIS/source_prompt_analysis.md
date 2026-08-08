@@ -1,3 +1,3 @@
-# source prompt analysis
+# Source Prompt Analysis
 
-اصل محفوظ؛ DNA، KEEP/ADAPT/REMOVE، risk و adapted asset با provenance.
+Preserve source unchanged. Record structural DNA, KEEP/ADAPT/REMOVE matrix, risks, contradictions, and provenance of adapted assets.

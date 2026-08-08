@@ -1,1 +1,1 @@
-قالب، identity، composition، motion و final state.
+Expected format, identity, composition, motion, and final state.

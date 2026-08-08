@@ -1,1 +1,1 @@
-اصل: product identity primary؛ macro texture؛ dark studio فقط style/lighting.
+Primary product identity reference; macro texture reference; dark studio reference controls style/lighting only.

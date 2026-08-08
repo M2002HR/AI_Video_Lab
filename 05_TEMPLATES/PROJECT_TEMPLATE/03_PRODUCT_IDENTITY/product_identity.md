@@ -1,3 +1,3 @@
-# product identity
+# Product Identity
 
-category، geometry، material، texture، color، packaging، components و confidence.
+Record category, geometry, material, texture, color, packaging, components, natural irregularity, and confidence.

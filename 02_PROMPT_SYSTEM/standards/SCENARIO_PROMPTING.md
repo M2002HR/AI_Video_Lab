@@ -1,45 +1,24 @@
-# SCENARIO PROMPTING
+# Scenario Prompting Standard
 
-## اصل
-Scenario prompting باید قبل از زیباسازی، **state logic + duration fit + generative feasibility + commercial payoff** را حل کند.
+Scenario prompting must solve **state logic + duration fit + generative feasibility + commercial payoff** before visual beautification.
 
-## ترتیب پیشنهادی
-1. Product identity و forbidden transformations.
+Recommended order:
+1. Product identity and forbidden transformations.
 2. Source/template creative DNA.
-3. Process State Map و truth labels.
+3. Process State Map with truth labels.
 4. Scenario Capacity Assessment.
-5. Duration/clip architecture.
-6. Distinct scenario families.
-7. Risk/reference burden.
-8. User selection gate.
-9. فقط بعد از انتخاب: beat/timeline/storyboard details.
+5. Duration/clip viability if not already fixed.
+6. Distinct scenario families and architecture modes.
+7. Compact scenario cards with clip roles, risk, reference burden, and payoff.
+8. User selection.
+9. Only after selection: detailed beats/timeline/storyboard/keyframe requirements.
 
-## Duration architecture
-اگر duration قفل نیست، 1–4 clip را ارزیابی کن:
-- 10s / 1 clip
-- 20s / 2 clips
-- 30s / 3 clips
-- 40s / 4 clips
+For 1–4 clips, longer is not automatically better. Each clip should own one clear responsibility and normally no more than 1–2 major state changes.
 
-Longer is not automatically better. هر clip باید یک responsibility روشن داشته باشد و معمولاً حداکثر 1–2 state change اصلی.
+Candidate count is adaptive, not a quota. Add a new scenario only when action/story architecture is genuinely different; color/angle/name variations are not separate scenarios.
 
-## Adaptive candidate count
-تعداد سناریو quota نیست. candidate جدید فقط وقتی اضافه شود که action/story architecture واقعاً متفاوت باشد. variation صرفاً angle/color/name حذف شود.
+Never invent a real manufacturing process. Label process claims `verified`, `user_confirmed`, `creative_metaphor`, or `unknown`.
 
-## Process truth
-process واقعی را invent نکن. هر claim:
-- verified real
-- user confirmed
-- creative metaphor
-- unknown
+For 2–4 clips, choose `continuous_world`, `hybrid`, or `editorial_sequence` based on continuity burden and commercial value. Hybrid is often useful but never mandatory.
 
-## Initial menu vs selected expansion
-منوی اولیه compact باشد: premise، clip map، architecture mode، risk، visual impact، reference burden و payoff. prompt کامل image/video و beat-by-beat طولانی تا قبل از user selection ساخته نشود.
-
-## Multi-clip
-برای 2–4 clips architecture یکی از continuous / hybrid / editorial باشد. Hybrid اغلب candidate مناسب است ولی نباید اجباری شود.
-
-## Prompt hygiene
-identity lock و role هر reference صریح؛ camera/light/material/action/timeline/physics/final state فقط در حد لازم؛ contradiction و over-specification را حذف کن. assumptions، failure risk، process truth و evaluation criteria را در خروجی بخواه.
-
-منبع کامل: `00_SYSTEM/SCENARIO_ARCHITECTURE_SYSTEM.md`.
+Full source: `00_SYSTEM/SCENARIO_ARCHITECTURE_SYSTEM.md`.

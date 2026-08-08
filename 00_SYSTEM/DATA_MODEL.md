@@ -1,97 +1,49 @@
-# DATA MODEL
+# Data Model
 
-## Source of truth
-- `project.json`: project-level machine state.
-- `run.json`: provenance هر اجرای AI.
-- prompt metadata/front matter: prompt identity/version/status.
-- Markdownهای analysis/evaluation/decision/handoff: human-readable evidence and context.
-- CSVهای `10_REGISTRY/`: generated views، نه فایل editable دستی.
+## Primary records
+- `project.json`: project state and durable metadata.
+- `run.json`: provenance for each meaningful AI execution.
+- Markdown analysis/evaluation/decision/handoff files: human-readable evidence and context.
+- `10_REGISTRY/*.csv`: generated views, not manually edited source-of-truth files.
 
-JSON باید UTF-8 معتبر باشد. مقدار نامعلوم `unknown` یا `null` است، نه حدس.
+JSON must be valid UTF-8. Unknown values are `unknown` or `null`, never guesses.
 
-## Project continuity fields
-هر project علاوه بر stage/state باید این context را داشته باشد:
-- `STATUS.md`: وضعیت عملیاتی کوتاه.
-- `HANDOFF.md`: خلاصه کامل برای AI/session بعدی.
-- `18_CONVERSATION_LOG/`: feedback و session summaryهای ارزشمند.
-- `19_HANDOFF_ASSETS/`: preview اختیاری برای continuity طبق Storage Policy.
+## Project continuity records
+Every active project should maintain:
+- `STATUS.md` — concise current operational state;
+- `HANDOFF.md` — complete continuation summary;
+- `18_CONVERSATION_LOG/` — durable feedback/session summaries;
+- `19_HANDOFF_ASSETS/` — optional low-resolution visual proxies and manifest under Storage Policy.
 
-`HANDOFF.md` source detail را duplicate نمی‌کند؛ به fileهای authoritative link می‌دهد.
+`HANDOFF.md` links authoritative detail rather than duplicating every source file.
 
 ## Derivative projects
-اگر deliverable جدید از پروژه قبلی ساخته می‌شود ولی duration/story/sequence جدید دارد، به‌طور پیش‌فرض پروژه جدید بساز و parent را link کن؛ پروژه قبلی overwrite نشود.
+When a new deliverable changes duration/story/sequence materially, create a new derivative project and link its parent instead of overwriting the previous project. Record parent project ID, inherited learnings, and reused asset IDs only when media is actually available and role-appropriate.
 
-Recommended fields:
-- `parent_project_id`
-- `derivative_reason`
-- `reused_knowledge_paths`
-- `reused_asset_ids` فقط وقتی media واقعاً در دسترس و role مناسب است.
+## Multi-clip model
+For multi-clip deliverables record:
+- `sequence_id`, e.g. `P0002-S01`;
+- `clip_id`, e.g. `P0002-C01` through `P0002-C04`;
+- total duration and clip durations;
+- architecture mode;
+- Master Sequence;
+- Clip Contracts and boundary contracts;
+- selected final Run per clip;
+- assembled final metadata/path and sequence QA.
 
-مثال: P0002 یک 30s derivative از P0001 است ولی Run/Scenario/Final مستقل دارد.
-
-## Multi-clip / sequence model
-
-برای deliverable چندکلیپی:
-- `sequence_id`: مثال `P0002-S01`
-- `clip_id`: مثال `P0002-C01` تا `P0002-C04`
-- `clip_count`: 2 / 3 / 4
-- `architecture_mode`: `continuous_world` / `hybrid` / `editorial_sequence`
-- `master_sequence_path`
-- `boundary_contracts`
-- `selected_run_per_clip`
-- `assembled_final_path` یا metadata
-
-Run ID همچنان project-global است:
-`P0002-R0017` می‌تواند `clip_id=P0002-C02` داشته باشد.
-
-### Recommended run fields for multi-clip
-- `sequence_id`
-- `clip_id`
-- `clip_role`
-- `boundary_role`: start / middle / end / none
+Run IDs remain project-global, e.g. `P0002-R0017` may include `clip_id=P0002-C02`.
 
 ## Scenario architecture records
-قبل از انتخاب سناریو در پروژه‌های مناسب ثبت شود:
-- `process_state_map_path`
-- `scenario_capacity_assessment_path`
-- `scenario_menu_path`
-- `selected_scenario_id`
-- `selected_duration_seconds`
-- `selected_clip_count`
-- `selected_architecture_mode`
+Before scenario selection when appropriate, persist Process State Map, Scenario Capacity Assessment, Duration Viability Matrix, scenario candidates/cards, selected scenario, clip count, architecture mode, and user decision.
 
 ## Reference roles
-roleهای استاندارد:
-- `product_identity_primary`
-- `product_identity_secondary`
-- `geometry_view`
-- `texture_detail`
-- `packaging`
-- `style_only`
-- `lighting_only`
-- `scene_only`
-- `composition_only`
-- `character_only`
-- `start_frame`
-- `end_frame`
-- `boundary_start_state`
-- `boundary_end_state`
+Standard role concepts include product identity, packaging identity, macro/texture, angle/geometry, assortment, character identity, style/lighting, scene master, start state, end state, and process/tool evidence. Style-only references never redefine product identity.
 
-style-only هیچ‌گاه identity محصول را بازتعریف نمی‌کند.
+## Media records
+If the binary is outside Git, record as much as possible: filename/location description, role, originating Run, hash when available, dimensions/duration, proxy path if any, privacy status, and whether re-attachment is required. A chat attachment alone does not mean the media is stored in the repository.
 
-## Media provenance
-اگر binary داخل Git نیست، record باید تا حد امکان شامل این موارد باشد:
-- filename/path یا external location description؛
-- role؛
-- originating Run؛
-- hash وقتی قابل محاسبه است؛
-- whether re-attach may be required in a new chat.
+## Selection integrity
+`selected_final_run` must refer to an existing evaluated Run. Failed/obsolete Runs remain preserved. For multi-clip work, each clip has an independently selected final Run and the assembled master receives separate final QA.
 
-Chat attachment به‌خودی‌خود به معنی media storage در repo نیست.
-
-## Final selection
-`selected_final_run` فقط باید Run موجود و ارزیابی‌شده باشد. failed/obsolete Runs حذف نمی‌شوند.
-
-برای multi-clip:
-- هر clip باید selected final Run مستقل داشته باشد؛
-- assembled master نیز final selection/QA مستقل دارد.
+## Language
+Persisted text fields are English-only. Translate non-English source feedback before storing it.

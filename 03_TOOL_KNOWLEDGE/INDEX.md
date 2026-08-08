@@ -1,3 +1,3 @@
-# Tool knowledge
+# Tool Knowledge
 
-tool cardها claim vendor و evidence داخلی را جدا می‌کنند؛ recommendation قابل بازبینی و task مستقل از tool است.
+Tool cards separate vendor claims from internal evidence. Recommendations are revisable and task requirements remain independent of tool choice.

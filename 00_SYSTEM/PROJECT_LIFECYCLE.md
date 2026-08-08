@@ -1,3 +1,3 @@
-# PROJECT LIFECYCLE
+# Project Lifecycle
 
-از Intake تا Learning با stage ID پایدار پیش بروید. Gateها پس از identity، reference، storyboard، keyframe و preflight هستند. STATUS stage/approved/blocker/next/package را نشان می‌دهد. failure تکراری یعنی بازگشت به ریشه، نه Run بیشتر.
+Move from Intake through Learning using stable stage IDs. Gates follow identity, references, storyboard, keyframes, and preflight. `STATUS.md` records stage, approvals, blockers, and next action. Repeated failure should route back to the likely root stage rather than merely generating more Runs.

@@ -1,64 +1,40 @@
-# CHK — Scenario Architecture Menu
+# Scenario Architecture Menu Checklist
 
-همه requiredها باید Pass یا N/A مستدل باشند قبل از ورود به production سنگین.
+All required items must pass or be N/A with rationale before heavy production.
 
 ## Inputs
-- [ ] product identity/identity lock خوانده شده.
-- [ ] source/template DNA و product-specific leakage شناخته شده.
-- [ ] creative direction روشن است.
-- [ ] tool/model duration/reference constraints در حد معلوم ثبت شده.
-- [ ] user duration/clip preference در صورت وجود ثبت شده.
+- [ ] Product identity/identity lock read.
+- [ ] Source/template DNA and old-product leakage understood.
+- [ ] Creative direction clear.
+- [ ] Known tool/model duration/reference constraints recorded.
+- [ ] User duration/clip preference recorded when provided.
 
 ## Process truth
-- [ ] Process State Map ساخته شده.
-- [ ] هر process claim به verified/user-confirmed/creative-metaphor/unknown برچسب خورده.
-- [ ] فرآیند واقعی جعل نشده.
+- [ ] Process State Map exists.
+- [ ] Each process claim labeled verified / user_confirmed / creative_metaphor / unknown.
+- [ ] No real process is invented.
 
-## Capacity assessment
-- [ ] process richness ارزیابی شده.
-- [ ] visual diversity ارزیابی شده.
-- [ ] world/character capacity ارزیابی شده.
-- [ ] reference readiness ارزیابی شده.
-- [ ] generative feasibility ارزیابی شده.
-- [ ] commercial arc/value ارزیابی شده.
-
-## Duration menu
-اگر duration از قبل fixed نیست:
-- [ ] 10s fit بررسی شده.
-- [ ] 20s / 2 clips fit بررسی شده.
-- [ ] 30s / 3 clips fit بررسی شده.
-- [ ] 40s / 4 clips fit بررسی شده.
-- [ ] duration ضعیف صرفاً برای کامل بودن منو پیشنهاد نشده.
+## Capacity / duration
+- [ ] Process richness assessed.
+- [ ] Visual diversity assessed.
+- [ ] World/character capacity assessed.
+- [ ] Reference readiness assessed.
+- [ ] Generative feasibility assessed.
+- [ ] Commercial arc/value assessed.
+- [ ] If duration is not fixed, 10s/20s/30s/40s fit is considered and weak durations are not recommended merely for completeness.
 
 ## Candidate quality
-- [ ] candidateها از نظر action/story architecture واقعاً متفاوت‌اند.
-- [ ] variation صرفاً camera/color/name حذف شده.
-- [ ] candidate count adaptive است نه ثابت.
-- [ ] filler حذف شده.
-- [ ] هر candidate architecture mode دارد.
-- [ ] هر candidate risk level دارد.
-- [ ] هر candidate reference burden دارد.
-- [ ] هر candidate commercial advantage دارد.
-- [ ] هر candidate main failure risk دارد.
-- [ ] real process vs metaphor روشن است.
+- [ ] Candidates are genuinely distinct in action/story architecture.
+- [ ] Camera/color/name-only variants are removed.
+- [ ] Candidate count is adaptive, not fixed.
+- [ ] Filler is removed.
+- [ ] Each candidate records architecture mode, risk, reference burden, commercial advantage, main failure risk, and process truth.
+- [ ] Multi-clip candidates have distinct clip roles and clear final payoff.
+- [ ] Four clips are proposed only when four chapters add value.
 
-## Multi-clip logic
-برای هر candidate چندکلیپی:
-- [ ] role هر clip روشن است.
-- [ ] هر clip 1–2 state change اصلی دارد مگر دلیل.
-- [ ] boundary type اولیه قابل تصور است.
-- [ ] final payoff روشن است.
-- [ ] 4 clips فقط وقتی پیشنهاد شده که چهار chapter واقعی ارزش دارند.
-
-## UX
-- [ ] منوی اولیه concise و انتخاب‌پذیر است.
-- [ ] promptهای طولانی قبل از انتخاب کاربر تولید نشده‌اند.
-- [ ] recommendation با دلیل ارائه شده ولی انتخاب کاربر حفظ شده.
-
-## Documentation
-- [ ] process_state_map ثبت شده.
-- [ ] capacity assessment ثبت شده.
-- [ ] scenario menu ثبت شده.
-- [ ] candidateهای مهم حذف‌شده و دلیل در صورت لازم ثبت شده.
-- [ ] انتخاب/feedback کاربر بعداً ثبت خواهد شد.
-- [ ] STATUS/HANDOFF در milestone مناسب sync می‌شوند.
+## UX / documentation
+- [ ] Initial menu is concise and selectable.
+- [ ] Long prompts/storyboards are not generated before selection.
+- [ ] Recommendation has rationale while user choice remains available.
+- [ ] Process map, capacity assessment, scenario menu, important omissions, and later user selection are persisted.
+- [ ] STATUS/HANDOFF sync at the appropriate milestone.

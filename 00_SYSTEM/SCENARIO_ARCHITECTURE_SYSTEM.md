@@ -1,234 +1,113 @@
 # Scenario Architecture System
 
-این سند منبع اصلی برای پیشنهاد سناریو قبل از تولید است. هدف این است که سیستم برای تبلیغ‌های 10، 20، 30 و 40 ثانیه‌ای آماده باشد، بدون اینکه کاربر با ده‌ها گزینه مشابه و کم‌ارزش بمباران شود.
+This is the primary source for proposing scenario options before heavy production. The system supports 10, 20, 30, and 40-second deliverables (typically 1–4 short clips) without overwhelming the user with low-value variations.
 
-## اصل UX
+## UX rule
+Before storyboard/keyframe production, build a **Scenario Architecture Menu** and let the user choose. If duration/clip count is already specified, focus on that architecture. If not, assess 1–4 clips and show only durations that add real value.
 
-قبل از Storyboard/Keyframe، AI operator باید ابتدا یک **Scenario Architecture Menu** بسازد و به کاربر اجازه دهد مسیر را انتخاب کند.
+## Standard units
+For tools that generate 10-second clips:
+- `1x10s` = 10s
+- `2x10s` = 20s
+- `3x10s` = 30s
+- `4x10s` = 40s
 
-اگر کاربر duration/clip count را از قبل مشخص کرده است، فقط همان معماری را با گزینه‌های مناسب پیشنهاد بده. اگر مشخص نکرده است، ظرفیت 1 تا 4 کلیپ 10 ثانیه‌ای را ارزیابی کن و فقط گزینه‌های واقعاً معنادار را نمایش بده.
+Adapt the same logic when the actual clip duration differs.
 
-هیچ duration یا تعداد کلیپ نباید فقط برای پر کردن منو پیشنهاد شود.
+## Scenario Capacity Assessment
+Assess before ideation:
+1. **Process State Map** — what real or useful product states exist?
+2. **Product diversity** — components, colors, coatings, materials, packaging states, macro details.
+3. **Creative-world capacity** — e.g. miniature workers, factory metaphor, luxury studio, material transformation.
+4. **Reference readiness** — whether states can be supported without excessive new reference generation.
+5. **Generative feasibility** — state changes, interactions, characters, object counts, and continuity burden.
+6. **Commercial arc** — whether extra duration adds payoff or merely filler.
 
-## واحدهای استاندارد
+Every process/state claim must be labeled `verified`, `user_confirmed`, `creative_metaphor`, or `unknown`. Never invent a real manufacturing process from appearance alone.
 
-پیش‌فرض سیستم برای ابزارهایی که کلیپ 10 ثانیه‌ای می‌سازند:
-
-- `1×10s` = 10 ثانیه
-- `2×10s` = 20 ثانیه
-- `3×10s` = 30 ثانیه
-- `4×10s` = 40 ثانیه
-
-اگر ابزار یا brief duration دیگری دارد، همین منطق با clip duration واقعی adapt می‌شود؛ مفهوم اصلی **Master Sequence + Clip Contracts** است.
-
-## Step 1 — Scenario Capacity Assessment
-
-قبل از ایده‌پردازی، ظرفیت creative واقعی پروژه را بسنج:
-
-### A. Product process richness
-چند state واقعی/قابل‌نمایش داریم؟ مثال:
-`raw/base → shaped → coated → wrapped/cupped → arranged → packaged → hero`
-
-اگر فرآیند واقعی معلوم نیست، آن را جعل نکن. stateها را با یکی از این برچسب‌ها ثبت کن:
-- `verified_real_process`
-- `user_confirmed_process`
-- `creative_metaphor`
-- `unknown_do_not_claim`
-
-### B. Visual diversity
-آیا محصول چند component، رنگ، coating، material، packaging state یا macro detail معنادار دارد؟
-
-### C. World/character capacity
-آیا template یا creative direction یک جهان مثل miniature workers، factory metaphor، luxury studio یا transformation world دارد که بیش از یک scene معنادار تولید کند؟
-
-### D. Reference readiness
-آیا برای stateهای مختلف reference کافی داریم یا ساخت هر سناریو نیازمند referenceهای جدید است؟
-
-### E. Generative feasibility
-برای tool فعلی، چند state change، interaction، character و object count قابل‌اعتماد است؟
-
-### F. Commercial arc
-آیا داستان طولانی‌تر واقعاً payoff بهتری می‌دهد یا فقط filler اضافه می‌کند؟
-
-## Step 2 — Duration Viability Matrix
-
-برای هرکدام از 10/20/30/40 ثانیه یکی از این وضعیت‌ها را بده:
+## Duration viability
+For each relevant duration assign one of:
 - `strong_fit`
 - `viable`
 - `possible_but_low_value`
 - `not_recommended`
 
-و یک دلیل کوتاه بنویس.
+Give a concise reason and recommended candidate count.
 
-مثال:
+## Adaptive candidate count
+Candidate count is not a quota. Typical ranges:
+- 10s: 2–4 distinct options
+- 20s: 3–5
+- 30s: 3–5
+- 40s: 2–5
 
-| Duration | Fit | Why | Meaningful scenario count |
-|---|---|---|---:|
-| 10s | strong_fit | یک hero/reveal روشن | 3 |
-| 20s | strong_fit | process + payoff | 4 |
-| 30s | strong_fit | craft + assembly + payoff | 4 |
-| 40s | viable | فقط اگر چهار state مستقل ارزش تجاری دارند | 3 |
+Stop when additional ideas are only renamed/reordered versions of existing ones. The initial menu should normally remain under roughly 10–14 meaningful architectures even when several durations are considered.
 
-## Step 3 — Adaptive Candidate Budget
+## Scenario families to consider when appropriate
+- hero / reveal / inspection
+- making / forming
+- coating / decorating
+- assembly / arrangement
+- packaging
+- transformation
+- multi-stage process chain
+- miniature worksite / factory metaphor
+- editorial macro/material sequence
+- character-driven product story
+- ingredient-to-product only when verified/appropriate
 
-سیستم نباید تعداد ثابت و مصنوعی سناریو تولید کند.
+Not every family fits every product.
 
-راهنمای پیش‌فرض:
-- 10s: معمولاً 2–4 گزینه distinct.
-- 20s: معمولاً 3–5 گزینه distinct.
-- 30s: معمولاً 3–5 گزینه distinct.
-- 40s: معمولاً 2–5 گزینه distinct.
+## Scenario card
+Each menu option should be compact and selectable, containing:
+- scenario ID/title;
+- duration and clip count;
+- architecture mode: `continuous_world`, `hybrid`, or `editorial_sequence`;
+- premise;
+- clip-by-clip role summary;
+- process depth;
+- visual impact;
+- generation risk;
+- new-reference burden;
+- strongest commercial advantage;
+- main failure risk;
+- process truth label.
 
-ولی **فقط تا جایی که تفاوت واقعی وجود دارد**.
+Do not generate full image/video prompts or detailed beat-by-beat production before the user selects an architecture.
 
-اگر بعد از 2 سناریو بقیه صرفاً rename/reorder هستند، متوقف شو.
+## Duration-specific guidance
+### 10s
+Prefer one clear idea: one stable state + camera reveal, one main transformation, or two simple sequential actions. Avoid compressing forming + coating + transport + packaging + reveal into one clip.
 
-اگر محصول/process/template واقعاً ظرفیت بالایی دارد، می‌توان گزینه بیشتری ارائه کرد، ولی کل منوی اولیه بهتر است معمولاً از حدود 10–14 معماری معنادار بیشتر نشود. گزینه‌های اضافی را فقط با دلیل روشن اضافه کن.
+### 20s / 2 clips
+Strong patterns include Process -> Payoff, Craft -> Collection, Macro Detail -> Hero, or two editorial worlds with shared identity.
 
-## Step 4 — Scenario Family Coverage
+### 30s / 3 clips
+Strong patterns include Craft -> Assembly -> Hero, One Item -> Collection -> Packaging, Material -> Making -> Payoff, or three editorial chapters. This is often a good length for process storytelling because each clip can own one responsibility.
 
-به‌جای تولید variationهای سطحی، خانواده‌های متفاوت را پوشش بده. بسته به محصول:
+### 40s / 4 clips
+Use only when four genuinely valuable chapters exist, such as Form -> Decorate -> Package -> Reveal. If two middle clips repeat the same responsibility, recommend 30s instead.
 
-- `hero_reveal`
-- `inspection`
-- `making`
-- `coating_decorating`
-- `assembly`
-- `packaging`
-- `process_chain`
-- `before_after_transformation`
-- `ingredient_to_product` فقط اگر واقعی/مجاز است
-- `miniature_worksite`
-- `editorial_macro_sequence`
-- `premium_product_journey`
-- `conceptual_metaphor`
-- `character_driven`
-- `material_texture_story`
+## Architecture modes
+- **Continuous world** — all clips are consecutive parts of one physical world; highest continuity burden.
+- **Editorial sequence** — independent scenes connected by identity, style, rhythm, edit, and audio; usually safer for generative video.
+- **Hybrid** — hard continuity inside clips with controlled match/action/editorial boundaries; often a strong default candidate, never mandatory.
 
-همه خانواده‌ها برای همه محصولات مناسب نیستند.
+Do not choose continuous mode merely because it feels more cinematic; reliability and commercial quality take priority.
 
-## Step 5 — Scenario Menu Card
+## Boundary planning
+For every `Cn -> Cn+1`, define what remains fixed, allowed changes, transition type, product/object/character state, camera/motion direction, environment/lighting, and whether the previous End Keyframe becomes the next Start-State evidence.
 
-در منوی اولیه هر گزینه باید **مختصر ولی انتخاب‌پذیر** باشد، نه prompt کامل.
-
-هر card شامل:
-- Scenario ID/Title
-- total duration / clip count
-- architecture: `continuous_world` / `hybrid` / `editorial_sequence`
-- one-line premise
-- clip-by-clip role summary
-- process depth: low / medium / high
-- visual impact: low / medium / high
-- generation risk: low / medium / high
-- new reference burden: low / medium / high
-- strongest commercial advantage
-- main failure risk
-- `real_process` یا `creative_metaphor`
-
-کاربر باید بتواند با خواندن card انتخاب کند؛ beat-by-beat کامل فقط بعد از انتخاب تولید شود.
-
-## Step 6 — Duration-specific Story Patterns
-
-### 1×10s
-بهترین برای یک idea اصلی:
-- Hook → Hero
-- One transformation → Hero
-- One inspection/work action → Reveal
-- Macro texture journey
-
-به‌طور پیش‌فرض بیش از 1 state change اصلی یا 2 action ساده نگذار.
-
-### 2×10s — 20s
-الگوهای قوی:
-1. `Process → Payoff`
-   - C01 making/decorating
-   - C02 packaging/reveal
-2. `Hook → Development`
-   - C01 striking macro concept
-   - C02 expanded product world + hero
-3. `Craft → Collection`
-   - C01 one-item craftsmanship
-   - C02 assortment/box completion
-4. `Editorial Duo`
-   - C01 independent process vignette
-   - C02 independent premium hero vignette
-
-### 3×10s — 30s
-الگوهای قوی:
-1. `Craft → Assembly → Hero`
-2. `Origin/Material → Transformation → Product`
-3. `One Item → Collection → Packaging`
-4. `Three Editorial Chapters`
-5. `Character Journey → Completion → Reveal`
-
-برای product ads معمولاً 30s نقطه خوبی برای process storytelling است، چون هر clip یک مسئولیت اصلی می‌گیرد.
-
-### 4×10s — 40s
-فقط وقتی چهار chapter واقعاً ارزش دارند:
-1. `Origin → Craft → Assembly → Hero`
-2. `Form → Decorate → Package → Reveal`
-3. `Macro Detail → Process → Collection → Brand Hero`
-4. `Four Editorial Worlds` با identity/style مشترک
-
-40s را فقط برای پرکردن زمان پیشنهاد نکن. اگر Clip 2 و 3 تقریباً یک کار می‌کنند، 30s بهتر است.
-
-## Step 7 — Architecture Modes
-
-### continuous_world
-همه clipها یک جهان فیزیکی پیوسته‌اند. بالاترین continuity burden.
-
-### editorial_sequence
-هر clip scene مستقل دارد؛ identity/style/pacing مشترک و اتصال در edit. مطمئن‌تر برای AI.
-
-### hybrid — default recommendation for many 20–40s AI ads
-داخل هر clip continuity سخت، بین clipها transition کنترل‌شده مانند match cut، action cut یا approved boundary frame.
-
-سیستم نباید continuous را فقط چون «سینمایی‌تر» است انتخاب کند. reliability و commercial quality مقدم‌اند.
-
-## Step 8 — Boundary-first design
-
-برای هر Cn→Cn+1 قبل از generation ثبت کن:
-- product state at end/start
-- character count and identity
-- important object count
-- camera orientation
-- movement direction
-- lighting/environment
-- transition type
-- exact continuity requirements
-- allowed discontinuities
-
-اگر hard continuity لازم است، End KF کلیپ N به عنوان Start-state evidence کلیپ N+1 استفاده شود.
-
-## Step 9 — Selection Gate
-
-تا وقتی کاربر یا brief یک Scenario Architecture را انتخاب نکرده است، وارد production سنگین نشو.
-
-بعد از انتخاب:
-1. Scenario را expand کن.
-2. `MASTER_SEQUENCE.md` بساز اگر بیش از یک clip است.
-3. برای هر clip `CLIP_CONTRACT.md` بساز.
-4. سپس reference strategy را per-clip بازبینی کن.
-5. بعد shot timing/storyboard/keyframe/video prompt را اجرا کن.
+## Selection gate
+Do not enter heavy production until the user/brief selects a Scenario Architecture. After selection: expand the scenario, create `MASTER_SEQUENCE.md` for multi-clip work, create a Clip Contract per clip, revisit per-clip reference strategy, then proceed to shot timing/storyboard/keyframes/video prompting.
 
 ## Anti-overgeneration rules
-
-- سناریوهای تقریباً مشابه را merge کن.
-- فقط تغییر رنگ/زاویه/اسم = سناریوی جدید نیست.
-- duration بلندتر بدون state/story جدید پیشنهاد نشود.
-- process واقعی را invent نکن.
-- یک 40s ضعیف را صرفاً چون سیستم 4 clip را پشتیبانی می‌کند پیشنهاد نده.
-- منوی اولیه باید انتخاب را آسان‌تر کند، نه سخت‌تر.
+- Merge near-duplicates.
+- A color/angle/name change is not a new scenario.
+- Do not recommend longer duration without new state/story value.
+- Do not invent real process.
+- Do not recommend 40s just because the system supports four clips.
+- The menu should reduce decision burden, not increase it.
 
 ## Documentation
-
-برای هر Scenario Menu ثبت شود:
-- capacity assessment
-- duration viability matrix
-- candidate cards
-- rejected/omitted family و دلیل در صورت مهم بودن
-- user selection
-- architecture mode
-- confidence/assumptions
-
-این اطلاعات باید در project files بماند تا chat بعدی بفهمد چه گزینه‌هایی بررسی و چرا انتخاب/رد شده‌اند.
+Persist Process State Map, capacity assessment, duration viability, scenario cards shown to the user, important omitted families and reasons, user selection, and next gate.

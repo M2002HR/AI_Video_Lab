@@ -1,3 +1,3 @@
-# DEC-xxxx
+# Decision Record
 
-Context، options، evidence، decision، consequence و review.
+Record context, options considered, evidence, decision, consequences, status, and review conditions.

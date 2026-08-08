@@ -1,21 +1,14 @@
-# CHK PROJECT INTAKE
-
-## نسخه
-
-1.0.0
+# Project Intake
 
 ## Gate
+All required items must pass or be marked N/A with rationale.
 
-همهٔ requiredها pass یا N/A مستدل.
+## Checklist
+- [ ] Brief and deliverable recorded
+- [ ] Originals/provenance/hash recorded when available
+- [ ] Source prompt preserved
+- [ ] Assumptions/gaps recorded
+- [ ] Project STATUS/HANDOFF initialized
 
-## موارد
-
-- [ ] brief و deliverable ثبت
-- [ ] اصل immutable/hash
-- [ ] source prompt ثبت
-- [ ] assumption/کمبود
-- [ ] STATUS/project JSON sync
-
-## ثبت
-
-نتیجه، استثنا، Run/فایل و تصمیم را در STATUS یا review ثبت کنید.
+## Record
+Persist result, exceptions, relevant Run/file IDs, and decision in the project review/STATUS as appropriate.

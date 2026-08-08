@@ -1,1 +1,1 @@
-rubric score، reviewer، failure tag، selection و decision.
+Rubric scores, reviewer, failure tags, selection status, and decision rationale.

@@ -1,1 +1,1 @@
-ترافل fictional کروی قهوه‌ای با cocoa powder و irregularity ظریف؛ برند/متن ندارد.
+Fictional spherical brown cocoa-powder truffle with subtle handmade irregularity; no brand/text.

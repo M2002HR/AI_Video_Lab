@@ -1,1 +1,1 @@
-CHK_IMAGE_PROMPT_PREFLIGHT یا CHK_VIDEO_PROMPT_PREFLIGHT را اجرا کنید.
+Run the relevant image or video prompt preflight checklist.

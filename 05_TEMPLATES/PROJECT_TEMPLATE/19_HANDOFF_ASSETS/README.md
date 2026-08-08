@@ -1,26 +1,17 @@
-# Handoff Assets / Git Previews
+# Handoff Assets
 
-این پوشه حافظه بصری کم‌حجم پروژه برای cross-chat continuity است.
+Low-resolution visual memory for cross-chat continuity.
 
-## Structure
+- `git_previews/`: version-controlled WebP/MP4 proxies.
+- `proxy_manifest.json`: source/Run-to-proxy mapping.
 
-- `git_previews/` — low-resolution WebP/MP4 proxies که version-controlled هستند.
-- `proxy_manifest.json` — mapping بین source/run و proxy.
-
-## Rules
-
-- proxy source of truth نیست؛ original/full-resolution در محل اصلی خود می‌ماند.
-- default image proxy: WebP، long edge≤1280، quality≈72.
-- default video proxy: MP4/H.264، long edge≤1280، ≈24fps، CRF≈30.
-- فقط assetی را commit کن که privacy/IP اجازه می‌دهد.
-- repository ممکن است public باشد؛ low-resolution هنوز public media است.
-- confidential/client/sensitive یا `do_not_publish` media → metadata-only.
-- نام فایل باید به project asset/Run مربوط قابل ردیابی باشد.
-- `HANDOFF.md` باید توضیح دهد هر preview چیست و آیا original برای generation یا قضاوت دقیق باید دوباره attach شود.
-- proxy + manifest بعد از media Run/approval معنی‌دار باید طبق `00_SYSTEM/MEDIA_PROXY_PIPELINE.md` sync شوند.
-
-Recommended filename:
-
-`<SOURCE_OR_RUN_ID>__<ROLE>__preview.webp`
-
-`<RUN_ID>__video__preview.mp4`
+Rules:
+- Proxy is not source of truth; original/full-resolution remains at its authoritative location.
+- Default image proxy: WebP, long edge <=1280, quality about 72.
+- Default video proxy: MP4/H.264, long edge <=1280, about 24fps, CRF about 30.
+- Commit only media whose privacy/IP status permits publication.
+- Public repository proxies are still public media.
+- Confidential/client/sensitive/`do_not_publish` media -> metadata-only.
+- Filename must trace to project asset/Run.
+- `HANDOFF.md` must explain what each proxy represents and whether original media is required for generation or detailed QA.
+- Sync proxy + manifest according to `00_SYSTEM/MEDIA_PROXY_PIPELINE.md`.
