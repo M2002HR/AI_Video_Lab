@@ -1,0 +1,25 @@
+{
+  "run_id": "P0001-R0011",
+  "project_id": "P0001",
+  "stage": "STAGE_10_STORYBOARD",
+  "task": "scene_keyframe_kf01_opening_macro",
+  "execution_mode": "external_manual",
+  "tool": "ChatGPT Image",
+  "model": "unknown",
+  "prompt_version": "PKG_SCENE_KEYFRAME_V01_KF01",
+  "prompt_language": "en",
+  "reference_assets": ["SESSION-ASSET-P0001-IMG-002", "P0001-R0003", "P0001-R0008", "P0001-R0006", "P0001-R0010"],
+  "settings": {},
+  "outputs": [{
+    "filename": "1000015979.png",
+    "sha256": "cedb4cd5bdde509c704aa185706f6f090e65f06d5ef46ad882d700aa614d71c6",
+    "width": 1672,
+    "height": 941,
+    "bytes": 3100769,
+    "storage": "chat_attachment_not_committed"
+  }],
+  "evaluation": {"status": "failed_gate", "overall_score": 2.9},
+  "failure_tags": ["unwanted_prop", "reference_contamination", "scale_instability", "geometry_regularization", "particle_scale_drift", "continuity_setup_failure"],
+  "selected": false,
+  "notes": "Exactly three recognizable chefs and a readable hero truffle, but the frame reintroduced a wooden workshop surface, background box/assortment and multiple bowls/tools despite strict scene-cleanliness constraints. Hero truffle is too perfect and nonpareils are oversized. The scene is not physically anchored inside the same kraft box needed for the later continuous pull-back reveal."
+}
