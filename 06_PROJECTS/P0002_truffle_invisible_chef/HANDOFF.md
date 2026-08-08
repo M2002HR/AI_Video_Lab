@@ -1,38 +1,53 @@
 # Project Handoff — P0002
 
 ## Context snapshot
-P0002 is a new 10-second derivative for the same colorful handmade truffle product as P0001. It follows a newly supplied invisible-chef brownie-template grammar, not the previous miniature-chocolatier concept.
+P0002 is a 10-second derivative for the same colorful handmade truffle product as P0001. It uses a newly supplied invisible-chef brownie-template grammar as source material, not the previous miniature-chocolatier concept.
 
-Current stage: `STAGE_11` — baseline Gemini prompt ready.
+Current stage: `STAGE_03` — Reference Strategy.
 
-## Locked constraints
-- 10 seconds, 16:9, single clip;
-- fixed 90-degree top-down camera for the entire video;
-- no camera motion of any kind;
-- pure white minimalist tabletop;
-- soft diffused premium food-commercial lighting;
-- no visible hands, arms, bodies, reflections or human shadows;
-- realistic physics and food motion;
-- final truffle-box presentation must remain identity-faithful to the current uploaded product image;
-- final beat lifts one mixed-rainbow truffle and shows a realistic bite with crumbs/sprinkles falling.
+The previous session advanced too far and created a scenario, timeline, and Gemini video prompt before reference/creative/storyboard gates were complete. Those files are preserved only as premature drafts and are not active.
+
+## Upstream work that remains valid
+- Project intake and input provenance are recorded.
+- Source/template prompt transcription and KEEP / ADAPT / REMOVE analysis exist.
+- Product identity and identity lock exist.
+- The user-supplied truffle photograph remains the highest-authority product source for P0002.
 
 ## Product truth
-Current chat asset `SESSION-ASSET-P0002-IMG-001` is the highest-authority reference. It shows the same product family documented in P0001: handmade colorful sprinkle/nonpareil-coated chocolate truffles, each in a dark fluted paper cup, packed in a shallow open kraft box.
+The product is the same handmade colorful truffle family documented in P0001: slightly irregular chocolate truffles coated with tiny nonpareils or thin sprinkles, seated in dark fluted paper cups inside a shallow natural kraft box.
 
-Do not reproduce the photo's wooden tabletop or watermark.
+The source photograph's wooden tabletop and watermark are not product identity and must not leak into generated scene references or the final video.
 
-## Current prompt
-`11_PROMPT_PACKAGES/PKG_GEMINI_VIDEO_V01/resolved_prompt.md`
+## Source-template constraints — provisional until Creative Direction stage
+The supplied template strongly suggests:
+- 10 seconds, 16:9, one clip;
+- fixed 90-degree top-down camera;
+- invisible-chef/self-moving-object mechanism;
+- clean minimalist studio treatment;
+- realistic physics.
 
-## Main risks
-- multi-piece count/layout drift;
-- over-perfect spherical truffles;
-- plastic-looking decoration particles;
-- weightless levitation;
-- too many actions for 10 seconds.
+These are useful source-DNA findings, but they do not authorize skipping Reference Strategy, Reference QA, Creative Direction, Scenario, Storyboard/Keyframe, or Video Preflight gates.
+
+## Current gate
+Complete the smallest reliable reference plan for this creative direction.
+
+Evaluate:
+1. the current original product photo as identity source;
+2. P0001-R0003 as an already-tested clean top-down candidate for the same product;
+3. whether any new white-background top-down, macro, packaging, or scene reference is actually needed;
+4. explicit authority boundaries for every selected reference.
+
+No P0002 reference set is approved yet.
+
+## Premature drafts — do not run
+- `07_SCENARIOS/selected/scenario_v01_invisible_chef_truffle_assembly.md`
+- `08_SHOT_DESIGN/timeline_v01.md`
+- `11_PROMPT_PACKAGES/PKG_GEMINI_VIDEO_V01/`
+
+The Gemini prompt in that package must **not** be given to the user as the next action. It can later be mined for useful wording after the project legitimately reaches `STAGE_14`.
 
 ## Media availability
-The new uploaded files were not published as new binaries to the public repository in this session. Their hashes/dimensions are in `01_INPUTS/input_manifest.json`. For later coarse visual recall, P0001's existing public `R0003` proxy may be inspected. Request the full-resolution current product image again only when generation-grade fidelity is needed and it is no longer available.
+The newest attachments were not published as binaries to the public repository. Their hashes/dimensions remain in `01_INPUTS/input_manifest.json`. Existing P0001 proxies may be used only for coarse cross-chat recall unless full-resolution detail is available again.
 
 ## Next action
-Generate one baseline in Gemini using the current product image plus `PKG_GEMINI_VIDEO_V01/resolved_prompt.md`. Then register the output as P0002-R0001, evaluate it against product identity, camera lock, invisible-chef integrity, final composition and physical realism, and only then revise the prompt if evidence supports a change.
+Stay in `STAGE_03`. Present/review the reference-role plan and determine the first necessary reference-generation or cleanup task. If a reference image is generated, register and QA it before advancing. Do not generate the final video yet.
