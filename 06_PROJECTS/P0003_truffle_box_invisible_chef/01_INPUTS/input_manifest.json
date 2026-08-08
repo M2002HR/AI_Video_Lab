@@ -1,0 +1,27 @@
+{
+  "project_id": "P0003",
+  "recorded_at": "2026-08-08T18:24:00+03:30",
+  "inputs": [
+    {
+      "source_id": "SESSION-ASSET-P0003-IMG-001",
+      "role": "primary_product_reference",
+      "media_type": "image/png",
+      "dimensions": [1440, 1440],
+      "bytes": 2824324,
+      "sha256": "c1ce80076f4ca4b775cde6996d6d1d0934c385cfd3e2efa510a379158809ed64",
+      "storage": "current_chat_attachment_not_published_to_repository",
+      "notes": "Top-down photograph of the colorful handmade truffle assortment in an open kraft box. Wooden tabletop and visible CHOCOLAT.CHOCOLATE watermark/text are not product identity. Re-attach the original if generation-grade pixels are needed in a later chat."
+    },
+    {
+      "source_id": "SESSION-ASSET-P0003-PROMPT-001",
+      "role": "source_template_prompt_screenshot",
+      "media_type": "image/png",
+      "dimensions": [1080, 1350],
+      "bytes": 743106,
+      "sha256": "5cee92f36b41146bb21ec68150dccd3e302e2f680612eee1e8f2d54255a9a171",
+      "storage": "current_chat_attachment_not_published_to_repository",
+      "notes": "Screenshot containing the English 10-second Gemini food-video prompt; operational prompt text is transcribed separately."
+    }
+  ],
+  "cross_project_note": "These binaries are byte-identical to inputs previously recorded in P0002, but P0003 is intentionally a fresh independent project and inherits no P0002 approvals or active artifacts."
+}
