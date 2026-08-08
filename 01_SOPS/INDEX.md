@@ -7,7 +7,7 @@
 - SOP_04_REFERENCE_GENERATION.md
 - SOP_05_REFERENCE_QA.md
 - SOP_06_CREATIVE_DIRECTION.md
-- SOP_07_SCENARIO_GENERATION.md
+- SOP_07_SCENARIO_GENERATION.md — adaptive 1–4 clip scenario architecture menu
 - SOP_08_SCENARIO_SELECTION.md
 - SOP_09_SHOT_TIMING.md
 - SOP_10_STORYBOARD.md
@@ -24,3 +24,6 @@
 - SOP_21_FINAL_QA.md
 - SOP_22_POSTMORTEM.md
 - SOP_23_SYSTEM_LEARNING.md
+
+## Specialized sequence SOP
+- SOP_MULTI_CLIP_SEQUENCE.md — 2/3/4 clip Master Sequence, Clip Contracts, boundaries, assembly and sequence QA
