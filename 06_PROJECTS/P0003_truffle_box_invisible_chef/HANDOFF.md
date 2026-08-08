@@ -3,7 +3,7 @@
 ## Context snapshot
 P0003 is a fresh independent 10-second Gemini food/product-video project based on the user-supplied colorful truffle photograph and invisible-chef source-template prompt.
 
-Current stage: `STAGE_11` — Storyboard QA / local repair required.
+Current stage: `STAGE_11` — Storyboard QA / second local repair required.
 
 ## Upstream gates completed
 - Input provenance recorded.
@@ -22,43 +22,44 @@ Highest authority for real product identity, handmade irregularity, coating char
 ### REF-P0003-001
 Approved derivative role: clean 90-degree top-down white-studio product/packaging/composition support.
 
-Recorded output metadata:
-- 1672 × 941 px;
-- 2,713,686 bytes;
-- SHA-256 `665626e7bee88cf5ca5beec16975260246edad43837c214993f1b13145fa33fb`.
+## Storyboard history
+### SB-P0003-001
+Initial storyboard candidate. Broad storyboard grammar passed, but Panels 7–8 failed count continuity because the lifted truffle read as an extra object above a full box.
 
-## Storyboard candidate
-`SB-P0003-001` was generated in ChatGPT and QA-reviewed.
+### SB-P0003-001R1
+First local repair returned by the user.
 
 Recorded metadata:
 - 1672 × 941 px;
-- 3,082,317 bytes;
-- SHA-256 `a516d0da0dfeae835ed8488982db6ba0415c5608ce373697987ea1abf97468d7`.
+- 3,033,916 bytes;
+- SHA-256 `a73be9895fd6258607470971aedfddcc7c3373bb78e3bcdf140864380302d2e7`.
 
-### What passed
-- eight-panel 2×4 contact-sheet structure;
-- exact top-down white-studio grammar;
-- invisible-chef mechanism without visible anatomy;
-- readable process progression from cups to centers to coating to filling to hero;
-- kraft-box identity, dark fluted cups and colorful coating families remain recognizable;
-- Panel 6 reaches a readable complete 25-piece hero assortment.
+What improved:
+- a visible lifted-origin vacancy was introduced;
+- lift and bite states remain top-down, white-studio and visually consistent;
+- Panels 1–6 remain usable, with Panel 6 still serving as the complete 25-piece hero state.
 
-### Blocking failure
-Panels 7 and 8 visually read as a floating mixed-rainbow truffle added above an already full box. A clearly vacated near-center paper cup is not visible, so the selected continuity rule **25 total = 24 seated + 1 lifted** is not proven.
+Blocking issue:
+Panels 7 and 8 now show **two near-center empty cups** while only one truffle is floating. This over-correction implies 23 seated + 1 lifted instead of the locked 24 seated + 1 lifted.
 
-This is a local storyboard continuity failure, not a reason to redesign the scenario.
-
-## Active repair
+## Active second repair
 Prompt package:
-`11_PROMPT_PACKAGES/PKG_CHATGPT_STORYBOARD_REPAIR_001/resolved_prompt.md`
+`11_PROMPT_PACKAGES/PKG_CHATGPT_STORYBOARD_REPAIR_002/resolved_prompt.md`
 
 Repair target:
-`SB-P0003-001R1`
+`SB-P0003-001R2`
 
-Preserve Panels 1–6. Repair only Panels 7–8 so exactly one near-center mixed-rainbow truffle leaves its cup, the same cup remains visibly empty, 24 truffles remain seated, and the same lifted truffle receives the bite in Panel 8.
+Repair rule:
+- preserve Panels 1–6 exactly;
+- in Panels 7–8 restore one of the two current empty cups with the exact truffle from Panel 6;
+- retain only one empty cup as the lifted origin;
+- make the floating truffle match the piece removed from that single retained vacancy;
+- maintain exactly 24 seated + 1 lifted in Panel 7 and the same 24 + same bitten lifted piece in Panel 8.
+
+Preferred choice: keep the upper near-center vacancy as the lifted origin and restore the lower/central vacancy from Panel 6.
 
 ## Next action
-Upload the existing storyboard image to ChatGPT image editing and run the repair prompt. Return the repaired contact sheet for focused Storyboard QA.
+Upload the current repaired storyboard to ChatGPT image editing and run the second repair prompt. Return `SB-P0003-001R2` for focused Storyboard QA.
 
 ## Anti-jump reminder
-No keyframe generation or final Gemini video prompt is authorized until the repaired storyboard passes Storyboard QA.
+No keyframe generation or final Gemini video prompt is authorized until the storyboard count/continuity gate passes.
