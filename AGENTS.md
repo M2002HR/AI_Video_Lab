@@ -28,8 +28,16 @@
 ## Multi-clip
 اگر deliverable 2، 3 یا 4 کلیپ دارد یا سناریو برای یک clip بیش‌ازحد پیچیده است، `00_SYSTEM/MULTI_CLIP_ARCHITECTURE.md` و `01_SOPS/SOP_MULTI_CLIP_SEQUENCE.md` را بخوان و قبل از promptهای تک‌کلیپ `MASTER_SEQUENCE`، Clip Contracts و boundary contracts را بساز.
 
-## Media persistence
-attachmentهای تصویر/ویدیوی ChatGPT خودکار داخل GitHub ذخیره نمی‌شوند. Storage behavior را از `00_SYSTEM/STORAGE_POLICY.md` بخوان و فقط metadata/path/role/hash موجود را به‌عنوان ذخیره‌شده فرض کن مگر media واقعاً در repo/storage ثبت شده باشد.
+## Media persistence — low-resolution Git proxies
+- attachmentهای تصویر/ویدیوی ChatGPT مستقیماً به GitHub منتقل نمی‌شوند؛ pipeline درست را از `00_SYSTEM/STORAGE_POLICY.md` و `00_SYSTEM/MEDIA_PROXY_PIPELINE.md` بخوان.
+- default فعلی برای **media غیرحساس و locally accessible** = `git_previews`.
+- برای original/reference/generated image/video معنی‌دار یک proxy کم‌حجم بساز و در `19_HANDOFF_ASSETS/git_previews/` commit کن.
+- image default: WebP، long edge≤1280، quality≈72، بدون EXIF؛ video default: MP4/H.264، long edge≤1280، ≈24fps، CRF≈30، AAC≈96kbps.
+- `proxy_manifest.json` را با source/run ID، role، hashes، dimensions/duration، profile و privacy status sync کن.
+- original/full-resolution به‌صورت خودکار وارد Git معمولی نمی‌شود و proxy `source_of_truth=false` است.
+- اگر asset حساس/محرمانه است، user گفته `do_not_publish`، یا public exposure نامطمئن است، binary را commit نکن و metadata-only ثبت کن.
+- **کم‌کردن کیفیت privacy control نیست؛ repo ممکن است public باشد.**
+- اگر binary upload capability در session در دسترس نیست، limitation را ثبت کن و وانمود نکن commit انجام شده است.
 
 ## اجازه تغییر GitHub
 کاربر اجازه داده ChatGPT در جریان تولید پروژه، تغییرات لازم، کم‌ریسک، مستند و قابل‌بازگشت را در repo انجام دهد و commit بزند. commitها باید موضوعی و خوانا باشند. برای حذف داده، force/rewrite history، تغییر معماری گسترده، انتشار اطلاعات حساس یا اقدام destructive approval صریح بگیر.
