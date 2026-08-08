@@ -36,21 +36,34 @@ Learning: `OBS-0012`.
 The planned V02 off-screen count-lock experiment remains documented in backlog and can be resumed later. Do not resume unless user asks.
 
 ## System status after P0001
-System v1.3.0 now includes:
+System v1.3.0 includes:
 - Documentation Contract as mandatory Definition of Done;
 - adaptive Scenario Architecture Menu for 10/20/30/40s;
 - explicit 2/3/4 clip support;
 - Process State Map + duration viability;
 - Master Sequence + Clip Contracts + boundary contracts;
 - scenario and multi-clip checklists/templates;
-- **low-resolution Git media proxy persistence** for non-sensitive images/videos.
+- low-resolution Git media proxy persistence for non-sensitive images/videos.
 
-Media mode for P0001:
-- `git_previews` enabled for future meaningful non-sensitive media;
-- image proxy: WebP ≤1280px / q≈72;
-- video proxy: MP4 H.264 ≤1280px / ≈24fps / CRF≈30;
-- originals/full-res remain outside Git;
-- historical P0001 proxy backfill not yet done because old source binaries are not stored in repo.
+## Media persistence / historical backfill
+Storage mode: `git_previews`.
+
+Retroactive backfill requested by user is now COMPLETE for:
+- `R0002` — 45° hero reference (`R002` request interpreted as `R0002`);
+- `R0003` — clean top reference;
+- `R0010` — character reference;
+- `R0015` — scene master;
+- `R0016` — KF01;
+- `R0020` — KF03;
+- `R0022` — selected video proxy;
+- `R0023` — rejected video/failure-evidence proxy.
+
+Git paths and technical metadata:
+`19_HANDOFF_ASSETS/proxy_manifest.json`
+
+The proxy files are intentionally very low resolution and `source_of_truth=false`. They are for cross-chat visual recall, composition, broad motion and failure evidence. Originals/full-resolution media remain outside Git and should be reattached only when generation-grade fidelity or detailed QA is required.
+
+Repository is public; the user explicitly requested this backfill. Future sensitive/client/confidential media stays metadata-only unless publication is explicitly approved.
 
 Relevant docs:
 - `00_SYSTEM/DOCUMENTATION_CONTRACT.md`
@@ -67,4 +80,4 @@ For a new 30s / 3×10s ad from this same product, create a NEW derivative projec
 Exact new-chat handoff:
 `30S_DERIVATIVE_START.md`
 
-The new project should first produce a 3–5 option 30s Scenario Architecture Menu and wait for user selection before generating new media. New meaningful media should be proxied/committed automatically when accessible and publishable.
+The new project should first produce a 3–5 option 30s Scenario Architecture Menu and wait for user selection before generating new media. It should inspect Git previews before requesting old media from the user.
