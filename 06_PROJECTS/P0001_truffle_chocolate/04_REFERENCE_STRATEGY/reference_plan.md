@@ -1,108 +1,116 @@
-# P0001 Reference Strategy v3
+# P0001 Reference Strategy v4
 
 ## Target generation mode
 Google Flow → Video → Ingredients/References → Gemini Omni Flash → 10 seconds → 16:9.
 
 ## Ingredient budget
 - Operational maximum for Omni Flash: **7 image-reference slots**.
-- Treat 7 as a provisional operational limit and re-verify after major Flow/model changes.
-- Do not fill all seven automatically. Default production target remains 4–6 high-information, non-conflicting references with headroom reserved.
+- Treat 7 as provisional and re-verify after major Flow/model changes.
+- Do not fill all seven automatically. Prefer the smallest high-information non-conflicting set.
 
-## Core authority rule
-Separate source truth from generated supporting evidence. Each generated reference receives a narrow authority role so that a useful reference cannot accidentally redefine unrelated product/character facts.
+## Core principle — reference roles are task-specific
+A reference can be useful for one task and harmful for another.
 
-### Product authority order
-1. original real product photograph — ultimate source authority;
-2. `P0001-R0003` — selected clean-top visible product identity;
-3. `P0001-R0008` — assortment/color/coating-family authority;
-4. `P0001-R0006` — micro texture/material/particle-scale authority only;
-5. `P0001-R0002` — optional secondary inferred geometry/depth support only.
+Example from P0001:
+- R0006 MACRO is useful as a video material/particle reference;
+- R0008 ASSORTMENT is useful as a video diversity reference;
+- but using both during combined scene-keyframe synthesis amplified their generated regularization and contributed to oversized particles/perfect-sphere drift.
 
-Generated references never override the real source when they disagree about handmade irregularity, box construction, coating family or visible arrangement.
+Therefore the **scene-keyframe generation stack does not need to equal the final Flow ingredient stack**.
 
-### Character authority
-`P0001-R0010` independently defines the recurring three-chef cast appearance/style:
+## Product authority order
+1. original real product photograph — ultimate truth/evidence;
+2. `R0003` TOP-CLEAN — selected clean visible identity surrogate;
+3. `R0008` ASSORTMENT — diversity/coating-family authority;
+4. `R0006` MACRO — material/particle-scale authority only;
+5. `R0002` HERO-45 — optional inferred depth/geometry support only.
+
+### Environment caveat
+The original real photo contains wooden-table context. `OBS-0005` shows that source environment can leak into multi-reference image synthesis even when prompt instructions try to isolate product identity. Therefore the original may remain the project's truth source while being intentionally omitted from a specific generation step if a cleaned surrogate (R0003) carries the needed visible identity information with lower contamination risk.
+
+## Character authority
+`R0010` independently defines the recurring three-chef cast appearance/style only:
 - moustached foreman;
 - clean-shaven chocolatier;
 - small-goatee specialist;
-- consistent deep-red jackets/hats, dark trousers/shoes;
-- compact stylized premium miniature proportions.
+- matching deep-red jackets/hats;
+- dark trousers/shoes;
+- compact premium stylized miniature proportions.
 
-R0010 does NOT define action, pose, tool, scene position or chef-to-truffle scale.
+It does NOT define pose, action, tool, scene position or chef-to-truffle scale.
 
-## Collage / contact-sheet policy
-Default remains: **do not combine multiple product views into one collage as a production shortcut.** Separate single-role ingredients are easier to assign and less likely to introduce duplication/reference ambiguity. This is a working hypothesis pending `EXP-0001`, not an official Google prohibition.
-
-A clean group image of the exact three intended recurring chefs is different: those three are real intended scene entities, not alternate views of one object. Therefore R0010 is accepted as one character-only slot.
+## Collage policy
+Do not combine alternate product views into one collage as a production shortcut pending `EXP-0001`. Separate role-clean images remain preferred.
 
 ## Approved core references
+### R0003 — TOP-CLEAN
+Primary clean visible product identity. Selected ~4.8/5.
 
-### Ingredient A — `REF-PROD-TOP-CLEAN` — APPROVED / SELECTED
-Selected: `P0001-R0003` (~4.8/5).  
-Alternate: `P0001-R0004`.
+### R0008 — ASSORTMENT
+Diversity/color/coating-family authority. Selected ~4.5/5. Not geometry authority.
 
-Role: `product_identity_primary` + visible composition evidence.
+### R0006 — MACRO
+Texture/material/particle-scale role. Selected ~4.5/5. Not scene-shape authority.
 
-Purpose: highest-fidelity cleaned representation of the real assortment; watermark/wooden environment removed while visible product facts remain close to source.
+### R0010 — CHARACTERS
+Exact recurring trio appearance/style. Selected ~4.8/5.
 
-### Ingredient B — `REF-PROD-ASSORTMENT-DETAIL` — APPROVED / SELECTED
-Selected: `P0001-R0008` (~4.5/5).  
-Alternate: `P0001-R0007`.
+### R0002 — HERO-45
+Optional secondary geometry/depth support. Use only when a test shows a specific need.
 
-Role: assortment diversity / color-family / coating-family evidence.
+## Scene-keyframe v01 evidence — failed
+`R0011`, `R0012`, `R0013` were generated with original + R0003 + R0008 + R0006 + R0010.
 
-Purpose: explicitly show multiple supported colors plus both round nonpareils and elongated sprinkles. Not geometry authority.
+No candidate passed. Repeated issues:
+- extra props and loose ingredients;
+- wrong chef scale;
+- oversized nonpareils;
+- perfect-sphere regularization;
+- back-facing character identity loss;
+- scene not physically embedded in the final kraft box;
+- one wooden/workshop contamination case.
 
-### Ingredient C — `REF-PROD-MACRO` — APPROVED / SELECTED
-Selected: `P0001-R0006` (~4.5/5).  
-Alternate: `P0001-R0005`.
+See `13_EVALUATION/reports/reference_qa_kf01_v01.md`, `OBS-0007`, `HYP-0002`.
 
-Role: texture/material/particle-scale only.
+## Scene-keyframe v02 stack — ACTIVE
+For the first repaired KF01 test, upload ONLY:
+1. `R0003` TOP-CLEAN — product + packaging + clean environment;
+2. `R0010` CHARACTERS — recurring trio appearance/style.
 
-Purpose: teach tiny edible nonpareil size/contact, dark-chocolate glimpses and matte folded-paper cup behavior. Not silhouette/assortment authority.
+Do NOT upload original, R0008, R0006 or R0002 in the first v02 pass.
 
-### Ingredient D — `REF-CHAR-CHOCOLATIERS` — APPROVED / SELECTED
-Selected: `P0001-R0010` (~4.8/5).  
-Alternate: `P0001-R0009`.
+Reason: isolate two role-clean authorities and reduce scene/reference bleed. If a later QA identifies one specific missing fact, add only the single reference needed in a controlled follow-up.
 
-Role: `character_only`.
+Active prompt: `11_PROMPT_PACKAGES/PKG_SCENE_KEYFRAME_V02_KF01/prompt.txt`.
 
-Purpose: clean exact three-character cast without cheesecake/old-scene contamination. Downstream prompts must explicitly override reference poses while preserving appearance.
+## Active scene design
+Scenario v02: `Quiet Inspection → Full Box Reveal`.
+- hands empty;
+- no tools/bowls/loose ingredients;
+- opening already inside the same kraft box;
+- hero truffle diameter ≈ 3× chef height;
+- all three faces readable;
+- one continuous pull-back/upward reveal.
 
-### Ingredient E — `REF-SCENE-KEYFRAME` — NEXT
-Role: combined scene / composition / scale anchor.
+## Provisional final Flow ingredient stack — only after scene passes
+The final Flow stack may still use more roles than the image-keyframe generation stack because Omni video prompting can assign separate ingredient roles directly.
 
-Purpose: combine the real product family and selected three-chef cast in the opening macro world, locking chef-to-truffle scale and initial composition before video generation.
-
-Generate/QA KF01 first from the storyboard. Do not generate later keyframes until combined-scene grammar passes.
-
-### Ingredient F — `REF-PROD-HERO-45` — OPTIONAL
-Selected candidate: `P0001-R0002` (~4.3/5).  
-Alternate: `P0001-R0001`.
-
-Role: secondary inferred geometry/depth only.
-
-Use only if scene-keyframe/video tests show that extra full-box depth support adds value without product regularization or reference conflict. Omit by default in first-pass testing if redundant.
-
-### Ingredient G — RESERVED
-Keep unused unless QA identifies a specific repair need.
-
-## Recommended first-pass Flow ingredient stack after KF01 approval
-1. `R0003` TOP-CLEAN — primary product identity.
-2. `R0008` ASSORTMENT — diversity/coating families.
-3. `R0006` MACRO — particle/material scale.
-4. `R0010` CHARACTERS — recurring trio identity/style.
-5. selected KF01 combined scene reference — composition + chef/product scale.
-6. optional `R0002` HERO-45 only if preflight evidence justifies it.
+Provisional:
+1. R0003 TOP-CLEAN — product identity;
+2. R0008 ASSORTMENT — diversity;
+3. R0006 MACRO — material/particle scale;
+4. R0010 CHARACTERS — recurring trio;
+5. selected scene keyframe — composition/scale/physical scene anchor;
+6. optional R0002 only if needed;
 7. reserved.
 
-Preferred first experiment: start with five active references (1–5) rather than automatically adding R0002. Add R0002 only as a controlled variable if the box-depth/3D geometry is insufficient.
-
-## Evidence notes
-- `OBS-0003`: novel-angle image generation regularized handmade geometry; source-derived identity refs must outrank synthesized views.
-- `OBS-0004`: macro references are useful but must receive narrow material/scale authority.
-- `OBS-0005`: source environments can leak into generated references despite explicit background instructions.
-- `OBS-0006`: character-only regeneration successfully removed old cheesecake contamination; selected group reference must be treated as appearance/style authority, not pose authority.
+This stack is not final until video preflight and the scene-keyframe evidence are complete.
 
 ## Current gate
-Core product and character reference roles are approved. Scenario/shot timing are locked. The next gate is combined-scene keyframe QA (`SB/KF01`). After one KF01 candidate is approved, proceed to later storyboard/keyframe states and then final Flow prompt synthesis/preflight.
+Do not generate KF02/KF03 until one KF01 v02 candidate passes:
+- same-box physical continuity;
+- exact three readable characters;
+- correct miniature scale;
+- no props/loose food;
+- source-like product particle scale and handmade shape;
+- clean dark presentation.
