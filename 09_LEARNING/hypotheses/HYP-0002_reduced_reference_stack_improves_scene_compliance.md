@@ -5,7 +5,7 @@ confidence: provisional
 linked_observation: OBS-0007
 
 ## Hypothesis
-For P0001 combined product+character scene-keyframe generation, a smaller reference stack containing only high-authority/role-clean inputs plus a simpler no-prop scene will produce better source fidelity and instruction compliance than the v01 five-reference stack.
+For P0001 combined product+character scene-keyframe generation, a very small reference stack containing only role-clean inputs plus a simpler no-prop scene will produce better source fidelity and instruction compliance than the v01 five-reference stack.
 
 ## v01 baseline
 Inputs:
@@ -20,24 +20,26 @@ Result across R0011–R0013:
 - scale drift;
 - geometry regularization;
 - oversized particle appearance;
-- continuity setup failure.
+- continuity setup failure;
+- one candidate also leaked the original wooden/workshop environment.
 
-## v02 test
-Core inputs:
-- original real product photo;
-- R0003 TOP-CLEAN;
-- R0010 CHARACTERS.
+## v02 test — deliberately minimal
+Use ONLY:
+1. `R0003` TOP-CLEAN — product/packaging identity and clean environment;
+2. `R0010` CHARACTERS — exact three-chef appearance/style.
 
-Optional fourth input:
-- R0002 only as conservative box/cup depth support if the image tool can obey role separation.
+Do **not** upload the original real photo in this scene-synthesis pass even though it remains the project's ultimate truth source, because `OBS-0005` shows that its wooden environment can leak into multi-reference generation. `R0003` was specifically created as the cleaned source-preserving identity surrogate.
+
+Do not upload R0006, R0008 or R0002 for the first v02 pass. If a specific missing geometry problem appears, add only the single reference required to diagnose it in a later controlled test.
 
 Prompt/action changes:
 - no brush or other tools;
-- no loose ingredients;
+- no bowls, loose ingredients or food debris;
 - quiet inspection only;
-- opening scene already physically inside the kraft box;
-- all three faces visible;
-- truffle diameter target approximately three times one chef's full standing height.
+- opening scene already physically inside the same kraft box that will later be revealed;
+- all three faces visible in 3/4 view;
+- truffle diameter target approximately three times one chef's full standing height;
+- shorter prioritized prompt with fewer competing instructions.
 
 ## Success criteria
 Compared with R0012 baseline, v02 should improve:
