@@ -4,6 +4,20 @@
 - Primary operator: ChatGPT / AI operator architecture
 - Current system focus: sequential stage-gated production + adaptive scenario architecture + 2/3/4 clip production + documented cross-chat media handling
 
+## P0003 — invisible-chef truffle box assembly
+- Current stage: `STAGE_03` — Reference Strategy / first reference task prepared.
+- Parent project: none; fresh independent project by explicit user request.
+- Objective: adapt the supplied 10s / 16:9 invisible-chef Gemini food-video template to the supplied colorful handmade truffle gift box.
+- Source-template DNA: fixed 90-degree overhead, invisible chef, pure-white premium food-commercial grammar, realistic physics, compressed timecoded transformation.
+- Product authority: current uploaded real truffle-box photograph.
+- Active identity lock: `06_PROJECTS/P0003_truffle_box_invisible_chef/03_PRODUCT_IDENTITY/identity_lock_v01.md`.
+- Active reference plan: `06_PROJECTS/P0003_truffle_box_invisible_chef/04_REFERENCE_STRATEGY/reference_plan.md`.
+- Current-stage prompt: `PKG_GEMINI_IMAGE_REF_001` for one clean top-down white-studio product reference.
+- Active video prompt: **none**.
+- Approved P0003 derivative reference set: **none yet**.
+- Next action: generate `REF-P0003-001`, return it for Reference QA, then approve/reject before Creative Direction.
+- Current attachments are metadata-only in Git; no attachment binaries were published.
+
 ## P0002 — invisible-chef truffle assembly
 - Current stage: `STAGE_03` — Reference Strategy.
 - Parent project: `P0001`.
@@ -20,7 +34,7 @@
 - Current stage: `STAGE_19_FINAL_SELECTION`
 - Accepted current final: `R0022` (~4.6/5, with known caveats)
 - Further V02 count-lock optimization: paused/backlog by user
-- P0001 is preserved and is not overwritten by P0002.
+- P0001 is preserved and is not overwritten by P0002/P0003.
 
 ### P0001 locked anchors
 - `R0003` product/packaging clean identity
@@ -64,7 +78,7 @@ Core docs:
 - `04_CHECKLISTS/CHK_MULTI_CLIP_CONTINUITY.md`
 
 ## Media storage status
-P0001 includes user-approved public low-resolution Git previews for selected historical assets. P0002 currently stores new attachment metadata only; its full-resolution current-chat inputs remain outside Git.
+P0001 includes user-approved public low-resolution Git previews for selected historical assets. P0002 and P0003 currently store their new/current attachment metadata only; full-resolution current-chat inputs remain outside Git.
 
 See `00_SYSTEM/STORAGE_POLICY.md` and `00_SYSTEM/MEDIA_PROXY_PIPELINE.md`.
 
