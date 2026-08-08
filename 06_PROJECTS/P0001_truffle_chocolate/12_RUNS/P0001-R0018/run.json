@@ -1,0 +1,25 @@
+{
+  "run_id": "P0001-R0018",
+  "project_id": "P0001",
+  "stage": "STAGE_10_STORYBOARD",
+  "task": "scene_keyframe_kf03_camera_derivation_v04",
+  "execution_mode": "external_manual",
+  "tool": "ChatGPT Image",
+  "model": "unknown",
+  "prompt_version": "PKG_SCENE_KEYFRAME_V04_KF03_FROM_MASTER",
+  "prompt_language": "en",
+  "reference_assets": ["P0001-R0015", "P0001-R0003"],
+  "settings": {},
+  "outputs": [{
+    "filename": "1000016001.png",
+    "sha256": "52b12aa1ee4d12214f85c0cc8c091a113774d490f9d393203c48d5c583d1d371",
+    "width": 1672,
+    "height": 941,
+    "bytes": 3176798,
+    "storage": "chat_attachment_not_committed"
+  }],
+  "evaluation": {"status": "failed_strict_continuity_retained_product_hero_candidate", "overall_score": 3.9},
+  "failure_tags": ["continuity_break", "hero_identity_loss", "scene_layout_drift", "source_reference_snap"],
+  "selected": false,
+  "notes": "Strong standalone final product-hero frame: complete kraft box, three chefs remain inside the box, clean studio, no props. However it fails strict camera-only continuity from R0015 because the oversized multicolor hero truffle and its immediate local arrangement disappear/reconfigure into a source-like full-box layout. Retain as aesthetic/final-product hero candidate only, not as trajectory KF03."
+}
