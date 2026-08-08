@@ -3,9 +3,9 @@
 ## Context snapshot
 P0003 is a fresh independent 10-second Gemini food/product-video project based on the user-supplied colorful truffle photograph and invisible-chef source-template prompt.
 
-Current stage: `STAGE_11` — Storyboard QA / second local repair required.
+Current stage: `STAGE_12` — Keyframe Generation.
 
-## Upstream gates completed
+## Completed gates
 - Input provenance recorded.
 - Source/template transcription and KEEP / ADAPT / REMOVE analysis complete.
 - Product identity extraction and `identity_lock_v01.md` complete.
@@ -14,6 +14,7 @@ Current stage: `STAGE_11` — Storyboard QA / second local repair required.
 - Creative direction locked.
 - Invisible-chef truffle-assembly scenario selected.
 - 10-second shot timeline selected.
+- Storyboard generated, locally repaired twice, and approved as `SB-P0003-001R2`.
 
 ## Approved reference stack
 ### Original real product photograph
@@ -22,44 +23,38 @@ Highest authority for real product identity, handmade irregularity, coating char
 ### REF-P0003-001
 Approved derivative role: clean 90-degree top-down white-studio product/packaging/composition support.
 
-## Storyboard history
-### SB-P0003-001
-Initial storyboard candidate. Broad storyboard grammar passed, but Panels 7–8 failed count continuity because the lifted truffle read as an extra object above a full box.
-
-### SB-P0003-001R1
-First local repair returned by the user.
+### SB-P0003-001R2
+Approved storyboard/sequence authority.
 
 Recorded metadata:
 - 1672 × 941 px;
-- 3,033,916 bytes;
-- SHA-256 `a73be9895fd6258607470971aedfddcc7c3373bb78e3bcdf140864380302d2e7`.
+- 3,072,260 bytes;
+- SHA-256 `c03dd6883c085c48fa5c60a386f7adf99c2051045b846fb75de7179d09cc782c`.
 
-What improved:
-- a visible lifted-origin vacancy was introduced;
-- lift and bite states remain top-down, white-studio and visually consistent;
-- Panels 1–6 remain usable, with Panel 6 still serving as the complete 25-piece hero state.
+Storyboard continuity lock:
+- Panel 6 = complete 25-piece hero state;
+- Panel 7 = exactly one near-center empty cup, 24 seated truffles, and one mixed-rainbow lifted truffle;
+- Panel 8 = same 24 seated, same single empty cup, same lifted truffle with a bite.
 
-Blocking issue:
-Panels 7 and 8 now show **two near-center empty cups** while only one truffle is floating. This over-correction implies 23 seated + 1 lifted instead of the locked 24 seated + 1 lifted.
+## Current keyframe task
+Generate only three controlling anchors rather than a large redundant set.
 
-## Active second repair
-Prompt package:
-`11_PROMPT_PACKAGES/PKG_CHATGPT_STORYBOARD_REPAIR_002/resolved_prompt.md`
+### KF-P0003-01 — opening
+Exactly 25 empty dark fluted paper cups in the centered diamond-oriented kraft box; no truffles.
 
-Repair target:
-`SB-P0003-001R2`
+### KF-P0003-02 — mid assembly
+Same box/camera with approximately 16 finished colorful truffles seated and the remaining cups empty; no loose exterior pieces.
 
-Repair rule:
-- preserve Panels 1–6 exactly;
-- in Panels 7–8 restore one of the two current empty cups with the exact truffle from Panel 6;
-- retain only one empty cup as the lifted origin;
-- make the floating truffle match the piece removed from that single retained vacancy;
-- maintain exactly 24 seated + 1 lifted in Panel 7 and the same 24 + same bitten lifted piece in Panel 8.
+### KF-P0003-03 — lift state
+Same final hero arrangement family with exactly 24 seated truffles, exactly one near-center empty cup, and the corresponding mixed-rainbow truffle floating above the box; no bite yet.
 
-Preferred choice: keep the upper near-center vacancy as the lifted origin and restore the lower/central vacancy from Panel 6.
+A separate hero keyframe is unnecessary because `REF-P0003-001` already serves that role. A bitten-final keyframe is deferred unless later video QA shows that the bite transition needs extra control.
+
+Active prompt package:
+`11_PROMPT_PACKAGES/PKG_CHATGPT_KEYFRAME_SET_001/resolved_prompt.md`
 
 ## Next action
-Upload the current repaired storyboard to ChatGPT image editing and run the second repair prompt. Return `SB-P0003-001R2` for focused Storyboard QA.
+In ChatGPT image generation, provide the approved clean product reference and repaired storyboard, run the three-panel keyframe prompt, and return the output for Keyframe QA.
 
 ## Anti-jump reminder
-No keyframe generation or final Gemini video prompt is authorized until the storyboard count/continuity gate passes.
+No final Gemini video prompt or video generation is authorized until the controlling keyframe set passes QA and the final video prompt passes preflight.
