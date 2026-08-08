@@ -1,0 +1,61 @@
+{
+  "project_id": "P0003",
+  "slug": "truffle_box_invisible_chef",
+  "title": "Invisible-Chef Truffle Box Assembly Commercial",
+  "status": "active",
+  "created_at": "2026-08-08T18:24:00+03:30",
+  "updated_at": "2026-08-08T18:24:00+03:30",
+  "system_version_started": "1.4.0",
+  "current_stage": "STAGE_03",
+  "parent_project_id": null,
+  "derivative_reason": "Fresh independent project created at the user's request from the current product photograph and source/template prompt. No approvals, stage completion, or downstream artifacts are inherited from P0001 or P0002.",
+  "deliverable": {
+    "type": "video_ad",
+    "duration_seconds": 10,
+    "aspect_ratio": "16:9",
+    "clip_count": 1,
+    "clip_duration_seconds": 10,
+    "architecture_mode": "single_clip_source_template_adaptation",
+    "target_tool": "Gemini",
+    "target_model": null
+  },
+  "media_storage": {
+    "mode": "metadata_only",
+    "auto_proxy_commit": false,
+    "originals_in_git": false,
+    "proxy_root": "19_HANDOFF_ASSETS/git_previews",
+    "manifest_path": "19_HANDOFF_ASSETS/proxy_manifest.json",
+    "public_repo_policy": "Current chat attachment binaries are not published to the public repository; hashes, dimensions, roles, and re-attachment requirements are recorded."
+  },
+  "primary_product_reference": "SESSION-ASSET-P0003-IMG-001",
+  "source_prompt_path": "01_INPUTS/source_prompt/source_prompt_transcription.md",
+  "active_identity_lock": "03_PRODUCT_IDENTITY/identity_lock_v01.md",
+  "active_reference_plan": "04_REFERENCE_STRATEGY/reference_plan.md",
+  "selected_scenario": null,
+  "active_shot_timeline": null,
+  "active_storyboard_plan": null,
+  "active_video_prompt_package": null,
+  "approved_reference_set": [],
+  "reference_candidates": [
+    {
+      "role": "SOURCE-PROD-CURRENT",
+      "source_id": "SESSION-ASSET-P0003-IMG-001",
+      "authority": "highest product identity and final-assortment authority",
+      "availability": "current_chat_only"
+    },
+    {
+      "role": "REF-PROD-TOP-CLEAN-WHITE",
+      "source_id": null,
+      "authority": "pending derivative reference for clean top-down product/packaging support only",
+      "availability": "not_generated"
+    }
+  ],
+  "selected_final_run": null,
+  "selected_run_per_clip": {},
+  "handoff_path": "HANDOFF.md",
+  "conversation_log_path": "18_CONVERSATION_LOG",
+  "handoff_assets_path": "19_HANDOFF_ASSETS",
+  "last_session_summary_at": "2026-08-08T18:24:00+03:30",
+  "next_planned_task": "Generate exactly one clean 90-degree top-down white-studio derivative reference from the original product photograph, then QA and approve/reject it before Creative Direction.",
+  "tags": ["food", "chocolate", "truffle", "gift_box", "invisible_chef", "top_down", "gemini", "product_ad"]
+}
