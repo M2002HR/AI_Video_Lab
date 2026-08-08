@@ -1,50 +1,42 @@
-# CHAT CONTINUITY PROTOCOL
+# Chat Continuity Protocol
 
-هدف: هر پروژه بتواند بین chat/sessionهای مستقل بدون وابستگی به حافظه گفتگو ادامه پیدا کند.
+Goal: any project can continue across independent chat sessions without depending on conversation memory.
 
-## سه لایه context
-1. **System context**: `AI_START_HERE.md` + `00_SYSTEM/*`.
-2. **Project context**: `project.json` + `STATUS.md` + `HANDOFF.md`.
-3. **Evidence context**: input/prompt/Run/evaluation/feedback/decision files.
+## Three context layers
+1. System rules: `AI_START_HERE.md`, `AGENTS.md`, system/SOP/checklist docs.
+2. Project current state: `project.json`, `STATUS.md`, `HANDOFF.md`.
+3. Evidence/history: Runs, prompt packages, evaluations, conversation logs, proxy media, learnings.
 
-## `HANDOFF.md` چه چیزی باید بگوید؟
-- پروژه و deliverable؛
-- stage فعلی؛
-- آخرین تصمیم‌های approved؛
-- product identity summary و مسیر full spec؛
-- referenceهای approved؛
-- scenario/keyframe/prompt package منتخب؛
-- آخرین Runهای مهم و نتیجه آن‌ها؛
-- known failures؛
-- feedback اخیر کاربر؛
-- blocker؛
-- دقیقاً next action؛
-- کدام media برای ادامه باید در chat بعدی re-attach شود، اگر لازم است.
+## `HANDOFF.md` must include
+- project and deliverable;
+- current stage;
+- latest approved decisions/assets;
+- product identity summary and authoritative spec path;
+- approved references;
+- selected scenario/keyframes/prompt package;
+- important recent Runs/results;
+- known failures;
+- important translated user feedback;
+- blockers;
+- exact next action;
+- media availability and whether any original must be re-attached.
 
-`HANDOFF.md` خلاصه عملیاتی است، نه جایگزین source files.
+`HANDOFF.md` is an operational summary, not a replacement for authoritative source files.
 
 ## Conversation log
-`18_CONVERSATION_LOG/` فقط اطلاعات با ارزش پایدار را نگه می‌دارد:
-- feedback خام مهم؛
-- session summaries؛
-- تصمیم/ترجیحی که روی تولید اثر دارد.
+`18_CONVERSATION_LOG/` stores only durable-value context such as important translated feedback, session summaries, and decisions/preferences that affect production. Do not store full transcripts unless there is a specific reason.
 
-Transcript کامل chat لازم نیست ذخیره شود مگر دلیل مشخص وجود داشته باشد.
+## End of a meaningful session
+1. Register Runs/prompts/evaluations.
+2. Record important feedback.
+3. Sync `STATUS.md`.
+4. Write `HANDOFF.md` so an uninformed AI can continue.
+5. Create OBS/HYP records when reusable insight exists.
+6. Sync media proxies if required.
+7. Commit focused changes.
 
-## پایان session
-وقتی یک session تصمیم یا تولید معنادار داشته است:
-1. Run/prompt/evaluation را ثبت کن.
-2. feedback مهم را ثبت کن.
-3. `STATUS.md` را sync کن.
-4. `HANDOFF.md` را طوری بنویس که یک AI بی‌خبر بتواند ادامه دهد.
-5. اگر insight عمومی است OBS/HYP بساز.
-6. commit موضوعی بزن.
+## Start of next session
+Read the repository first. Never ask the user to explain everything again unless a genuine repository gap remains.
 
-## شروع session بعدی
-AI نباید از کاربر بخواهد «همه‌چیز را از اول توضیح بده». ابتدا repo را بخواند. فقط gapهای واقعی را سؤال کند.
-
-## Visual continuity
-Git metadata به‌تنهایی جای visual inspection را نمی‌گیرد. اگر media سنگین در Git نیست:
-- مسیر/نام/hash/role آن در docs ثبت شود؛
-- handoff مشخص کند آیا re-attach لازم است؛
-- در صورت امکان یک preview غیرحساس طبق Storage Policy نگهداری شود.
+## Media limitation
+Git metadata alone is not a substitute for visual inspection. Use low-resolution Git proxies for recall/planning. Request original media only when detailed inspection or generation input requires it.

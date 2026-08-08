@@ -1,3 +1,7 @@
-# identity lock
+# Identity Lock
 
-Identity-critical: [ثبت]. Forbidden transformations: [ثبت]. Style/scene traits: [ثبت].
+Identity-critical traits: [record].
+
+Forbidden transformations: [record].
+
+Style/scene traits that are non-authoritative: [record].

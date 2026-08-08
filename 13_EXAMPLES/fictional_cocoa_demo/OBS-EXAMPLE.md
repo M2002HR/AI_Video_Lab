@@ -1,1 +1,1 @@
-Raw feedback demo: حرکت crumbs آرام premiumتر بود. classification: observation؛ نیازمند آزمایش.
+Demo observation: slower crumb motion appeared more premium. Classification: observation; requires testing.

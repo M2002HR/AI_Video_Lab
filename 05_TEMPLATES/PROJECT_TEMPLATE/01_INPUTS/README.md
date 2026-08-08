@@ -1,3 +1,3 @@
-# README
+# Inputs
 
-اصل‌ها در originals و prompt immutable در source_prompt؛ نام/مسیر/hash/source را inventory کنید.
+Keep originals immutable. Preserve the source prompt and inventory source/name/path/hash/provenance.

@@ -1,3 +1,3 @@
-# CHG-xxxx
+# Change Proposal
 
-Evidence، change، files، benefit، risk/regression، validation، approval/DEC/changelog.
+Record evidence, proposed change, affected files, expected benefit, risk/regression, validation, approval/decision, and changelog entry.

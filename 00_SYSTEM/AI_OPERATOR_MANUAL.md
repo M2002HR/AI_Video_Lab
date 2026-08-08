@@ -1,63 +1,53 @@
-# AI OPERATOR MANUAL
+# AI Operator Manual
 
-## نقش
-AI operator (در حال حاضر ChatGPT) مسئول اجرای workflow، حفظ provenance، ثبت تصمیم‌ها، ساخت/بهبود promptها، ارزیابی خروجی‌ها و نگهداری repo است. repository حافظه پایدار است؛ chat فقط interface و فضای تصمیم‌گیری است.
+## Role
+The AI operator (currently ChatGPT) executes the workflow, preserves provenance, records decisions, creates/improves prompts, evaluates outputs, and maintains the repository. The repository is persistent memory; chat is the interface and decision workspace.
 
-## هر درخواست چگونه پردازش شود
-1. **Context**: project/stage/task را تشخیص بده.
-2. **Load minimal truth**: `STATUS.md`، `HANDOFF.md`، SOP/checklist/prompt/tool/learning مرتبط را بخوان.
-3. **Execute**: تا حد ممکن خود کار را انجام بده؛ سؤال فقط برای blocker واقعی.
-4. **Record**: prompt/Run/evaluation/feedback/decision/status/handoff را ثبت کن.
-5. **Improve**: اگر failure یا insight تکرارشونده بود OBS/HYP/EXP/LRN مناسب بساز.
-6. **Sync**: registry/dashboard را در صورت نیاز به‌روز کن.
-7. **Commit**: تغییرات معنادار را با commit موضوعی ثبت کن.
-8. **Report**: خلاصه فارسی کوتاه و next action.
+## Process every request
+1. **Context** — identify project, stage, and task.
+2. **Load minimal truth** — read `STATUS.md`, `HANDOFF.md`, and the relevant SOP/checklist/prompt/tool/learning.
+3. **Execute** — perform the work directly when possible; ask only for genuine blockers.
+4. **Record** — persist prompt, Run, evaluation, feedback, decisions, status, and handoff as applicable.
+5. **Improve** — create OBS/HYP/EXP/LRN records for repeatable failures or insights.
+6. **Sync** — update registry/dashboard when required.
+7. **Commit** — make focused commits for meaningful repository changes.
+8. **Report** — give the user a concise operational summary and next action in the user’s preferred chat language.
 
-## شروع session جدید
-`AI_START_HERE.md` را اجرا کن. اگر پروژه active وجود دارد، `HANDOFF.md` مهم‌ترین خلاصه context بین sessionهاست. chat history قبلی را مطالبه نکن مگر repo واقعاً ناقص باشد.
+## New session
+Run `AI_START_HERE.md`. If a project is active, `HANDOFF.md` is the primary cross-session summary. Do not request old chat history unless the repository genuinely lacks required information.
 
-## شروع پروژه جدید
-اگر user حداقل product image + source/template prompt را داده است، `FAST_START_PROTOCOL.md` را اجرا کن. optional fields را بهانه توقف نکن. assumptionهای کم‌ریسک را ثبت کن.
+## New project
+If the user has at least product image(s) + source/template prompt, run `FAST_START_PROTOCOL.md`. Missing optional fields are not blockers; record low-risk assumptions.
 
-## مدیریت Git
-کاربر اجازه داده تغییرات لازم و غیر-destructive را مستقیم در repo انجام داده و commit کنی. مثال:
-- ایجاد/به‌روزرسانی project records، Run، prompt package، evaluation، handoff؛
-- اصلاح documentation و checklist بر اساس policy؛
-- ثبت observation/hypothesis/experiment؛
-- candidate prompt versions.
+## Git management
+The user authorizes necessary low-risk reversible edits such as project records, Runs, prompt packages, evaluations, handoffs, documentation/checklist improvements, and observation/hypothesis records.
 
-قبل از این موارد approval صریح بگیر:
-- حذف media/evidence/history؛
-- force push یا rewrite history؛
-- انتشار asset حساس؛
-- تغییر معماری بزرگ و پرریسک؛
-- promotion یک تغییر global وقتی user قبلاً دستور آن را نداده و evidence کافی محل تردید است.
+Ask explicit approval before destructive media/evidence deletion, force-push/history rewriting, publishing sensitive assets, or broad high-risk architecture changes.
 
-## Prompt-first learning
-هدف مرکب سیستم بهبود promptهاست. برای هر task مهم:
-- از canonical prompt معتبر شروع کن؛
-- prompt دقیق استفاده‌شده را حفظ کن؛
-- نتیجه را rubric-score و failure-tag کن؛
-- تغییر prompt را به failure/observation لینک کن؛
-- candidate جدید را با version جدید بساز؛
-- در صورت امکان یک متغیر معنادار را کنترل‌شده تست کن؛
-- فقط بعد از evidence مناسب آن را validated/default کن.
+## Prompt improvement loop
+For every important task:
+- start from the best valid canonical/active prompt;
+- preserve the exact resolved prompt used;
+- score the result and assign failure tags;
+- link prompt changes to observed failures/evidence;
+- create a new version for meaningful changes;
+- control one meaningful variable when feasible;
+- promote only after adequate evidence.
 
-## Visual asset handling
-اگر asset در chat حاضر است، از همان به‌عنوان evidence بصری استفاده کن و provenance را ثبت کن. اگر ادامه پروژه در chat جدید نیازمند visual inspection است ولی asset از repo قابل render نیست، فقط asset لازم را برای re-attach بخواه. هویت/تصمیمات قبلی باید از docs بازیابی شوند، نه از حافظه چت.
+## Visual evidence
+If media is available in the current session, inspect it and record provenance. If a later session needs visual context, use Git proxies first. Request original media only when the proxy is insufficient for the actual task.
 
-## سطح جزئیات documentation
-هر نکته‌ای را ثبت نکن؛ چیزهایی را ثبت کن که یکی از این ارزش‌ها را دارند:
-- برای reproduce کردن خروجی لازم‌اند؛
-- تصمیم بعدی را تغییر می‌دهند؛
-- failure یا success pattern هستند؛
-- prompt/SOP/checklist/tool knowledge را بهتر می‌کنند؛
-- برای session بعدی context ضروری‌اند.
+## Documentation depth
+Record information that is needed to reproduce outputs, changes a future decision, represents a failure/success pattern, improves prompts/SOPs/checklists/tool knowledge, or is essential to the next session. Do not persist transient scratch reasoning with no operational value.
 
-## Definition of done برای یک مرحله
-مرحله کامل نیست مگر:
-- خروجی مرحله وجود داشته باشد؛
-- checklist/gate مربوطه بررسی شده باشد؛
-- metadata/provenance کافی ثبت شده باشد؛
-- `STATUS.md` و در صورت مهم بودن session، `HANDOFF.md` به‌روز باشند؛
-- next action روشن باشد.
+## Definition of Done for a stage
+A stage is not complete until:
+- its required output exists;
+- the relevant checklist/gate has been evaluated;
+- sufficient metadata/provenance is recorded;
+- `STATUS.md` and, when appropriate, `HANDOFF.md` are current;
+- the next action is explicit;
+- required media proxy/documentation sync is complete or a documented exception exists.
+
+## English-only repository language
+All repository documentation and persisted text must be English. Translate or paraphrase non-English user feedback before persistence. Do not keep Persian/Arabic-script examples or quotes in the repository. This policy is enforced by `11_TOOLS/check_english_docs.py` and CI.

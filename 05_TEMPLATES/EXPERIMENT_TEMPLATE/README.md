@@ -1,3 +1,1 @@
-# Experiment
-
-یک variable معنادار را تغییر دهید؛ controls، Run، metric، regression و conclusion را ثبت کنید.
+Change one meaningful variable when practical. Record controls, Runs, metrics, regression checks, and conclusion.

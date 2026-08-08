@@ -15,3 +15,11 @@ __pycache__/
 07_EXPERIMENTS/**/inputs/*
 07_EXPERIMENTS/**/outputs/*
 !**/.gitkeep
+
+# Low-resolution, explicitly versioned cross-chat media proxies only.
+# Originals/full-resolution binaries remain ignored everywhere else.
+!06_PROJECTS/**/19_HANDOFF_ASSETS/git_previews/
+!06_PROJECTS/**/19_HANDOFF_ASSETS/git_previews/**/*.webp
+!06_PROJECTS/**/19_HANDOFF_ASSETS/git_previews/**/*.mp4
+!05_TEMPLATES/PROJECT_TEMPLATE/19_HANDOFF_ASSETS/git_previews/
+!05_TEMPLATES/PROJECT_TEMPLATE/19_HANDOFF_ASSETS/git_previews/.gitkeep

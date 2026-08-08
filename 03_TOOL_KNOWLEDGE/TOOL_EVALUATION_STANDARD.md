@@ -1,3 +1,3 @@
-# Tool evaluation standard
+# Tool Evaluation Standard
 
-task/input/prompt version/rubric را تا حد امکان ثابت نگه دارید؛ variable مستقل، identity score، failure، retry و limitation را مقایسه کنید. تک پروژه observation است.
+Keep task, input, prompt version, and rubric fixed whenever practical. Change one meaningful variable, compare identity score, failures, retry rate, and limitations. A single project normally supports an observation, not a universal recommendation.

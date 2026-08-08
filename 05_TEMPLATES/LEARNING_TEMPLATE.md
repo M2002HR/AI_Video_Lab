@@ -1,3 +1,3 @@
-# LRN-xxxx
+# Learning
 
-Evidence، scope، confidence، regression، recommendation و files.
+Record evidence, scope, confidence, regression checks, recommendation, and affected files.

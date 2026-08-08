@@ -1,101 +1,77 @@
 # Documentation Contract
 
-این سند یک قانون سیستمی است، نه پیشنهاد. هدف آن این است که هیچ دانشی که برای تکرار، مقایسه، ادامه در chat جدید یا بهبود سیستم ارزش دارد فقط داخل مکالمه باقی نماند.
+This is a system rule, not a suggestion. No knowledge that matters for reproduction, comparison, cross-chat continuation, or system improvement may remain only in conversation.
 
-## اصل اصلی
+## Core rule
+**If a decision, input, output, failure, feedback item, prompt, tool change, workflow change, creative selection, QA result, or learning can affect a future execution, it must be recorded in the repository.**
 
-**اگر یک تصمیم، ورودی، خروجی، خطا، feedback، prompt، تغییر ابزار، تغییر workflow، انتخاب creative، نتیجه QA یا learning بتواند روی اجرای بعدی اثر بگذارد، باید در repository ثبت شود.**
+Chat is the working interface; the repository is durable memory.
 
-Chat history رابط کار است؛ repository حافظه پایدار است.
+## Mandatory records
+### Project state
+- brief and deliverable;
+- original inputs and provenance;
+- assumptions and uncertainty;
+- current stage, blockers, and next action;
+- approved/selected assets and rationale.
 
-## مواردی که ثبتشان اجباری است
-
-### Project facts
-- brief و deliverable؛
-- original inputs؛
-- assumptions و uncertainty؛
-- stage فعلی، blocker و next action؛
-- approved/selected assets و دلیل انتخاب.
-
-### AI production
-- prompt کامل استفاده‌شده؛
-- prompt ID/version/status در صورت canonical بودن؛
-- tool/model/settings در حد اطلاعات موجود؛
-- ingredient/reference list و role هر reference؛
-- هر Run معنی‌دار؛
-- خروجی منتخب و خروجی شکست‌خورده‌ای که evidence مفید دارد.
+### Generation
+- full prompt actually used;
+- prompt ID/version/status when canonical;
+- tool/model/settings when known;
+- ingredient/reference list and explicit role of each reference;
+- every meaningful Run;
+- selected outputs and failed outputs that provide useful evidence.
 
 ### Evaluation
-- score/rubric؛
-- failure tags؛
-- comparison؛
-- pass/fail gate؛
-- repair/regenerate/stop decision.
+- rubric scores;
+- failure tags;
+- comparisons;
+- pass/fail gate decisions;
+- selection rationale.
 
-### Learning
-- raw user feedback مهم؛
-- observation؛
-- hypothesis؛
-- experiment؛
-- validated learning؛
-- تغییر prompt/SOP/checklist/tool recommendation؛
-- دلیل و evidence تغییر.
+### Learning and change
+- important user feedback translated into English if necessary;
+- observations;
+- hypotheses;
+- experiments;
+- validated learnings;
+- prompt/SOP/checklist/tool changes;
+- evidence and rationale for changes.
 
-### Process knowledge
-هر بار که در حین پروژه متوجه می‌شویم یک **مرحله جدید، checklist جدید، decision rule، naming rule، continuity rule، prompt-writing rule یا workflow branch** لازم است، خود این نیاز نیز باید ثبت شود و در صورت تکرارپذیری از project knowledge به system documentation ارتقا یابد.
+## Workflow discovery must also be documented
+If production reveals the need for a new stage, checklist, decision rule, naming rule, continuity rule, prompt-writing rule, or workflow branch, that need is evidence. Record it at project level and promote it to system documentation when reusable and sufficiently supported.
 
-## «خودِ مستندسازی» نیز باید مستند باشد
+## Documentation self-check
+Before completing meaningful work, the operator must ask:
+1. What was produced or decided?
+2. What still exists only in chat?
+3. Is it project-local or system-reusable?
+4. Must `STATUS.md` or `HANDOFF.md` change?
+5. Is a Run/Prompt/Observation/Hypothesis/Decision record required?
+6. Must registry/dashboard/checklists be synchronized?
+7. Is required media proxy persistence complete?
 
-AI operator موظف است قبل از پایان هر کار مهم بپرسد:
+If any required record is missing, the task is not complete.
 
-1. چه چیزی تولید یا تصمیم‌گیری شد؟
-2. کدام بخش فقط در chat است و هنوز در repo نیست؟
-3. آیا این مورد project-local است یا system-reusable؟
-4. آیا STATUS/HANDOFF باید برای chat بعدی به‌روزرسانی شود؟
-5. آیا Run/Prompt/Observation/Hypothesis/Decision لازم است؟
-6. آیا registry/dashboard یا checklist باید sync شود؟
+## Recording levels
+- **Run-level** — every meaningful generation, prompt, final decision, and approval.
+- **Project-level** — feedback, creative choices, failure patterns, workarounds, and context needed to continue the project.
+- **System-level** — reusable rules or methods. Begin as observation/hypothesis when evidence is limited; promote under Evidence/Change policy.
 
-اگر پاسخ یکی از موارد بالا مثبت است، task تا زمان ثبت آن از نظر سیستم کامل محسوب نمی‌شود.
+## What not to record
+- social conversation with no project impact;
+- exact repetition of information already authoritative in the repository;
+- transient speculation that does not affect decisions;
+- scratch reasoning that creates no evidence or operational output.
 
-## سطوح ثبت
+## Cross-chat completeness
+After a milestone, a fresh ChatGPT session should be able to read `AI_START_HERE.md`, project `STATUS.md`, project `HANDOFF.md`, relevant evidence, and active-stage documents and understand the project goal, approvals, failures, active prompt/reference plan, important learnings, and exact next action without asking the user to recount prior history.
 
-### Level A — Mandatory provenance
-برای هر Run، prompt، final decision و approval.
+## Definition of Done for documentation
+A milestone is done only when its output/decision is recorded, provenance is traceable, status/handoff are synchronized when necessary, important learning is not chat-only, system-level changes follow governance, and a new session can recover the required context.
 
-### Level B — Project memory
-برای feedback، انتخاب creative، failure pattern، workaround و نکته‌ای که ادامه همین پروژه به آن نیاز دارد.
+## English-only persistence policy
+All persisted repository text must be English: Markdown, text, JSON string values, YAML, CSV notes, prompts, templates, examples, comments, feedback logs, handoffs, and change history. If source material or user feedback is non-English, persist an English translation/paraphrase rather than the non-English text. User-facing chat language is independent of this repository rule.
 
-### Level C — System knowledge
-برای rule یا روش قابل‌استفاده در پروژه‌های دیگر. ابتدا observation/hypothesis؛ سپس طبق Evidence Policy در صورت اعتبار کافی به SOP/prompt/checklist ارتقا پیدا می‌کند.
-
-## مواردی که لازم نیست ثبت شوند
-- گفت‌وگوی اجتماعی بدون اثر روی پروژه؛
-- توضیح تکراری که دقیقاً در repo موجود است؛
-- حدس زودگذر بدون اثر بر تصمیم؛
-- intermediate scratch reasoning که evidence یا خروجی عملی ایجاد نکرده است.
-
-## Cross-chat handoff contract
-در پایان یک session یا پس از milestone مهم، پروژه باید طوری باشد که یک ChatGPT جدید با خواندن:
-
-1. `AI_START_HERE.md`
-2. `project.json`
-3. `STATUS.md`
-4. `HANDOFF.md`
-5. اسناد stage فعال
-
-بتواند بدون درخواست بازگویی تاریخچه از کاربر، موارد زیر را بفهمد:
-- هدف پروژه؛
-- چه چیزهایی approved شده؛
-- چه چیزهایی fail شده و چرا؛
-- prompt/reference فعال چیست؛
-- چه learningهایی مهم‌اند؛
-- دقیقاً next action چیست.
-
-## Definition of Done برای documentation
-یک milestone فقط وقتی Done است که:
-- خروجی/تصمیم ثبت شده؛
-- provenance قابل ردیابی است؛
-- status و handoff در صورت نیاز sync هستند؛
-- learning مهم فقط در chat باقی نمانده؛
-- تغییر system-level طبق governance ثبت شده؛
-- chat جدید بتواند context لازم را از repo بازیابی کند.
+Run `python 11_TOOLS/check_english_docs.py` before declaring repository language compliance complete. CI must pass with zero forbidden-script violations.

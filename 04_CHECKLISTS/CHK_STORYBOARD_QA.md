@@ -1,21 +1,15 @@
-# CHK STORYBOARD QA
-
-## نسخه
-
-1.0.0
+# Storyboard Qa
 
 ## Gate
+All required items must pass or be marked N/A with rationale.
 
-همهٔ requiredها pass یا N/A مستدل.
+## Checklist
+- [ ] All controlling beats are defined
+- [ ] Composition/action/camera are readable
+- [ ] Product continuity holds
+- [ ] Character/object counts are coherent
+- [ ] Timing and complexity are realistic
+- [ ] Final hero/end state is defined
 
-## موارد
-
-- [ ] beat کامل
-- [ ] transition/composition
-- [ ] continuity محصول
-- [ ] action feasible
-- [ ] زمان/complexity واقع‌گرا
-
-## ثبت
-
-نتیجه، استثنا، Run/فایل و تصمیم را در STATUS یا review ثبت کنید.
+## Record
+Persist result, exceptions, relevant Run/file IDs, and decision in the project review/STATUS as appropriate.

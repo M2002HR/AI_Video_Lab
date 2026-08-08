@@ -1,1 +1,1 @@
-Run بسازید؛ prompt/reference/settings/output/evaluation/hash را ثبت کنید.
+Create a Run and record prompt, references, settings, output, evaluation, and hashes when available.

@@ -1,19 +1,15 @@
-# CHK IMAGE PROMPT PREFLIGHT
-
-## نسخه
-
-1.0.0
+# Image Prompt Preflight
 
 ## Gate
+All required items must pass or be marked N/A with rationale.
 
-همهٔ requiredها pass یا N/A مستدل.
+## Checklist
+- [ ] Task/output contract explicit
+- [ ] Identity lock present
+- [ ] Reference roles explicit
+- [ ] No contradictory camera/material/composition rules
+- [ ] Actual tool settings recorded or unknown
+- [ ] Negative constraints target known risks
 
-## موارد
-
-- [ ] task/priority/subject/identity/reference role/angle/light/material/negative
-- [ ] conflict ندارد
-- [ ] setting واقعی جدا
-
-## ثبت
-
-نتیجه، استثنا، Run/فایل و تصمیم را در STATUS یا review ثبت کنید.
+## Record
+Persist result, exceptions, relevant Run/file IDs, and decision in the project review/STATUS as appropriate.

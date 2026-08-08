@@ -1,3 +1,3 @@
 # Experiments
 
-آزمایش کنترل‌شده hypothesis را evidence می‌کند؛ در حد امکان یک variable. demo وارد registry واقعی نیست.
+Controlled experiments turn hypotheses into evidence. Change one meaningful variable when practical. Fictional/demo experiments do not enter real project registries or statistics.

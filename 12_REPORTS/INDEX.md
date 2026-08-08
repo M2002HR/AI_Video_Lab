@@ -1,3 +1,3 @@
 # Reports
 
-گزارش‌ها فقط از evidence ثبت‌شده نتیجه می‌گیرند؛ statistic بدون داده کافی ممنوع.
+Reports may conclude only from recorded evidence. Do not report statistics or confidence levels unsupported by sample size/evidence.

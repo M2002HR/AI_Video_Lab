@@ -1,12 +1,17 @@
 # Handoff Assets
 
-این پوشه برای previewهای کم‌حجم و غیرحساس است که می‌توانند context بصری session بعدی را آسان کنند.
+Low-resolution visual memory for cross-chat continuity.
+
+- `git_previews/`: version-controlled WebP/MP4 proxies.
+- `proxy_manifest.json`: source/Run-to-proxy mapping.
 
 Rules:
-- source of truth نیست؛ original media در محل اصلی خود می‌ماند.
-- فقط assetی را commit کن که privacy/IP اجازه می‌دهد.
-- برای repo public، confidential/client media را اینجا نگذار.
-- نام فایل باید به project asset/Run مربوط قابل ردیابی باشد.
-- `HANDOFF.md` باید توضیح دهد هر preview چیست و آیا original برای قضاوت دقیق باید دوباره attach شود.
-
-اگر media در Git commit نمی‌شود، این پوشه می‌تواند فقط README داشته باشد.
+- Proxy is not source of truth; original/full-resolution remains at its authoritative location.
+- Default image proxy: WebP, long edge <=1280, quality about 72.
+- Default video proxy: MP4/H.264, long edge <=1280, about 24fps, CRF about 30.
+- Commit only media whose privacy/IP status permits publication.
+- Public repository proxies are still public media.
+- Confidential/client/sensitive/`do_not_publish` media -> metadata-only.
+- Filename must trace to project asset/Run.
+- `HANDOFF.md` must explain what each proxy represents and whether original media is required for generation or detailed QA.
+- Sync proxy + manifest according to `00_SYSTEM/MEDIA_PROXY_PIPELINE.md`.

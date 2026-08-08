@@ -1,3 +1,3 @@
-# SYSTEM HEALTH
+# System Health
 
-قالب سلامت: broken links، malformed JSON، duplicate IDs، Run بدون evaluation، candidate بی‌آزمون، tool card کهنه، CHG باز، پروژه بدون postmortem، prompt deprecated فعال، hash مفقود. lab.py validate موارد ماشینی را گزارش می‌کند.
+Health checks include broken links, malformed JSON, duplicate IDs, Runs without evaluation, untested candidates, stale tool cards, open change proposals, projects without postmortem, deprecated prompts still active, missing hashes, and English-only documentation compliance. Use `lab.py validate` and the CI checks for machine-verifiable items.

@@ -1,216 +1,132 @@
-# Master workflow
-
-## Production mode branch
-
-بعد از Creative Direction، قبل از production سنگین، `00_SYSTEM/SCENARIO_ARCHITECTURE_SYSTEM.md` اجرا می‌شود. اگر duration/clip count از قبل قفل نشده باشد، سیستم ظرفیت `1×10s / 2×10s / 3×10s / 4×10s` را می‌سنجد و یک Scenario Architecture Menu adaptive می‌سازد. فقط durationها و سناریوهای واقعاً معنادار پیشنهاد می‌شوند.
-
-### SINGLE_CLIP
-یک کلیپ مستقل، معمولاً 4–10 ثانیه. مراحل Stage 07 تا Stage 23 مستقیم اجرا می‌شوند.
-
-### MULTI_CLIP
-به‌صورت رسمی 2، 3 یا 4 کلیپ پشتیبانی می‌شود؛ در setup 10s یعنی معمولاً 20s، 30s یا 40s. قبل از shot/prompt هر clip باید `00_SYSTEM/MULTI_CLIP_ARCHITECTURE.md` و `01_SOPS/SOP_MULTI_CLIP_SEQUENCE.md` اجرا شوند و این موارد ایجاد شوند:
-- Master Story / `MASTER_SEQUENCE`؛
-- sequence ID و clip IDs؛
-- role هر clip؛
-- shared identity bible؛
-- boundary contracts؛
-- architecture = continuous / hybrid / editorial؛
-- shared vs clip-specific reference strategy.
-
-سپس Stage 09 تا Stage 19 برای هر clip به‌عنوان unit مستقل اجرا می‌شود و Stage 20 مونتاژ sequence و Stage 21 QA کل sequence را نیز پوشش می‌دهد.
-
-اگر یک سناریوی 10s بیش از 1–2 state change اصلی و چند interaction فیزیکی دارد، قبل از پیچیده‌تر کردن prompt باید multi-clip decomposition بررسی شود. اگر 4 clips filler ایجاد می‌کند، 3 یا 2 clips ترجیح دارد.
-
-## Stage map
-
-### STAGE_00 — PROJECT_INTAKE
-ورودی: brief و ورودی‌های اصلی
-
-خروجی: project.json، STATUS و inventory
-
-عملیات و Gate: اصل‌ها را بدون تغییر نگه‌دار؛ deliverable، hash، assumption و کمبود را ثبت کن.
-
-### STAGE_01 — SOURCE_PROMPT_ANALYSIS
-ورودی: پرامپت immutable و brief
-
-خروجی: تحلیل KEEP/ADAPT/REMOVE و risk
-
-عملیات و Gate: DNA ساختاری، محتوای محصول قدیمی، مفهوم reusable و contradictionها را جدا کن.
-
-### STAGE_02 — PRODUCT_IDENTITY
-ورودی: تصاویر محصول
-
-خروجی: identity spec، identity lock، uncertainty
-
-عملیات و Gate: silhouette، نسبت‌ها، material، texture، رنگ، packaging و forbidden transformations را ثبت کن.
-
-### STAGE_03 — REFERENCE_STRATEGY
-ورودی: identity spec و هدف
-
-خروجی: reference plan و roleها
-
-عملیات و Gate: نیاز cleanup/angle/macro/scene را تعیین و identity را از style جدا کن.
-
-### STAGE_04 — REFERENCE_GENERATION
-ورودی: reference plan
-
-خروجی: Runهای reference
-
-عملیات و Gate: هر رفرنس تولیدی Run مستقل و QA دارد؛ اصل را جایگزین نکن.
-
-### STAGE_05 — REFERENCE_QA
-ورودی: اصل‌ها و رفرنس تولیدی
-
-خروجی: approved reference set
-
-عملیات و Gate: geometry/color/material/label را با اصل مقایسه و drift را رد کن.
-
-### STAGE_06 — CREATIVE_DIRECTION
-ورودی: brief و رفرنس approved
-
-خروجی: creative direction
-
-عملیات و Gate: campaign، emotion، realism، scale، camera، lighting و product priority را ثبت کن.
-
-### STAGE_07 — SCENARIO_ARCHITECTURE_AND_GENERATION
-ورودی: creative direction + identity + source/template analysis + tool constraints
-
-خروجی:
-- Process State Map؛
-- Scenario Capacity Assessment؛
-- Duration Viability Matrix در صورت نیاز؛
-- Scenario Architecture Menu؛
-- candidate scenarios.
-
-عملیات و Gate: `SOP_07_SCENARIO_GENERATION.md` و `CHK_SCENARIO_ARCHITECTURE_MENU.md` اجرا شوند. سناریوها باید از نظر action/story architecture متفاوت باشند، process واقعی جعل نشود، candidate count adaptive باشد، و برای 2/3/4 clips نقش هر clip در card مشخص باشد. قبل از production سنگین user selection gate وجود دارد.
-
-### STAGE_08 — SCENARIO_SELECTION
-ورودی: candidate/menu و rubric
-
-خروجی: scenario selected و decision
-
-عملیات و Gate: focus، feasibility، complexity، commercial payoff و reference burden را بسنج. production mode single/multi، clip count و architecture نهایی اینجا قفل می‌شوند. برای multi-clip پس از انتخاب Master Sequence و Clip Contracts ساخته می‌شوند.
-
-### STAGE_09 — SHOT_TIMING
-ورودی: سناریو منتخب
-
-خروجی: timeline، camera plan، continuity
-
-عملیات و Gate: beat، framing، حرکت، contact، final hero و SFX را sequence کن. در multi-clip برای هر clip جدا و در چارچوب Master Sequence اجرا می‌شود.
-
-### STAGE_10 — STORYBOARD
-ورودی: shot design
-
-خروجی: storyboard specification
-
-عملیات و Gate: برای هر beat composition، subject، action و transition را مشخص کن.
-
-### STAGE_11 — STORYBOARD_QA
-ورودی: storyboard
-
-خروجی: QA report
-
-عملیات و Gate: continuity، composition، timing و accidental complexity را gate کن.
-
-### STAGE_12 — KEYFRAME_GENERATION
-ورودی: storyboard و identity lock
-
-خروجی: keyframe Runها
-
-عملیات و Gate: فقط keyframeهای کنترل‌کننده را تولید و provenance کامل ثبت کن. در multi-clip boundary keyframeها دارایی درجه‌یک‌اند.
-
-### STAGE_13 — KEYFRAME_QA
-ورودی: keyframe و اصل
-
-خروجی: approved keyframe set
-
-عملیات و Gate: identity، scale، light، scene و character continuity را بررسی کن؛ برای multi-clip مرز Cn→Cn+1 نیز gate می‌شود.
-
-### STAGE_14 — VIDEO_PROMPT
-ورودی: identity/reference/scenario/timeline
-
-خروجی: video prompt package
-
-عملیات و Gate: base logic را با adapter ابزار، نقش رفرنس، physics و final frame ترکیب کن. هر clip در multi-clip package مستقل دارد و shared prompt blocks provenance دارند.
-
-### STAGE_15 — VIDEO_PREFLIGHT
-ورودی: package
-
-خروجی: preflight report
-
-عملیات و Gate: contradiction، complexity، role رفرنس، timing، camera و known failure را چک کن.
-
-### STAGE_16 — VIDEO_GENERATION
-ورودی: package و settings
-
-خروجی: video Runها
-
-عملیات و Gate: هر generation را با tool/model/settings/outputs کامل ثبت کن؛ در multi-clip `clip_id` و `sequence_id` نیز ثبت شوند.
-
-### STAGE_17 — VIDEO_QA
-ورودی: video Run
-
-خروجی: frame-by-frame evaluation
-
-عملیات و Gate: identity، morph، count، contact، gravity، camera، lighting و hero را نمره بده.
-
-### STAGE_18 — REPAIR_DECISION
-ورودی: QA و failure tags
-
-خروجی: repair/regenerate decision
-
-عملیات و Gate: local cosmetic را repair و identity/structure/continuity را regenerate یا stage قبلی کن.
-
-### STAGE_19 — FINAL_SELECTION
-ورودی: evaluated runs
-
-خروجی: selected final run
-
-عملیات و Gate: با rubric و brief، انتخاب و دلیل را ثبت کن؛ final بدون evaluation ممنوع. در multi-clip یک final run برای هر clip انتخاب می‌شود.
-
-### STAGE_20 — POST_PRODUCTION
-ورودی: final candidate یا مجموعه final clipها
-
-خروجی: edit/composite/assembly record
-
-عملیات و Gate: trim، color، transition، text/logo overlay، audio و delivery format را traceable ثبت کن. برای multi-clip sequence assembly اینجا انجام می‌شود.
-
-### STAGE_21 — FINAL_QA
-ورودی: deliverable
-
-خروجی: final QA report
-
-عملیات و Gate: brief، format، brand، logo، audio و commercial readiness را تأیید کن. در multi-clip علاوه بر clip QA، `CHK_MULTI_CLIP_CONTINUITY.md` اجرا شود.
-
-### STAGE_22 — POSTMORTEM
-ورودی: Runها و QAها
-
-خروجی: postmortem
-
-عملیات و Gate: موفقیت/شکست، retry، prompt/tool، failure و experiment بعدی را ثبت کن.
-
-### STAGE_23 — SYSTEM_LEARNING
-ورودی: postmortem و evidence
-
-خروجی: OBS/HYP/LRN/CHG
-
-عملیات و Gate: شواهد را طبقه‌بندی کن؛ فقط learning validated استاندارد را تغییر می‌دهد.
-
-stage تازه با ID جدید افزوده می‌شود و پروژه‌های قدیمی را نمی‌شکند.
-
-## Documentation gate عمومی
-
-در تمام Stageها `00_SYSTEM/DOCUMENTATION_CONTRACT.md` بخشی از Definition of Done است. هر تصمیم، prompt، Run، feedback، failure، learning، workflow discovery یا next-action که برای ادامه/تکرار اثر دارد باید قبل از پایان milestone در repo ثبت شود.
-
-## استاندارد تحلیل پرامپت مرجع
-
-پرامپت اصلی immutable است. تحلیل باید این ماتریس را در فایل مرحله ثبت کند:
-
-| بخش | دسته | اقدام | دلیل/ریسک |
-|---|---|---|---|
-| duration، aspect، camera، lighting، scale، background، character، timing، physics، sound، hero | DNA ساختاری | KEEP یا ADAPT | فقط در صورت سازگاری با brief جدید |
-| نام/بسته‌بندی/مواد/عمل قدیمی | product-specific | REMOVE یا ADAPT | جلوگیری از leakage محصول قدیمی |
-| استعارهٔ خلاقه مانند miniature workers یا macro factory | creative concept | ADAPT | feasibility و brand fit را بسنج |
-| حرکت متناقض دوربین، scale ناسازگار، اکشن هم‌زمان زیاد | conflict/risk | REMOVE یا simplify | دلیل و تصمیم را ثبت کن |
-
-Adapted prompt دارایی جدید با provenance است، نه ویرایش اصل.
+# Master Workflow
+
+This workflow uses stable stage IDs `STAGE_00` through `STAGE_23`. The Documentation Contract is part of Definition of Done at every stage.
+
+## Scenario / multi-clip routing
+After Creative Direction and before heavy production, run `SCENARIO_ARCHITECTURE_SYSTEM.md`. If duration is not locked, assess 1x10s through 4x10s and present only meaningful options. For 2–4 clips, create the Master Sequence, Clip Contracts, and boundary contracts before per-clip shot/prompt work. A 10-second clip should normally carry no more than 1–2 major state changes; otherwise consider decomposition.
+
+## STAGE_00 — Project Intake
+**Input:** brief and original inputs.
+**Action/Gate:** preserve originals; register deliverable, provenance, hashes, assumptions, and gaps.
+**Output:** project.json, STATUS, inventory.
+
+## STAGE_01 — Source Prompt Analysis
+**Input:** immutable source prompt and brief.
+**Action/Gate:** separate structural DNA, old-product content, reusable creative concepts, contradictions, and tool assumptions using KEEP/ADAPT/REMOVE.
+**Output:** source prompt analysis and risk matrix.
+
+## STAGE_02 — Product Identity
+**Input:** product images.
+**Action/Gate:** document category, silhouette, proportions, materials, texture, color, packaging/components, natural irregularity, uncertainty, and forbidden transformations.
+**Output:** product identity spec, identity lock, uncertainty log.
+
+## STAGE_03 — Reference Strategy
+**Input:** identity spec and objective.
+**Action/Gate:** decide which cleanup/angle/macro/scene references are truly necessary; separate identity authority from style influence.
+**Output:** reference plan and role map.
+
+## STAGE_04 — Reference Generation
+**Input:** approved reference plan.
+**Action/Gate:** generate only required single-purpose references; each meaningful generation is a Run.
+**Output:** reference Runs.
+
+## STAGE_05 — Reference QA
+**Input:** originals and generated references.
+**Action/Gate:** compare geometry/color/material/labels/identity against authoritative source; approve/reject with reasons.
+**Output:** approved reference set.
+
+## STAGE_06 — Creative Direction
+**Input:** brief and approved references.
+**Action/Gate:** lock campaign idea, emotion, realism, scale, environment, camera, lighting, rhythm, and product priority.
+**Output:** creative direction.
+
+## STAGE_07 — Scenario Architecture
+**Input:** creative direction + identity + source analysis + tool constraints.
+**Action/Gate:** build Process State Map, capacity assessment, duration viability, and adaptive scenario menu without inventing real process.
+**Output:** process state map, capacity assessment, scenario menu.
+
+## STAGE_08 — Scenario Selection
+**Input:** scenario candidates and rubric.
+**Action/Gate:** evaluate focus, feasibility, complexity, commercial payoff, reference burden; lock single/multi-clip architecture after user selection.
+**Output:** selected scenario and decision.
+
+## STAGE_09 — Shot Timing
+**Input:** selected scenario.
+**Action/Gate:** sequence beats, framing, camera, contact/physics, audio cues, and final hero; for multi-clip do this per Clip Contract.
+**Output:** timeline, camera plan, continuity rules.
+
+## STAGE_10 — Storyboard
+**Input:** shot design.
+**Action/Gate:** define composition, subject, action, and transition for every controlling beat.
+**Output:** storyboard specification.
+
+## STAGE_11 — Storyboard QA
+**Input:** storyboard.
+**Action/Gate:** gate continuity, composition, timing, accidental complexity, and product focus.
+**Output:** storyboard QA report.
+
+## STAGE_12 — Keyframe Generation
+**Input:** storyboard and identity lock.
+**Action/Gate:** generate only controlling keyframes/boundary frames with full provenance.
+**Output:** keyframe Runs.
+
+## STAGE_13 — Keyframe QA
+**Input:** keyframes and authoritative references.
+**Action/Gate:** evaluate identity, scale, light, scene, character, and boundary continuity.
+**Output:** approved keyframe set.
+
+## STAGE_14 — Video Prompt
+**Input:** identity + references + scenario + timeline.
+**Action/Gate:** combine base logic, tool adapter, explicit reference roles, physics/count constraints, temporal plan, and final-state rules.
+**Output:** video prompt package.
+
+## STAGE_15 — Video Preflight
+**Input:** prompt package.
+**Action/Gate:** check contradictions, complexity, reference roles, timing, camera, known failure modes, and settings.
+**Output:** preflight report.
+
+## STAGE_16 — Video Generation
+**Input:** approved package and settings.
+**Action/Gate:** register every generation with exact prompt/tool/model/settings/references/output metadata.
+**Output:** video Runs.
+
+## STAGE_17 — Video QA
+**Input:** video Run.
+**Action/Gate:** perform frame-by-frame evaluation of identity, morphing, count, contact, gravity, camera, lighting, temporal stability, and final hero.
+**Output:** video QA report.
+
+## STAGE_18 — Repair Decision
+**Input:** QA and failure tags.
+**Action/Gate:** repair local cosmetic issues; regenerate or return to root stage for identity/structural/continuity failures.
+**Output:** repair/regenerate decision.
+
+## STAGE_19 — Final Selection
+**Input:** evaluated Runs.
+**Action/Gate:** select with rubric and brief; never select an unevaluated final; multi-clip selects one final per clip.
+**Output:** selected final Run(s).
+
+## STAGE_20 — Post Production
+**Input:** final candidate(s).
+**Action/Gate:** record trims, assembly, transitions, color/exposure, text/logo overlays, audio, and delivery format.
+**Output:** edit/composite/assembly record.
+
+## STAGE_21 — Final QA
+**Input:** deliverable.
+**Action/Gate:** verify brief, format, brand, text/logo, audio, sequence continuity, and commercial readiness.
+**Output:** final QA report.
+
+## STAGE_22 — Postmortem
+**Input:** Runs and QA.
+**Action/Gate:** record successes/failures, retries, best prompts/tools, recurring failures, and next experiments.
+**Output:** postmortem.
+
+## STAGE_23 — System Learning
+**Input:** postmortem and evidence.
+**Action/Gate:** classify OBS/HYP/EXP/LRN and promote only evidence-supported changes.
+**Output:** learning/change records.
+
+## Source prompt analysis standard
+Preserve the source prompt unchanged. Record a KEEP / ADAPT / REMOVE matrix covering duration, aspect, camera, lighting, scale, background, characters, timing, physics, sound, hero framing, old-product-specific details, reusable creative metaphors, contradictions, and risk. An adapted prompt is a new provenance-tracked asset, never an overwrite of the source.
+
+## Documentation and language gates
+Every meaningful decision, prompt, Run, feedback item, failure, learning, workflow discovery, and next action needed for continuation must be persisted. All persisted repository text is English-only.

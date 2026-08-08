@@ -1,3 +1,3 @@
-# Demo only
+# Fictional Cocoa Demo
 
-پروژه fictional و text-only؛ در 06_PROJECTS یا registry واقعی نیست و media تولیدشده ندارد.
+A fictional text-only example. It is not a real project, is excluded from real registries/statistics, and contains no generated media.

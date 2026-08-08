@@ -1,21 +1,15 @@
-# CHK KEYFRAME QA
-
-## نسخه
-
-1.0.0
+# Keyframe Qa
 
 ## Gate
+All required items must pass or be marked N/A with rationale.
 
-همهٔ requiredها pass یا N/A مستدل.
+## Checklist
+- [ ] Product identity passes
+- [ ] Character identity/count passes when relevant
+- [ ] Scale and perspective are coherent
+- [ ] Lighting/environment continuity passes
+- [ ] Composition supports intended motion/boundary
+- [ ] Approve/reject rationale recorded
 
-## موارد
-
-- [ ] identity lock
-- [ ] scene/scale/light/character continuity
-- [ ] composition
-- [ ] artifacts
-- [ ] approved set
-
-## ثبت
-
-نتیجه، استثنا، Run/فایل و تصمیم را در STATUS یا review ثبت کنید.
+## Record
+Persist result, exceptions, relevant Run/file IDs, and decision in the project review/STATUS as appropriate.

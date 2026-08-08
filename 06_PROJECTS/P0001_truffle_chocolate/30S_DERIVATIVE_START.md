@@ -1,58 +1,51 @@
 # New Chat Start — 30s Truffle Derivative
 
-این فایل برای شروع یک chat جدید و ساخت تبلیغ 30 ثانیه‌ای / 3×10s از همان محصول P0001 است.
+Use this file to begin a fresh chat for a new 30-second / 3x10s advertisement derived from `P0001`.
 
-## هدف
+## Goal
+Create a **new derivative project** linked to P0001. Do not overwrite P0001 or resume R0022 optimization unless its learnings are relevant.
 
-یک **پروژه مشتق جدید** از P0001 ایجاد شود؛ P0001 و Run نهایی R0022 overwrite نشوند.
+The derivative should understand the same truffle product and source-template creative DNA, reuse validated/provisional learnings appropriately, target 30s / 3x10s / 16:9, present a Scenario Architecture Menu before new media production, and persist meaningful new media through the Git proxy policy.
 
-پروژه جدید باید:
-- همان محصول ترافل و template/creative DNA را بشناسد؛
-- learningهای P0001 را reuse کند؛
-- deliverable = 30s / 3×10s / 16:9 باشد؛
-- قبل از تولید تصویر/ویدیو یک Scenario Architecture Menu مخصوص 3×10s ارائه کند؛
-- 3–5 سناریوی واقعاً متفاوت پیشنهاد دهد فقط اگر ظرفیت واقعی وجود دارد؛
-- process واقعی را جعل نکند؛
-- بعد از انتخاب کاربر Master Sequence + Clip Contracts بسازد؛
-- سپس per-clip reference strategy و production را جلو ببرد.
-
-## Exact prompt to send in a fresh ChatGPT chat
+## Exact prompt for a fresh ChatGPT chat
 
 ```text
-این GitHub Repository سیستم AI Video Lab ماست:
+This GitHub repository is our AI Video Lab system:
 M2002HR/AI_Video_Lab
 
-اول `AI_START_HERE.md` و `AGENTS.md` را بخوان و طبق خود سیستم context را بازیابی کن. تاریخچه چت قبلی را از من نخواه؛ هر چیزی که در repo ثبت شده خودت پیدا کن.
+First read `AI_START_HERE.md` and `AGENTS.md` and recover context from the repository. Do not ask me to restate previous chat history if the information is already documented.
 
-من می‌خواهم از همان محصول ترافل پروژه `P0001` این بار یک تبلیغ جدید 30 ثانیه‌ای بسازم که از 3 ویدیوی 10 ثانیه‌ای تشکیل شود و در نهایت به هم متصل شوند.
+I want to create a new 30-second advertisement for the same truffle product from project `P0001`, made from three 10-second videos that will be assembled into one sequence.
 
-P0001 را overwrite نکن و optimization قبلی R0022 را ادامه نده مگر برای استفاده از learningهایش. یک پروژه مشتق جدید بساز و parent را P0001 ثبت کن.
+Do not overwrite P0001 and do not continue optimizing R0022 unless you are reusing its learnings. Create a new derivative project and record P0001 as the parent.
 
-قبل از هر تولید جدید:
-1. `06_PROJECTS/P0001_truffle_chocolate/HANDOFF.md` و `STATUS.md` را بخوان.
-2. source-prompt analysis، product identity، reference strategy و learningهای P0001 را بررسی کن.
-3. `00_SYSTEM/SCENARIO_ARCHITECTURE_SYSTEM.md`، `00_SYSTEM/MULTI_CLIP_ARCHITECTURE.md`، `01_SOPS/SOP_07_SCENARIO_GENERATION.md`، `01_SOPS/SOP_MULTI_CLIP_SEQUENCE.md` و checklistهای مرتبط را بخوان.
-4. برای 30s / 3×10s یک Process State Map و Scenario Capacity Assessment بساز.
-5. سپس 3 تا 5 Scenario Architecture واقعاً متفاوت و باارزش برای همین محصول + creative DNA پیشنهاد بده. اگر واقعاً فقط 3 گزینه معنادار وجود دارد، 5 تا را مصنوعی نکن.
-6. در سناریوها فقط reveal ساده پیشنهاد نده؛ در صورت مناسب بودن process/making/coating/assembly/packaging/character-driven/editorial/hybrid را هم بررسی کن.
-7. هر process را مشخص کن که verified/user-confirmed است یا creative metaphor؛ فرآیند واقعی را از خودت نساز.
-8. برای هر سناریو clip map سه‌قسمتی، architecture mode، process depth، visual impact، generation risk، reference burden، مزیت تجاری و failure risk را خلاصه کن.
-9. هنوز promptهای کامل تصویر/ویدیو یا storyboard سنگین نساز. اول من باید سناریو را انتخاب کنم.
-10. همه تصمیم‌ها، candidateها و انتخاب بعدی را طبق Documentation Contract در repo ثبت و commit کن.
+Before new production:
+1. Read `06_PROJECTS/P0001_truffle_chocolate/HANDOFF.md` and `STATUS.md`.
+2. Read `06_PROJECTS/P0001_truffle_chocolate/19_HANDOFF_ASSETS/proxy_manifest.json` and inspect available Git previews for visual context.
+3. Review P0001 source-prompt analysis, product identity, reference strategy, evaluations, and learnings.
+4. Read `00_SYSTEM/SCENARIO_ARCHITECTURE_SYSTEM.md`, `00_SYSTEM/MULTI_CLIP_ARCHITECTURE.md`, `01_SOPS/SOP_07_SCENARIO_GENERATION.md`, `01_SOPS/SOP_MULTI_CLIP_SEQUENCE.md`, and relevant checklists.
+5. Build a Process State Map and Scenario Capacity Assessment for 30s / 3x10s.
+6. Propose 3–5 genuinely distinct and valuable Scenario Architectures for this product + creative DNA. If only three are truly meaningful, do not manufacture five.
+7. Do not limit ideas to a simple reveal. When appropriate, consider making/coating/assembly/packaging/character-driven/editorial/hybrid approaches.
+8. Label every process claim as verified/user-confirmed or creative metaphor; never invent a real manufacturing process.
+9. For each scenario summarize the 3-clip map, architecture mode, process depth, visual impact, generation risk, reference burden, commercial advantage, and primary failure risk.
+10. Do not generate full image/video prompts or heavy storyboard detail yet. Wait for my scenario selection.
+11. Persist decisions, candidates, and later selection under the Documentation Contract and commit required changes.
+12. Read `00_SYSTEM/MEDIA_PROXY_PIPELINE.md`. Every meaningful new or re-attached media item that is non-sensitive and locally accessible should receive a low-resolution proxy, be stored under the derivative project's `19_HANDOFF_ASSETS/git_previews/`, update its `proxy_manifest.json`, and be committed. Keep original/full-resolution media outside normal Git.
 
-بعد از context load ابتدا یک خلاصه کوتاه از چیزهایی که از P0001 یاد گرفتی بده و بعد Scenario Menu مخصوص 30 ثانیه را ارائه کن.
+After context load, give me a short summary of the most important P0001 learnings and then present the 30-second Scenario Architecture Menu.
 
-نکته رسانه: عکس‌ها و ویدیوهای چت قبلی به‌صورت binary در Git ذخیره نشده‌اند. برای Scenario Planning از اسناد repo استفاده کن. وقتی بعد از انتخاب سناریو واقعاً به asset بصری نیاز شد، دقیقاً و فقط assetهای لازم را از من بخواه دوباره attach کنم.
+Media note: P0001 already has low-resolution Git previews for R0002, R0003, R0010, R0015, R0016, R0020, R0022, and R0023. Use them first for Scenario Planning and visual recall. Do not ask me to re-send them unless original/full-resolution detail is genuinely required for generation or precise QA.
 ```
 
-## Recommended media re-attachment timing
+## Existing P0001 Git previews
+- `R0002` — 45-degree product hero reference
+- `R0003` — clean top product reference
+- `R0010` — three-chef character reference
+- `R0015` — scene master
+- `R0016` — KF01
+- `R0020` — KF03
+- `R0022` — selected 10s video
+- `R0023` — rejected video retained as failure evidence
 
-برای Scenario Menu لازم نیست همه media دوباره فرستاده شوند؛ repo textual context کافی دارد.
-
-بعد از انتخاب سناریو، operator باید role-based درخواست کند. نقطه شروع معمولاً:
-1. original real product photo؛
-2. R0003 clean top؛
-3. R0010 three-chef reference؛
-4. R0022 فقط اگر selected sequence واقعاً می‌خواهد motion/world آن را reuse کند.
-
-R0006/R0008/R0015/R0016/R0020 فقط بر اساس نیاز clip انتخاب‌شده درخواست شوند.
+No re-attachment is required merely to build the Scenario Menu. After scenario selection, request only the original/full-resolution assets genuinely necessary for the chosen clip production.

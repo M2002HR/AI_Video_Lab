@@ -1,37 +1,37 @@
 # AI Video Ad Lab
 
-AI Video Ad Lab یک سیستم local-first و version-controlled برای ساخت و بهبود تبلیغات محصول با AI است. ورودی رایج: **عکس محصول + source/template prompt**. خروجی: media نهایی به‌علاوه یک knowledge base قابل‌ردیابی که بعد از هر پروژه بهتر می‌شود.
+AI Video Ad Lab is a local-first, version-controlled production and R&D system for creating AI product advertisements from inputs such as **product images + a source/template prompt**. The deliverable is not only the final media: prompts, checklists, SOPs, failure knowledge, tool knowledge, decisions, and reusable learnings must improve after every project.
 
-## هسته سیستم
-- `06_PROJECTS/`: پرونده کامل هر پروژه از input تا final/postmortem.
-- هر اجرای AI = یک **Run** با prompt/reference/settings/output/evaluation.
-- `02_PROMPT_SYSTEM/`: promptهای نسخه‌دار؛ prompt مهم دارایی تولیدی است، نه متن موقت.
-- `03_TOOL_KNOWLEDGE/`: تفاوت task با tool؛ توصیه ابزار باید evidence-based و قابل تغییر باشد.
-- `04_CHECKLISTS/`: quality gates برای اینکه مرحله مهمی جا نیفتد.
-- `07_EXPERIMENTS/`: A/B و controlled experiments.
-- `09_LEARNING/`: Observation → Hypothesis → Experiment → Validated Learning → System Change.
-- `10_REGISTRY/`: viewهای تولیدشده برای پروژه/Run/prompt/tool/learning.
+## Core structure
+- `06_PROJECTS/`: complete project records from intake through final selection and postmortem.
+- Every meaningful AI generation is a **Run** with prompt, references, settings, outputs, evaluation, and provenance.
+- `02_PROMPT_SYSTEM/`: versioned prompt assets; important prompts are production assets, not disposable chat text.
+- `03_TOOL_KNOWLEDGE/`: task requirements are separated from tool choice; recommendations must be evidence-based and revisable.
+- `04_CHECKLISTS/`: quality gates that prevent critical production steps from being skipped.
+- `07_EXPERIMENTS/`: controlled tests and A/B experiments.
+- `09_LEARNING/`: observations, hypotheses, validated learnings, changes, and decisions.
+- `10_REGISTRY/`: generated views for projects, Runs, prompts, tools, and learnings.
 
-## ChatGPT به‌عنوان اپراتور
-ChatGPT اپراتور اصلی workflow است و repo حافظه پایدار است. یک chat جدید نباید به chat history وابسته باشد: `AI_START_HERE.md` مسیر context recovery را تعریف می‌کند؛ هر پروژه `STATUS.md` و `HANDOFF.md` دارد.
+## ChatGPT as operator
+ChatGPT is the current primary workflow operator and the repository is persistent memory. A new chat must not depend on prior chat history. `AI_START_HERE.md` defines context recovery, and every active project maintains `STATUS.md` and `HANDOFF.md`.
 
-## چرخه تولید
-Input → source prompt analysis → product identity → reference strategy/generation/QA → creative direction → scenario → shot/timing → storyboard/keyframes → prompt package → video Runs → QA/repair → final → postmortem → learning → prompt/SOP/checklist/tool improvement.
+## Production cycle
+Intake -> source prompt analysis -> product identity -> reference strategy -> creative/scenario architecture -> shot/storyboard/keyframes -> video prompt -> generation -> QA -> selection/post -> postmortem -> system learning.
 
-## اصول
-1. original و history overwrite نمی‌شوند.
-2. product identity بر style مقدم است.
-3. WHAT باید از WHICH TOOL جدا باشد.
-4. هیچ claim ابزار بدون verification/evidence به‌عنوان حقیقت دائمی ثبت نمی‌شود.
-5. failed Runs حذف نمی‌شوند؛ failure evidence است.
-6. canonical prompt فقط با version/evidence تغییر می‌کند.
-7. chat تصمیم می‌سازد؛ repo تصمیم را حفظ می‌کند.
+## Principles
+1. Do not overwrite originals or historical Runs.
+2. Product identity has priority over style.
+3. Separate WHAT the task requires from WHICH TOOL performs it.
+4. Do not record tool capabilities as permanent fact without verification/evidence.
+5. Failed Runs are evidence and are not deleted merely because they failed.
+6. Canonical prompts change only through versioning and evidence.
+7. Chat creates decisions; the repository preserves them.
+8. Repository documentation and persisted text are English-only.
 
-## شروع
-- کاربر: `START_HERE.md`
-- ChatGPT/agent جدید: `AI_START_HERE.md`
-- نقشه سیستم: `00_SYSTEM/INDEX.md`
-- workflow: `00_SYSTEM/MASTER_WORKFLOW.md`
-- اپراتور: `00_SYSTEM/AI_OPERATOR_MANUAL.md`
+## Start here
+- User/operator entry: `START_HERE.md`
+- New AI agent/session: `AI_START_HERE.md`
+- System map: `00_SYSTEM/INDEX.md`
+- Operator rules: `AGENTS.md` and `00_SYSTEM/AI_OPERATOR_MANUAL.md`
 
-Media سنگین طبق `00_SYSTEM/STORAGE_POLICY.md` مدیریت می‌شود. metadata، prompt، evaluation، decision و handoff باید در Git باقی بمانند تا پروژه بین sessionها قابل ادامه باشد.
+Large media is managed through `00_SYSTEM/STORAGE_POLICY.md`. Metadata, prompts, evaluations, decisions, handoffs, and approved low-resolution proxies must remain versioned so work can continue across sessions.

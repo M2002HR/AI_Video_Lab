@@ -1,3 +1,3 @@
-# HYP-xxxx
+# Hypothesis
 
-Claim آزمون‌پذیر، OBS، prediction، controls، metric و falsification.
+Record a testable claim, linked observations, prediction, controls, metric, and falsification condition.

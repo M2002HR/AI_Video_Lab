@@ -1,3 +1,3 @@
-# Prompt engineering standard
+# Prompt Engineering Standard
 
-ترتیب: task/output contract، priority، subject/identity lock، reference role، composition/camera/light/material/environment، action/timeline، continuity/physics/contact/count، final frame/audio، negative constraints. contradiction و jargon بی‌معنا ممنوع. aesthetic language با setting واقعی ابزار فرق دارد. action زیاد یا identity حساس را به reference، keyframe و video جدا تقسیم کنید.
+Recommended order: task/output contract; priorities; subject/identity lock; reference roles; composition/camera/light/material/environment; action/timeline; continuity/physics/contact/count; final frame/audio; negative constraints. Remove contradictions, unnecessary jargon, and over-specification. Make assumptions, risk, and evaluation criteria explicit when useful.

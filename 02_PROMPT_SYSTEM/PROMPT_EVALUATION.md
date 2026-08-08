@@ -1,3 +1,3 @@
-# Prompt evaluation
+# Prompt Evaluation
 
-هر تغییر مسئله، Run، hypothesis، ثابت‌ها، metric، نتیجه و regression را ثبت می‌کند. evaluation با QA واقعی/benchmark است؛ statistic بدون نمونه کافی ممنوع.
+Every meaningful prompt change records the target problem, Run(s), hypothesis, controls, metric/rubric, result, and regression check. Evaluate with real QA/benchmarks. Do not claim statistics without adequate sample size.

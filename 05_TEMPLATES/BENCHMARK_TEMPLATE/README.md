@@ -1,3 +1,1 @@
-# Benchmark item
-
-Original reference، task، expected constraint، rubric، history و asset hash را حفظ کنید.
+Preserve original reference, task, expected constraints, rubric, history, and asset hashes.

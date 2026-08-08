@@ -1,3 +1,3 @@
-# brief
+# Brief
 
-هدف، مخاطب، پیام، CTA، deliverable، deadline و constraint را ثبت کنید.
+Record objective, audience, message, CTA, deliverables, deadline, and constraints.

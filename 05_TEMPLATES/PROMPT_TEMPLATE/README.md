@@ -1,1 +1,1 @@
-این package self-contained است: prompt را کپی، referenceها را با role درست upload، settings را اعمال، output را ذخیره و Run ثبت کنید.
+This package is self-contained: copy the prompt, upload references with the correct roles, apply settings, save output, and register the Run.

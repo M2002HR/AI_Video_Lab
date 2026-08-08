@@ -1,20 +1,14 @@
-# CHK REFERENCE PLAN
-
-## نسخه
-
-1.0.0
+# Reference Plan
 
 ## Gate
+All required items must pass or be marked N/A with rationale.
 
-همهٔ requiredها pass یا N/A مستدل.
+## Checklist
+- [ ] Original-source sufficiency assessed
+- [ ] Only necessary additional views proposed
+- [ ] Every reference has explicit role
+- [ ] Style references cannot override identity
+- [ ] Reference budget/slot constraints considered
 
-## موارد
-
-- [ ] کفایت اصل
-- [ ] cleanup/angle/macro/scene
-- [ ] role همهٔ رفرنس
-- [ ] style نباید identity را عوض کند
-
-## ثبت
-
-نتیجه، استثنا، Run/فایل و تصمیم را در STATUS یا review ثبت کنید.
+## Record
+Persist result, exceptions, relevant Run/file IDs, and decision in the project review/STATUS as appropriate.

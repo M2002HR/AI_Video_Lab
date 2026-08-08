@@ -1,3 +1,3 @@
-# Prompt versioning
+# Prompt Versioning
 
-ID پایدار و version semantic است: MAJOR قرارداد، MINOR strategy/quality، PATCH وضوح. status: draft, candidate, validated, deprecated. فایل تاریخی immutable است.
+Prompt IDs are stable and versions use SemVer: MAJOR changes contract, MINOR changes strategy/quality behavior, PATCH clarifies/fixes. Status values include draft, candidate, validated, deprecated. Historical prompt files are immutable.

@@ -1,3 +1,3 @@
-# QUALITY STANDARD
+# Quality Standard
 
-مقیاس 0–5: 0 غیرقابل‌استفاده، 1 شکست شدید، 2 ضعیف، 3 قابل‌قبول، 4 قوی، 5 عالی؛ N/A مجاز. identity زیر 3 gate رفرنس/keyframe/video را fail می‌کند مگر تصمیم مستند.
+Use a 0–5 scale: 0 unusable, 1 severe failure, 2 weak, 3 acceptable, 4 strong, 5 excellent; N/A is allowed with rationale. Identity below 3 fails reference/keyframe/video gates unless a documented exception is approved.

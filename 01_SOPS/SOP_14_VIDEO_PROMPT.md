@@ -1,29 +1,26 @@
-# SOP 14 VIDEO PROMPT
+# SOP 14 — Video Prompt
 
-## هدف
+## Purpose
+Execute `STAGE_14` repeatably with traceable evidence and a clear gate.
 
-اجرای قابل‌تکرار STAGE_14 با حفظ evidence و gate روشن.
+## Required input
+Identity + references + scenario + timeline. Optional inputs may include user feedback, style/scene references, and tool constraints. The previous stage must be approved or have a documented blocker/assumption.
 
-## ورودی لازم
+## Procedure
+1. Read current `STATUS.md`, this SOP, the relevant checklist, and authoritative evidence.
+2. Core stage action: combine base logic, tool adapter, explicit reference roles, physics/count constraints, temporal plan, and final-state rules.
+3. Instantiate the relevant canonical/active prompt when applicable and keep reference roles explicit.
+4. Record output, decision, uncertainty, provenance, and failure tags in the stage record or Run.
+5. Execute the checklist/gate. Advance `STATUS.md` only after pass or a documented exception; rebuild generated registry views when required.
 
-identity/reference/scenario/timeline. ورودی اختیاری: feedback کاربر، reference style/scene و constraint ابزار. پیش‌نیاز: stage قبلی approved یا blocker/assumption ثبت‌شده.
+## Output and gate
+Expected output: **video prompt package**. Pass requires usable output, sufficient provenance, and the stage-specific quality criteria. Fail requires a blocker/failure record and an explicit repair, regenerate, or return-to-root-stage decision.
 
-## رویه
+## AI/tool metadata
+The AI task is independent of tool choice. Unknown tool/model/settings are recorded as `unknown`, not guessed. Generations require Run ID, exact prompt, reference roles, settings, output manifest, evaluation, and selection state. Analysis tasks require sources, confidence, and assumptions.
 
-1. STATUS، SOP/checklist و evidence مرتبط را بخوانید.
-2. base logic را با adapter ابزار، نقش رفرنس، physics و final frame ترکیب کن.
-3. canonical prompt مرتبط را instantiate و reference roleها را صریح نگه دارید.
-4. خروجی، تصمیم، uncertainty و failure tag را در فایل stage یا Run ثبت کنید.
-5. checklist را اجرا کنید؛ فقط پس از pass STATUS را جلو ببرید و registry را rebuild کنید.
+## Escalation
+Common root issues include identity drift, ambiguous reference roles, contradictory prompts, and over-complex timelines. Repair local cosmetic errors; regenerate or return to an earlier stage for identity/structural/continuity failures. Repeated failure should produce an OBS/HYP/EXP record rather than endless retries.
 
-## خروجی و Gate
-
-video prompt package. Pass یعنی usable، provenance کامل و معیار stage؛ Fail یعنی blocker/failure و تصمیم repair/regenerate/بازگشت ثبت شده.
-
-## AI، ابزار و metadata
-
-AI task مستقل از tool است؛ tool/model نامعلوم unknown ثبت می‌شود. generation به Run ID، prompt ID/version/body، reference role، settings، manifest، evaluation و selected نیاز دارد. analysis به source، confidence و assumption نیاز دارد.
-
-## خطا و escalation
-
-identity drift، role مبهم reference، prompt متناقض و timeline بیش‌پیچیده‌اند. خطای local repair؛ identity/structural/continuity regenerate؛ failure تکراری بازگشت به stage ریشه و hypothesis/experiment. Done: فایل‌های stage، STATUS و metadata sync و gate مستند.
+## Documentation/language
+The Documentation Contract is mandatory. Persist all required text in English only.

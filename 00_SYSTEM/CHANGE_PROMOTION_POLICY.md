@@ -1,3 +1,3 @@
-# CHANGE PROMOTION POLICY
+# Change Promotion Policy
 
-اصلاح نوشتاری کم‌خطر مستند مستقیم می‌شود. تغییر workflow/rubric/checklist/prompt validated/preferred tool به evidence، CHG، risk/regression، validation و DEC نیاز دارد؛ بدون دستور کاربر proposal می‌ماند.
+Low-risk editorial clarification may be documented directly. Meaningful changes to workflow, rubric, checklist, canonical prompt, or preferred tool require evidence, a change record, risk/regression analysis, validation, and a decision record. Without sufficient evidence or explicit user direction, keep the change as a proposal/candidate.

@@ -1,1 +1,1 @@
-Cocoa Orbit truffle fictional؛ ویدیو 10 ثانیه‌ای 16:9، premium، product focus.
+Fictional Cocoa Orbit truffle; 10-second 16:9 premium product-focused video.

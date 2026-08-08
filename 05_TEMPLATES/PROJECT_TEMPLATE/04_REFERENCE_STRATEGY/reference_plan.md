@@ -1,3 +1,3 @@
-# reference plan
+# Reference Plan
 
-رفرنس لازم، هدف و gate.
+Record each required reference, purpose, authority/role, generation need, and QA gate.

@@ -1,20 +1,15 @@
-# CHK PRODUCT IDENTITY
-
-## نسخه
-
-1.0.0
+# Product Identity
 
 ## Gate
+All required items must pass or be marked N/A with rationale.
 
-همهٔ requiredها pass یا N/A مستدل.
+## Checklist
+- [ ] Category/silhouette/geometry documented
+- [ ] Materials/textures/colors documented
+- [ ] Packaging/components documented
+- [ ] Identity-critical traits separated from style/scene
+- [ ] Forbidden transformations defined
+- [ ] Uncertainty recorded
 
-## موارد
-
-- [ ] category/silhouette/geometry/material/texture/color/component/packaging
-- [ ] critical جدا از style/scene
-- [ ] uncertainty
-- [ ] identity lock
-
-## ثبت
-
-نتیجه، استثنا، Run/فایل و تصمیم را در STATUS یا review ثبت کنید.
+## Record
+Persist result, exceptions, relevant Run/file IDs, and decision in the project review/STATUS as appropriate.

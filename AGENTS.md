@@ -1,40 +1,47 @@
-# AI operator rules
+# AI Operator Rules
 
-این repository حافظه و **source of truth پایدار** برای AI Video Ad Lab است. ChatGPT در این workflow اپراتور اصلی است، اما قواعد برای هر AI agent آینده نیز معتبرند.
+This repository is persistent memory and the source of truth for AI Video Ad Lab. ChatGPT is the current primary operator, but these rules apply to future AI agents as well.
 
-## شروع هر chat/session جدید
-1. اول `AI_START_HERE.md` را بخوان.
-2. سپس `START_HERE.md`، `DASHBOARD.md` و `00_SYSTEM/INDEX.md` را بخوان.
-3. اگر پروژه active وجود دارد، `project.json`، `STATUS.md` و `HANDOFF.md` همان پروژه را قبل از ادامه کار بخوان.
-4. فقط اسناد مرحله فعلی را load کن: SOP، checklist، canonical prompt، tool knowledge و learning مرتبط.
-5. chat history را حافظه پایدار فرض نکن؛ تصمیم/feedback/نتیجه مهم باید در repo ثبت شود.
+## Start every new chat/session
+1. Read `AI_START_HERE.md` first.
+2. Then read `START_HERE.md`, `DASHBOARD.md`, and `00_SYSTEM/INDEX.md`.
+3. For an active project, read its `project.json`, `STATUS.md`, and `HANDOFF.md` before doing work.
+4. Load only the SOP, checklist, prompt, tool knowledge, and learnings relevant to the current stage.
+5. Never treat chat history as durable memory; important decisions, feedback, outputs, and learnings belong in the repository.
 
-## قواعد غیرقابل‌مذاکره
-- original input، Run تاریخی و prompt version تاریخی را overwrite نکن.
-- هر تولید معنی‌دار AI باید provenance قابل‌ردیابی داشته باشد.
-- هر reference نقش صریح داشته باشد؛ product identity بر style مقدم است.
-- یک تجربه منفرد معمولاً `observation` است، نه قانون جهانی.
-- تغییر canonical prompt/workflow/rubric/checklist/preferred tool طبق evidence و `CHANGE_PROMOTION_POLICY.md` انجام شود.
-- مقدار نامعلوم را حدس نزن؛ `unknown`/`null` ثبت کن.
-- capability ابزار را جعل نکن؛ vendor claim و evidence داخلی را جدا نگه دار.
-- بعد از تغییرات مهم، metadata/registry/dashboard را sync و integrity را بررسی کن.
-- **هر چیزی که برای تکرار، ادامه در chat جدید، مقایسه یا بهبود سیستم اثر دارد باید طبق `00_SYSTEM/DOCUMENTATION_CONTRACT.md` در repo ثبت شود.**
-- خودِ requirement مستندسازی نیز بخشی از Definition of Done است: task مهم تا وقتی تصمیم/Run/prompt/feedback/learning لازم فقط در chat مانده، کامل نیست.
-- هر بار process جدید، workflow branch، checklist need یا rule جدید در عمل کشف شد، ابتدا project evidence ثبت و در صورت reusable بودن به system documentation ارتقا داده شود.
+## Non-negotiable rules
+- Never overwrite original inputs, historical Runs, or historical prompt versions.
+- Every meaningful AI generation must have traceable provenance.
+- Every reference must have an explicit role; product identity has priority over style.
+- A single experience is normally an observation, not a universal rule.
+- Promote canonical prompts/workflows/rubrics/checklists/tool recommendations only through evidence and `CHANGE_PROMOTION_POLICY.md`.
+- Unknown values are `unknown`/`null`; do not invent them.
+- Separate vendor claims from internal evidence.
+- After meaningful changes, sync metadata/registries/dashboard and check integrity.
+- Anything needed for reproduction, comparison, cross-chat continuation, or system improvement must be persisted under `00_SYSTEM/DOCUMENTATION_CONTRACT.md`.
+- Documentation itself is part of Definition of Done.
+- When a new workflow branch, checklist need, naming rule, or reusable process is discovered, record project evidence first and promote it to system documentation when justified.
 
-## Scenario / duration selection
-اگر کاربر هنوز سناریو/مدت را انتخاب نکرده یا درباره 10/20/30/40 ثانیه یا 1/2/3/4 clip سؤال دارد، ابتدا `00_SYSTEM/SCENARIO_ARCHITECTURE_SYSTEM.md` و `01_SOPS/SOP_07_SCENARIO_GENERATION.md` را اجرا کن. منوی سناریو باید adaptive باشد؛ candidateهای duplicate/filler تولید نکن و duration بلندتر را فقط وقتی ظرفیت واقعی دارد پیشنهاد بده.
+## Scenario routing
+If scenario/duration/clip count is not locked, run `00_SYSTEM/SCENARIO_ARCHITECTURE_SYSTEM.md` and `01_SOPS/SOP_07_SCENARIO_GENERATION.md` first. Candidate count is adaptive; no filler options.
 
-## Multi-clip
-اگر deliverable 2، 3 یا 4 کلیپ دارد یا سناریو برای یک clip بیش‌ازحد پیچیده است، `00_SYSTEM/MULTI_CLIP_ARCHITECTURE.md` و `01_SOPS/SOP_MULTI_CLIP_SEQUENCE.md` را بخوان و قبل از promptهای تک‌کلیپ `MASTER_SEQUENCE`، Clip Contracts و boundary contracts را بساز.
+For 2, 3, or 4 clips, read `00_SYSTEM/MULTI_CLIP_ARCHITECTURE.md` and `01_SOPS/SOP_MULTI_CLIP_SEQUENCE.md`; create the Master Sequence, Clip Contracts, and boundary contracts before per-clip heavy prompting.
 
 ## Media persistence
-attachmentهای تصویر/ویدیوی ChatGPT خودکار داخل GitHub ذخیره نمی‌شوند. Storage behavior را از `00_SYSTEM/STORAGE_POLICY.md` بخوان و فقط metadata/path/role/hash موجود را به‌عنوان ذخیره‌شده فرض کن مگر media واقعاً در repo/storage ثبت شده باشد.
+- Chat attachments do not automatically become repository binaries.
+- Default for non-sensitive locally accessible meaningful media is `git_previews`.
+- Create low-resolution proxies under `19_HANDOFF_ASSETS/git_previews/` and sync `proxy_manifest.json`.
+- Full-resolution originals do not enter normal Git by default; proxies use `source_of_truth=false`.
+- Sensitive, confidential, client, or `do_not_publish` media remains metadata-only unless a safe explicit storage mode is selected.
+- Lower quality does not make public-repository media private.
+- Never claim a proxy was committed if binary upload capability was unavailable.
 
-## اجازه تغییر GitHub
-کاربر اجازه داده ChatGPT در جریان تولید پروژه، تغییرات لازم، کم‌ریسک، مستند و قابل‌بازگشت را در repo انجام دهد و commit بزند. commitها باید موضوعی و خوانا باشند. برای حذف داده، force/rewrite history، تغییر معماری گسترده، انتشار اطلاعات حساس یا اقدام destructive approval صریح بگیر.
+## GitHub change permission
+The user authorizes necessary, low-risk, documented, reversible repository changes and commits during production. Use focused readable commits. Ask explicit approval before destructive deletion, history rewriting/force push, publishing sensitive data, or other high-risk architectural changes.
 
-## UX
-پاسخ کاربر پیش‌فرض فارسی و عملیاتی باشد: `کار انجام‌شده → یافته → فایل/Run → stage → next action`. prompt تولیدی پیش‌فرض English است مگر evidence یا درخواست پروژه خلافش را نشان دهد.
+## Language policy
+**All persisted repository text must be English. No Persian/Arabic-script or Cyrillic prose is allowed in documentation, prompts, logs, examples, comments, or metadata.** If the user provides non-English feedback that must be preserved, store an English translation/paraphrase and mark it as translated if relevant. User-facing chat may remain in the user’s preferred language.
 
-راهنمای کامل: `00_SYSTEM/AI_OPERATOR_MANUAL.md`.
+Use `python 11_TOOLS/check_english_docs.py` and the English-only CI workflow as a hard gate.
+
+Full operator guidance: `00_SYSTEM/AI_OPERATOR_MANUAL.md`.

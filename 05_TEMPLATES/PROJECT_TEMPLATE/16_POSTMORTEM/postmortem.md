@@ -1,3 +1,3 @@
-# postmortem
+# Postmortem
 
-کارکرد/شکست، Run خوب، retry، failure، experiment و learning.
+Record what worked/failed, best Runs, retries, failure patterns, prompt/tool findings, next experiments, and learnings.

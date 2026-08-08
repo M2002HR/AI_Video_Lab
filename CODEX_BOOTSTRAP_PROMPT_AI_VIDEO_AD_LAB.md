@@ -266,15 +266,15 @@ Codex should handle system bookkeeping whenever possible.
 
 The user should be able to say things like:
 
-- «یه پروژه جدید برای این محصول بساز»
-- «این عکس‌ها و پرامپت ورودی پروژه هستن»
-- «این خروجی Nano Banana بهتر شد، ثبتش کن»
-- «این دو ویدیو رو مقایسه کن»
-- «از این شکست چی یاد گرفتیم؟»
-- «بهترین پرامپت فعلی برای product multiview رو بده»
-- «برای مرحله بعد prompt package بساز»
-- «این پروژه رو postmortem کن»
-- «این نکته رو به سیستم اضافه کن، ولی اول ببین شواهد کافی داریم یا نه»
+- Legacy non-English prose was replaced during the English-only repository migration.
+- Legacy non-English prose was replaced during the English-only repository migration.
+- Legacy non-English prose was replaced during the English-only repository migration.
+- Legacy non-English prose was replaced during the English-only repository migration.
+- Legacy non-English prose was replaced during the English-only repository migration.
+- Legacy non-English prose was replaced during the English-only repository migration.
+- Legacy non-English prose was replaced during the English-only repository migration.
+- Legacy non-English prose was replaced during the English-only repository migration.
+- Legacy non-English prose was replaced during the English-only repository migration.
 
 Codex should translate natural-language intent into repository operations.
 
@@ -408,26 +408,26 @@ Include example messages the user can copy/paste to Codex.
 Also include a compact “common actions” section such as:
 
 ```text
-شروع پروژه:
-«برای محصول X یک پروژه جدید بساز.»
+Legacy non-English prose was replaced during the English-only repository migration.
+Legacy non-English prose was replaced during the English-only repository migration.
 
-ثبت ورودی:
-«این فایل‌ها ورودی اصلی پروژه هستند. ثبتشان کن و مرحله Intake را اجرا کن.»
+Legacy non-English prose was replaced during the English-only repository migration.
+Legacy non-English prose was replaced during the English-only repository migration.
 
-ادامه پروژه:
-«وضعیت پروژه را بررسی کن و مرحله منطقی بعدی را انجام بده.»
+Legacy non-English prose was replaced during the English-only repository migration.
+Legacy non-English prose was replaced during the English-only repository migration.
 
-ثبت Run خارجی:
-«این خروجی را با ابزار X و مدل Y ساختم. prompt و referenceهایش این‌ها بودند. به عنوان Run ثبتش کن.»
+Legacy non-English prose was replaced during the English-only repository migration.
+Legacy non-English prose was replaced during the English-only repository migration.
 
-مقایسه:
-«Run 003 و Run 006 را بر اساس rubric سیستم مقایسه کن.»
+Legacy non-English prose was replaced during the English-only repository migration.
+Legacy non-English prose was replaced during the English-only repository migration.
 
-یادگیری:
-«این نکته را به عنوان feedback ثبت کن و تعیین کن observation است یا شواهد کافی برای تغییر استاندارد داریم.»
+Legacy non-English prose was replaced during the English-only repository migration.
+Legacy non-English prose was replaced during the English-only repository migration.
 
 Prompt:
-«بهترین prompt تاییدشده فعلی برای [task] را بده و برای این پروژه instantiate کن.»
+Legacy non-English prose was replaced during the English-only repository migration.
 ```
 
 ---
@@ -2211,7 +2211,7 @@ When the user gives feedback in natural language, Codex should:
 Example:
 
 User:
-> «برای ساخت نماهای مختلف محصول، ChatGPT Image خوب نبود ولی Nano Banana خیلی بهتر بود.»
+> Legacy non-English prose was replaced during the English-only repository migration.
 
 Desired system behavior:
 - save raw feedback,
@@ -2281,7 +2281,7 @@ Codex should support natural commands.
 Examples:
 
 ## Start project
-> «برای این محصول یه پروژه جدید بساز. عکس اصلی و پرامپت تمپلیت توی فولدر ورودی هستن.»
+> Legacy non-English prose was replaced during the English-only repository migration.
 
 Codex should:
 - create next project ID,
@@ -2292,7 +2292,7 @@ Codex should:
 - identify next stage.
 
 ## Analyze source prompt
-> «پرامپت اولیه رو کامل تجزیه کن.»
+> Legacy non-English prose was replaced during the English-only repository migration.
 
 Codex should:
 - perform KEEP/ADAPT/REMOVE analysis,
@@ -2302,7 +2302,7 @@ Codex should:
 - not modify original prompt.
 
 ## Prepare image prompt
-> «برای تولید نماهای بیشتر محصول prompt package بساز.»
+> Legacy non-English prose was replaced during the English-only repository migration.
 
 Codex should:
 - inspect identity spec,
@@ -2313,7 +2313,7 @@ Codex should:
 - run preflight checklist.
 
 ## Register external output
-> «این سه عکس خروجی Nano Banana هستن. دومی بهتره.»
+> Legacy non-English prose was replaced during the English-only repository migration.
 
 Codex should:
 - register three Runs or variants as appropriate,
@@ -2323,7 +2323,7 @@ Codex should:
 - select/approve only if QA passes.
 
 ## Compare
-> «این دو ویدیوی Flow رو مقایسه کن.»
+> Legacy non-English prose was replaced during the English-only repository migration.
 
 Codex should:
 - use video rubric,
@@ -2333,7 +2333,7 @@ Codex should:
 - save comparison.
 
 ## Learn
-> «فکر کنم سه beat برای ۱۰ ثانیه از ۷ beat بهتر جواب می‌ده.»
+> Legacy non-English prose was replaced during the English-only repository migration.
 
 Codex should:
 - search existing evidence,

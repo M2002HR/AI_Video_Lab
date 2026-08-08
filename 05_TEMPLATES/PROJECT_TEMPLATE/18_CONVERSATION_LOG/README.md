@@ -1,19 +1,10 @@
 # Conversation Log
 
-این پوشه transcript کامل chat نیست. فقط context با ارزش پایدار را ثبت می‌کند تا پروژه بین sessionها قابل ادامه و سیستم قابل یادگیری باشد.
+This folder is not a complete transcript archive. It stores only durable-value context for cross-session continuation and system learning.
 
-## Files
-- `FEEDBACK_LOG.md`: feedback خام مهم کاربر با زمان/context و لینک به Run/prompt.
-- `SESSION_SUMMARIES.md`: خلاصه sessionهایی که تصمیم یا تولید معنادار داشته‌اند.
+- `FEEDBACK_LOG.md`: important user feedback, stored in English (translate/paraphrase non-English input), with time/context and Run/prompt links.
+- `SESSION_SUMMARIES.md`: summaries of sessions with meaningful production or decisions.
 
-## چه چیزی ثبت شود؟
-ثبت کن اگر اطلاعات:
-- تصمیم تولید را تغییر می‌دهد؛
-- یک preference پروژه را مشخص می‌کند؛
-- failure/success pattern است؛
-- برای session بعدی ضروری است؛
-- می‌تواند به Observation/Hypothesis/Learning تبدیل شود.
+Record content when it changes a production decision, captures a project preference, is a failure/success pattern, is essential to the next session, or may become an Observation/Hypothesis/Learning. Do not store routine conversation or duplicates.
 
-گفتگوی روزمره، تکرارها و متن‌های بدون ارزش عملیاتی را ثبت نکن.
-
-`HANDOFF.md` خلاصه فعلی پروژه است؛ این پوشه تاریخچه context را نگه می‌دارد.
+`HANDOFF.md` is current-state summary; this folder preserves durable context history.

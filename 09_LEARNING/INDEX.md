@@ -1,3 +1,3 @@
-# Learning loop
+# Learning Index
 
-IDها OBS/HYP/LRN/CHG/DEC. confidence: anecdotal یک رخداد، provisional چند Run، validated آزمایش کنترل‌شده، strongly_validated تکرار بی regression.
+Record IDs use OBS/HYP/EXP/LRN/CHG/DEC families. Confidence: anecdotal = one event, provisional = repeated evidence without controlled validation, validated = controlled evidence, strongly_validated = repeated validation without material regression.

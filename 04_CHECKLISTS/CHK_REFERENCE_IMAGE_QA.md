@@ -1,21 +1,14 @@
-# CHK REFERENCE IMAGE QA
-
-## نسخه
-
-1.0.0
+# Reference Image Qa
 
 ## Gate
+All required items must pass or be marked N/A with rationale.
 
-همهٔ requiredها pass یا N/A مستدل.
+## Checklist
+- [ ] Reference role is explicit
+- [ ] Identity fidelity checked against authority
+- [ ] Geometry/color/material/text checked
+- [ ] Reference contamination checked
+- [ ] Approved/rejected status and rationale recorded
 
-## موارد
-
-- [ ] identity/geometry/material/color/count/label
-- [ ] angle/light
-- [ ] background
-- [ ] artifact
-- [ ] approved/rejected با دلیل
-
-## ثبت
-
-نتیجه، استثنا، Run/فایل و تصمیم را در STATUS یا review ثبت کنید.
+## Record
+Persist result, exceptions, relevant Run/file IDs, and decision in the project review/STATUS as appropriate.

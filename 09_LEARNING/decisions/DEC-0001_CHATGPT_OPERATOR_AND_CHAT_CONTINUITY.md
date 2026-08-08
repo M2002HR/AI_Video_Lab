@@ -1,31 +1,29 @@
-# DEC-0001 — ChatGPT operator + repository-based chat continuity
+# DEC-0001 — ChatGPT Operator and Repository-Based Chat Continuity
 
-- Date: 2026-08-07
-- Status: accepted
-- Decision type: architecture / operating model
-- Requested by: user
+## Status
+Accepted design decision.
 
 ## Context
-نسخه 1.0 repository با فرض Codex به‌عنوان operator ساخته شد. کاربر تصمیم گرفت production واقعی، prompt/scenario/image/video iteration و maintenance سیستم را عمدتاً با ChatGPT انجام دهد و ممکن است کار را در chatهای جدید ادامه دهد.
+The original v1.0 repository assumed a Codex-oriented operator. The user chose to perform real production, prompt/scenario/image/video iteration, and system maintenance primarily with ChatGPT and expects work to continue across fresh chats.
 
 ## Decision
-1. معماری از Codex-specific به **AI-operator** تغییر می‌کند؛ ChatGPT operator فعلی است.
-2. repository، نه chat history، حافظه پایدار پروژه است.
-3. هر پروژه active باید `STATUS.md` + `HANDOFF.md` + conversation log داشته باشد.
-4. `AI_START_HERE.md` پروتکل context recovery برای agent/session جدید است.
-5. کاربر اجازه داده ChatGPT تغییرات لازم، non-destructive و مستند را در repo انجام دهد و commit کند.
-6. minimum-input fast start برای پروژه جدید: product image(s) + source/template prompt.
+1. The architecture is AI-operator neutral; ChatGPT is the current primary operator.
+2. The repository, not chat history, is durable project memory.
+3. Every active project maintains `STATUS.md`, `HANDOFF.md`, and durable conversation logs.
+4. `AI_START_HERE.md` is the context-recovery protocol for a new agent/session.
+5. The user authorizes necessary low-risk documented repository changes/commits during production.
+6. Minimum-input Fast Start is product image(s) + source/template prompt.
 
-## Alternatives considered
-- ادامه Codex-only: رد شد؛ با شیوه کار موردنظر user هم‌راستا نیست.
-- اتکا به chat memory: رد شد؛ بین sessionها قابل اعتماد و audit-friendly نیست.
-- ذخیره transcript کامل: فعلاً رد شد؛ noise و duplication زیاد دارد. فقط feedback/session summary ارزشمند ثبت می‌شود.
+## Alternatives rejected
+- Codex-only workflow: does not match the desired operating model.
+- Dependence on chat memory: unreliable across sessions and weak for auditability.
+- Full transcript storage by default: excessive noise/duplication; persist only durable feedback/session summaries.
 
 ## Consequences
-- docs/operator files باید AI-neutral شوند.
-- project template به handoff/conversation continuity نیاز دارد.
-- visual media ممکن است در chat جدید نیاز به re-attach داشته باشد؛ این باید در handoff صریح باشد.
-- تغییرات repo در جریان production بخشی از workflow عادی هستند.
+- Operator documentation is AI-neutral.
+- Project template includes explicit handoff/conversation continuity.
+- Media availability/re-attachment requirements must be explicit.
+- Repository maintenance during production is normal workflow behavior.
 
-## Evidence
-این تصمیم بر اساس نیاز عملیاتی صریح user است، نه benchmark عملکرد مدل. بنابراین به‌عنوان design decision پذیرفته شده و نباید به‌عنوان empirical claim درباره کیفیت ChatGPT/Codex تعبیر شود.
+## Evidence / scope
+This is a direct system-design requirement from the user, not a benchmark claim about comparative ChatGPT/Codex quality.

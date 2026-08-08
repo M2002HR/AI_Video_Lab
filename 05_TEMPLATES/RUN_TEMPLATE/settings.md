@@ -1,1 +1,1 @@
-tool/model/settings/seed/aspect/duration و unknownها.
+Tool/model/settings/seed/aspect/duration and explicit unknowns.
