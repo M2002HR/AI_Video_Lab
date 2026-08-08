@@ -4,7 +4,7 @@
   "title": "Colorful Chocolate Truffle Miniature Commercial",
   "status": "active",
   "created_at": "2026-08-07T21:41:00+03:30",
-  "updated_at": "2026-08-08T06:03:00+03:30",
+  "updated_at": "2026-08-08T06:20:00+03:30",
   "system_version_started": "1.1.0",
   "current_stage": "STAGE_10",
   "deliverable": {
@@ -18,37 +18,17 @@
   "source_prompt_path": "01_INPUTS/source_prompt/source_prompt_transcription.md",
   "active_identity_lock": "03_PRODUCT_IDENTITY/identity_lock_v02.md",
   "active_reference_plan": "04_REFERENCE_STRATEGY/reference_plan.md",
-  "selected_scenario": "07_SCENARIOS/selected/scenario_v01_final_touch_reveal.md",
-  "active_shot_timeline": "08_SHOT_DESIGN/timeline_v01.md",
+  "selected_scenario": "07_SCENARIOS/selected/scenario_v02_quiet_inspection_reveal.md",
+  "active_shot_timeline": "08_SHOT_DESIGN/timeline_v02.md",
   "active_storyboard_plan": "09_STORYBOARD/storyboard_plan_v01.md",
   "approved_reference_set": [
-    {
-      "role": "REF-PROD-TOP-CLEAN",
-      "run_id": "P0001-R0003",
-      "authority": "primary_clean_identity"
-    },
-    {
-      "role": "REF-PROD-MACRO",
-      "run_id": "P0001-R0006",
-      "authority": "texture_material_only"
-    },
-    {
-      "role": "REF-PROD-ASSORTMENT-DETAIL",
-      "run_id": "P0001-R0008",
-      "authority": "assortment_diversity_and_coating_family"
-    },
-    {
-      "role": "REF-CHAR-CHOCOLATIERS",
-      "run_id": "P0001-R0010",
-      "authority": "character_identity_style_only"
-    }
+    {"role": "REF-PROD-TOP-CLEAN", "run_id": "P0001-R0003", "authority": "primary_clean_identity"},
+    {"role": "REF-PROD-MACRO", "run_id": "P0001-R0006", "authority": "texture_material_only"},
+    {"role": "REF-PROD-ASSORTMENT-DETAIL", "run_id": "P0001-R0008", "authority": "assortment_diversity_and_coating_family"},
+    {"role": "REF-CHAR-CHOCOLATIERS", "run_id": "P0001-R0010", "authority": "character_identity_style_only"}
   ],
   "provisional_reference_set": [
-    {
-      "role": "REF-PROD-HERO-45",
-      "run_id": "P0001-R0002",
-      "authority": "secondary_geometry_optional"
-    }
+    {"role": "REF-PROD-HERO-45", "run_id": "P0001-R0002", "authority": "secondary_geometry_optional"}
   ],
   "approved_alternates": [
     {"role": "REF-PROD-TOP-CLEAN", "run_id": "P0001-R0004"},
@@ -57,19 +37,12 @@
     {"role": "REF-CHAR-CHOCOLATIERS", "run_id": "P0001-R0009"},
     {"role": "REF-PROD-HERO-45", "run_id": "P0001-R0001"}
   ],
+  "failed_scene_candidates": ["P0001-R0011", "P0001-R0012", "P0001-R0013"],
+  "best_diagnostic_scene_candidate": "P0001-R0012",
   "selected_final_run": null,
   "latest_runs": [
-    "P0001-R0001",
-    "P0001-R0002",
-    "P0001-R0003",
-    "P0001-R0004",
-    "P0001-R0005",
-    "P0001-R0006",
-    "P0001-R0007",
-    "P0001-R0008",
-    "P0001-R0009",
-    "P0001-R0010"
+    "P0001-R0001", "P0001-R0002", "P0001-R0003", "P0001-R0004", "P0001-R0005", "P0001-R0006", "P0001-R0007", "P0001-R0008", "P0001-R0009", "P0001-R0010", "P0001-R0011", "P0001-R0012", "P0001-R0013"
   ],
-  "next_planned_task": "SB-KF01_OPENING_COMBINED_SCENE",
+  "next_planned_task": "KF01_V02_MINIMAL_REFERENCE_REGEN",
   "tags": ["food", "chocolate", "truffle", "miniature", "tiny_chocolatiers", "product_ad"]
 }
