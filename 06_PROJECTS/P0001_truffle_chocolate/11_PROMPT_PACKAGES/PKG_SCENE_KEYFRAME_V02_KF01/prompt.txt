@@ -1,0 +1,210 @@
+SCENE KEYFRAME V02 — MINIMAL ROLE-CLEAN REFERENCE TEST
+
+Use ONLY TWO uploaded references for this generation:
+
+REFERENCE 1 — SELECTED CLEAN TOP PRODUCT REFERENCE (P0001-R0003)
+This is the authority for the truffle product family, visible assortment, handmade product character, supported colors/coatings, dark fluted paper cups, natural kraft box and clean dark presentation.
+
+REFERENCE 2 — SELECTED CHARACTER REFERENCE (P0001-R0010)
+This is the authority for the EXACT THREE recurring miniature chocolatier identities, their red uniforms/hats, broad body/head proportions and facial-hair identity cues.
+
+Do not upload or infer from the old cheesecake reference.
+Do not use the macro, assortment-detail or generated 45-degree references in this v02 test.
+
+PRIMARY GOAL
+Create ONE clean 16:9 cinematic opening keyframe for a 10-second continuous miniature truffle commercial.
+
+The frame must look like a close real-camera view of ONE LOCAL AREA INSIDE THE SAME KRAFT GIFT BOX shown in the clean product reference.
+
+This is not a separate workshop table and not an isolated giant candy scene.
+
+The camera will later pull backward and slightly upward to reveal the rest of this exact same box. Therefore the opening frame must already be physically inside the final box from frame one.
+
+SCENE CONTENT
+Show:
+- exactly ONE dominant multicolor round-nonpareil hero truffle from the same product family;
+- that hero truffle seated in its own dark charcoal-gray fluted paper cup;
+- exactly THREE recurring miniature chocolatiers matching the supplied character reference;
+- a small visible amount of natural kraft cardboard floor/box structure;
+- only partial edges of 2–3 neighboring truffles/cups near the outer frame, enough to prove a larger assortment already exists outside the close crop.
+
+Do NOT show the whole box yet.
+
+PRODUCT FIDELITY
+The hero truffle must look like one actual handmade piece selected from the clean product reference.
+
+Preserve:
+- dark chocolate base;
+- dense tiny round edible nonpareils;
+- realistic source-supported multicolor palette;
+- subtle handmade asymmetry;
+- natural uneven coating density;
+- dark fluted paper cup.
+
+The truffle must NOT become a perfect CGI sphere.
+Do not beautify it into a factory-perfect candy ball.
+
+NONPAREIL SCALE
+Keep the nonpareils as small as they visually appear in the clean product reference.
+
+Do NOT enlarge them into pearls, marbles or toy beads.
+They are tiny edible sugar particles attached directly to dark chocolate.
+No floating particles.
+No loose particles on the floor.
+No particle explosion.
+
+CHEF IDENTITY
+Use EXACTLY the same recurring trio from the character reference:
+
+A — moustached foreman.
+B — clean-shaven chocolatier.
+C — small-goatee chocolatier.
+
+Preserve their red chef jackets, red hats, dark trousers, dark shoes and premium stylized miniature appearance.
+
+All THREE faces must be visible enough to identify.
+Use front-three-quarter or side-three-quarter poses.
+Do NOT place a chef with the back of the head as the main visible identity view.
+
+CHARACTER SCALE — HARD LOCK
+The chefs are much smaller than the hero truffle.
+
+Target:
+HERO TRUFFLE DIAMETER ≈ 3 TIMES ONE CHEF'S FULL STANDING HEIGHT.
+
+Equivalent:
+one chef's full standing height ≈ one-third of the truffle diameter.
+
+All three chefs must use the same scale.
+Do not make them nearly as tall as the truffle.
+Do not make one chef larger than the others.
+
+CHARACTER POSITION
+Place all three chefs in the near/front local area inside the kraft box, standing on visible flat kraft-cardboard space or stable gaps between neighboring paper cups.
+
+They must NOT stand on a separate external tabletop.
+They must NOT stand on the hero truffle.
+They must NOT be embedded in the cup or chocolate.
+
+Keep the three silhouettes separated and readable.
+
+ACTION — NO PROPS
+This is a quiet inspection moment.
+
+ALL HANDS ARE EMPTY.
+
+No brush.
+No bowl.
+No tweezers.
+No spoon.
+No tray.
+No ladder.
+No cart.
+No utensil.
+No ingredient container.
+No loose chocolate pieces.
+No food debris.
+
+Character A: slight attentive lean toward the truffle, empty hands.
+Character B: one restrained open-hand inspection/approval gesture, without touching the truffle.
+Character C: calm observation with a subtle natural hand position.
+
+No one is cooking or assembling the product.
+The truffle is already finished.
+
+CONTINUITY GEOMETRY
+The visible hero truffle, neighboring cups and kraft cardboard must form one physically coherent portion of the real box.
+
+The scene must be expandable simply by moving the camera backward.
+Nothing in the opening frame should need to transform, disappear or be replaced to reach a full-box view.
+
+Do not create:
+- an isolated platform;
+- a separate workshop bench;
+- a second box in the background;
+- a background display of truffles unrelated to the foreground box;
+- impossible miniature architecture.
+
+COMPOSITION
+16:9 landscape.
+Close three-quarter macro framing.
+
+Hero truffle is dominant, but leave enough local environment visible to prove it belongs inside the box.
+
+The three chefs occupy the lower/near region and remain clearly readable.
+Partial neighboring truffles should remain secondary and may appear only near frame edges/deeper local background.
+
+Avoid perfect symmetry.
+Avoid a centered catalogue layout.
+The composition should feel like a real close camera placed inside/just above one corner of the box.
+
+BACKGROUND / ENVIRONMENT
+Use the same clean dark-neutral commercial world as the clean top reference.
+
+Outside the immediate kraft-box area, background falls into soft charcoal-gray to near-black.
+
+NO wooden plank tabletop.
+NO rustic workbench.
+NO kitchen.
+NO bakery.
+NO bowls.
+NO scattered decorations.
+NO chocolate chunks.
+NO text.
+NO logo.
+NO watermark.
+
+LIGHTING
+Premium soft food-commercial lighting.
+Large diffused key from upper-front-left.
+Subtle fill from opposite side.
+Gentle separation for red uniforms and dark paper cups.
+
+Keep:
+- character faces readable;
+- product edible;
+- kraft cardboard matte;
+- dark cups matte paper;
+- nonpareils small and non-plastic.
+
+CAMERA / FOCUS
+Natural macro perspective.
+No fisheye.
+No dutch angle.
+No extreme low angle.
+
+Use moderate depth of field so:
+- hero truffle surface;
+- all three chef identities;
+- nearby kraft/cup context
+remain sufficiently readable together.
+
+Do not heavily blur two of the three chefs.
+
+HARD COUNT / CLEANLINESS CHECK
+Exactly THREE chefs.
+Exactly ONE dominant hero truffle.
+One paper cup for the hero truffle.
+Only partial neighboring product context.
+ZERO tools.
+ZERO bowls.
+ZERO loose ingredients.
+ZERO loose sprinkles on the floor.
+ZERO chocolate debris.
+ZERO duplicate characters.
+ZERO extra background product displays.
+
+FINAL PRIORITY ORDER
+1. physical continuity inside the real kraft box;
+2. fidelity to the clean real-product reference;
+3. exact recurring three-chef identities;
+4. chef scale: truffle diameter approximately 3× chef height;
+5. all three faces readable;
+6. tiny realistic nonpareil scale;
+7. no props / no scene clutter;
+8. handmade truffle irregularity;
+9. premium cinematic appearance.
+
+If visual drama conflicts with any higher priority, REMOVE THE DRAMA.
+
+The result should look like a clean, physically plausible opening frame that can naturally become the full real truffle box simply by pulling the camera backward and slightly upward.
