@@ -76,27 +76,34 @@ Before generating new keyframes/video:
 
 For a requested 30s / 3×10s derivative, do NOT assume the old 10s scenario should simply be repeated. It may become a useful final/payoff chapter, but only if the selected Master Sequence supports it.
 
-## Media persistence — new policy
-System storage mode is now `git_previews` for non-sensitive media.
+## Media persistence
+System storage mode is `git_previews` for non-sensitive media.
 
 Paths:
 - `19_HANDOFF_ASSETS/git_previews/`
 - `19_HANDOFF_ASSETS/proxy_manifest.json`
 
-Default profiles:
-- images → WebP, max long edge 1280px, quality≈72;
-- videos → MP4/H.264, max long edge 1280px, ≈24fps, CRF≈30.
-
 Original/full-resolution media remains outside Git normal storage; proxy is `source_of_truth=false`.
 
-### Historical P0001 backfill
-Old P0001 media binaries are not in Git, so they have **not** been retroactively converted yet. `proxy_manifest.json` starts empty.
+### Historical P0001 backfill — COMPLETED for requested assets
+On 2026-08-08 the user explicitly requested public low-resolution Git copies of the previously supplied selected assets and both evaluated videos. The following proxies now exist in Git:
 
-Whenever an old selected asset such as R0003/R0010/R0015/R0016/R0020/R0022 is re-attached or otherwise locally accessible, ChatGPT should create and commit its low-res proxy and update the manifest.
+- `R0002` — 45° hero product reference. (`R002` in the user's backfill request was interpreted as `R0002` based on project context.)
+- `R0003` — clean top product identity reference.
+- `R0010` — three-chef character identity reference.
+- `R0015` — scene master / mid camera state.
+- `R0016` — selected KF01 opening frame.
+- `R0020` — selected KF03 final camera state.
+- `R0022` — selected 10s video, low-resolution motion proxy.
+- `R0023` — rejected 10s video retained as failure evidence for the fourth-chef duplication issue.
 
-For new media from this point onward, proxy generation + manifest + commit should happen automatically when the media is meaningful, accessible and non-sensitive.
+Exact paths, dimensions, roles, hashes where available, and compression profiles are recorded in `19_HANDOFF_ASSETS/proxy_manifest.json`.
 
-Important: repository may be public; low quality does not make media private. Sensitive/client/confidential or `do_not_publish` assets remain metadata-only.
+These Git media files are intentionally very low resolution. They are adequate for cross-chat scene recall, composition, character count and broad motion/context review, but are NOT authority for fine texture, final quality, exact color, or generation-grade source input.
+
+For a new chat, inspect the Git proxies first. Ask the user to reattach an original/full-resolution asset only when the next generation or detailed QA genuinely needs it.
+
+Important: repository is public; these proxies are publicly accessible. The user explicitly requested this historical backfill. Sensitive/client/confidential or `do_not_publish` assets remain metadata-only in future projects.
 
 ## Cross-chat continuity
 A fresh ChatGPT session working on a new 30s derivative should read:
