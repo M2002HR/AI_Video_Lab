@@ -1,21 +1,54 @@
 # Multi-Clip Architecture
 
-این سند روش ساخت تبلیغ‌های طولانی‌تر از چند کلیپ کوتاه مستقل (مثلاً 2×10s یا 3×10s) را تعریف می‌کند.
+این سند روش ساخت تبلیغ‌های طولانی‌تر از چند کلیپ کوتاه مستقل را تعریف می‌کند. سیستم به‌صورت رسمی برای **2، 3 و 4 کلیپ** آماده است؛ در setupهای 10 ثانیه‌ای یعنی معمولاً 20s، 30s و 40s.
 
 ## اصل طراحی
 
-یک ویدیوی 20 یا 30 ثانیه‌ای نباید صرفاً «سه ویدیوی 10 ثانیه‌ای تصادفی که بعداً کنار هم چسبیده‌اند» باشد.
+یک ویدیوی 20/30/40 ثانیه‌ای نباید صرفاً «چند ویدیوی 10 ثانیه‌ای تصادفی که بعداً کنار هم چسبیده‌اند» باشد.
 
 ابتدا یک **Master Sequence** طراحی می‌شود، سپس هر کلیپ یک واحد تولید مستقل با قرارداد ورودی/خروجی روشن است.
 
-ساختار:
+ساختار عمومی:
 
-`MASTER STORY → CLIP 01 → TRANSITION CONTRACT → CLIP 02 → TRANSITION CONTRACT → CLIP 03 → ASSEMBLY → SEQUENCE QA`
+`SCENARIO MENU → MASTER STORY → C01 → BOUNDARY → C02 → [BOUNDARY → C03] → [BOUNDARY → C04] → ASSEMBLY → SEQUENCE QA`
 
-## دو نوع معماری اصلی
+قبل از انتخاب تعداد کلیپ، `SCENARIO_ARCHITECTURE_SYSTEM.md` اجرا می‌شود تا فقط duration/architectureهای واقعاً معنادار پیشنهاد شوند.
+
+## Supported sequence sizes
+
+### 2×10s — 20s
+برای زمانی که داستان دو chapter طبیعی دارد.
+
+الگوهای رایج:
+- Process → Payoff
+- Craft → Collection
+- Hook → Product World
+- Editorial Process → Hero
+
+### 3×10s — 30s
+برای process storytelling چندمرحله‌ای با سه مسئولیت روشن.
+
+الگوهای رایج:
+- Craft → Assembly → Hero
+- Material/Origin → Transformation → Product
+- One Item → Collection → Packaging
+- Three Editorial Chapters
+
+### 4×10s — 40s
+فقط وقتی چهار chapter مستقل و ارزشمند وجود دارد.
+
+الگوهای رایج:
+- Origin → Craft → Assembly → Hero
+- Form → Decorate → Package → Reveal
+- Macro Detail → Process → Collection → Brand Hero
+- Four Editorial Worlds
+
+اگر یک 4-clip sequence filler ایجاد کند، سیستم باید 3 clips را پیشنهاد کند.
+
+## سه نوع معماری اصلی
 
 ### A. Continuous-world sequence
-برای زمانی که می‌خواهیم مخاطب احساس کند همه کلیپ‌ها بخش‌های متوالی یک جهان واحد هستند.
+برای زمانی که مخاطب باید حس کند همه کلیپ‌ها بخش‌های متوالی یک جهان واحد هستند.
 
 نیازمند:
 - product identity lock مشترک؛
@@ -23,56 +56,44 @@
 - environment/lighting lock مشترک؛
 - clip boundary frame یا handoff state؛
 - camera/position continuity؛
-- exact object count/placement continuity در مرزها.
+- exact object count/placement continuity در مرزهای لازم.
 
-مثال:
-- Clip 1: آماده‌سازی/تزئین ترافل؛
-- Clip 2: قرار دادن و مرتب‌سازی داخل جعبه؛
-- Clip 3: inspection و final box reveal.
+ریسک generative بالاتر است و نباید فقط برای زیبایی انتخاب شود.
 
 ### B. Editorial sequence
-برای زمانی که هر 10 ثانیه یک mini-scene مستقل است و اتصال از طریق تدوین، مفهوم، product identity، رنگ و rhythm انجام می‌شود.
+هر 10 ثانیه یک mini-scene مستقل است؛ اتصال از طریق product identity، style، rhythm، match concept، edit و audio انجام می‌شود.
 
-نیازمند continuity سخت spatial کمتر است و معمولاً برای AI video مطمئن‌تر است.
+continuity سخت spatial کمتر است و معمولاً برای AI video مطمئن‌تر است.
 
-مثال:
-- Clip 1: macro making/decorating؛
-- Clip 2: miniature packaging world؛
-- Clip 3: premium final product hero.
+### C. Hybrid — default candidate for many AI ads
+داخل هر clip continuity سخت است، ولی بین clipها با transition کنترل‌شده مانند approved boundary frame، match cut، motion cut یا editorial cut وصل می‌شوند.
 
-این سه کلیپ می‌توانند با cut/match cut/sound bridge به هم وصل شوند بدون اینکه لازم باشد مدل exact geometry فریم قبل را ادامه دهد.
-
-## انتخاب architecture
-
-قبل از تولید، برای هر sequence باید یکی از این‌ها ثبت شود:
-- `continuous_world`
-- `editorial_sequence`
-- `hybrid`
-
-### Hybrid
-در hybrid، continuity داخل هر clip سخت است ولی بین clipها با یک transition کنترل‌شده سبک‌تر می‌شود؛ معمولاً بهترین گزینه برای 20–30 ثانیه AI ads است.
+برای 20–40s معمولاً بهترین تعادل بین کیفیت سینمایی و reliability است، مگر brief دلیل روشنی برای continuous/editorial خالص داشته باشد.
 
 ## Master Sequence Document
 
-قبل از ساخت Clip 01 باید یک فایل `MASTER_SEQUENCE.md` وجود داشته باشد که شامل این موارد باشد:
+قبل از ساخت Clip 01 باید `MASTER_SEQUENCE.md` وجود داشته باشد و شامل این موارد باشد:
 - total duration؛
 - clip count و duration هر clip؛
+- selected scenario ID/title؛
+- architecture mode؛
 - overall story arc؛
 - role هر clip؛
 - product state در ابتدای/انتهای هر clip؛
-- character state؛
+- character state/count؛
 - environment state؛
 - camera state؛
-- transition type؛
+- transition type برای هر boundary؛
 - shared references؛
 - clip-specific references؛
 - shared prompt blocks؛
 - audio/music continuity؛
-- final commercial payoff.
+- final commercial payoff؛
+- accepted discontinuities.
 
 ## Clip Contract
 
-هر clip باید قرارداد مستقلی داشته باشد:
+هر clip باید قرارداد مستقل داشته باشد.
 
 ### START STATE
 - product state؛
@@ -80,25 +101,32 @@
 - environment؛
 - camera/framing؛
 - lighting؛
-- important visible props.
+- important visible props؛
+- inherited state from previous clip.
 
 ### ACTION ARC
-حداکثر چند beat روشن که داخل مدت clip واقعاً قابل اجرا باشند.
+حداکثر 1–2 state change اصلی به‌طور پیش‌فرض؛ actionهای همزمان محدود.
 
 ### END STATE
-فریمی که باید یا:
-- به clip بعدی تحویل داده شود؛
-- یا یک cut/editorial transition را ممکن کند.
+فریمی که باید:
+- به clip بعدی handoff شود؛ یا
+- match/editorial cut را ممکن کند؛ یا
+- sequence را به final payoff برساند.
+
+### CLIP-SPECIFIC RISK
+interaction، physics، count، identity و reference burden مختص آن clip ثبت شود.
 
 ## Boundary Continuity
 
-برای continuous/hybrid sequence، مرز دو کلیپ یک asset درجه‌یک است.
+برای هر `Cn → Cn+1` مرز یک asset درجه‌یک است.
 
-روش ترجیحی:
-1. End Keyframe Clip N ساخته و QA می‌شود.
-2. همان تصویر به‌عنوان Start Reference/Ingredient اصلی Clip N+1 استفاده می‌شود.
-3. prompt Clip N+1 صریحاً می‌گوید این تصویر state اولیه است، نه فقط style reference.
-4. object count، product state، character positions و lighting در transition checklist بررسی می‌شوند.
+روش ترجیحی در hard/hybrid continuity:
+1. End Keyframe Clip N ساخته و QA شود.
+2. همان state به‌عنوان Start Reference/Ingredient اصلی Clip N+1 استفاده شود.
+3. prompt Clip N+1 صریحاً بگوید این تصویر **initial state** است نه style reference.
+4. object count، product state، character positions، camera direction و lighting در transition checklist بررسی شوند.
+
+برای editorial transition exact geometry لازم نیست، ولی identity/style/direction/pacing باید intentional باشد.
 
 ## Shared vs Clip-Specific References
 
@@ -106,37 +134,47 @@
 - clean product identity؛
 - character identity؛
 - packaging identity؛
+- global scale rules؛
 - style/lighting bible در صورت نیاز.
 
 ### Clip-specific
 - start frame؛
 - scene master؛
 - end frame؛
-- process-specific prop/tool reference؛
+- process-state reference؛
+- tool/prop reference در صورت ضروری بودن؛
 - clip-specific environment.
 
 نباید صرفاً چون reference slot خالی است، همه assetها را در همه کلیپ‌ها آپلود کرد.
 
-## Scenario distribution برای 3×10s
+## Reference-budget rule
 
-یک الگوی پیشنهادی عمومی:
+برای هر clip reference stack جداگانه طراحی می‌شود.
 
-### Clip 01 — Hook / Making
-هدف: جذب توجه + یک process action واضح.
+یادگیری P0001: reference مفید در یک task الزاماً reference مفید برای task دیگر نیست؛ reference competition می‌تواند scene reconstruction ایجاد کند. بنابراین **minimum sufficient role-clean stack** نسبت به maximum-filled stack ترجیح دارد مگر evidence خلافش را نشان دهد.
 
-### Clip 02 — Development / Assembly
-هدف: گسترش جهان، assembly، packaging یا transformation کنترل‌شده.
+## Process-state distribution examples
 
-### Clip 03 — Payoff / Product Hero
-هدف: completion، inspection، reveal، برندینگ/hero.
+### 2 clips
+- C01: one clear craft/transformation state
+- C02: completion + packaging/reveal
 
-برای 2×10s:
-- Clip 01: process/hook؛
-- Clip 02: completion/reveal.
+### 3 clips
+- C01: craft/making
+- C02: assembly/collection/packaging
+- C03: inspection/reveal/hero
 
-## چرا تقسیم کردن بهتر از فشرده‌کردن همه چیز در یک 10s است؟
+### 4 clips
+- C01: origin/forming or macro hook
+- C02: decorating/transformation
+- C03: assembly/packaging
+- C04: hero/payoff
 
-اگر فرآیند شامل چند state change باشد (ساخت، تزئین، جابه‌جایی، بسته‌بندی، reveal)، قراردادن همه در یک 10 ثانیه ریسک این موارد را بالا می‌برد:
+این‌ها template هستند نه اجبار. `SCENARIO_ARCHITECTURE_SYSTEM.md` باید بر اساس محصول گزینه‌های واقعی را بسازد.
+
+## چرا تقسیم کردن بهتر از فشرده‌کردن همه چیز در یک clip است؟
+
+اگر فرآیند چند state change دارد، فشرده‌سازی در یک 10s ریسک این موارد را بالا می‌برد:
 - morphing؛
 - teleportation؛
 - duplicate objects/characters؛
@@ -144,32 +182,41 @@
 - impossible physics؛
 - scene reconstruction.
 
-تقسیم به چند clip اجازه می‌دهد هر clip فقط 1–2 تغییر state مهم داشته باشد.
+تقسیم به چند clip اجازه می‌دهد هر clip یک مسئولیت اصلی داشته باشد و failure root cause قابل‌تشخیص‌تر شود.
+
+## Clip production loop
+
+برای هر clip:
+`Clip Contract → Reference Strategy → Shot Timing → Storyboard → Keyframes → Prompt Package → Preflight → Baseline Runs → Video QA → Final Selection`
+
+لازم نیست همه clipها یک‌جا generate شوند. بهتر است boundary-critical asset کلیپ قبلی قبل از قفل کلیپ بعد approved باشد.
 
 ## Assembly Stage
 
 پس از انتخاب Final Run هر clip:
-- trim frame-accurate؛
+- frame-accurate trim؛
 - transition؛
-- speed only if justified؛
-- color matching؛
-- audio bridge؛
+- speed adjustment فقط با دلیل؛
+- color/exposure matching؛
+- audio/music bridge؛
 - logo/text overlay؛
 - master export.
 
 ## Sequence QA
 
-بعد از assembly علاوه بر QA تک‌کلیپ، باید بررسی شود:
-- product identity بین کلیپ‌ها؛
-- character identity؛
+علاوه بر QA تک‌کلیپ، بررسی شود:
+- product identity بین همه clipها؛
+- character identity/count؛
 - scale؛
 - lighting/color؛
 - direction of movement؛
-- continuity of action/state؛
+- continuity of product/action state؛
 - transition smoothness؛
-- repeated or contradictory moments؛
+- repeated/contradictory moments؛
 - pacing across total duration؛
-- final payoff.
+- escalation of visual interest؛
+- final payoff؛
+- audio continuity.
 
 ## Run/Data Model
 
@@ -177,13 +224,19 @@
 - `P0002-C01`
 - `P0002-C02`
 - `P0002-C03`
+- `P0002-C04`
 
-Run ID همچنان project-global باقی می‌ماند، ولی `clip_id` در metadata ثبت می‌شود. مثال:
+Run ID project-global باقی می‌ماند، ولی `clip_id` در metadata ثبت می‌شود. مثال:
 - run_id: `P0002-R0017`
 - clip_id: `P0002-C02`
 
-این کار registry و مقایسه را ساده نگه می‌دارد.
+برای sequence نیز `sequence_id` می‌تواند مانند `P0002-S01` ثبت شود.
 
-## Stop rule
+## Stop / downgrade rule
 
-اگر continuity بین دو clip باعث generation loop بی‌پایان شد، sequence باید از `continuous_world` به `hybrid` یا `editorial_sequence` downgrade شود و transition در post-production کنترل شود. کیفیت کل تبلیغ مهم‌تر از اثبات continuity مصنوعی است.
+اگر continuity بین یک boundary بیش از دو repair cycle ایجاد کرد و root cause stochastic reconstruction بود:
+- hard continuous را به hybrid یا editorial downgrade کن؛
+- match cut یا post-production transition استفاده کن؛
+- learning را ثبت کن.
+
+کیفیت کل تبلیغ مهم‌تر از اثبات continuity مصنوعی است.
