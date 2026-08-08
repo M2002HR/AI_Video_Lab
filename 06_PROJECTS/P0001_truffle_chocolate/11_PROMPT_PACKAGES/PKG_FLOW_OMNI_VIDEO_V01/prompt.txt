@@ -1,0 +1,312 @@
+CREATE ONE CONTINUOUS 10-SECOND PREMIUM MINIATURE PRODUCT COMMERCIAL.
+
+FORMAT
+- Duration: exactly 10 seconds.
+- Aspect ratio: 16:9 landscape.
+- One uninterrupted shot.
+- No cuts, no scene changes, no montage, no time jump.
+- Natural cinematic motion and realistic soft motion blur.
+- No visible text, logo, watermark or branding.
+
+REFERENCE HIERARCHY — STRICT ROLE SEPARATION
+
+Use the FIVE uploaded images in the exact upload order described below.
+
+INGREDIENT 1 — OPENING CAMERA STATE
+The close inside-box scene with one dominant multicolor hero truffle and exactly three tiny red-uniform chefs.
+Use this as the visual anchor for the beginning of the video.
+It defines the opening camera distance, the local hero-truffle region and initial chef placement.
+
+INGREDIENT 2 — MID / SCENE MASTER
+The medium inside-box scene with the same hero truffle and same three chefs.
+Use this as the combined-world continuity anchor around the middle of the video.
+It defines the stable physical miniature world, lighting, local box environment and mid-reveal spatial relationships.
+
+INGREDIENT 3 — FINAL CAMERA STATE
+The wider complete-box scene with the same central multicolor hero truffle and same three chefs still inside the kraft box.
+Use this as the final camera-state anchor.
+It defines the desired final reveal direction and wide composition.
+
+INGREDIENT 4 — PRODUCT IDENTITY
+The clean product-only kraft box of colorful handmade truffles.
+Use this ONLY for product-category truth, coating/color vocabulary, handmade truffle character, dark fluted paper cups and simple natural kraft packaging.
+Do NOT use this image to replace or reorganize the scene layout established by Ingredients 1–3.
+
+INGREDIENT 5 — CHARACTER IDENTITY
+The clean cast image showing the exact recurring three miniature chefs.
+Use it ONLY to preserve their recognizable faces, facial-hair cues, red chef jackets, red chef hats, dark trousers/shoes and broad miniature proportions.
+Do NOT copy the static reference poses as required video poses.
+
+CONFLICT RULE
+For spatial arrangement and camera continuity, Ingredients 1–3 have priority.
+For product category/material/packaging identity, Ingredient 4 has priority without changing the established layout.
+For chef faces/uniform identity, Ingredient 5 has priority without changing the established scene positions.
+
+PRIMARY CREATIVE IDEA
+This is a quiet premium miniature inspection-to-reveal commercial.
+The product is already finished.
+The camera movement is the MAIN action.
+The three tiny chocolatiers provide only subtle life and scale.
+Nothing is being cooked, assembled, poured, decorated or carried.
+
+SCENE CONTINUITY — MOST IMPORTANT RULE
+Treat Ingredients 1, 2 and 3 as three camera views of ONE SINGLE PHYSICAL WORLD.
+Do NOT morph one picture into another as separate scenes.
+Do NOT regenerate the arrangement at each stage.
+Do NOT teleport characters or products.
+The camera simply moves backward and slightly upward through the same stable kraft-box world.
+
+CAMERA
+Use ONE smooth continuous physical camera move for the full clip:
+- slow dolly backward;
+- combined with a shallow gradual crane upward;
+- same viewing side throughout;
+- minimal framing compensation only.
+
+No orbit around the box.
+No sudden pan.
+No digital zoom effect.
+No snap reframing.
+No dutch angle.
+No top-down jump.
+No camera cut.
+
+The camera trajectory should naturally pass from the close visual state of Ingredient 1, through the medium scene-master state of Ingredient 2, toward the wide final state of Ingredient 3.
+
+TIMELINE
+
+00:00–00:02.0 — CLOSE OPENING
+Begin very close to the visual state of Ingredient 1.
+One multicolor round-nonpareil handmade chocolate truffle is the dominant object.
+The same three tiny chefs stand in the established front/local region inside the kraft box.
+The camera begins an extremely gentle backward movement almost immediately.
+
+Chef motion is minimal:
+- natural breathing / tiny body weight shift;
+- one subtle head turn or eye-line adjustment;
+- restrained quiet inspection behavior.
+
+All hands remain empty.
+No chef touches or modifies the truffle.
+The product and cups remain completely stationary.
+
+00:02.0–00:06.0 — CONTINUOUS MID REVEAL
+Continue the SAME backward + shallow upward camera movement.
+More neighboring truffles, dark fluted cups and kraft-cardboard interior gradually enter the frame only because the camera reveals previously off-screen space.
+
+Around the middle of the clip, the scene should visually approach Ingredient 2.
+
+The central hero truffle remains the same physical object in the same cup and local region.
+The same three chefs remain in their same broad physical region.
+They do NOT walk across the box.
+They do NOT exchange positions.
+They do NOT grow or shrink physically.
+
+Allow only very small natural chef movements:
+- slight head orientation change;
+- subtle posture settling;
+- tiny relaxed empty-hand movement close to the body.
+
+No exaggerated gesture.
+No waving.
+No running.
+No jumping.
+
+00:06.0–00:09.0 — FULL PRODUCT REVEAL
+Continue the SAME camera trajectory without changing direction.
+The complete kraft gift box and colorful assortment gradually become readable.
+The image should naturally progress toward the wide spatial state of Ingredient 3.
+
+The colorful truffle collection becomes the primary commercial subject.
+The chefs become smaller in screen space only because the camera is farther away.
+Their physical scale relative to the box and truffles remains constant.
+
+Do not rearrange products to make the composition prettier.
+Do not replace the central hero truffle.
+Do not generate a different full-box layout halfway through the shot.
+
+00:09.0–00:10.0 — FINAL HERO HOLD
+Camera movement eases smoothly to an almost complete stop.
+Hold a stable premium final product composition for approximately the final one second.
+The complete box is readable.
+The colorful assortment is the visual hero.
+The same three tiny chefs remain visible as secondary scale/story accents.
+No new action begins.
+
+PRODUCT IDENTITY LOCK
+The product is a collection of handmade chocolate truffles.
+
+Each truffle:
+- is approximately spherical but subtly irregular and handmade;
+- has a dark-chocolate body;
+- is densely coated directly with either tiny round edible sugar nonpareils or thin short edible sprinkles;
+- sits inside its own small dark charcoal-gray fluted paper candy cup.
+
+Preserve source-supported assortment diversity such as:
+- pink;
+- bright/dark blue;
+- purple;
+- white;
+- multicolor/rainbow;
+- red-green-white;
+- yellow/lime;
+- orange/brown elongated sprinkles.
+
+Do NOT make all truffles identical.
+Do NOT make every truffle a perfect CGI sphere.
+Do NOT turn them into cake pops, hard-shell bonbons, cupcakes, cookies, macarons or generic candy balls.
+No sticks.
+
+DECORATION SCALE
+Round nonpareils are TINY edible particles, not large beads, pearls, marbles or gemstones.
+Elongated sprinkles are small short confectionery rods, not large sticks.
+Particles remain physically attached to chocolate.
+No floating decorations.
+No loose sprinkles scattered in the box or studio.
+
+PACKAGING
+The box is simple natural kraft-brown cardboard:
+- matte;
+- unbranded;
+- lightweight-looking;
+- no luxury redesign;
+- no ribbon;
+- no lid transformation;
+- no plastic window;
+- no printed label.
+
+Paper cups remain dark charcoal-gray matte folded confectionery paper.
+Do not turn them into glossy black plastic, metallic foil or silicone.
+
+CHARACTER LOCK
+Exactly THREE recurring miniature adult chocolatiers for the entire video:
+
+CHARACTER A
+- moustached foreman;
+- slightly stockier round face.
+
+CHARACTER B
+- clean-shaven round friendly face.
+
+CHARACTER C
+- small neat dark goatee.
+
+All three wear the same deep-red chef jacket and matching red chef hat, dark trousers and dark shoes.
+
+No fourth chef.
+No duplicate chef.
+No missing chef.
+No face swap.
+No changing facial hair.
+No costume change.
+No hat-color change.
+
+Keep hands anatomically simple and coherent.
+Because there is no tool interaction, do not create complicated finger choreography.
+
+ZERO-PROP RULE
+Absolutely no:
+- brush;
+- bowl;
+- spoon;
+- tray;
+- tweezers;
+- knife;
+- ladder;
+- cart;
+- machinery;
+- ingredient container;
+- loose chocolate;
+- crumbs;
+- cocoa powder;
+- loose decorations.
+
+Do not introduce props from any earlier creative concept.
+
+PHYSICS / OBJECT STABILITY
+All truffles, cups and the kraft box remain physically stationary throughout the shot.
+The camera is moving, not the product arrangement.
+
+No:
+- object duplication;
+- object disappearance;
+- teleportation;
+- truffle morphing;
+- cup morphing;
+- box-wall movement;
+- scale pumping;
+- floating objects;
+- intersecting geometry.
+
+The central hero truffle remains continuously traceable from opening to final reveal.
+
+LIGHTING
+Preserve one stable premium dark-studio lighting setup across the full clip.
+Use soft diffused food-commercial illumination from upper/front-left with restrained fill.
+Keep:
+- chocolate edible-looking;
+- sugar decorations matte-to-soft-satin rather than plastic;
+- kraft cardboard naturally textured;
+- dark cups readable;
+- chef faces and red fabric controlled.
+
+No lighting flicker.
+No sudden color-temperature shift.
+No neon lighting.
+No dramatic relighting during the pull-back.
+
+FOCUS / DEPTH OF FIELD
+At the opening, use moderate macro depth of field with the hero truffle and all three chefs sufficiently readable.
+As the camera pulls back, allow focus/depth behavior to naturally become more inclusive so the growing assortment remains readable.
+Do not rack focus dramatically between subjects.
+Do not blur two chefs beyond recognition.
+The final box should be mostly clear enough for a premium product hero shot.
+
+BACKGROUND
+Outside the kraft box, maintain a simple charcoal-gray to near-black premium studio environment.
+No wooden workbench.
+No bakery.
+No kitchen.
+No workshop set.
+No cheesecake.
+No cherries.
+No unrelated dessert elements.
+
+AUDIO
+No dialogue.
+No voiceover.
+No spoken words.
+If native audio is generated, keep it extremely subtle and unobtrusive, with quiet studio ambience only; do not invent loud cooking sounds because no cooking action occurs.
+
+HARD FAILURE CONDITIONS
+The video is incorrect if any of these happen:
+- any cut or scene replacement;
+- central hero truffle disappears or changes coating;
+- full arrangement suddenly snaps to a different box layout;
+- chefs teleport or exchange positions;
+- a fourth chef appears;
+- chef identity/facial hair changes;
+- tools/bowls/loose ingredients appear;
+- truffles move by themselves;
+- nonpareils become oversized beads;
+- kraft box transforms;
+- products morph into another dessert category;
+- camera changes to an unrelated angle;
+- lighting flickers or scene style changes.
+
+FINAL PRIORITY ORDER
+1. Single-world temporal continuity.
+2. Product identity stability.
+3. Exact three-chef identity stability.
+4. One smooth backward + shallow-upward camera move.
+5. No props and no product motion.
+6. Clean progression from opening anchor to mid anchor to final anchor.
+7. Realistic edible materials and handmade character.
+8. Stable premium final hero hold.
+9. Visual beauty.
+
+If visual drama conflicts with continuity, choose continuity.
+If adding motion increases risk, keep the motion smaller.
+If a secondary reference conflicts with the established scene layout, preserve the established scene layout.
+
+The finished result should look like one real miniature macro camera quietly pulling backward through a stable physical truffle gift box, beginning near one hero truffle and the same three tiny chocolatiers, then naturally revealing the complete colorful handmade assortment without any scene reconstruction.
