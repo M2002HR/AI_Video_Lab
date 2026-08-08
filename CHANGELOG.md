@@ -1,5 +1,26 @@
 # Changelog
 
+## 1.3.0 — 2026-08-08
+### Added
+- `00_SYSTEM/MEDIA_PROXY_PIPELINE.md` برای ساخت و commit نسخه کم‌حجم تصاویر/ویدیوهای معنی‌دار پروژه.
+- `11_TOOLS/media_proxy.py` برای image WebP proxy و video H.264 MP4 proxy.
+- project-level `19_HANDOFF_ASSETS/git_previews/` و `proxy_manifest.json` به‌عنوان visual memory بین chatها.
+
+### Changed
+- Storage mode پیش‌فرض media غیرحساس از metadata-only به `git_previews` تغییر کرد؛ original/full-resolution همچنان خارج Git معمولی می‌ماند.
+- `.gitignore` فقط WebP/MP4های مسیر استاندارد `19_HANDOFF_ASSETS/git_previews/` را re-include می‌کند و binaryهای دیگر را همچنان ignore نگه می‌دارد.
+- default image proxy: long edge≤1280، WebP quality≈72، metadata stripped.
+- default video proxy: MP4/H.264، long edge≤1280، ≈24fps، CRF≈30، AAC≈96kbps.
+- `AGENTS.md` و `AI_START_HERE.md` اکنون proxy generation/manifest/commit را بخشی از cross-chat persistence می‌دانند.
+- project template و P0001 media-storage metadata به `git_previews` ارتقا یافتند.
+
+### Safety / privacy
+- repository ممکن است public باشد؛ low-resolution media همچنان public است و کاهش کیفیت privacy control محسوب نمی‌شود.
+- sensitive/client/confidential یا `do_not_publish` media باید metadata-only بماند مگر user storage/private-repo policy دیگری تعیین کند.
+
+### Backfill
+- media تاریخی P0001 به‌صورت خودکار backfill نشده است چون binaryهای اصلی در Git موجود نیستند. هنگام دسترسی/reattach شدن sourceها می‌توان proxyهای تاریخی را تولید و manifest را تکمیل کرد.
+
 ## 1.2.0 — 2026-08-08
 ### Added
 - `00_SYSTEM/SCENARIO_ARCHITECTURE_SYSTEM.md` برای پیشنهاد adaptive سناریوهای 10/20/30/40 ثانیه‌ای و 1–4 کلیپ.
@@ -69,6 +90,6 @@
 
 ## 1.0.0 — 2026-08-07
 ### Added
-- هستهٔ AI Video Ad Lab، چرخهٔ 24 مرحله‌ای، SOP/checklist، prompt library، template، registry و CLI.
+- هستهٔ AI Video Ad Lab، چرخهٔ 24 مرحله‌ای، SOP/checklist، template، registry و CLI.
 ### Changed / Deprecated / Fixed / Learning-derived changes
 - هنوز موردی ثبت نشده بود.
