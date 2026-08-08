@@ -49,12 +49,29 @@ Minimum viable inputs:
 
 اگر optionalها وجود ندارند، assumption کم‌ریسک را ثبت کن و فقط وقتی تصمیم blocker است سؤال بپرس.
 
-## محدودیت رسانه بین chatها
-متن، prompt، metadata، decision و handoff باید در repo باشد. **فایل‌های تصویر/ویدیوی attach‌شده در ChatGPT به‌صورت خودکار داخل GitHub ذخیره نمی‌شوند.** وضعیت فعلی repo نیز binary media را در `.gitignore` نادیده می‌گیرد مگر storage policy بعداً تغییر کند.
+## Media persistence بین chatها
 
-اگر یک تصویر/ویدیو در repo یا connector قابل مشاهده نیست و برای قضاوت بصری لازم است، فقط همان asset لازم را از کاربر بخواه دوباره attach کند؛ کل context را دوباره نپرس. `HANDOFF.md` باید مشخص کند کدام asset در session بعد ممکن است نیاز به re-attach داشته باشد.
+سیستم از نسخه 1.3 به بعد برای media غیرحساس از **low-resolution Git proxies** استفاده می‌کند.
 
-جزئیات: `00_SYSTEM/STORAGE_POLICY.md`.
+وقتی تصویر/ویدیوی مهم locally accessible است:
+1. original metadata/hash را ثبت کن؛
+2. طبق `00_SYSTEM/MEDIA_PROXY_PIPELINE.md` یک proxy کم‌حجم بساز؛
+3. آن را در `19_HANDOFF_ASSETS/git_previews/` commit کن؛
+4. `proxy_manifest.json` و HANDOFF را sync کن.
+
+Default proxy:
+- image: WebP ≤1280px long edge, quality≈72؛
+- video: MP4/H.264 ≤1280px long edge, ≈24fps, CRF≈30.
+
+Original/full-resolution همچنان خارج Git معمولی می‌ماند و proxy source of truth نیست.
+
+Repository ممکن است public باشد؛ low quality به معنی private نیست. asset حساس یا `do_not_publish` باید metadata-only بماند.
+
+در chat جدید ابتدا Git proxy را برای visual context استفاده کن. فقط وقتی full-resolution/detail واقعی لازم است original را از user بخواه دوباره attach کند.
+
+جزئیات:
+- `00_SYSTEM/STORAGE_POLICY.md`
+- `00_SYSTEM/MEDIA_PROXY_PIPELINE.md`
 
 ## پایان هر session مهم
 قبل از رها کردن یک پروژه فعال:
@@ -62,7 +79,8 @@ Minimum viable inputs:
 - `HANDOFF.md` را به‌روز کن؛
 - feedback/decision مهم را در `18_CONVERSATION_LOG/` ثبت کن؛
 - Run/prompt/evaluation جدید را ثبت کن؛
+- media proxy/manifest لازم را sync کن یا دلیل metadata-only را ثبت کن؛
 - workflow discovery یا system knowledge را طبق `DOCUMENTATION_CONTRACT.md` ثبت کن؛
 - تغییرات لازم را commit کن.
 
-هدف این است که session بعدی بتواند فقط با همین repo کار را ادامه دهد.
+هدف این است که session بعدی بتواند تا حد ممکن فقط با repo کار را ادامه دهد.
