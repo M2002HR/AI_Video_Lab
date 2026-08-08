@@ -1,6 +1,6 @@
 # Project status — P0001
 
-- Current stage: `STAGE_10_STORYBOARD` — KF01 has now passed using camera derivation from the stable scene master. Next task is final hero KF03 derivation.
+- Current stage: `STAGE_10_STORYBOARD` — KF01 passed; KF03 v04 failed strict continuity because the complete product reference overrode the scene master during the wide derivation. Next task is a scene-master-only KF03 v05 test.
 - Product identity: `product_identity.md` + active injection `identity_lock_v02.md`.
 - Source prompt analysis: completed v1.
 - Active reference strategy: `04_REFERENCE_STRATEGY/reference_plan.md`.
@@ -15,60 +15,49 @@
 - `P0001-R0015` → SELECTED `REF-SCENE-MASTER`, coherent inside-box combined world / KF02-like anchor, ~4.3/5.
 - `P0001-R0016` → SELECTED `KF01`, closer camera-derived opening state, ~4.5/5.
 - `P0001-R0002` → provisional optional `REF-PROD-HERO-45`, secondary inferred geometry/depth, ~4.3/5.
+- `P0001-R0018` → retained only as a standalone final-product/aesthetic hero candidate; NOT an approved sequence endpoint.
 
-Approved alternates/evidence: R0004 TOP-CLEAN, R0007 ASSORTMENT, R0005 MACRO, R0009 CHARACTER, R0001 HERO-45, R0014 scene-grammar alternate, R0017 KF01 alternate.
+## Storyboard mapping
+- `KF01` (~00:01): `P0001-R0016` — APPROVED.
+- `KF02` / mid-state (~00:05): `P0001-R0015` — APPROVED scene master.
+- `KF03` / final hero (~00:09.2): NOT YET APPROVED.
 
-## Scene/keyframe history
-### KF01 v01 — failed
-R0011–R0013 failed due role bleed, unwanted props/tools/loose ingredients, wrong physical scene anchoring, scale/readability problems and product regularization.
+## KF03 v04 — FAILED STRICT CONTINUITY
+Inputs:
+- R0015 scene master;
+- R0003 clean full-box product reference.
 
-### KF01 v02 — stable combined world
-R0014–R0015 used only R0003 + R0010 and no tools/actions. This produced a coherent inside-box scene. R0015 was selected as `SCENE MASTER / KF02-like` rather than forcing it into an opening role because it revealed too much assortment.
+Results:
+- `R0018` ~3.9/5 — visually strong standalone full-box hero, chefs remain inside, but the central hero/local arrangement from R0015 is rebuilt and no longer traceable. Retain only as aesthetic/product target.
+- `R0019` ~3.3/5 — same scene-rebuild failure plus all three chefs drift outside/in front of the box.
 
-### KF01 v03 — PASSED via camera derivation
-R0016–R0017 were derived from R0015 + R0003 instead of rebuilding the world.
+Root-cause interpretation: during wide derivation, R0003 is a stronger globally coherent full-box layout than the partial R0015 world, so the image model snaps toward the product reference instead of performing camera-only extrapolation.
 
-- `R0016` ~4.5/5 — SELECTED KF01.
-- `R0017` ~4.4/5 — approved alternate.
+Evidence:
+- `13_EVALUATION/reports/reference_qa_kf03_v04.md`
+- `OBS-0010`
+- `HYP-0003`
 
-R0016 passes because it is clearly closer than R0015, preserves the same three-chef cast and kraft-box world, keeps the hero truffle dominant, introduces zero props/loose ingredients and plausibly connects to R0015 via one continuous pull-back.
-
-Remaining caveats:
-- more neighboring assortment is visible than the strict opening target;
-- some static pose language remains;
-- hero geometry is still mildly regularized relative to the handmade source.
-
-Evidence: `13_EVALUATION/reports/reference_qa_kf01_v03.md`, `OBS-0009`.
-
-## Storyboard mapping now
-- `KF01` (~00:01): `P0001-R0016`.
-- `KF02` / mid-state (~00:05): `P0001-R0015`.
-- `KF03` / final hero (~00:09.2): NEXT.
-
-Do not independently regenerate KF02. Derive KF03 outward from R0015 to preserve the same combined world.
-
-## Next action — KF03 final hero derivation
+## Next action — KF03 v05 MASTER ONLY
 Generate exactly TWO candidates with:
-`11_PROMPT_PACKAGES/PKG_SCENE_KEYFRAME_V04_KF03_FROM_MASTER/prompt.txt`
+`11_PROMPT_PACKAGES/PKG_SCENE_KEYFRAME_V05_KF03_MASTER_ONLY/prompt.txt`
 
-### Upload only
-1. `R0015` — selected SCENE MASTER / highest authority for combined-world continuity.
-2. `R0003` — product/packaging truth backup.
+### Upload ONLY
+1. `R0015` — selected scene master.
 
-Do not upload character reference, macro, assortment, hero-45 or original wooden-background source unless a later controlled repair explicitly requires one of them.
+Do NOT upload R0003 or any other reference in this pass.
 
-Expected next runs: `P0001-R0018`, `P0001-R0019`.
+Expected next Runs: `P0001-R0020`, `P0001-R0021`.
 
-### KF03 gate
-- clearly farther and moderately higher camera than R0015;
-- complete kraft box readable without changing box identity;
-- colorful assortment dominates the final commercial frame;
-- same three chefs remain present, smaller in screen space but physically consistent;
-- no extra chefs, tools, bowls, loose ingredients or debris;
-- hero-truffle region remains traceable;
-- deeper/moderate focus keeps most of product readable;
-- clean dark studio breathing room suitable for final hold / later branding;
-- plausible same camera path from R0016 → R0015 → new KF03.
+### v05 success gate
+- same central multicolor hero remains traceable in the same cup/local region;
+- same three chefs remain inside the box in the same broad region;
+- camera is simply farther and moderately higher;
+- more of the same box is extrapolated around the existing scene rather than replacing it;
+- no props, loose ingredients or character duplication;
+- plausible path: R0016 → R0015 → new KF03.
+
+If master-only still fails, stop repeated still-image endpoint iteration. Reassess final-flow architecture: use R0018 as a final aesthetic/product target without strict interpolation, or split the reveal into a separate controlled clip.
 
 - Target video workflow: Google Flow / Gemini Omni Flash / Ingredients-to-Video / 10s / 16:9.
-- Operational ingredient budget remains 7; final Flow stack will be chosen after KF03 QA rather than filling all available slots automatically.
+- Operational ingredient budget remains 7; use only high-value role-clean ingredients.
