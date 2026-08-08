@@ -5,7 +5,7 @@ The AI operator (currently ChatGPT) executes the workflow, preserves provenance,
 
 ## Process every request
 1. **Context** — identify project, stage, and task.
-2. **Load minimal truth** — read `STATUS.md`, `HANDOFF.md`, and the relevant SOP/checklist/prompt/tool/learning.
+2. **Load minimal truth** — read `STATUS.md`, `HANDOFF.md`, `00_SYSTEM/SEQUENTIAL_STAGE_GATE_PROTOCOL.md`, and the relevant SOP/checklist/prompt/tool/learning.
 3. **Execute** — perform the work directly when possible; ask only for genuine blockers.
 4. **Record** — persist prompt, Run, evaluation, feedback, decisions, status, and handoff as applicable.
 5. **Improve** — create OBS/HYP/EXP/LRN records for repeatable failures or insights.
@@ -17,7 +17,16 @@ The AI operator (currently ChatGPT) executes the workflow, preserves provenance,
 Run `AI_START_HERE.md`. If a project is active, `HANDOFF.md` is the primary cross-session summary. Do not request old chat history unless the repository genuinely lacks required information.
 
 ## New project
-If the user has at least product image(s) + source/template prompt, run `FAST_START_PROTOCOL.md`. Missing optional fields are not blockers; record low-risk assumptions.
+If the user has at least product image(s) + source/template prompt, run `FAST_START_PROTOCOL.md` together with `SEQUENTIAL_STAGE_GATE_PROTOCOL.md`. Missing optional fields are not blockers; record low-risk assumptions.
+
+**Never interpret Fast Start as permission to complete the whole pipeline in one response.** Product image + template prompt begins the analysis sequence. The active project stage must remain at the earliest incomplete gate, and only the immediate next-stage generation/decision should be requested from the user.
+
+## Sequential execution
+Follow the SOP/stage order unless a stage is explicitly documented as not applicable. A final video prompt may only become active after the relevant upstream reference, creative/scenario, timing, storyboard/keyframe, and preflight gates are complete.
+
+If a previous agent jumped ahead, preserve the downstream artifact as historical `premature_draft`, clear active downstream pointers, roll the project stage back to the earliest incomplete gate, and continue from there.
+
+When external generation is needed, request one stage-appropriate generation batch, wait for the output, QA it, record the result, then advance. Do not ask the user to generate the final video while reference/storyboard/keyframe work remains unresolved.
 
 ## Git management
 The user authorizes necessary low-risk reversible edits such as project records, Runs, prompt packages, evaluations, handoffs, documentation/checklist improvements, and observation/hypothesis records.
@@ -50,4 +59,4 @@ A stage is not complete until:
 - required media proxy/documentation sync is complete or a documented exception exists.
 
 ## English-only repository language
-All repository documentation and persisted text must be English. Translate or paraphrase non-English user feedback before persistence. Do not keep Persian/Arabic-script examples or quotes in the repository. This policy is enforced by `11_TOOLS/check_english_docs.py` and CI.
+All repository documentation and persisted text must be English. Translate or paraphrase non-English user feedback before persistence. Do not keep Persian/Arabic-script examples or quotes in the repository. This policy is checked manually with `11_TOOLS/check_english_docs.py`; the English-only audit workflow is intentionally manual-only to avoid routine notification spam.
