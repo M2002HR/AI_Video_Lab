@@ -1,64 +1,61 @@
 # AI Video Ad Lab dashboard
 
-- System version: 1.1.1
+- System version: 1.2.0
 - Primary operator: ChatGPT / AI operator architecture
-- Active projects: 1
-- Project current stages: `P0001` → STAGE_16 Video Generation / first controlled Flow baseline
+- Current system focus: adaptive scenario architecture + 2/3/4 clip production
 
-## P0001 locked storyboard anchors
-- `R0016` KF01 — selected opening close camera state (~4.5/5)
-- `R0015` SCENE MASTER / KF02-like — selected stable combined-world mid state (~4.3/5)
-- `R0020` KF03 — selected final farther+higher camera state (~4.5/5)
+## P0001 — truffle chocolate
+- Current stage: `STAGE_19_FINAL_SELECTION`
+- Accepted current final: `R0022` (~4.6/5, with known caveats)
+- Further V02 count-lock optimization: paused/backlog by user
+- P0001 should not be overwritten when creating a new 20/30/40s derivative.
 
-## P0001 identity anchors
-- `R0003` TOP-CLEAN — primary product/packaging truth (~4.8/5)
-- `R0010` CHARACTERS — exact recurring three-chef appearance/style authority (~4.8/5)
+### P0001 locked anchors
+- `R0003` product/packaging clean identity
+- `R0010` recurring three-chef identity
+- `R0015` scene master
+- `R0016` KF01 opening
+- `R0020` KF03 final camera state
+- `R0022` selected 10s video
 
-Lower-priority evidence intentionally excluded from first video stack:
-- R0008 assortment
-- R0006 macro
-- R0002 hero-45
+### P0001 important learning
+- role-clean reference stacks can outperform max-filled stacks in tested scene tasks;
+- scene-master-derived adjacent camera states improved continuity;
+- identical video setup can produce stochastic character-count failure (`R0023` fourth chef);
+- these remain project/provisional unless promoted through evidence policy.
 
-## Recent KF03 evidence
-### v04 — scene master + complete product reference
-- R0018 ~3.9/5 — visually strong standalone hero but failed strict scene continuity.
-- R0019 ~3.3/5 — failed, including chef position drift outside box.
+## Scenario architecture v1.2.0
+System now supports an adaptive menu for:
+- 1×10s / 10s
+- 2×10s / 20s
+- 3×10s / 30s
+- 4×10s / 40s
 
-### v05 — scene master only
-- R0020 ~4.5/5 — SELECTED KF03; preserves central hero and three-chef local region while revealing wider box.
-- R0021 ~4.2/5 — alternate; more assortment/box drift.
+Candidate count is adaptive, not a quota. Longer duration is proposed only when process/story capacity justifies it.
 
-Project-level observation: after a stable scene master exists, master-only adjacent-camera derivation preserved continuity better than adding a competing globally complete product layout. `OBS-0011`; still provisional globally.
+Core docs:
+- `00_SYSTEM/SCENARIO_ARCHITECTURE_SYSTEM.md`
+- `00_SYSTEM/MULTI_CLIP_ARCHITECTURE.md`
+- `01_SOPS/SOP_07_SCENARIO_GENERATION.md`
+- `01_SOPS/SOP_MULTI_CLIP_SEQUENCE.md`
+- `04_CHECKLISTS/CHK_SCENARIO_ARCHITECTURE_MENU.md`
+- `04_CHECKLISTS/CHK_MULTI_CLIP_CONTINUITY.md`
 
-## Active Flow package
-`06_PROJECTS/P0001_truffle_chocolate/11_PROMPT_PACKAGES/PKG_FLOW_OMNI_VIDEO_V01/`
+Candidate prompt:
+- `PRM-SCN-ARCH-001_v1.0.0` — candidate pending broader project validation.
 
-Preflight: PASS.
+## Next intended use
+A new chat can create a new 30s / 3×10s derivative from P0001 using:
+`06_PROJECTS/P0001_truffle_chocolate/30S_DERIVATIVE_START.md`
 
-### First video ingredient stack — five images only
-1. R0016 opening KF01
-2. R0015 scene master / mid
-3. R0020 final KF03
-4. R0003 product identity only
-5. R0010 character identity only
+The first action in that new project is Scenario Architecture Menu, not immediate video generation.
 
-Operational slots 6–7 intentionally unused.
-
-## Exact next controlled generation
-Google Flow / Gemini Omni Flash / Ingredients-to-Video / 10s / 16:9.
-
-Generate two videos with identical stack, order, prompt and exposed settings:
-- `P0001-R0022`
-- `P0001-R0023`
-
-Do not optimize between the pair. Next gate is frame-by-frame video QA.
-
-## Learning / experiments
-- EXP-0001 separate ingredients vs contact sheet remains planned/non-blocking.
-- OBS-0007/0008/0009/0010/0011 document the progression from over-conditioned scene synthesis toward stable scene-master camera derivation.
-- Validated global learnings: 0; current findings remain project/provisional unless promoted through evidence policy.
+## Media storage status
+Current mode: metadata-only/default.
+ChatGPT image/video attachments are NOT automatically stored in GitHub, and binary media is currently ignored by `.gitignore`.
+See `00_SYSTEM/STORAGE_POLICY.md`.
 
 ## Cross-chat readiness
-Enabled via `AI_START_HERE.md` + project `HANDOFF.md`.
+Enabled via `AI_START_HERE.md`, `AGENTS.md`, project `HANDOFF.md`, and Documentation Contract.
 
-Generated/maintained dashboard; not source of truth. Project truth lives in project metadata/status/handoff and underlying evidence.
+Dashboard is a generated/maintained overview; source of truth remains underlying project/system documents.
