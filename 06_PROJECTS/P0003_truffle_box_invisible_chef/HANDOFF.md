@@ -3,7 +3,7 @@
 ## Context snapshot
 P0003 is a fresh independent 10-second Gemini food/product-video project based on the user-supplied colorful truffle photograph and invisible-chef source-template prompt.
 
-Current stage: `STAGE_16` — Video Generation.
+Current stage: `STAGE_18` — Repair Decision / revised temporal conditioning.
 
 ## Completed gates
 - Input provenance recorded.
@@ -16,64 +16,68 @@ Current stage: `STAGE_16` — Video Generation.
 - 10-second shot timeline selected.
 - Storyboard generated, locally repaired twice, and approved as `SB-P0003-001R2`.
 - Three-state controlling keyframe sheet generated and approved as `KFSET-P0003-001`.
-- Final Gemini video prompt constructed.
-- Video Preflight passed.
+- Gemini video V01 prompt constructed and preflighted.
+- Baseline run `P0003-R0001` generated and Video-QA reviewed.
 
-## Approved visual hierarchy
-### Original real product photograph
-Highest authority for handmade irregularity, coating character, and packaging truth. It is not part of the final Gemini upload stack because its wooden tabletop and watermark are contamination risks.
+## Baseline P0003-R0001
+Technical metadata:
+- 1280 × 720;
+- 24 fps;
+- 10.005 seconds;
+- 2,476,184 bytes;
+- SHA-256 `c10c62d03e78030d22e75283bb166af0225676423fecbaf31d38b7bede951107`.
 
-### REF-P0003-001
-Approved clean product/packaging/environment authority for final Gemini conditioning.
+Video QA result: **FAIL / rejected — structural temporal reversal**.
 
-### SB-P0003-001R2
-Approved sequence/storyboard evidence. Do not upload for the baseline unless troubleshooting later.
+### What passed
+- fixed 90-degree top-down visual family;
+- clean white studio environment;
+- recognizable kraft box / colorful truffle identity;
+- no visible human anatomy;
+- no split-screen/reference-sheet leakage.
 
-### KFSET-P0003-001
-Approved state-continuity authority.
+### Blocking failures
+- video begins with the full hero box instead of 25 empty cups;
+- bowl/chocolate-center formation beat is missing;
+- coating-dish / sprinkle-adhesion beat is missing;
+- lift/bite motif occurs early rather than at the end;
+- later action progressively removes/disappears truffles until the box is empty;
+- required final state 24 seated + one bitten floating truffle + one empty cup is absent.
 
-Recorded metadata:
-- 1672 × 941 px;
-- 2,465,209 bytes;
-- SHA-256 `23c53cbdc144bb7e28f3805b12db2039c766f3b0e96b599ef286b8d16efbd4cc`.
+This is not a local cosmetic failure. The run must be regenerated.
 
-Keyframe QA:
-- opening state: exactly 25 empty cups, zero truffles;
-- mid assembly: approximately 18 seated truffles, accepted as a non-boundary partial-fill state;
-- lift state: exactly 24 seated + one mixed-rainbow floating truffle + exactly one empty cup.
+## Root-cause hypothesis
+The strongest one-run evidence suggests temporal reference-role confusion: `REF-P0003-001` likely acted as an initial-state anchor because it shows the completed box, while the three-panel `KFSET-P0003-001` was not reliably interpreted as left-to-right chronology. The resulting video approximately followed hero -> lift/bite -> partial -> empty.
 
-## Active final video package
-`11_PROMPT_PACKAGES/PKG_GEMINI_VIDEO_V01/`
+This remains a project-level hypothesis until tested again.
 
-Files:
-- `resolved_prompt.md`
-- `preflight.md`
+## Repair strategy
+Keep the approved product identity, creative direction, scenario, timing, storyboard and keyframe logic.
 
-Preflight result: **PASS / generation authorized**.
+Change only the next video-conditioning stack:
+1. do not upload the three-panel keyframe sheet directly in V02;
+2. first create a standalone 16:9 empty-opening image `START-P0003-001`;
+3. make that new image the strict frame-0 / start-state authority;
+4. keep `REF-P0003-001` only as secondary final-product/packaging identity authority;
+5. construct/preflight V02 only after the start anchor passes QA.
 
-## Baseline upload stack
-Upload only:
-1. `REF-P0003-001` — clean product/packaging/environment authority.
-2. `KFSET-P0003-001` — temporal/state authority.
+## Active repair task
+Prompt package:
+`11_PROMPT_PACKAGES/PKG_CHATGPT_VIDEO_START_ANCHOR_001/resolved_prompt.md`
 
-The keyframe sheet is not a split-screen design. The active prompt explicitly forbids reproducing panel borders/gutters and instructs Gemini to interpret it only as sequential state evidence.
+Generate `START-P0003-001` in ChatGPT using:
+- `REF-P0003-001` for box/environment identity;
+- `KFSET-P0003-001` only to understand the left-panel empty opening state.
 
-## Locked video continuity
-- 10.0 seconds, 16:9.
-- Camera fixed exactly 90-degree top-down for the entire video.
-- Invisible chef; no visible anatomy.
-- Pure white matte studio tabletop.
-- 00:00–00:00.8 box/cup setup.
-- 00:00.8–00:02.0 chocolate-center formation.
-- 00:02.0–00:03.6 coating.
-- 00:03.6–00:06.4 progressive box assembly.
-- 00:06.4–00:07.8 complete 25-piece hero settle.
-- 00:07.8–00:09.0 one mixed-rainbow truffle lifts, leaving 24 seated + one empty cup.
-- 00:09.0–00:10.0 same floating truffle receives an invisible bite; same 24 remain seated and the same single cup remains empty.
+Required output:
+- one standalone 16:9 frame;
+- centered diamond-oriented kraft box;
+- exactly 25 empty dark fluted cups;
+- zero truffles;
+- pure white studio background;
+- no contact-sheet/gutter layout.
 
 ## Next action
-Generate **one baseline only** in Gemini using the approved two-reference stack and paste `PKG_GEMINI_VIDEO_V01/resolved_prompt.md` unchanged.
+Return `START-P0003-001` for focused QA.
 
-Register/return the result as `P0003-R0001` for `STAGE_17` Video QA.
-
-Do not tune or regenerate repeatedly before the first baseline is evaluated. The first QA should determine whether any failure is identity, timing, physics, count, camera, or local cosmetic drift.
+Do **not** run another Gemini video yet. After the start anchor passes, construct and preflight `PKG_GEMINI_VIDEO_V02` using the revised role-clean conditioning stack.
