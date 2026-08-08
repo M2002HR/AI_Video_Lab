@@ -4,67 +4,82 @@
 - ID: `P0001`
 - Deliverable: 10s, 16:9 AI product ad
 - Target: Google Flow / Gemini Omni Flash / Ingredients-to-Video
-- Current stage: `STAGE_10_STORYBOARD`
+- Current stage: `STAGE_16_VIDEO_GENERATION`
 
-## Current approved anchors
-### Product
-- `R0003` TOP-CLEAN — primary clean visible identity (~4.8/5).
-- `R0008` ASSORTMENT — diversity/color/coating authority (~4.5/5).
-- `R0006` MACRO — micro material/particle-scale only (~4.5/5).
-- `R0002` HERO-45 — optional inferred depth support (~4.3/5).
+## Locked storyboard / scene anchors
+- `R0016` — SELECTED KF01 / opening close camera state (~4.5/5).
+- `R0015` — SELECTED SCENE MASTER / KF02-like mid state (~4.3/5).
+- `R0020` — SELECTED KF03 / final farther+higher hero camera state (~4.5/5).
 
-### Characters
-- `R0010` — selected exact three-chef appearance/style reference (~4.8/5).
+These three frames are treated as camera states of one physical scene, not three independently replaceable layouts.
 
-### Combined scene / storyboard
-- `R0016` — SELECTED KF01 / opening camera state (~4.5/5).
-- `R0015` — SELECTED SCENE MASTER / KF02-like mid-state (~4.3/5).
-- KF03 — not approved yet.
+## Product / character identity anchors
+- `R0003` — TOP-CLEAN product/packaging truth (~4.8/5).
+- `R0010` — exact recurring three-chef appearance/style identity (~4.8/5).
 
-## Important history
-### Independent scene synthesis v01
-R0011–R0013 failed due role bleed, tools/bowls/loose ingredients, scale/readability problems and wrong physical anchoring.
+Additional lower-priority evidence:
+- `R0008` assortment diversity (~4.5/5).
+- `R0006` micro texture/particle scale (~4.5/5).
+- `R0002` optional inferred 45-degree geometry (~4.3/5).
 
-### Minimal-reference scene synthesis v02
-R0014–R0015 used only R0003 + R0010 and no tools/actions. This created a stable inside-box world. R0015 selected as scene master.
+These lower-priority assets are intentionally excluded from the first Flow video stack to reduce reference competition.
 
-### Camera-derived KF01 v03
-R0016–R0017 derived from R0015 + R0003. R0016 selected; camera-path continuity into R0015 is plausible.
+## Important learning history
+1. R0011–R0013: five-reference independent scene synthesis failed due role bleed, props/tools, wrong anchoring and geometry regularization.
+2. R0014–R0015: minimal R0003+R0010 scene synthesis created the stable inside-box combined world.
+3. R0016–R0017: adjacent closer camera states derived successfully from scene master.
+4. R0018–R0019: KF03 derivation with R0015+R0003 failed strict spatial continuity because the complete product reference pulled the model toward a rebuilt full-box layout.
+5. R0020–R0021: scene-master-only KF03 derivation preserved core hero/chef continuity; R0020 selected.
 
-### KF03 v04 — FAILED STRICT CONTINUITY
-R0018–R0019 attempted to derive the final wide state from R0015 + R0003.
+Evidence:
+- `13_EVALUATION/reports/reference_qa_kf03_v05.md`
+- `OBS-0011`
 
-- `R0018` ~3.9/5: excellent standalone full-box product hero; complete box, exactly three chefs, no props. However it rebuilds the local arrangement and loses the traceable central hero from R0015. Keep only as a standalone final aesthetic/product target, not sequence endpoint.
-- `R0019` ~3.3/5: same scene-rebuild failure plus chefs move outside/in front of the box. Reject.
+## Active Flow package
+`11_PROMPT_PACKAGES/PKG_FLOW_OMNI_VIDEO_V01/`
 
-Evidence: `13_EVALUATION/reports/reference_qa_kf03_v04.md`.
-Learning: `OBS-0010`.
-Repair hypothesis: `HYP-0003`.
+Files:
+- `prompt.txt`
+- `references.md`
+- `recommended_settings.md`
+- `preflight_checklist.md`
 
-## Current interpretation
-Adding R0003 to a wide camera derivation appears to pull the model toward R0003's globally coherent full-box layout and away from R0015's local spatial continuity. Product truth and scene continuity are both useful, but they should not necessarily be injected into the same still-image derivation step.
+Preflight: PASS.
 
-## Exact next action — KF03 v05 master-only
-Generate exactly TWO candidates using:
-`11_PROMPT_PACKAGES/PKG_SCENE_KEYFRAME_V05_KF03_MASTER_ONLY/prompt.txt`
+## EXACT FIVE-IMAGE Flow stack — upload in this order
+1. `R0016` — KF01 opening state.
+2. `R0015` — scene master / mid state.
+3. `R0020` — KF03 final state.
+4. `R0003` — product/packaging identity only.
+5. `R0010` — character identity only.
 
-### Upload ONLY
-1. `R0015` scene master.
+Leave slots 6–7 unused on the first controlled video run.
 
-Do not upload R0003 or any other reference in this controlled pass.
+Do NOT upload R0006, R0008, R0002, original wooden-background source, cheesecake creative reference or R0018 unless later video QA identifies a specific problem and a reason to add one.
 
-Expected runs: `P0001-R0020`, `P0001-R0021`.
+## Exact next action
+In Google Flow / Gemini Omni Flash / Ingredients-to-Video:
+- duration 10s;
+- aspect ratio 16:9;
+- upload the five images above in exact order;
+- paste `PKG_FLOW_OMNI_VIDEO_V01/prompt.txt`;
+- keep all exposed settings identical between the first two generations.
 
-### Desired result
-- camera farther and moderately higher than R0015;
-- same central multicolor hero remains traceable in same local region/cup;
-- same three chefs remain inside the box in same broad positions;
-- additional box/assortment is extrapolated around the existing scene, not substituted for it;
-- zero tools, bowls, loose ingredients or debris;
-- plausible continuity: R0016 → R0015 → KF03.
+Create exactly TWO baseline videos:
+- `P0001-R0022`
+- `P0001-R0023`
 
-## Stop rule
-If v05 master-only still cannot preserve the scene while revealing a coherent full box, do not keep making the prompt longer. Switch architecture: either use R0018 as a final aesthetic target without treating it as a strict end-frame, or split the final reveal into a separate controlled clip.
+Do not alter the prompt or ingredient stack between them.
+
+After generation, supply both videos for frame-by-frame QA. Evaluate temporal product identity, hero traceability, chef identity/count, scene layout, camera trajectory, object stability, particle scale, lighting continuity and final hero hold before any repair decision.
 
 ## Cross-chat continuity
-A new ChatGPT session should read `AI_START_HERE.md`, this HANDOFF, STATUS, `reference_qa_kf03_v04.md`, `OBS-0010`, `HYP-0003`, and the active V05 prompt. Ask only for media unavailable in the new session; never ask the user to re-explain the project.
+A fresh ChatGPT session should read:
+1. `AI_START_HERE.md`
+2. this `HANDOFF.md`
+3. `STATUS.md`
+4. `11_PROMPT_PACKAGES/PKG_FLOW_OMNI_VIDEO_V01/references.md`
+5. `11_PROMPT_PACKAGES/PKG_FLOW_OMNI_VIDEO_V01/prompt.txt`
+6. `13_EVALUATION/reports/reference_qa_kf03_v05.md`
+
+Ask the user only for visual assets unavailable in the new session; never ask them to retell the project history.
