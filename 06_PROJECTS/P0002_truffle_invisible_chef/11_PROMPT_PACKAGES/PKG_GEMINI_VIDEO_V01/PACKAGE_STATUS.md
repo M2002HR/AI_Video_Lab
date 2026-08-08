@@ -12,5 +12,5 @@ Do not activate or run this package unless P0002 later reaches `STAGE_14` sequen
 
 See:
 - `../../../../00_SYSTEM/SEQUENTIAL_STAGE_GATE_PROTOCOL.md`
-- `../../../STATUS.md`
-- `../../../HANDOFF.md`
+- `../../STATUS.md`
+- `../../HANDOFF.md`
