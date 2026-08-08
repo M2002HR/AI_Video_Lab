@@ -1,0 +1,25 @@
+{
+  "run_id": "P0001-R0015",
+  "project_id": "P0001",
+  "stage": "STAGE_10_STORYBOARD",
+  "task": "scene_keyframe_kf01_v02_minimal_reference",
+  "execution_mode": "external_manual",
+  "tool": "ChatGPT Image",
+  "model": "unknown",
+  "prompt_version": "PKG_SCENE_KEYFRAME_V02_KF01",
+  "prompt_language": "en",
+  "reference_assets": ["P0001-R0003", "P0001-R0010"],
+  "settings": {},
+  "outputs": [{
+    "filename": "1000015993.png",
+    "sha256": "d308c7411035ebc5e19fe0ee20d1aafd20ce0217a3797b97ddc7e8bbc7e7a84e",
+    "width": 1672,
+    "height": 941,
+    "bytes": 3353341,
+    "storage": "chat_attachment_not_committed"
+  }],
+  "evaluation": {"status": "selected_scene_master_midframe", "overall_score": 4.3},
+  "failure_tags": ["scale_target_miss", "temporal_framing_too_wide", "character_pose_leakage", "mild_geometry_regularization"],
+  "selected": true,
+  "notes": "Selected as combined-scene master / KF02-like mid-reveal anchor rather than final KF01. Strong clean inside-box continuity, exact three recognizable chefs, zero unwanted props, coherent product world and strong product-dominant composition. It already reveals too much assortment for the intended opening, so the true KF01 should be derived as a tighter camera view of this exact scene rather than regenerated from scratch."
+}
