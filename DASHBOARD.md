@@ -3,7 +3,7 @@
 - System version: 1.1.1
 - Primary operator: ChatGPT / AI operator architecture
 - Active projects: 1
-- Project current stages: `P0001` → STAGE_10 Storyboard / combined-scene keyframe preparation
+- Project current stages: `P0001` → STAGE_10 Storyboard / KF01 v02 repair
 
 ## P0001 selected references
 - `R0003` TOP-CLEAN — primary visible product identity (~4.8/5)
@@ -12,35 +12,48 @@
 - `R0010` CHARACTERS — exact recurring three-chef appearance/style authority (~4.8/5)
 - `R0002` HERO-45 — optional secondary inferred depth/geometry (~4.3/5)
 
-Approved alternates: R0004, R0007, R0005, R0009, R0001.
+## KF01 v01 result
+- `R0011` — 2.9/5 — FAIL
+- `R0012` — 3.4/5 — FAIL / best diagnostic only
+- `R0013` — 3.2/5 — FAIL
 
-## Current creative lock
-- Scenario selected: `Final Touch → Full Box Reveal`
-- One continuous 10-second shot
-- Camera: smooth pull-back on shallow upward arc
-- Exactly three recurring chefs
-- Minimal finishing/inspection action
-- Stable full-box hero ending
-- Text storyboard: KF01 opening macro → KF02 mid assortment → KF03 final hero
+Repeated failures: extra props/bowls/ingredients, wrong chef scale, oversized nonpareils, over-perfect hero sphere, back-facing character identity loss, and opening scene not physically inside the final kraft box.
+
+No scene keyframe is approved yet.
+
+## Active creative revision
+Scenario v02: `Quiet Inspection → Full Box Reveal`
+- no tools or bowls;
+- hands empty;
+- opening already inside the same kraft box;
+- truffle diameter ≈ 3× chef height;
+- all three faces readable;
+- same continuous pull-back + shallow rise;
+- final full-box hero hold.
 
 ## Next controlled generation
-Generate two `SB/KF01` combined product+character opening keyframes using:
-`06_PROJECTS/P0001_truffle_chocolate/11_PROMPT_PACKAGES/PKG_SCENE_KEYFRAME_V01_KF01/prompt.txt`
+Use ONLY:
+1. `R0003` TOP-CLEAN
+2. `R0010` CHARACTERS
 
-Preferred references: original real product + R0003 + R0008 + R0006 + R0010. Do not use old cheesecake creative. Do not add R0002 in the first KF01 test unless later evidence justifies it.
+Prompt:
+`06_PROJECTS/P0001_truffle_chocolate/11_PROMPT_PACKAGES/PKG_SCENE_KEYFRAME_V02_KF01/prompt.txt`
 
-Expected next Runs: `P0001-R0011`, `P0001-R0012`.
+Expected next Runs: `P0001-R0014`, `P0001-R0015`.
+
+Do not add original wooden-background source, R0006, R0008 or R0002 in the first v02 pass. This is a deliberate minimal-reference repair test (`HYP-0002`).
 
 ## Learning / experiments
 - Open experiment: `EXP-0001` separate ingredients vs contact sheet (planned, non-blocking)
-- Observations:
-  - `OBS-0001` Flow operational seven-image reference limit
-  - `OBS-0002` low inter-run variance for HERO-45 baseline
+- Key observations:
+  - `OBS-0001` provisional Flow seven-image reference limit
   - `OBS-0003` novel-angle generation can regularize handmade geometry
   - `OBS-0004` macro refs need narrow material/scale authority
   - `OBS-0005` source environment can leak despite background instruction
-  - `OBS-0006` clean character-only regeneration can remove old-creative contamination; pose must not become character-action authority
-- Validated global learnings: 0; evidence is still project/provisional unless separately promoted.
+  - `OBS-0006` clean character-only reference removes old-creative contamination; poses are not authority
+  - `OBS-0007` combined-scene five-reference/long-prompt setup produced recurring role bleed, prop invention and continuity failure
+- `HYP-0002` tests whether a two-reference, no-prop scene improves compliance.
+- Validated global learnings: 0; current findings remain project/provisional unless promoted through evidence policy.
 
 ## Cross-chat readiness
 Enabled via `AI_START_HERE.md` + project `HANDOFF.md`.
