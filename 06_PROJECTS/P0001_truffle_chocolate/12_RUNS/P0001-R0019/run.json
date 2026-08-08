@@ -1,0 +1,25 @@
+{
+  "run_id": "P0001-R0019",
+  "project_id": "P0001",
+  "stage": "STAGE_10_STORYBOARD",
+  "task": "scene_keyframe_kf03_camera_derivation_v04",
+  "execution_mode": "external_manual",
+  "tool": "ChatGPT Image",
+  "model": "unknown",
+  "prompt_version": "PKG_SCENE_KEYFRAME_V04_KF03_FROM_MASTER",
+  "prompt_language": "en",
+  "reference_assets": ["P0001-R0015", "P0001-R0003"],
+  "settings": {},
+  "outputs": [{
+    "filename": "1000016002.png",
+    "sha256": "43c551228a34ea62efe2fcbf004deefd45e5d23409a7285d1b47f5406605474c",
+    "width": 1672,
+    "height": 941,
+    "bytes": 3349814,
+    "storage": "chat_attachment_not_committed"
+  }],
+  "evaluation": {"status": "failed_gate", "overall_score": 3.3},
+  "failure_tags": ["continuity_break", "hero_identity_loss", "scene_layout_drift", "character_position_drift", "source_reference_snap"],
+  "selected": false,
+  "notes": "Clean standalone box image but strict KF03 failure. The scene snaps toward the clean product reference rather than extending R0015: the central hero identity is lost, local layout is rebuilt, and the three chefs are now outside/in front of the box rather than preserving their established inside-box positions. Do not use as sequence endpoint."
+}
