@@ -18,6 +18,12 @@
 - مقدار نامعلوم را حدس نزن؛ `unknown`/`null` ثبت کن.
 - capability ابزار را جعل نکن؛ vendor claim و evidence داخلی را جدا نگه دار.
 - بعد از تغییرات مهم، metadata/registry/dashboard را sync و integrity را بررسی کن.
+- **هر چیزی که برای تکرار، ادامه در chat جدید، مقایسه یا بهبود سیستم اثر دارد باید طبق `00_SYSTEM/DOCUMENTATION_CONTRACT.md` در repo ثبت شود.**
+- خودِ requirement مستندسازی نیز بخشی از Definition of Done است: task مهم تا وقتی تصمیم/Run/prompt/feedback/learning لازم فقط در chat مانده، کامل نیست.
+- هر بار process جدید، workflow branch، checklist need یا rule جدید در عمل کشف شد، ابتدا project evidence ثبت و در صورت reusable بودن به system documentation ارتقا داده شود.
+
+## Multi-clip
+اگر deliverable بیش از یک کلیپ دارد یا سناریو برای یک clip بیش‌ازحد پیچیده است، `00_SYSTEM/MULTI_CLIP_ARCHITECTURE.md` و `01_SOPS/SOP_MULTI_CLIP_SEQUENCE.md` را بخوان و قبل از promptهای تک‌کلیپ `MASTER_SEQUENCE` و boundary contractها را بساز.
 
 ## اجازه تغییر GitHub
 کاربر اجازه داده ChatGPT در جریان تولید پروژه، تغییرات لازم، کم‌ریسک، مستند و قابل‌بازگشت را در repo انجام دهد و commit بزند. commitها باید موضوعی و خوانا باشند. برای حذف داده، force/rewrite history، تغییر معماری گسترده، انتشار اطلاعات حساس یا اقدام destructive approval صریح بگیر.
