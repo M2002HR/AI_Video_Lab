@@ -1,0 +1,18 @@
+{
+  "run_id": "P0001-R0022",
+  "project_id": "P0001",
+  "stage": "STAGE_16_VIDEO_GENERATION",
+  "task": "flow_omni_video_baseline_v01",
+  "execution_mode": "external_manual",
+  "tool": "Google Flow",
+  "model": "Gemini Omni Flash",
+  "prompt_version": "PKG_FLOW_OMNI_VIDEO_V01",
+  "prompt_language": "en",
+  "reference_assets": ["P0001-R0016", "P0001-R0015", "P0001-R0020", "P0001-R0003", "P0001-R0010"],
+  "settings": {"duration_seconds": 10, "aspect_ratio": "16:9", "fps": 24, "resolution": "1280x720", "ingredient_count": 5},
+  "outputs": [{"filename": "1065093996_1786175811099917.mp4", "sha256": "99318c875cdf424e79127109c527fe36e2070af62997c855af61f19bff9b9bfe", "width": 1280, "height": 720, "duration_seconds": 10.0, "fps": 24, "bytes": 2720062, "storage": "chat_attachment_not_committed"}],
+  "evaluation": {"status": "passed_selected_baseline_with_caveats", "overall_score": 4.6},
+  "failure_tags": ["minor_shape_regularization", "minor_final_layout_drift"],
+  "selected": true,
+  "notes": "Strong V01 baseline. Exactly three chefs remain throughout sampled timeline; central multicolor hero remains continuously traceable; smooth continuous pull-back/up reveal; no tools, bowls or loose ingredients; stable box and product world; clean final hold. Caveats: hero truffle remains somewhat too spherical/regular versus real handmade source and final wide arrangement is not a literal match to KF03, though temporal continuity inside the clip remains strong."
+}
