@@ -74,4 +74,4 @@ A milestone is done only when its output/decision is recorded, provenance is tra
 ## English-only persistence policy
 All persisted repository text must be English: Markdown, text, JSON string values, YAML, CSV notes, prompts, templates, examples, comments, feedback logs, handoffs, and change history. If source material or user feedback is non-English, persist an English translation/paraphrase rather than the non-English text. User-facing chat language is independent of this repository rule.
 
-Run `python 11_TOOLS/check_english_docs.py` before declaring repository language compliance complete. CI must pass with zero forbidden-script violations.
+Run `python 11_TOOLS/check_english_docs.py` before declaring repository language compliance complete. The GitHub Actions English-only audit is manual-only by design to avoid routine notification noise. When explicitly dispatched, it must pass with zero forbidden-script violations.
