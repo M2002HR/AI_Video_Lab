@@ -1,0 +1,28 @@
+{
+  "run_id": "P0001-R0020",
+  "project_id": "P0001",
+  "stage": "STAGE_10_STORYBOARD",
+  "task": "scene_keyframe_kf03_master_only_derivation_v05",
+  "execution_mode": "external_manual",
+  "tool": "ChatGPT Image",
+  "model": "unknown",
+  "prompt_version": "PKG_SCENE_KEYFRAME_V05_KF03_MASTER_ONLY",
+  "prompt_language": "en",
+  "reference_assets": ["P0001-R0015"],
+  "settings": {},
+  "outputs": [{
+    "filename": "1000016003.png",
+    "sha256": "ee210384f8f2fce56d0ea54c0d90a07d4644ae54db655359a8bfa0a21b46db30",
+    "width": 1672,
+    "height": 941,
+    "bytes": 3322668,
+    "storage": "chat_attachment_not_committed"
+  }],
+  "evaluation": {
+    "status": "passed_selected_kf03_with_caveats",
+    "overall_score": 4.5
+  },
+  "failure_tags": ["minor_box_geometry_drift", "mild_assortment_extrapolation"],
+  "selected": true,
+  "notes": "Selected KF03. Master-only derivation preserves the large central multicolor hero truffle, the same three chefs inside the box in the same broad front/local region, zero props, and a plausible farther/higher camera state. Additional surrounding truffles and box boundaries are extrapolated, but the established local scene remains traceable. Strongest continuity endpoint so far. Caveat: the wider box geometry and newly revealed assortment are inferred rather than source-exact, so R0003 remains the product/packaging truth reference for the final video prompt without being used to rebuild this still endpoint."
+}
