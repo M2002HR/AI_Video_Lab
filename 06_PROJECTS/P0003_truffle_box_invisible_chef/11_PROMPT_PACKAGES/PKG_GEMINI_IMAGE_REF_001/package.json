@@ -1,0 +1,14 @@
+{
+  "package_id": "PKG_GEMINI_IMAGE_REF_001",
+  "project_id": "P0003",
+  "package_type": "reference_image_generation",
+  "target_tool": "Gemini",
+  "target_model": null,
+  "status": "ready_for_current_stage_external_run",
+  "stage": "STAGE_04",
+  "input_reference": "SESSION-ASSET-P0003-IMG-001",
+  "intended_output_id": "REF-P0003-001",
+  "prompt_path": "resolved_prompt.md",
+  "authority": "Creates a candidate clean product reference only; output must be QA-approved before downstream use.",
+  "video_generation_authorized": false
+}
