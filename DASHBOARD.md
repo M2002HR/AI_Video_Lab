@@ -1,14 +1,24 @@
 # AI Video Ad Lab dashboard
 
-- System version: 1.2.0
+- System version: 1.3.0
 - Primary operator: ChatGPT / AI operator architecture
-- Current system focus: adaptive scenario architecture + 2/3/4 clip production
+- Current system focus: adaptive scenario architecture + 2/3/4 clip production + documented cross-chat media handling
+
+## P0002 — invisible-chef truffle assembly
+- Current stage: `STAGE_11` — first Gemini prompt package ready for external generation.
+- Parent project: `P0001`.
+- Objective: new 10s / 16:9 single-clip creative direction for the same truffle product.
+- Camera: fixed exactly 90-degree overhead for the entire clip.
+- Mechanism: invisible chef; no visible hands/body; realistic self-moving utensils/ingredients.
+- Active prompt: `06_PROJECTS/P0002_truffle_invisible_chef/11_PROMPT_PACKAGES/PKG_GEMINI_VIDEO_V01/resolved_prompt.md`.
+- Next action: generate one baseline in Gemini, then register/evaluate P0002-R0001 before prompt iteration.
+- New turn attachments are metadata-only in Git; no new binary publication was performed.
 
 ## P0001 — truffle chocolate
 - Current stage: `STAGE_19_FINAL_SELECTION`
 - Accepted current final: `R0022` (~4.6/5, with known caveats)
 - Further V02 count-lock optimization: paused/backlog by user
-- P0001 should not be overwritten when creating a new 20/30/40s derivative.
+- P0001 is preserved and is not overwritten by P0002.
 
 ### P0001 locked anchors
 - `R0003` product/packaging clean identity
@@ -24,8 +34,8 @@
 - identical video setup can produce stochastic character-count failure (`R0023` fourth chef);
 - these remain project/provisional unless promoted through evidence policy.
 
-## Scenario architecture v1.2.0
-System now supports an adaptive menu for:
+## Scenario architecture v1.3.0
+System supports an adaptive menu for:
 - 1×10s / 10s
 - 2×10s / 20s
 - 3×10s / 30s
@@ -41,21 +51,12 @@ Core docs:
 - `04_CHECKLISTS/CHK_SCENARIO_ARCHITECTURE_MENU.md`
 - `04_CHECKLISTS/CHK_MULTI_CLIP_CONTINUITY.md`
 
-Candidate prompt:
-- `PRM-SCN-ARCH-001_v1.0.0` — candidate pending broader project validation.
-
-## Next intended use
-A new chat can create a new 30s / 3×10s derivative from P0001 using:
-`06_PROJECTS/P0001_truffle_chocolate/30S_DERIVATIVE_START.md`
-
-The first action in that new project is Scenario Architecture Menu, not immediate video generation.
-
 ## Media storage status
-Current mode: metadata-only/default.
-ChatGPT image/video attachments are NOT automatically stored in GitHub, and binary media is currently ignored by `.gitignore`.
-See `00_SYSTEM/STORAGE_POLICY.md`.
+P0001 includes user-approved public low-resolution Git previews for selected historical assets. P0002 currently stores new attachment metadata only; its full-resolution current-chat inputs remain outside Git.
+
+See `00_SYSTEM/STORAGE_POLICY.md` and `00_SYSTEM/MEDIA_PROXY_PIPELINE.md`.
 
 ## Cross-chat readiness
 Enabled via `AI_START_HERE.md`, `AGENTS.md`, project `HANDOFF.md`, and Documentation Contract.
 
-Dashboard is a generated/maintained overview; source of truth remains underlying project/system documents.
+Dashboard is a maintained overview; source of truth remains underlying project/system documents.

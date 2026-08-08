@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "project_id": "P0002",
+  "updated_at": "2026-08-08T18:01:00+03:30",
+  "storage_mode": "metadata_only",
+  "notes": [
+    "No new attachment binary was published in this session because the repository is public and publication of the newly attached files was not explicitly reconfirmed.",
+    "Input hashes and dimensions are recorded in 01_INPUTS/input_manifest.json.",
+    "P0001-R0003 may be used as a low-resolution public cross-chat fallback for coarse product recall only; source_of_truth remains false."
+  ],
+  "proxies": [],
+  "cross_project_fallbacks": [
+    {
+      "source_id": "P0001-R0003",
+      "role": "REF-PROD-TOP-CLEAN-FALLBACK",
+      "project_id": "P0001",
+      "source_of_truth": false,
+      "usage": "coarse cross-chat product and packaging recall only"
+    }
+  ]
+}
