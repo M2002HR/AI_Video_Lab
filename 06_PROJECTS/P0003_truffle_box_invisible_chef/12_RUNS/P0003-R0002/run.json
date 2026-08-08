@@ -1,0 +1,19 @@
+{
+  "run_id": "P0003-R0002",
+  "project_id": "P0003",
+  "stage": "STAGE_18_REPAIR_DECISION",
+  "task": "unscheduled_video_candidate_after_r0001_repair_decision",
+  "execution_mode": "external_manual",
+  "tool": "unknown",
+  "model": "unknown",
+  "prompt_version": "unknown",
+  "prompt_language": "unknown",
+  "reference_assets": [],
+  "reference_stack_known": false,
+  "settings": {"duration_seconds": 10.0, "aspect_ratio": "16:9", "fps": 24, "resolution": "1280x720"},
+  "outputs": [{"filename": "515515423_1786206460560694.mp4", "sha256": "df5717de4e6add5b8ea53b10bfe232a74fae6697204160a9c55d225e0d900272", "width": 1280, "height": 720, "duration_seconds": 10.0, "fps": 24, "bytes": 3176110, "storage": "chat_attachment_not_committed"}],
+  "evaluation": {"status": "failed_structural_timing_and_final_state"},
+  "failure_tags": ["missing_process_beats", "assembly_timing_overrun", "lift_direction_wrong", "missing_bite", "camera_zoom_drift", "final_state_incomplete"],
+  "selected": false,
+  "notes": "Useful evidence despite being returned before the planned standalone start-anchor step. The clip correctly opens on 25 empty cups and fills forward rather than deconstructing, but omits the bowl/center-formation and coating beats, spends most of the runtime on direct filling, then shows a rainbow piece descending into the box rather than lifting out, adds a late zoom/reframe, and ends without the required floating bitten hero. Exact generation tool, prompt, and reference stack were not supplied and are therefore recorded as unknown."
+}
