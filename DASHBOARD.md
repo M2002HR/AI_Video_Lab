@@ -1,17 +1,19 @@
 # AI Video Ad Lab dashboard
 
-- System version: 1.3.0
+- System version: 1.4.0
 - Primary operator: ChatGPT / AI operator architecture
-- Current system focus: adaptive scenario architecture + 2/3/4 clip production + documented cross-chat media handling
+- Current system focus: sequential stage-gated production + adaptive scenario architecture + 2/3/4 clip production + documented cross-chat media handling
 
 ## P0002 — invisible-chef truffle assembly
-- Current stage: `STAGE_11` — first Gemini prompt package ready for external generation.
+- Current stage: `STAGE_03` — Reference Strategy.
 - Parent project: `P0001`.
 - Objective: new 10s / 16:9 single-clip creative direction for the same truffle product.
-- Camera: fixed exactly 90-degree overhead for the entire clip.
-- Mechanism: invisible chef; no visible hands/body; realistic self-moving utensils/ingredients.
-- Active prompt: `06_PROJECTS/P0002_truffle_invisible_chef/11_PROMPT_PACKAGES/PKG_GEMINI_VIDEO_V01/resolved_prompt.md`.
-- Next action: generate one baseline in Gemini, then register/evaluate P0002-R0001 before prompt iteration.
+- Source-template DNA: fixed 90-degree overhead invisible-chef food-commercial grammar.
+- Product authority: current uploaded truffle product image.
+- Active video prompt: **none**.
+- Approved P0002 reference set: **none yet**.
+- Previous scenario/timeline/Gemini package are preserved as `premature_draft` artifacts and are not generation-authorized.
+- Next action: complete reference-role strategy; if needed, generate/clean only the first required product reference and QA it before moving to Creative Direction.
 - New turn attachments are metadata-only in Git; no new binary publication was performed.
 
 ## P0001 — truffle chocolate
@@ -34,7 +36,17 @@
 - identical video setup can produce stochastic character-count failure (`R0023` fourth chef);
 - these remain project/provisional unless promoted through evidence policy.
 
-## Scenario architecture v1.3.0
+## Sequential stage-gate policy v1.4.0
+New projects may not jump from product image + source/template prompt directly to a final video prompt. Fast Start accelerates setup only; active progression must stop at the earliest incomplete gate.
+
+Core docs:
+- `00_SYSTEM/SEQUENTIAL_STAGE_GATE_PROTOCOL.md`
+- `00_SYSTEM/FAST_START_PROTOCOL.md`
+- `00_SYSTEM/MASTER_WORKFLOW.md`
+- `01_SOPS/INDEX.md`
+- `09_LEARNING/decisions/DEC-0002_SEQUENTIAL_STAGE_GATES.md`
+
+## Scenario architecture
 System supports an adaptive menu for:
 - 1×10s / 10s
 - 2×10s / 20s
@@ -57,6 +69,6 @@ P0001 includes user-approved public low-resolution Git previews for selected his
 See `00_SYSTEM/STORAGE_POLICY.md` and `00_SYSTEM/MEDIA_PROXY_PIPELINE.md`.
 
 ## Cross-chat readiness
-Enabled via `AI_START_HERE.md`, `AGENTS.md`, project `HANDOFF.md`, and Documentation Contract.
+Enabled via `AI_START_HERE.md`, `AGENTS.md`, project `HANDOFF.md`, Documentation Contract, and the mandatory Sequential Stage-Gate Protocol.
 
 Dashboard is a maintained overview; source of truth remains underlying project/system documents.
