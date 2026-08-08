@@ -1,166 +1,29 @@
 {
   "schema_version": "1.0",
   "prompts": [
-    {
-      "prompt_id": "PRM-ANL-SOURCE-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "source_prompt_reverse_engineering",
-      "path": "02_PROMPT_SYSTEM/library/PRM-ANL-SOURCE-001_v1.0.0.md"
-    },
-    {
-      "prompt_id": "PRM-ANL-PRODUCT-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "product_image_analysis",
-      "path": "02_PROMPT_SYSTEM/library/PRM-ANL-PRODUCT-001_v1.0.0.md"
-    },
-    {
-      "prompt_id": "PRM-ANL-IDENTITY-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "product_identity_specification",
-      "path": "02_PROMPT_SYSTEM/library/PRM-ANL-IDENTITY-001_v1.0.0.md"
-    },
-    {
-      "prompt_id": "PRM-REF-PLAN-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "product_reference_planning",
-      "path": "02_PROMPT_SYSTEM/library/PRM-REF-PLAN-001_v1.0.0.md"
-    },
-    {
-      "prompt_id": "PRM-IMG-MULTIVIEW-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "product_multiview_generation",
-      "path": "02_PROMPT_SYSTEM/library/PRM-IMG-MULTIVIEW-001_v1.0.0.md"
-    },
-    {
-      "prompt_id": "PRM-QA-REFERENCE-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "product_reference_QA",
-      "path": "02_PROMPT_SYSTEM/library/PRM-QA-REFERENCE-001_v1.0.0.md"
-    },
-    {
-      "prompt_id": "PRM-CD-IDEATE-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "creative_direction_generation",
-      "path": "02_PROMPT_SYSTEM/library/PRM-CD-IDEATE-001_v1.0.0.md"
-    },
-    {
-      "prompt_id": "PRM-SCN-IDEATE-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "scenario_ideation",
-      "path": "02_PROMPT_SYSTEM/library/PRM-SCN-IDEATE-001_v1.0.0.md"
-    },
-    {
-      "prompt_id": "PRM-SCN-CRITIQUE-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "scenario_critique",
-      "path": "02_PROMPT_SYSTEM/library/PRM-SCN-CRITIQUE-001_v1.0.0.md"
-    },
-    {
-      "prompt_id": "PRM-SCN-SELECT-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "scenario_selection",
-      "path": "02_PROMPT_SYSTEM/library/PRM-SCN-SELECT-001_v1.0.0.md"
-    },
-    {
-      "prompt_id": "PRM-STB-SPEC-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "storyboard_specification",
-      "path": "02_PROMPT_SYSTEM/library/PRM-STB-SPEC-001_v1.0.0.md"
-    },
-    {
-      "prompt_id": "PRM-STB-IMAGE-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "storyboard_image_generation",
-      "path": "02_PROMPT_SYSTEM/library/PRM-STB-IMAGE-001_v1.0.0.md"
-    },
-    {
-      "prompt_id": "PRM-IMG-KEYFRAME-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "keyframe_generation",
-      "path": "02_PROMPT_SYSTEM/library/PRM-IMG-KEYFRAME-001_v1.0.0.md"
-    },
-    {
-      "prompt_id": "PRM-QA-KEYFRAME-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "keyframe_QA",
-      "path": "02_PROMPT_SYSTEM/library/PRM-QA-KEYFRAME-001_v1.0.0.md"
-    },
-    {
-      "prompt_id": "PRM-VID-SYNTH-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "video_prompt_synthesis",
-      "path": "02_PROMPT_SYSTEM/library/PRM-VID-SYNTH-001_v1.0.0.md"
-    },
-    {
-      "prompt_id": "PRM-VID-CRITIQUE-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "video_prompt_critique",
-      "path": "02_PROMPT_SYSTEM/library/PRM-VID-CRITIQUE-001_v1.0.0.md"
-    },
-    {
-      "prompt_id": "PRM-VID-PREFLIGHT-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "video_preflight",
-      "path": "02_PROMPT_SYSTEM/library/PRM-VID-PREFLIGHT-001_v1.0.0.md"
-    },
-    {
-      "prompt_id": "PRM-VID-QA-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "generation_evaluation",
-      "path": "02_PROMPT_SYSTEM/library/PRM-VID-QA-001_v1.0.0.md"
-    },
-    {
-      "prompt_id": "PRM-DIAG-FAILURE-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "failure_diagnosis",
-      "path": "02_PROMPT_SYSTEM/library/PRM-DIAG-FAILURE-001_v1.0.0.md"
-    },
-    {
-      "prompt_id": "PRM-VID-REPAIR-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "repair_prompt_generation",
-      "path": "02_PROMPT_SYSTEM/library/PRM-VID-REPAIR-001_v1.0.0.md"
-    },
-    {
-      "prompt_id": "PRM-LRN-POSTMORTEM-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "postmortem",
-      "path": "02_PROMPT_SYSTEM/library/PRM-LRN-POSTMORTEM-001_v1.0.0.md"
-    },
-    {
-      "prompt_id": "PRM-LRN-EXTRACT-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "learning_extraction",
-      "path": "02_PROMPT_SYSTEM/library/PRM-LRN-EXTRACT-001_v1.0.0.md"
-    },
-    {
-      "prompt_id": "PRM-EXP-DESIGN-001",
-      "version": "1.0.0",
-      "status": "validated",
-      "task": "experiment_design",
-      "path": "02_PROMPT_SYSTEM/library/PRM-EXP-DESIGN-001_v1.0.0.md"
-    }
+    {"prompt_id":"PRM-ANL-SOURCE-001","version":"1.0.0","status":"validated","task":"source_prompt_reverse_engineering","path":"02_PROMPT_SYSTEM/library/PRM-ANL-SOURCE-001_v1.0.0.md"},
+    {"prompt_id":"PRM-ANL-PRODUCT-001","version":"1.0.0","status":"validated","task":"product_image_analysis","path":"02_PROMPT_SYSTEM/library/PRM-ANL-PRODUCT-001_v1.0.0.md"},
+    {"prompt_id":"PRM-ANL-IDENTITY-001","version":"1.0.0","status":"validated","task":"product_identity_specification","path":"02_PROMPT_SYSTEM/library/PRM-ANL-IDENTITY-001_v1.0.0.md"},
+    {"prompt_id":"PRM-REF-PLAN-001","version":"1.0.0","status":"validated","task":"product_reference_planning","path":"02_PROMPT_SYSTEM/library/PRM-REF-PLAN-001_v1.0.0.md"},
+    {"prompt_id":"PRM-IMG-MULTIVIEW-001","version":"1.0.0","status":"validated","task":"product_multiview_generation","path":"02_PROMPT_SYSTEM/library/PRM-IMG-MULTIVIEW-001_v1.0.0.md"},
+    {"prompt_id":"PRM-QA-REFERENCE-001","version":"1.0.0","status":"validated","task":"product_reference_QA","path":"02_PROMPT_SYSTEM/library/PRM-QA-REFERENCE-001_v1.0.0.md"},
+    {"prompt_id":"PRM-CD-IDEATE-001","version":"1.0.0","status":"validated","task":"creative_direction_generation","path":"02_PROMPT_SYSTEM/library/PRM-CD-IDEATE-001_v1.0.0.md"},
+    {"prompt_id":"PRM-SCN-IDEATE-001","version":"1.0.0","status":"validated","task":"scenario_ideation","path":"02_PROMPT_SYSTEM/library/PRM-SCN-IDEATE-001_v1.0.0.md"},
+    {"prompt_id":"PRM-SCN-ARCH-001","version":"1.0.0","status":"candidate","task":"scenario_architecture_menu","path":"02_PROMPT_SYSTEM/library/PRM-SCN-ARCH-001_v1.0.0.md"},
+    {"prompt_id":"PRM-SCN-CRITIQUE-001","version":"1.0.0","status":"validated","task":"scenario_critique","path":"02_PROMPT_SYSTEM/library/PRM-SCN-CRITIQUE-001_v1.0.0.md"},
+    {"prompt_id":"PRM-SCN-SELECT-001","version":"1.0.0","status":"validated","task":"scenario_selection","path":"02_PROMPT_SYSTEM/library/PRM-SCN-SELECT-001_v1.0.0.md"},
+    {"prompt_id":"PRM-STB-SPEC-001","version":"1.0.0","status":"validated","task":"storyboard_specification","path":"02_PROMPT_SYSTEM/library/PRM-STB-SPEC-001_v1.0.0.md"},
+    {"prompt_id":"PRM-STB-IMAGE-001","version":"1.0.0","status":"validated","task":"storyboard_image_generation","path":"02_PROMPT_SYSTEM/library/PRM-STB-IMAGE-001_v1.0.0.md"},
+    {"prompt_id":"PRM-IMG-KEYFRAME-001","version":"1.0.0","status":"validated","task":"keyframe_generation","path":"02_PROMPT_SYSTEM/library/PRM-IMG-KEYFRAME-001_v1.0.0.md"},
+    {"prompt_id":"PRM-QA-KEYFRAME-001","version":"1.0.0","status":"validated","task":"keyframe_QA","path":"02_PROMPT_SYSTEM/library/PRM-QA-KEYFRAME-001_v1.0.0.md"},
+    {"prompt_id":"PRM-VID-SYNTH-001","version":"1.0.0","status":"validated","task":"video_prompt_synthesis","path":"02_PROMPT_SYSTEM/library/PRM-VID-SYNTH-001_v1.0.0.md"},
+    {"prompt_id":"PRM-VID-CRITIQUE-001","version":"1.0.0","status":"validated","task":"video_prompt_critique","path":"02_PROMPT_SYSTEM/library/PRM-VID-CRITIQUE-001_v1.0.0.md"},
+    {"prompt_id":"PRM-VID-PREFLIGHT-001","version":"1.0.0","status":"validated","task":"video_preflight","path":"02_PROMPT_SYSTEM/library/PRM-VID-PREFLIGHT-001_v1.0.0.md"},
+    {"prompt_id":"PRM-VID-QA-001","version":"1.0.0","status":"validated","task":"generation_evaluation","path":"02_PROMPT_SYSTEM/library/PRM-VID-QA-001_v1.0.0.md"},
+    {"prompt_id":"PRM-DIAG-FAILURE-001","version":"1.0.0","status":"validated","task":"failure_diagnosis","path":"02_PROMPT_SYSTEM/library/PRM-DIAG-FAILURE-001_v1.0.0.md"},
+    {"prompt_id":"PRM-VID-REPAIR-001","version":"1.0.0","status":"validated","task":"repair_prompt_generation","path":"02_PROMPT_SYSTEM/library/PRM-VID-REPAIR-001_v1.0.0.md"},
+    {"prompt_id":"PRM-LRN-POSTMORTEM-001","version":"1.0.0","status":"validated","task":"postmortem","path":"02_PROMPT_SYSTEM/library/PRM-LRN-POSTMORTEM-001_v1.0.0.md"},
+    {"prompt_id":"PRM-LRN-EXTRACT-001","version":"1.0.0","status":"validated","task":"learning_extraction","path":"02_PROMPT_SYSTEM/library/PRM-LRN-EXTRACT-001_v1.0.0.md"},
+    {"prompt_id":"PRM-EXP-DESIGN-001","version":"1.0.0","status":"validated","task":"experiment_design","path":"02_PROMPT_SYSTEM/library/PRM-EXP-DESIGN-001_v1.0.0.md"}
   ]
 }
