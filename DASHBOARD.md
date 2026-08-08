@@ -5,20 +5,21 @@
 - Current system focus: sequential stage-gated production + adaptive scenario architecture + 2/3/4 clip production + documented cross-chat media handling
 
 ## P0003 — invisible-chef truffle box assembly
-- Current stage: `STAGE_16` — Video Generation.
+- Current stage: `STAGE_18` — Repair Decision / revised temporal conditioning.
 - Parent project: none; fresh independent project by explicit user request.
 - Objective: adapt the supplied 10s / 16:9 invisible-chef Gemini food-video template to the supplied colorful handmade truffle gift box.
 - Product authority: original uploaded real truffle-box photograph.
 - Approved clean derivative: `REF-P0003-001` — 90-degree top-down white-studio product/packaging/composition support.
 - Approved storyboard: `SB-P0003-001R2` — repaired and count-locked.
 - Approved keyframe set: `KFSET-P0003-001` — opening, partial-fill, and lift-state control.
-- Keyframe lift lock: exactly 24 seated + 1 mixed-rainbow floating + exactly one empty cup.
-- Creative direction/scenario/timing: locked.
-- Active video package: `11_PROMPT_PACKAGES/PKG_GEMINI_VIDEO_V01`.
-- Video preflight: **PASS**.
-- Video generation authorized: **yes**.
-- Baseline upload stack: `REF-P0003-001` + `KFSET-P0003-001` only.
-- Next action: generate one unchanged Gemini baseline and return it as `P0003-R0001` for Video QA before any prompt iteration.
+- Baseline video run: `P0003-R0001` — **REJECTED**.
+- R0001 failure: timeline is structurally reversed; clip starts full, lift/bite occurs early, making-process beats are omitted, and the box progressively empties to an invalid final state.
+- R0001 technical/visual passes: ~10s 16:9, fixed top-down white-studio world, recognizable product/box, no visible anatomy.
+- Repair decision: regenerate with revised temporal conditioning; no cosmetic patch.
+- Active repair prompt: `11_PROMPT_PACKAGES/PKG_CHATGPT_VIDEO_START_ANCHOR_001`.
+- Next asset: `START-P0003-001` — standalone 16:9 frame-0 authority with exactly 25 empty cups and zero truffles.
+- V02 rule: do not upload the three-panel keyframe sheet directly; use the new standalone opening anchor as primary temporal authority and `REF-P0003-001` as secondary final-product identity authority.
+- Video generation authorized: **no** until the new anchor passes QA and V02 passes preflight.
 - Current attachments are metadata-only in Git; no current-chat binaries were published.
 
 ## P0002 — invisible-chef truffle assembly
