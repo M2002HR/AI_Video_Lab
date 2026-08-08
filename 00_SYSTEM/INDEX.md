@@ -18,6 +18,12 @@
 - `../05_TEMPLATES/MULTI_CLIP_SEQUENCE_TEMPLATE/MASTER_SEQUENCE.md`
 - `../05_TEMPLATES/MULTI_CLIP_SEQUENCE_TEMPLATE/CLIP_CONTRACT.md`
 
+## Media persistence / cross-chat visual memory
+- `STORAGE_POLICY.md` — storage modes و privacy/public-repo rules.
+- `MEDIA_PROXY_PIPELINE.md` — ساخت/نام‌گذاری/commit low-resolution image/video proxy.
+- `../11_TOOLS/media_proxy.py` — helper برای WebP/MP4 proxy generation.
+- project path: `19_HANDOFF_ASSETS/git_previews/` + `proxy_manifest.json`.
+
 ## هسته سیستم
 - `ARCHITECTURE.md`
 - `MASTER_WORKFLOW.md`
