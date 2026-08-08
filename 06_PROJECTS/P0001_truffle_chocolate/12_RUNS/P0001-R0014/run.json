@@ -1,0 +1,25 @@
+{
+  "run_id": "P0001-R0014",
+  "project_id": "P0001",
+  "stage": "STAGE_10_STORYBOARD",
+  "task": "scene_keyframe_kf01_v02_minimal_reference",
+  "execution_mode": "external_manual",
+  "tool": "ChatGPT Image",
+  "model": "unknown",
+  "prompt_version": "PKG_SCENE_KEYFRAME_V02_KF01",
+  "prompt_language": "en",
+  "reference_assets": ["P0001-R0003", "P0001-R0010"],
+  "settings": {},
+  "outputs": [{
+    "filename": "1000015996.png",
+    "sha256": "7d69c927230ccafd38c74da8412ff498957752cc49c926b256e75706ed13cc43",
+    "width": 1672,
+    "height": 941,
+    "bytes": 3549184,
+    "storage": "chat_attachment_not_committed"
+  }],
+  "evaluation": {"status": "pass_as_scene_grammar_not_final_kf01", "overall_score": 4.1},
+  "failure_tags": ["scale_target_miss", "temporal_framing_too_wide", "character_pose_leakage", "mild_geometry_regularization"],
+  "selected": false,
+  "notes": "Major improvement over KF01 v01: scene is physically inside the kraft box, exactly three recognizable chefs, no tools/bowls/loose ingredients, strong continuity grammar. Not accepted as the final opening frame because too much of the assortment/box is already revealed, chef-to-truffle ratio is larger than the original 1:3 target, poses partially inherit the character reference, and hero geometry remains somewhat regularized."
+}
