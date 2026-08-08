@@ -1,0 +1,47 @@
+{
+  "run_id": "P0003-R0001",
+  "project_id": "P0003",
+  "stage": "STAGE_16_VIDEO_GENERATION",
+  "task": "gemini_video_baseline_v01",
+  "execution_mode": "external_manual",
+  "tool": "Gemini video generation",
+  "model": "unknown",
+  "prompt_version": "PKG_GEMINI_VIDEO_V01",
+  "prompt_language": "en",
+  "reference_assets": ["REF-P0003-001", "KFSET-P0003-001"],
+  "settings": {
+    "duration_seconds": 10.0,
+    "aspect_ratio": "16:9",
+    "fps": 24,
+    "resolution": "1280x720"
+  },
+  "outputs": [
+    {
+      "filename": "730022735_1786205217569051.mp4",
+      "sha256": "c10c62d03e78030d22e75283bb166af0225676423fecbaf31d38b7bede951107",
+      "width": 1280,
+      "height": 720,
+      "duration_seconds": 10.005,
+      "fps": 24,
+      "bytes": 2476184,
+      "storage": "chat_attachment_not_committed"
+    }
+  ],
+  "evaluation": {
+    "status": "failed_structural_temporal_reversal",
+    "overall_score": 1.9
+  },
+  "failure_tags": [
+    "timeline_reversed",
+    "starts_from_final_hero",
+    "ends_empty",
+    "missing_center_formation",
+    "missing_coating_process",
+    "assembly_reversed_to_depletion",
+    "final_state_failure",
+    "reference_temporal_role_confusion",
+    "object_disappearance_nonphysical"
+  ],
+  "selected": false,
+  "notes": "Technical format passes and the fixed top-down white-studio product world is stable, but the semantic timeline is structurally wrong. The clip begins with the filled hero box, performs the lift/bite motif early, then progressively removes/disappears truffles until the box is empty. Bowl/center formation and coating beats are absent. This run is rejected and requires regeneration with a revised temporal-conditioning strategy rather than local cosmetic repair."
+}
