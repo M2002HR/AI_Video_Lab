@@ -1,0 +1,25 @@
+{
+  "run_id": "P0001-R0013",
+  "project_id": "P0001",
+  "stage": "STAGE_10_STORYBOARD",
+  "task": "scene_keyframe_kf01_opening_macro",
+  "execution_mode": "external_manual",
+  "tool": "ChatGPT Image",
+  "model": "unknown",
+  "prompt_version": "PKG_SCENE_KEYFRAME_V01_KF01",
+  "prompt_language": "en",
+  "reference_assets": ["SESSION-ASSET-P0001-IMG-002", "P0001-R0003", "P0001-R0008", "P0001-R0006", "P0001-R0010"],
+  "settings": {},
+  "outputs": [{
+    "filename": "1000015978.png",
+    "sha256": "f95e3e39b04dfb896d7420b602ac7f9939a630b8528ffcd2043c1c3b06d804c4",
+    "width": 1672,
+    "height": 941,
+    "bytes": 3089197,
+    "storage": "chat_attachment_not_committed"
+  }],
+  "evaluation": {"status": "failed_gate", "overall_score": 3.2},
+  "failure_tags": ["unwanted_prop", "scene_clutter", "scale_instability", "geometry_regularization", "particle_scale_drift", "character_pose_readability", "continuity_setup_failure"],
+  "selected": false,
+  "notes": "Clean dark scene and three recognizable chefs, but multiple props/food debris are invented, center chef is back-facing, hero sphere/nonpareils are over-regularized, scale is too large, and the scene is not embedded inside the kraft box needed for the continuous final reveal."
+}
