@@ -1,0 +1,46 @@
+name: Decode media proxy payloads
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  decode:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Decode staged base64 media proxies
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t payloads < <(find 06_PROJECTS -path '*/19_HANDOFF_ASSETS/git_previews/*.b64' -type f | sort)
+          if [ ${#payloads[@]} -eq 0 ]; then
+            echo 'No staged proxy payloads found.'
+            exit 0
+          fi
+          for src in "${payloads[@]}"; do
+            dst="${src%.b64}"
+            echo "Decoding $src -> $dst"
+            base64 --decode "$src" > "$dst"
+            rm "$src"
+          done
+      - name: Commit decoded media proxies
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git status --porcelain | grep -q .; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add 06_PROJECTS/**/19_HANDOFF_ASSETS/git_previews
+            git commit -m 'Decode low-resolution media proxies'
+            git push origin HEAD:master
+          else
+            echo 'Nothing to commit.'
+          fi
