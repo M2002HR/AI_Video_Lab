@@ -4,9 +4,9 @@
   "title": "Invisible-Chef Truffle Box Assembly Commercial",
   "status": "active",
   "created_at": "2026-08-08T18:24:00+03:30",
-  "updated_at": "2026-08-08T19:15:00+03:30",
+  "updated_at": "2026-08-08T19:37:00+03:30",
   "system_version_started": "1.4.0",
-  "current_stage": "STAGE_16",
+  "current_stage": "STAGE_18",
   "parent_project_id": null,
   "derivative_reason": "Fresh independent project created at the user's request from the current product photograph and source/template prompt. No approvals, stage completion, or downstream artifacts are inherited from P0001 or P0002.",
   "deliverable": {
@@ -42,7 +42,15 @@
       "availability": "current_chat_attachment"
     }
   ],
-  "reference_candidates": [],
+  "reference_candidates": [
+    {
+      "reference_id": "START-P0003-001",
+      "role": "VIDEO_START_FRAME_AUTHORITY",
+      "authority": "pending standalone 16:9 frame-0 authority: centered kraft box with exactly 25 empty dark cups and zero truffles",
+      "availability": "not_generated",
+      "prompt_package": "11_PROMPT_PACKAGES/PKG_CHATGPT_VIDEO_START_ANCHOR_001"
+    }
+  ],
   "active_creative_direction": "06_CREATIVE_DIRECTION/creative_direction_v01.md",
   "selected_scenario": "07_SCENARIOS/selected/scenario_v01_invisible_chef_truffle_assembly.md",
   "active_shot_timeline": "08_SHOT_DESIGN/timeline_v01.md",
@@ -84,17 +92,34 @@
     "availability": "current_chat_attachment",
     "roles": ["opening_state", "mid_assembly_state", "lift_state"]
   },
+  "baseline_video_prompt_package": "11_PROMPT_PACKAGES/PKG_GEMINI_VIDEO_V01",
   "active_keyframe_prompt_package": null,
   "active_storyboard_prompt_package": null,
-  "active_video_prompt_package": "11_PROMPT_PACKAGES/PKG_GEMINI_VIDEO_V01",
+  "active_video_prompt_package": null,
+  "active_repair_prompt_package": "11_PROMPT_PACKAGES/PKG_CHATGPT_VIDEO_START_ANCHOR_001",
   "video_preflight_path": "11_PROMPT_PACKAGES/PKG_GEMINI_VIDEO_V01/preflight.md",
-  "video_generation_authorized": true,
+  "video_generation_authorized": false,
+  "video_runs": [
+    {
+      "run_id": "P0003-R0001",
+      "status": "rejected_structural",
+      "run_path": "12_RUNS/P0003-R0001/run.json",
+      "qa_path": "13_EVALUATION/reports/video_qa_r0001.md",
+      "repair_decision_path": "13_EVALUATION/reports/repair_decision_r0001.md",
+      "sha256": "c10c62d03e78030d22e75283bb166af0225676423fecbaf31d38b7bede951107",
+      "dimensions": [1280, 720],
+      "duration_seconds": 10.005,
+      "fps": 24,
+      "bytes": 2476184,
+      "failure_summary": "Timeline reversed: starts from filled hero, lift/bite occurs early, required making beats omitted, box progressively empties, final state invalid."
+    }
+  ],
   "selected_final_run": null,
   "selected_run_per_clip": {},
   "handoff_path": "HANDOFF.md",
   "conversation_log_path": "18_CONVERSATION_LOG",
   "handoff_assets_path": "19_HANDOFF_ASSETS",
-  "last_session_summary_at": "2026-08-08T19:15:00+03:30",
-  "next_planned_task": "Generate one unchanged baseline video in Gemini using only REF-P0003-001 plus KFSET-P0003-001 and PKG_GEMINI_VIDEO_V01; return the result as P0003-R0001 for Video QA before any prompt iteration.",
+  "last_session_summary_at": "2026-08-08T19:37:00+03:30",
+  "next_planned_task": "Generate standalone video-start anchor START-P0003-001 in ChatGPT from REF-P0003-001 plus KFSET-P0003-001, QA it, then construct and preflight Gemini Video V02 using the standalone empty opening as primary temporal authority and without directly uploading the three-panel keyframe sheet.",
   "tags": ["food", "chocolate", "truffle", "gift_box", "invisible_chef", "top_down", "gemini", "chatgpt_image", "product_ad"]
 }
