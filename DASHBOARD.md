@@ -5,22 +5,21 @@
 - Current system focus: sequential stage-gated production + adaptive scenario architecture + 2/3/4 clip production + documented cross-chat media handling
 
 ## P0003 — invisible-chef truffle box assembly
-- Current stage: `STAGE_11` — Storyboard QA / local repair required.
+- Current stage: `STAGE_16` — Video Generation.
 - Parent project: none; fresh independent project by explicit user request.
 - Objective: adapt the supplied 10s / 16:9 invisible-chef Gemini food-video template to the supplied colorful handmade truffle gift box.
-- Source-template DNA: fixed 90-degree overhead, invisible chef, pure-white premium food-commercial grammar, realistic physics, compressed timecoded transformation.
 - Product authority: original uploaded real truffle-box photograph.
 - Approved clean derivative: `REF-P0003-001` — 90-degree top-down white-studio product/packaging/composition support.
-- Reference Readiness: **PASS**.
-- Creative direction: locked.
-- Selected scenario: invisible-chef truffle assembly ending with lifted rainbow truffle and bite gag.
-- Selected timing: `08_SHOT_DESIGN/timeline_v01.md`.
-- Storyboard candidate: `SB-P0003-001` generated; Panels 1–6 broadly pass.
-- Storyboard blocker: Panels 7–8 do not clearly vacate one cup when the rainbow truffle lifts, creating an extra-object / count-continuity risk.
-- Active repair prompt: `PKG_CHATGPT_STORYBOARD_REPAIR_001`.
-- Active video prompt: **none**.
-- Next action: repair only Panels 7–8, return `SB-P0003-001R1`, and re-run focused Storyboard QA before keyframes.
-- Current attachments are metadata-only in Git; no attachment binaries were published.
+- Approved storyboard: `SB-P0003-001R2` — repaired and count-locked.
+- Approved keyframe set: `KFSET-P0003-001` — opening, partial-fill, and lift-state control.
+- Keyframe lift lock: exactly 24 seated + 1 mixed-rainbow floating + exactly one empty cup.
+- Creative direction/scenario/timing: locked.
+- Active video package: `11_PROMPT_PACKAGES/PKG_GEMINI_VIDEO_V01`.
+- Video preflight: **PASS**.
+- Video generation authorized: **yes**.
+- Baseline upload stack: `REF-P0003-001` + `KFSET-P0003-001` only.
+- Next action: generate one unchanged Gemini baseline and return it as `P0003-R0001` for Video QA before any prompt iteration.
+- Current attachments are metadata-only in Git; no current-chat binaries were published.
 
 ## P0002 — invisible-chef truffle assembly
 - Current stage: `STAGE_03` — Reference Strategy.
