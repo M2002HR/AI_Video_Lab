@@ -1,5 +1,32 @@
 # Changelog
 
+## 1.2.0 — 2026-08-08
+### Added
+- `00_SYSTEM/SCENARIO_ARCHITECTURE_SYSTEM.md` برای پیشنهاد adaptive سناریوهای 10/20/30/40 ثانیه‌ای و 1–4 کلیپ.
+- `PRM-SCN-ARCH-001_v1.0.0` به‌عنوان candidate prompt برای Scenario Architecture Menu.
+- `CHK_SCENARIO_ARCHITECTURE_MENU.md`.
+- `SCENARIO_MENU_TEMPLATE.md`.
+- `MULTI_CLIP_SEQUENCE_TEMPLATE/MASTER_SEQUENCE.md` و `CLIP_CONTRACT.md`.
+- exact new-chat handoff برای ساخت derivative 30s از P0001 در `30S_DERIVATIVE_START.md`.
+
+### Changed
+- `MASTER_WORKFLOW` اکنون Scenario Architecture Gate را قبل از production سنگین اجرا می‌کند.
+- `SOP_07_SCENARIO_GENERATION` از ایده‌پردازی ثابت به Process State Map + Capacity Assessment + Duration Viability + adaptive menu ارتقا یافت.
+- Multi-clip architecture و SOP/checklist به‌صورت صریح 2، 3 و 4 کلیپ / 20، 30 و 40 ثانیه را پوشش می‌دهند.
+- Hybrid architecture به‌عنوان default candidate برای بسیاری از sequenceهای چندکلیپی مستند شد، نه الزام.
+- reference stack در هر clip باید minimum sufficient و role-clean باشد؛ پرکردن slotها هدف نیست.
+- `AI_START_HERE`, `AGENTS.md`, `START_HERE.md` و `INDEX.md` برای routing سناریو/مدت/چندکلیپی به‌روزرسانی شدند.
+- Storage Policy صریحاً ثبت می‌کند که ChatGPT attachments خودکار در GitHub ذخیره نمی‌شوند و binary media فعلاً توسط `.gitignore` خارج Git هستند.
+
+### Fixed
+- سیستم دیگر فرض نمی‌کند multi-clip فقط 2×10s یا 3×10s است؛ 4×10s نیز با filler guard پشتیبانی می‌شود.
+- candidate count دیگر quota ثابت نیست؛ اگر ظرفیت واقعی وجود نداشته باشد گزینه مصنوعی تولید نمی‌شود.
+- فرآیند واقعی محصول باید verified/user-confirmed باشد یا به‌صورت creative metaphor برچسب بخورد.
+
+### Learning-derived changes
+- P0001 نشان داد referenceهای بیشتر الزاماً scene synthesis بهتری نمی‌دهند و scene-master-derived camera states می‌توانند continuity را بهتر حفظ کنند؛ این یافته‌ها هنوز project/provisional هستند و به‌عنوان rule مطلق global promote نشده‌اند.
+- تجربه P0001 نشان داد یک 10s کم‌ریسک برای hero/reveal مناسب است، اما process chain بهتر است در صورت ارزش روایی به چند clip شکسته شود.
+
 ## 1.1.1 — 2026-08-07
 ### Added
 - اولین پروژه واقعی `P0001_truffle_chocolate` با brief، input provenance، source-prompt transcription/analysis، product identity، reference strategy، prompt package و handoff.
