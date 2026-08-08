@@ -36,23 +36,30 @@ Learning: `OBS-0012`.
 The planned V02 off-screen count-lock experiment remains documented in backlog and can be resumed later. Do not resume unless user asks.
 
 ## System status after P0001
-System v1.2.0 now includes:
+System v1.3.0 now includes:
 - Documentation Contract as mandatory Definition of Done;
 - adaptive Scenario Architecture Menu for 10/20/30/40s;
 - explicit 2/3/4 clip support;
 - Process State Map + duration viability;
 - Master Sequence + Clip Contracts + boundary contracts;
 - scenario and multi-clip checklists/templates;
-- media persistence rule clarifying that chat attachments are not automatically stored in GitHub.
+- **low-resolution Git media proxy persistence** for non-sensitive images/videos.
+
+Media mode for P0001:
+- `git_previews` enabled for future meaningful non-sensitive media;
+- image proxy: WebP ≤1280px / q≈72;
+- video proxy: MP4 H.264 ≤1280px / ≈24fps / CRF≈30;
+- originals/full-res remain outside Git;
+- historical P0001 proxy backfill not yet done because old source binaries are not stored in repo.
 
 Relevant docs:
 - `00_SYSTEM/DOCUMENTATION_CONTRACT.md`
+- `00_SYSTEM/MEDIA_PROXY_PIPELINE.md`
+- `00_SYSTEM/STORAGE_POLICY.md`
 - `00_SYSTEM/SCENARIO_ARCHITECTURE_SYSTEM.md`
 - `00_SYSTEM/MULTI_CLIP_ARCHITECTURE.md`
 - `01_SOPS/SOP_07_SCENARIO_GENERATION.md`
 - `01_SOPS/SOP_MULTI_CLIP_SEQUENCE.md`
-- `04_CHECKLISTS/CHK_SCENARIO_ARCHITECTURE_MENU.md`
-- `04_CHECKLISTS/CHK_MULTI_CLIP_CONTINUITY.md`
 
 ## Next derivative use
 For a new 30s / 3×10s ad from this same product, create a NEW derivative project linked to P0001; do not overwrite P0001.
@@ -60,4 +67,4 @@ For a new 30s / 3×10s ad from this same product, create a NEW derivative projec
 Exact new-chat handoff:
 `30S_DERIVATIVE_START.md`
 
-The new project should first produce a 3–5 option 30s Scenario Architecture Menu and wait for user selection before generating new media.
+The new project should first produce a 3–5 option 30s Scenario Architecture Menu and wait for user selection before generating new media. New meaningful media should be proxied/committed automatically when accessible and publishable.
