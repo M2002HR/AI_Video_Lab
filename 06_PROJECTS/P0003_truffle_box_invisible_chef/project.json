@@ -4,9 +4,9 @@
   "title": "Invisible-Chef Truffle Box Assembly Commercial",
   "status": "active",
   "created_at": "2026-08-08T18:24:00+03:30",
-  "updated_at": "2026-08-08T18:57:00+03:30",
+  "updated_at": "2026-08-08T19:05:00+03:30",
   "system_version_started": "1.4.0",
-  "current_stage": "STAGE_11",
+  "current_stage": "STAGE_12",
   "parent_project_id": null,
   "derivative_reason": "Fresh independent project created at the user's request from the current product photograph and source/template prompt. No approvals, stage completion, or downstream artifacts are inherited from P0001 or P0002.",
   "deliverable": {
@@ -47,36 +47,42 @@
   "selected_scenario": "07_SCENARIOS/selected/scenario_v01_invisible_chef_truffle_assembly.md",
   "active_shot_timeline": "08_SHOT_DESIGN/timeline_v01.md",
   "active_storyboard_plan": "09_STORYBOARD/storyboard_plan_v01.md",
+  "approved_storyboard": {
+    "storyboard_id": "SB-P0003-001R2",
+    "status": "approved",
+    "qa_path": "09_STORYBOARD/SB-P0003-001R2/qa.md",
+    "sha256": "c03dd6883c085c48fa5c60a386f7adf99c2051045b846fb75de7179d09cc782c",
+    "dimensions": [1672, 941],
+    "bytes": 3072260,
+    "availability": "current_chat_attachment"
+  },
   "storyboard_candidates": [
     {
       "storyboard_id": "SB-P0003-001",
-      "status": "repair_required",
-      "qa_path": "09_STORYBOARD/SB-P0003-001/qa.md",
-      "sha256": "a516d0da0dfeae835ed8488982db6ba0415c5608ce373697987ea1abf97468d7",
-      "dimensions": [1672, 941],
-      "bytes": 3082317,
-      "availability": "current_chat_attachment",
-      "blocking_issue": "Panels 7-8 did not visibly vacate the source cup, creating an extra-object/count interpretation."
+      "status": "superseded_repair_required",
+      "qa_path": "09_STORYBOARD/SB-P0003-001/qa.md"
     },
     {
       "storyboard_id": "SB-P0003-001R1",
-      "status": "repair_required",
-      "qa_path": "09_STORYBOARD/SB-P0003-001R1/qa.md",
-      "sha256": "a73be9895fd6258607470971aedfddcc7c3373bb78e3bcdf140864380302d2e7",
-      "dimensions": [1672, 941],
-      "bytes": 3033916,
-      "availability": "current_chat_attachment",
-      "blocking_issue": "Panels 7-8 over-corrected to two empty near-center cups while only one truffle is lifted; count lock becomes 23 seated + 1 lifted instead of 24 + 1."
+      "status": "superseded_repair_required",
+      "qa_path": "09_STORYBOARD/SB-P0003-001R1/qa.md"
+    },
+    {
+      "storyboard_id": "SB-P0003-001R2",
+      "status": "approved",
+      "qa_path": "09_STORYBOARD/SB-P0003-001R2/qa.md"
     }
   ],
-  "active_storyboard_prompt_package": "11_PROMPT_PACKAGES/PKG_CHATGPT_STORYBOARD_REPAIR_002",
+  "active_keyframe_plan": "10_KEYFRAMES/keyframe_plan_v01.md",
+  "active_keyframe_prompt_package": "11_PROMPT_PACKAGES/PKG_CHATGPT_KEYFRAME_SET_001",
+  "active_storyboard_prompt_package": null,
   "active_video_prompt_package": null,
   "selected_final_run": null,
   "selected_run_per_clip": {},
   "handoff_path": "HANDOFF.md",
   "conversation_log_path": "18_CONVERSATION_LOG",
   "handoff_assets_path": "19_HANDOFF_ASSETS",
-  "last_session_summary_at": "2026-08-08T18:57:00+03:30",
-  "next_planned_task": "Perform a second surgical storyboard repair: preserve Panels 1-6, restore one of the two current empty cups in Panels 7-8 from Panel 6, retain exactly one vacancy, and keep exactly 24 seated + 1 lifted before re-running Storyboard QA.",
+  "last_session_summary_at": "2026-08-08T19:05:00+03:30",
+  "next_planned_task": "Generate the minimal three-keyframe control set in ChatGPT: opening 25 empty cups, mid-assembly partial fill, and lift state with exactly 24 seated + 1 lifted and one empty cup; then run Keyframe QA before final video prompting.",
   "tags": ["food", "chocolate", "truffle", "gift_box", "invisible_chef", "top_down", "gemini", "chatgpt_image", "product_ad"]
 }
