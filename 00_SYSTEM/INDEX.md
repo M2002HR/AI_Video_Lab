@@ -4,6 +4,7 @@
 - New AI/session: `../AI_START_HERE.md`
 - User/operator start: `../START_HERE.md`
 - Operator manual: `AI_OPERATOR_MANUAL.md`
+- Mandatory sequential stage gates: `SEQUENTIAL_STAGE_GATE_PROTOCOL.md`
 - Cross-chat continuity: `CHAT_CONTINUITY_PROTOCOL.md`
 - Fast start from product image + source prompt: `FAST_START_PROTOCOL.md`
 
@@ -35,4 +36,4 @@
 
 `CODEX_OPERATING_MANUAL.md` is a legacy compatibility pointer; current operator rules are in `AI_OPERATOR_MANUAL.md`.
 
-All repository documentation is English-only and CI-enforced.
+All persisted repository text is English-only. The English audit script/workflow is intentionally manual-only unless repository policy is deliberately changed.
