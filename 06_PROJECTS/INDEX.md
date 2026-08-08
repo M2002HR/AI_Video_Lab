@@ -6,10 +6,13 @@
 
 | Project | Title | Status | Current stage | Next action |
 |---|---|---|---|---|
-| `P0001_truffle_chocolate` | Colorful Chocolate Truffle Miniature Commercial | active | STAGE_04 Reference Asset Creation | Generate Slots 1–4 from the reference-image prompt package, register Runs, then Reference QA |
+| `P0001_truffle_chocolate` | Colorful Chocolate Truffle Miniature Commercial | active | STAGE_19 Final Selection | R0022 accepted for 10s objective; optimization paused/backlog unless user requests resume |
+| `P0002_truffle_chocolate_30s` | Colorful Chocolate Truffle 30s Derivative | active | STAGE_07 Scenario Architecture | User selects S30-A/B/C/D; then build Master Sequence + Clip Contracts |
 
 ## New project
 پروژه جدید از `05_TEMPLATES/PROJECT_TEMPLATE/` ساخته می‌شود. وقتی user product image + source/template prompt می‌دهد، `00_SYSTEM/FAST_START_PROTOCOL.md` اجرا شود.
+
+Derivative projects باید `parent_project_id` را ثبت کنند و history پروژه parent را overwrite نکنند.
 
 ## New chat / continuation
 برای پیدا کردن context:
