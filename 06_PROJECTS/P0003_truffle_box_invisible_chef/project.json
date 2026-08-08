@@ -4,9 +4,9 @@
   "title": "Invisible-Chef Truffle Box Assembly Commercial",
   "status": "active",
   "created_at": "2026-08-08T18:24:00+03:30",
-  "updated_at": "2026-08-08T18:34:00+03:30",
+  "updated_at": "2026-08-08T18:44:00+03:30",
   "system_version_started": "1.4.0",
-  "current_stage": "STAGE_10",
+  "current_stage": "STAGE_11",
   "parent_project_id": null,
   "derivative_reason": "Fresh independent project created at the user's request from the current product photograph and source/template prompt. No approvals, stage completion, or downstream artifacts are inherited from P0001 or P0002.",
   "deliverable": {
@@ -47,14 +47,26 @@
   "selected_scenario": "07_SCENARIOS/selected/scenario_v01_invisible_chef_truffle_assembly.md",
   "active_shot_timeline": "08_SHOT_DESIGN/timeline_v01.md",
   "active_storyboard_plan": "09_STORYBOARD/storyboard_plan_v01.md",
-  "active_storyboard_prompt_package": "11_PROMPT_PACKAGES/PKG_CHATGPT_STORYBOARD_001",
+  "storyboard_candidates": [
+    {
+      "storyboard_id": "SB-P0003-001",
+      "status": "repair_required",
+      "qa_path": "09_STORYBOARD/SB-P0003-001/qa.md",
+      "sha256": "a516d0da0dfeae835ed8488982db6ba0415c5608ce373697987ea1abf97468d7",
+      "dimensions": [1672, 941],
+      "bytes": 3082317,
+      "availability": "current_chat_attachment",
+      "blocking_issue": "Panels 7-8 do not clearly vacate one cup when the rainbow truffle lifts; likely extra-object/count continuity failure."
+    }
+  ],
+  "active_storyboard_prompt_package": "11_PROMPT_PACKAGES/PKG_CHATGPT_STORYBOARD_REPAIR_001",
   "active_video_prompt_package": null,
   "selected_final_run": null,
   "selected_run_per_clip": {},
   "handoff_path": "HANDOFF.md",
   "conversation_log_path": "18_CONVERSATION_LOG",
   "handoff_assets_path": "19_HANDOFF_ASSETS",
-  "last_session_summary_at": "2026-08-08T18:34:00+03:30",
-  "next_planned_task": "Generate storyboard candidate SB-P0003-001 in ChatGPT using the approved clean product reference and the active storyboard prompt, then QA the storyboard before keyframe or final video prompting.",
+  "last_session_summary_at": "2026-08-08T18:44:00+03:30",
+  "next_planned_task": "Repair only storyboard Panels 7-8 so Panel 7 shows exactly 24 seated truffles plus one lifted piece with a visible vacated cup, and Panel 8 preserves the same 24 + same bitten lifted piece; then re-run Storyboard QA before keyframes.",
   "tags": ["food", "chocolate", "truffle", "gift_box", "invisible_chef", "top_down", "gemini", "chatgpt_image", "product_ad"]
 }
