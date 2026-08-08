@@ -1,0 +1,360 @@
+SCENE MASTER CAMERA-DERIVATION — KF03 FINAL HERO V04
+
+REFERENCE ROLES
+
+REFERENCE 1 — R0015 SELECTED SCENE MASTER
+
+This is the highest authority for the combined physical world.
+Preserve the SAME:
+- central multicolor hero truffle;
+- exact three recurring miniature chocolatiers;
+- chef identities, red uniforms and miniature visual language;
+- kraft-box interior;
+- dark fluted paper cups;
+- surrounding truffle assortment;
+- lighting direction;
+- premium dark-studio world.
+
+REFERENCE 2 — R0003 CLEAN TOP PRODUCT REFERENCE
+
+Use only as product/packaging truth support for:
+- overall kraft-box shape and simple natural cardboard character;
+- colorful assortment density;
+- real product-family diversity;
+- dark paper cups;
+- source-like box simplicity.
+
+Do NOT rebuild the scene from R0003. R0015 remains the combined-world authority.
+
+PRIMARY TASK
+
+Create ONE 16:9 FINAL HERO KEYFRAME that looks like the SAME camera from R0015 has moved FARTHER BACK and SLIGHTLY HIGHER along the same smooth trajectory.
+
+This frame represents approximately 00:09.2 of the final 10-second commercial.
+
+It is the final wide product reveal.
+
+It is NOT a new scene.
+It is NOT a different box.
+It is NOT a different cast.
+It is NOT a new arrangement generated from scratch.
+
+The only major intended change from R0015 is CAMERA POSITION / FRAMING.
+
+FINAL CAMERA POSITION
+
+Move the virtual camera:
+- clearly farther backward than R0015;
+- moderately higher than R0015;
+- still in a premium three-quarter perspective;
+- high enough to reveal the COMPLETE open kraft box and the full colorful assortment;
+- not so high that the shot becomes a perfectly flat top-down catalogue view.
+
+Maintain the same general viewing side and world orientation as R0015.
+
+Do NOT:
+- reverse to the opposite side;
+- rotate the box dramatically;
+- jump to a completely different angle;
+- create a top-down 90-degree view;
+- introduce a new set.
+
+FULL BOX REVEAL — CRITICAL
+
+The COMPLETE open natural kraft-brown gift box should now be readable as one coherent object.
+
+Show all major box boundaries clearly enough that the viewer understands the complete package.
+
+The box should occupy most of the central composition while leaving a restrained amount of dark studio breathing room around it.
+
+The kraft box must remain:
+- simple;
+- natural brown paperboard;
+- matte;
+- lightweight-looking;
+- unbranded;
+- consistent with R0003 and the scene master.
+
+Do NOT redesign it as:
+- luxury rigid packaging;
+- hinged presentation case;
+- magnetic box;
+- ribboned gift packaging;
+- glossy printed packaging;
+- plastic window box.
+
+No logo.
+No label.
+No text.
+
+PRODUCT ASSORTMENT
+
+Reveal the colorful assortment already present inside the box.
+
+The collection should read as the SAME handmade truffle family.
+
+Preserve visible diversity including multiple source-supported families such as:
+- pink round nonpareils;
+- blue round nonpareils;
+- purple round nonpareils;
+- white round nonpareils;
+- rainbow/multicolor nonpareils;
+- red-green-white combinations;
+- yellow/lime or orange/brown elongated sprinkles.
+
+Do not turn the whole box into rainbow truffles.
+Do not clone one product repeatedly.
+Do not create perfectly uniform identical spheres.
+
+Preserve small handmade differences in contour, size, coating density and seating angle.
+
+HERO TRUFFLE CONTINUITY
+
+The same central multicolor hero truffle from R0015 remains identifiable within the final assortment.
+
+It no longer needs to dominate the frame as strongly as in KF01/KF02, but it should remain visually traceable near the original local region.
+
+Do NOT replace it.
+Do NOT change its coating family.
+Do NOT make it disappear.
+
+TRUFFLE MATERIAL
+
+All truffles are handmade dark-chocolate confections coated directly with small edible particles.
+
+Preserve:
+- dark chocolate glimpses where plausible;
+- tiny edible nonpareil scale;
+- thin short elongated sprinkle geometry where applicable;
+- matte-to-soft-satin edible material behavior;
+- realistic contact shadows.
+
+Do NOT make particles look like:
+- glass beads;
+- pearls;
+- marbles;
+- gemstones;
+- plastic pellets.
+
+No floating particles.
+No loose sprinkles scattered outside cups.
+No magical effects.
+
+PAPER CUPS
+
+Every visible truffle remains seated in its own dark charcoal-gray fluted paper candy cup.
+
+Cups remain:
+- thin folded paper;
+- matte;
+- charcoal gray;
+- naturally pleated;
+- subordinate to the product.
+
+Do not turn them into plastic, foil, silicone or giant cupcake liners.
+
+CHARACTERS — EXACTLY THREE
+
+Show EXACTLY THREE recurring chefs from R0015.
+
+Preserve:
+CHARACTER A — moustached foreman.
+CHARACTER B — clean-shaven chocolatier.
+CHARACTER C — small-goatee chocolatier.
+
+They remain the same three individuals.
+
+No fourth chef.
+No duplicated chef.
+No missing chef.
+No character redesign.
+
+FINAL CHARACTER SCALE
+
+Because the camera is farther away, the chefs should appear smaller in screen space than in R0015 while preserving the SAME physical scale relative to the truffles and box.
+
+Do NOT physically shrink or grow them inside the world.
+
+They should function as charming scale accents, not as the dominant subject.
+
+The product collection and kraft box are the clear hero of the final frame.
+
+CHARACTER POSITION / MOTION STATE
+
+Keep the three chefs in the same broad local region established by R0015.
+
+Do not teleport them to distant corners.
+Do not place them outside the box.
+Do not place them on top of truffles.
+
+Their bodies are nearly settled into a quiet final-inspection posture.
+Hands remain EMPTY.
+
+No active cooking.
+No large gestures.
+No running.
+No jumping.
+No climbing.
+
+ZERO PROPS
+
+Absolutely ZERO:
+- brushes;
+- tools;
+- bowls;
+- trays;
+- tweezers;
+- ladders;
+- carts;
+- ingredient containers;
+- machinery;
+- loose chocolate;
+- loose nonpareils;
+- crumbs;
+- decorative debris.
+
+The product is complete.
+
+COMPOSITION
+
+16:9 landscape.
+
+Premium final product hero composition.
+
+The complete kraft box and assortment should occupy approximately 70–85% of the useful frame area, depending on perspective.
+
+Leave controlled dark negative space around the box so the frame feels premium and can accept optional post-production branding without crowding the product.
+
+Do not leave so much empty space that the product becomes small.
+
+Do not crop major box corners.
+
+Do not cut off chefs.
+
+Do not center the characters as a lineup.
+They remain secondary details around the product world.
+
+CAMERA / PERSPECTIVE
+
+Premium three-quarter product-commercial perspective.
+
+Natural lens rendering.
+
+No fisheye.
+No extreme wide angle.
+No dutch angle.
+No flat orthographic look.
+No 90-degree overhead catalogue view.
+
+The final camera position must feel like a farther/higher point on the SAME continuous path from KF01 → R0015 → KF03.
+
+LIGHTING
+
+Preserve the lighting direction and visual mood of R0015.
+
+Use premium soft food-commercial lighting:
+- large diffused key from upper/front-left;
+- subtle fill;
+- restrained separation against dark environment.
+
+Reveal:
+- colorful coating diversity;
+- natural kraft texture;
+- dark paper cups;
+- readable red uniforms;
+- edible chocolate surfaces.
+
+Do not over-light the box.
+Do not create hard glossy reflections.
+Do not make characters plastic.
+
+DEPTH OF FIELD
+
+Use deeper/moderate depth of field than the earlier macro frame.
+
+The majority of the box and assortment should now be clearly readable.
+
+All three chefs should remain identifiable.
+
+Avoid extreme shallow focus that blurs large sections of the final product reveal.
+
+BACKGROUND
+
+Outside the box use the same clean charcoal-gray to near-black premium studio environment.
+
+No wooden workbench.
+No bakery.
+No kitchen.
+No workshop.
+No cheesecake.
+No cherries.
+No old dessert contamination.
+No props.
+No text.
+No logo.
+No watermark.
+
+CONTINUITY — CRITICAL
+
+R0016 (opening), R0015 (mid-state) and this new KF03 must plausibly look like three frames from ONE uninterrupted camera move.
+
+Preserve the same:
+- world;
+- box;
+- cast;
+- hero-truffle region;
+- product family;
+- lighting;
+- material language.
+
+The camera simply moves backward and slightly upward.
+
+Do not introduce anything that would require morphing, teleportation or scene replacement.
+
+FINAL HERO HOLD PREPARATION
+
+This frame should feel calm and nearly motionless.
+
+No new action is beginning.
+No character is mid-run.
+No object is airborne.
+
+The composition should be suitable for approximately the final 0.8–1.2 seconds of a premium commercial hold and for optional branding/text added later in post-production.
+
+HARD CONTENT CHECK
+
+Final image must contain:
+- ONE complete open kraft box;
+- the colorful handmade truffle assortment;
+- dark fluted cups;
+- the SAME three recurring chefs;
+- the SAME premium dark studio world.
+
+ZERO:
+- extra chefs;
+- duplicate boxes;
+- tools;
+- bowls;
+- loose ingredients;
+- floating sprinkles;
+- debris;
+- branding;
+- text;
+- logos;
+- old dessert elements.
+
+FINAL PRIORITY ORDER
+
+1. Preserve continuity with R0015.
+2. Clearly reveal the complete kraft box and assortment.
+3. Preserve real product-family identity and diversity.
+4. Preserve exactly three recurring chefs at consistent physical scale.
+5. Keep scene completely prop-free and clean.
+6. Maintain source-like kraft packaging and dark paper cups.
+7. Maintain a plausible same-path farther/higher camera position.
+8. Produce a stable premium final hero composition.
+9. Visual beauty.
+
+If a change is not necessary for the wider final camera framing, DO NOT CHANGE IT.
+
+The result must look like the camera simply continued pulling backward and slightly upward from R0015 until the entire real truffle gift box became the hero of the frame.
