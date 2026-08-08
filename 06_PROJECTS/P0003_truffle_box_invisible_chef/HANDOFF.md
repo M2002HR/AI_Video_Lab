@@ -3,7 +3,7 @@
 ## Context snapshot
 P0003 is a fresh independent 10-second Gemini food/product-video project based on the user-supplied colorful truffle photograph and invisible-chef source-template prompt.
 
-Current stage: `STAGE_10` — Storyboard generation prepared.
+Current stage: `STAGE_11` — Storyboard QA / local repair required.
 
 ## Upstream gates completed
 - Input provenance recorded.
@@ -27,40 +27,38 @@ Recorded output metadata:
 - 2,713,686 bytes;
 - SHA-256 `665626e7bee88cf5ca5beec16975260246edad43837c214993f1b13145fa33fb`.
 
-QA note: the derivative is slightly cleaner/more regular than the real source, so it never overrides the original photo on exact handmade imperfection or microgeometry.
+## Storyboard candidate
+`SB-P0003-001` was generated in ChatGPT and QA-reviewed.
 
-## Locked creative direction
-- one 10-second 16:9 clip;
-- fixed exactly 90-degree top-down camera;
-- no camera movement;
-- pure white matte studio tabletop;
-- soft diffused premium food-commercial lighting;
-- invisible chef with no visible human anatomy;
-- realistic weight, collisions, settling and granular sprinkle physics;
-- compressed process: box/cups -> chocolate centers -> coating -> progressive box assembly -> full hero -> lifted rainbow truffle -> bite gag.
+Recorded metadata:
+- 1672 × 941 px;
+- 3,082,317 bytes;
+- SHA-256 `a516d0da0dfeae835ed8488982db6ba0415c5608ce373697987ea1abf97468d7`.
 
-## Selected timing
-- 00:00–00:00.8 box and paper-cup setup;
-- 00:00.8–00:02.0 chocolate-center formation;
-- 00:02.0–00:03.6 coating;
-- 00:03.6–00:06.4 progressive box assembly;
-- 00:06.4–00:07.8 full-box hero settle;
-- 00:07.8–00:09.0 one mixed-rainbow truffle lifts;
-- 00:09.0–00:10.0 realistic bite ending.
+### What passed
+- eight-panel 2×4 contact-sheet structure;
+- exact top-down white-studio grammar;
+- invisible-chef mechanism without visible anatomy;
+- readable process progression from cups to centers to coating to filling to hero;
+- kraft-box identity, dark fluted cups and colorful coating families remain recognizable;
+- Panel 6 reaches a readable complete 25-piece hero assortment.
 
-## Current storyboard task
-Generate one eight-panel 16:9 contact-sheet storyboard in ChatGPT using `REF-P0003-001` as the clean visual anchor.
+### Blocking failure
+Panels 7 and 8 visually read as a floating mixed-rainbow truffle added above an already full box. A clearly vacated near-center paper cup is not visible, so the selected continuity rule **25 total = 24 seated + 1 lifted** is not proven.
 
+This is a local storyboard continuity failure, not a reason to redesign the scenario.
+
+## Active repair
 Prompt package:
-`11_PROMPT_PACKAGES/PKG_CHATGPT_STORYBOARD_001/resolved_prompt.md`
+`11_PROMPT_PACKAGES/PKG_CHATGPT_STORYBOARD_REPAIR_001/resolved_prompt.md`
 
-Candidate ID when returned:
-`SB-P0003-001`
+Repair target:
+`SB-P0003-001R1`
 
-The storyboard must be QA-reviewed for camera continuity, box identity, 25-piece final assortment, coating/color diversity, no visible human anatomy, no background contamination, readable sequence, and final lift/bite continuity.
+Preserve Panels 1–6. Repair only Panels 7–8 so exactly one near-center mixed-rainbow truffle leaves its cup, the same cup remains visibly empty, 24 truffles remain seated, and the same lifted truffle receives the bite in Panel 8.
 
 ## Next action
-Run the storyboard prompt in ChatGPT image generation with the approved clean product reference attached, then return the single storyboard image for QA.
+Upload the existing storyboard image to ChatGPT image editing and run the repair prompt. Return the repaired contact sheet for focused Storyboard QA.
 
 ## Anti-jump reminder
-No final Gemini video prompt is active yet. No video generation is authorized. Storyboard QA must pass first; then determine whether separate keyframe generation is necessary before video-prompt construction and preflight.
+No keyframe generation or final Gemini video prompt is authorized until the repaired storyboard passes Storyboard QA.
