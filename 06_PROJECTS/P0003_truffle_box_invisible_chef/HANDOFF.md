@@ -3,7 +3,7 @@
 ## Context snapshot
 P0003 is a fresh independent 10-second Gemini food/product-video project based on the user-supplied colorful truffle photograph and invisible-chef source-template prompt.
 
-Current stage: `STAGE_12` — Keyframe Generation.
+Current stage: `STAGE_16` — Video Generation.
 
 ## Completed gates
 - Input provenance recorded.
@@ -15,46 +15,65 @@ Current stage: `STAGE_12` — Keyframe Generation.
 - Invisible-chef truffle-assembly scenario selected.
 - 10-second shot timeline selected.
 - Storyboard generated, locally repaired twice, and approved as `SB-P0003-001R2`.
+- Three-state controlling keyframe sheet generated and approved as `KFSET-P0003-001`.
+- Final Gemini video prompt constructed.
+- Video Preflight passed.
 
-## Approved reference stack
+## Approved visual hierarchy
 ### Original real product photograph
-Highest authority for real product identity, handmade irregularity, coating character, box truth, and final assortment identity.
+Highest authority for handmade irregularity, coating character, and packaging truth. It is not part of the final Gemini upload stack because its wooden tabletop and watermark are contamination risks.
 
 ### REF-P0003-001
-Approved derivative role: clean 90-degree top-down white-studio product/packaging/composition support.
+Approved clean product/packaging/environment authority for final Gemini conditioning.
 
 ### SB-P0003-001R2
-Approved storyboard/sequence authority.
+Approved sequence/storyboard evidence. Do not upload for the baseline unless troubleshooting later.
+
+### KFSET-P0003-001
+Approved state-continuity authority.
 
 Recorded metadata:
 - 1672 × 941 px;
-- 3,072,260 bytes;
-- SHA-256 `c03dd6883c085c48fa5c60a386f7adf99c2051045b846fb75de7179d09cc782c`.
+- 2,465,209 bytes;
+- SHA-256 `23c53cbdc144bb7e28f3805b12db2039c766f3b0e96b599ef286b8d16efbd4cc`.
 
-Storyboard continuity lock:
-- Panel 6 = complete 25-piece hero state;
-- Panel 7 = exactly one near-center empty cup, 24 seated truffles, and one mixed-rainbow lifted truffle;
-- Panel 8 = same 24 seated, same single empty cup, same lifted truffle with a bite.
+Keyframe QA:
+- opening state: exactly 25 empty cups, zero truffles;
+- mid assembly: approximately 18 seated truffles, accepted as a non-boundary partial-fill state;
+- lift state: exactly 24 seated + one mixed-rainbow floating truffle + exactly one empty cup.
 
-## Current keyframe task
-Generate only three controlling anchors rather than a large redundant set.
+## Active final video package
+`11_PROMPT_PACKAGES/PKG_GEMINI_VIDEO_V01/`
 
-### KF-P0003-01 — opening
-Exactly 25 empty dark fluted paper cups in the centered diamond-oriented kraft box; no truffles.
+Files:
+- `resolved_prompt.md`
+- `preflight.md`
 
-### KF-P0003-02 — mid assembly
-Same box/camera with approximately 16 finished colorful truffles seated and the remaining cups empty; no loose exterior pieces.
+Preflight result: **PASS / generation authorized**.
 
-### KF-P0003-03 — lift state
-Same final hero arrangement family with exactly 24 seated truffles, exactly one near-center empty cup, and the corresponding mixed-rainbow truffle floating above the box; no bite yet.
+## Baseline upload stack
+Upload only:
+1. `REF-P0003-001` — clean product/packaging/environment authority.
+2. `KFSET-P0003-001` — temporal/state authority.
 
-A separate hero keyframe is unnecessary because `REF-P0003-001` already serves that role. A bitten-final keyframe is deferred unless later video QA shows that the bite transition needs extra control.
+The keyframe sheet is not a split-screen design. The active prompt explicitly forbids reproducing panel borders/gutters and instructs Gemini to interpret it only as sequential state evidence.
 
-Active prompt package:
-`11_PROMPT_PACKAGES/PKG_CHATGPT_KEYFRAME_SET_001/resolved_prompt.md`
+## Locked video continuity
+- 10.0 seconds, 16:9.
+- Camera fixed exactly 90-degree top-down for the entire video.
+- Invisible chef; no visible anatomy.
+- Pure white matte studio tabletop.
+- 00:00–00:00.8 box/cup setup.
+- 00:00.8–00:02.0 chocolate-center formation.
+- 00:02.0–00:03.6 coating.
+- 00:03.6–00:06.4 progressive box assembly.
+- 00:06.4–00:07.8 complete 25-piece hero settle.
+- 00:07.8–00:09.0 one mixed-rainbow truffle lifts, leaving 24 seated + one empty cup.
+- 00:09.0–00:10.0 same floating truffle receives an invisible bite; same 24 remain seated and the same single cup remains empty.
 
 ## Next action
-In ChatGPT image generation, provide the approved clean product reference and repaired storyboard, run the three-panel keyframe prompt, and return the output for Keyframe QA.
+Generate **one baseline only** in Gemini using the approved two-reference stack and paste `PKG_GEMINI_VIDEO_V01/resolved_prompt.md` unchanged.
 
-## Anti-jump reminder
-No final Gemini video prompt or video generation is authorized until the controlling keyframe set passes QA and the final video prompt passes preflight.
+Register/return the result as `P0003-R0001` for `STAGE_17` Video QA.
+
+Do not tune or regenerate repeatedly before the first baseline is evaluated. The first QA should determine whether any failure is identity, timing, physics, count, camera, or local cosmetic drift.
