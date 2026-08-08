@@ -14,7 +14,8 @@
 - 3–5 سناریوی واقعاً متفاوت پیشنهاد دهد فقط اگر ظرفیت واقعی وجود دارد؛
 - process واقعی را جعل نکند؛
 - بعد از انتخاب کاربر Master Sequence + Clip Contracts بسازد؛
-- سپس per-clip reference strategy و production را جلو ببرد.
+- سپس per-clip reference strategy و production را جلو ببرد؛
+- media معنی‌دار جدید را طبق Git proxy policy کم‌حجم و commit کند.
 
 ## Exact prompt to send in a fresh ChatGPT chat
 
@@ -39,17 +40,20 @@ P0001 را overwrite نکن و optimization قبلی R0022 را ادامه ند�
 8. برای هر سناریو clip map سه‌قسمتی، architecture mode، process depth، visual impact، generation risk، reference burden، مزیت تجاری و failure risk را خلاصه کن.
 9. هنوز promptهای کامل تصویر/ویدیو یا storyboard سنگین نساز. اول من باید سناریو را انتخاب کنم.
 10. همه تصمیم‌ها، candidateها و انتخاب بعدی را طبق Documentation Contract در repo ثبت و commit کن.
+11. `00_SYSTEM/MEDIA_PROXY_PIPELINE.md` را هم بخوان. هر تصویر/ویدیوی معنی‌دار جدید یا re-attached که non-sensitive و locally accessible است باید low-resolution proxy بگیرد، در `19_HANDOFF_ASSETS/git_previews/` ذخیره شود، `proxy_manifest.json` به‌روز شود و commit بخورد. Original/full-resolution را داخل Git معمولی نگذار.
 
 بعد از context load ابتدا یک خلاصه کوتاه از چیزهایی که از P0001 یاد گرفتی بده و بعد Scenario Menu مخصوص 30 ثانیه را ارائه کن.
 
-نکته رسانه: عکس‌ها و ویدیوهای چت قبلی به‌صورت binary در Git ذخیره نشده‌اند. برای Scenario Planning از اسناد repo استفاده کن. وقتی بعد از انتخاب سناریو واقعاً به asset بصری نیاز شد، دقیقاً و فقط assetهای لازم را از من بخواه دوباره attach کنم.
+نکته رسانه: historical media قبلی هنوز به‌صورت کامل در Git نیست و proxy backfill P0001 کامل نشده است. برای Scenario Planning از اسناد repo و هر Git proxy موجود استفاده کن. بعد از انتخاب سناریو، اگر original/full-resolution واقعاً لازم شد، دقیقاً و فقط assetهای لازم را از من بخواه re-attach کنم. وقتی re-attach شدند، proxy کم‌حجمشان را هم طبق سیستم commit کن.
 ```
 
 ## Recommended media re-attachment timing
 
 برای Scenario Menu لازم نیست همه media دوباره فرستاده شوند؛ repo textual context کافی دارد.
 
-بعد از انتخاب سناریو، operator باید role-based درخواست کند. نقطه شروع معمولاً:
+بعد از انتخاب سناریو، operator باید اول `19_HANDOFF_ASSETS/proxy_manifest.json` را بررسی کند و سپس فقط در صورت نیاز به original/full-res درخواست re-attachment بدهد.
+
+نقطه شروع معمولاً:
 1. original real product photo؛
 2. R0003 clean top؛
 3. R0010 three-chef reference؛
