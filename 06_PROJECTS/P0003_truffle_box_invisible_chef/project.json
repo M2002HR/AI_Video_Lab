@@ -4,9 +4,9 @@
   "title": "Invisible-Chef Truffle Box Assembly Commercial",
   "status": "active",
   "created_at": "2026-08-08T18:24:00+03:30",
-  "updated_at": "2026-08-08T19:05:00+03:30",
+  "updated_at": "2026-08-08T19:15:00+03:30",
   "system_version_started": "1.4.0",
-  "current_stage": "STAGE_12",
+  "current_stage": "STAGE_16",
   "parent_project_id": null,
   "derivative_reason": "Fresh independent project created at the user's request from the current product photograph and source/template prompt. No approvals, stage completion, or downstream artifacts are inherited from P0001 or P0002.",
   "deliverable": {
@@ -74,15 +74,27 @@
     }
   ],
   "active_keyframe_plan": "10_KEYFRAMES/keyframe_plan_v01.md",
-  "active_keyframe_prompt_package": "11_PROMPT_PACKAGES/PKG_CHATGPT_KEYFRAME_SET_001",
+  "approved_keyframe_set": {
+    "keyframe_set_id": "KFSET-P0003-001",
+    "status": "approved",
+    "qa_path": "10_KEYFRAMES/KFSET-P0003-001/qa.md",
+    "sha256": "23c53cbdc144bb7e28f3805b12db2039c766f3b0e96b599ef286b8d16efbd4cc",
+    "dimensions": [1672, 941],
+    "bytes": 2465209,
+    "availability": "current_chat_attachment",
+    "roles": ["opening_state", "mid_assembly_state", "lift_state"]
+  },
+  "active_keyframe_prompt_package": null,
   "active_storyboard_prompt_package": null,
-  "active_video_prompt_package": null,
+  "active_video_prompt_package": "11_PROMPT_PACKAGES/PKG_GEMINI_VIDEO_V01",
+  "video_preflight_path": "11_PROMPT_PACKAGES/PKG_GEMINI_VIDEO_V01/preflight.md",
+  "video_generation_authorized": true,
   "selected_final_run": null,
   "selected_run_per_clip": {},
   "handoff_path": "HANDOFF.md",
   "conversation_log_path": "18_CONVERSATION_LOG",
   "handoff_assets_path": "19_HANDOFF_ASSETS",
-  "last_session_summary_at": "2026-08-08T19:05:00+03:30",
-  "next_planned_task": "Generate the minimal three-keyframe control set in ChatGPT: opening 25 empty cups, mid-assembly partial fill, and lift state with exactly 24 seated + 1 lifted and one empty cup; then run Keyframe QA before final video prompting.",
+  "last_session_summary_at": "2026-08-08T19:15:00+03:30",
+  "next_planned_task": "Generate one unchanged baseline video in Gemini using only REF-P0003-001 plus KFSET-P0003-001 and PKG_GEMINI_VIDEO_V01; return the result as P0003-R0001 for Video QA before any prompt iteration.",
   "tags": ["food", "chocolate", "truffle", "gift_box", "invisible_chef", "top_down", "gemini", "chatgpt_image", "product_ad"]
 }
