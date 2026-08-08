@@ -1,0 +1,25 @@
+{
+  "run_id": "P0001-R0012",
+  "project_id": "P0001",
+  "stage": "STAGE_10_STORYBOARD",
+  "task": "scene_keyframe_kf01_opening_macro",
+  "execution_mode": "external_manual",
+  "tool": "ChatGPT Image",
+  "model": "unknown",
+  "prompt_version": "PKG_SCENE_KEYFRAME_V01_KF01",
+  "prompt_language": "en",
+  "reference_assets": ["SESSION-ASSET-P0001-IMG-002", "P0001-R0003", "P0001-R0008", "P0001-R0006", "P0001-R0010"],
+  "settings": {},
+  "outputs": [{
+    "filename": "1000015977.png",
+    "sha256": "9566ef67044a11293a30cbdad93d7434a5e49c5d792c2783c9015506262b8b66",
+    "width": 1672,
+    "height": 941,
+    "bytes": 3084983,
+    "storage": "chat_attachment_not_committed"
+  }],
+  "evaluation": {"status": "failed_gate_best_diagnostic", "overall_score": 3.4},
+  "failure_tags": ["unwanted_prop", "scale_instability", "geometry_regularization", "particle_scale_drift", "character_pose_readability", "continuity_setup_failure"],
+  "selected": false,
+  "notes": "Best of the three KF01 v01 candidates because background is clean and composition is coherent, but still fails production gate: extra tool plus bowl, loose particles, center chef shown mostly from behind, chefs too large relative to truffle, perfect sphere/oversized nonpareils, and no physical kraft-box continuity for the later pull-back reveal. Retain as diagnostic evidence only."
+}
