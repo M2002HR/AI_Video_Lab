@@ -4,7 +4,7 @@
   "title": "Invisible-Chef Truffle Box Assembly Commercial",
   "status": "active",
   "created_at": "2026-08-08T18:24:00+03:30",
-  "updated_at": "2026-08-08T19:37:00+03:30",
+  "updated_at": "2026-08-08T19:58:00+03:30",
   "system_version_started": "1.4.0",
   "current_stage": "STAGE_18",
   "parent_project_id": null,
@@ -40,15 +40,25 @@
       "sha256": "665626e7bee88cf5ca5beec16975260246edad43837c214993f1b13145fa33fb",
       "dimensions": [1672, 941],
       "availability": "current_chat_attachment"
+    },
+    {
+      "reference_id": "START-P0003-001",
+      "role": "VIDEO_START_FRAME_AUTHORITY",
+      "authority": "approved standalone frame-0 temporal anchor: exactly 25 empty dark cups, zero truffles, centered kraft box, white studio",
+      "qa_path": "05_REFERENCE_ASSETS/START-P0003-001/qa.md",
+      "sha256": "759621ae9ad4fdb09de6a8afa5437bed83d91cc95ec8a9bd8ef34ed707be740a",
+      "dimensions": [1280, 720],
+      "bytes": 444807,
+      "availability": "current_chat_extracted_from_P0003-R0002"
     }
   ],
   "reference_candidates": [
     {
-      "reference_id": "START-P0003-001",
-      "role": "VIDEO_START_FRAME_AUTHORITY",
-      "authority": "pending standalone 16:9 frame-0 authority: centered kraft box with exactly 25 empty dark cups and zero truffles",
+      "reference_id": "END-P0003-001",
+      "role": "VIDEO_FINAL_FRAME_AUTHORITY",
+      "authority": "pending standalone final bite-state anchor: exactly 24 seated + one bitten floating rainbow truffle + exactly one empty cup",
       "availability": "not_generated",
-      "prompt_package": "11_PROMPT_PACKAGES/PKG_CHATGPT_VIDEO_START_ANCHOR_001"
+      "prompt_package": "11_PROMPT_PACKAGES/PKG_CHATGPT_VIDEO_END_ANCHOR_001"
     }
   ],
   "active_creative_direction": "06_CREATIVE_DIRECTION/creative_direction_v01.md",
@@ -65,21 +75,9 @@
     "availability": "current_chat_attachment"
   },
   "storyboard_candidates": [
-    {
-      "storyboard_id": "SB-P0003-001",
-      "status": "superseded_repair_required",
-      "qa_path": "09_STORYBOARD/SB-P0003-001/qa.md"
-    },
-    {
-      "storyboard_id": "SB-P0003-001R1",
-      "status": "superseded_repair_required",
-      "qa_path": "09_STORYBOARD/SB-P0003-001R1/qa.md"
-    },
-    {
-      "storyboard_id": "SB-P0003-001R2",
-      "status": "approved",
-      "qa_path": "09_STORYBOARD/SB-P0003-001R2/qa.md"
-    }
+    {"storyboard_id": "SB-P0003-001", "status": "superseded_repair_required", "qa_path": "09_STORYBOARD/SB-P0003-001/qa.md"},
+    {"storyboard_id": "SB-P0003-001R1", "status": "superseded_repair_required", "qa_path": "09_STORYBOARD/SB-P0003-001R1/qa.md"},
+    {"storyboard_id": "SB-P0003-001R2", "status": "approved", "qa_path": "09_STORYBOARD/SB-P0003-001R2/qa.md"}
   ],
   "active_keyframe_plan": "10_KEYFRAMES/keyframe_plan_v01.md",
   "approved_keyframe_set": {
@@ -96,7 +94,7 @@
   "active_keyframe_prompt_package": null,
   "active_storyboard_prompt_package": null,
   "active_video_prompt_package": null,
-  "active_repair_prompt_package": "11_PROMPT_PACKAGES/PKG_CHATGPT_VIDEO_START_ANCHOR_001",
+  "active_repair_prompt_package": "11_PROMPT_PACKAGES/PKG_CHATGPT_VIDEO_END_ANCHOR_001",
   "video_preflight_path": "11_PROMPT_PACKAGES/PKG_GEMINI_VIDEO_V01/preflight.md",
   "video_generation_authorized": false,
   "video_runs": [
@@ -112,6 +110,18 @@
       "fps": 24,
       "bytes": 2476184,
       "failure_summary": "Timeline reversed: starts from filled hero, lift/bite occurs early, required making beats omitted, box progressively empties, final state invalid."
+    },
+    {
+      "run_id": "P0003-R0002",
+      "status": "rejected_structural",
+      "run_path": "12_RUNS/P0003-R0002/run.json",
+      "qa_path": "13_EVALUATION/reports/video_qa_r0002.md",
+      "sha256": "df5717de4e6add5b8ea53b10bfe232a74fae6697204160a9c55d225e0d900272",
+      "dimensions": [1280, 720],
+      "duration_seconds": 10.0,
+      "fps": 24,
+      "bytes": 3176110,
+      "failure_summary": "Correct empty-to-filled direction but mandatory bowl/coating beats are absent, assembly overruns timing, rainbow piece descends instead of lifting, bite is absent, and late camera zoom/reframe breaks the lock."
     }
   ],
   "selected_final_run": null,
@@ -119,7 +129,7 @@
   "handoff_path": "HANDOFF.md",
   "conversation_log_path": "18_CONVERSATION_LOG",
   "handoff_assets_path": "19_HANDOFF_ASSETS",
-  "last_session_summary_at": "2026-08-08T19:37:00+03:30",
-  "next_planned_task": "Generate standalone video-start anchor START-P0003-001 in ChatGPT from REF-P0003-001 plus KFSET-P0003-001, QA it, then construct and preflight Gemini Video V02 using the standalone empty opening as primary temporal authority and without directly uploading the three-panel keyframe sheet.",
+  "last_session_summary_at": "2026-08-08T19:58:00+03:30",
+  "next_planned_task": "Generate standalone final-frame anchor END-P0003-001 in ChatGPT from REF-P0003-001 plus the approved keyframe set, QA it, then construct and preflight the next Gemini video package using explicit standalone start and end anchors with tighter mandatory timing checkpoints and no direct multi-panel keyframe-sheet upload.",
   "tags": ["food", "chocolate", "truffle", "gift_box", "invisible_chef", "top_down", "gemini", "chatgpt_image", "product_ad"]
 }
