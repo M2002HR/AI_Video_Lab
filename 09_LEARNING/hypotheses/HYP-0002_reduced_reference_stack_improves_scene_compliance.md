@@ -1,11 +1,11 @@
 # HYP-0002 — Reduced role-clean reference stack improves combined-scene compliance
 
-status: open  
-confidence: provisional  
-linked_observation: OBS-0007
+status: project_supported / still provisional globally  
+confidence: moderate_to_strong_for_P0001  
+linked_observations: OBS-0007, OBS-0008
 
 ## Hypothesis
-For P0001 combined product+character scene-keyframe generation, a very small reference stack containing only role-clean inputs plus a simpler no-prop scene will produce better source fidelity and instruction compliance than the v01 five-reference stack.
+For P0001 combined product+character scene-keyframe generation, a smaller reference stack containing only high-authority/role-clean inputs plus a simpler no-prop scene will produce better source fidelity and instruction compliance than the v01 five-reference stack.
 
 ## v01 baseline
 Inputs:
@@ -20,34 +20,46 @@ Result across R0011–R0013:
 - scale drift;
 - geometry regularization;
 - oversized particle appearance;
-- continuity setup failure;
-- one candidate also leaked the original wooden/workshop environment.
+- character readability problems;
+- opening staged outside the final kraft-box continuity;
+- one candidate leaked wooden/workshop environment.
 
-## v02 test — deliberately minimal
-Use ONLY:
-1. `R0003` TOP-CLEAN — product/packaging identity and clean environment;
-2. `R0010` CHARACTERS — exact three-chef appearance/style.
+## v02 controlled repair
+Inputs:
+- R0003 TOP-CLEAN;
+- R0010 CHARACTERS.
 
-Do **not** upload the original real photo in this scene-synthesis pass even though it remains the project's ultimate truth source, because `OBS-0005` shows that its wooden environment can leak into multi-reference generation. `R0003` was specifically created as the cleaned source-preserving identity surrogate.
+Deliberate removals:
+- original wooden-background source;
+- R0006 MACRO;
+- R0008 ASSORTMENT;
+- R0002 HERO-45;
+- all brushes/tools/bowls/loose ingredients.
 
-Do not upload R0006, R0008 or R0002 for the first v02 pass. If a specific missing geometry problem appears, add only the single reference required to diagnose it in a later controlled test.
+Results:
+- R0014 ~4.1/5;
+- R0015 ~4.3/5, selected scene master.
 
-Prompt/action changes:
-- no brush or other tools;
-- no bowls, loose ingredients or food debris;
-- quiet inspection only;
-- opening scene already physically inside the same kraft box that will later be revealed;
-- all three faces visible in 3/4 view;
-- truffle diameter target approximately three times one chef's full standing height;
-- shorter prioritized prompt with fewer competing instructions.
+Both outputs:
+- exist physically inside the kraft box;
+- contain exactly three recognizable recurring chefs;
+- have zero tool/bowl/loose-ingredient contamination;
+- improve face readability and combined-scene coherence;
+- provide a plausible world for a continuous pull-back.
 
-## Success criteria
-Compared with R0012 baseline, v02 should improve:
-- product fidelity;
-- particle scale;
-- chef-to-truffle scale;
-- prop cleanliness;
-- face/identity readability;
-- continuity readiness for pull-back to full-box reveal.
+## Interpretation
+The P0001 evidence strongly supports the narrow project hypothesis that fewer role-clean references plus reduced action complexity improved scene compliance versus the v01 setup.
 
-Do not promote as a global rule until repeated on other scene-generation cases or benchmarks.
+However, v02 still did not fully satisfy:
+- the original 1:3 chef-height/truffle-diameter scale target;
+- opening-macro camera distance;
+- handmade-geometry fidelity;
+- full removal of static pose influence.
+
+R0015 is therefore repurposed as a scene master / KF02-like anchor, and the true opening frame will be derived from it rather than independently resynthesized.
+
+## Global status
+Do NOT promote this to a universal prompt/tool rule yet. Confirm on additional products or a controlled benchmark/experiment before global promotion.
+
+## Next evidence step
+Derive KF01 from R0015 using a camera-only edit with R0003 as product-identity backup. This tests whether stabilizing one combined scene and deriving adjacent camera states outperforms repeated independent scene generation.
