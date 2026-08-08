@@ -4,9 +4,9 @@
   "title": "Colorful Chocolate Truffle Miniature Commercial",
   "status": "active",
   "created_at": "2026-08-07T21:41:00+03:30",
-  "updated_at": "2026-08-08T10:51:00+03:30",
+  "updated_at": "2026-08-08T11:03:00+03:30",
   "system_version_started": "1.1.0",
-  "current_stage": "STAGE_10",
+  "current_stage": "STAGE_16",
   "deliverable": {
     "type": "video_ad",
     "duration_seconds": 10,
@@ -21,13 +21,15 @@
   "selected_scenario": "07_SCENARIOS/selected/scenario_v02_quiet_inspection_reveal.md",
   "active_shot_timeline": "08_SHOT_DESIGN/timeline_v02.md",
   "active_storyboard_plan": "09_STORYBOARD/storyboard_plan_v01.md",
+  "active_video_prompt_package": "11_PROMPT_PACKAGES/PKG_FLOW_OMNI_VIDEO_V01",
   "approved_reference_set": [
     {"role": "REF-PROD-TOP-CLEAN", "run_id": "P0001-R0003", "authority": "primary_clean_identity"},
     {"role": "REF-PROD-MACRO", "run_id": "P0001-R0006", "authority": "texture_material_only"},
     {"role": "REF-PROD-ASSORTMENT-DETAIL", "run_id": "P0001-R0008", "authority": "assortment_diversity_and_coating_family"},
     {"role": "REF-CHAR-CHOCOLATIERS", "run_id": "P0001-R0010", "authority": "character_identity_style_only"},
     {"role": "REF-SCENE-MASTER", "run_id": "P0001-R0015", "authority": "combined_scene_continuity_midframe"},
-    {"role": "KF01", "run_id": "P0001-R0016", "authority": "opening_camera_state_from_scene_master"}
+    {"role": "KF01", "run_id": "P0001-R0016", "authority": "opening_camera_state_from_scene_master"},
+    {"role": "KF03", "run_id": "P0001-R0020", "authority": "final_camera_state_from_scene_master"}
   ],
   "provisional_reference_set": [
     {"role": "REF-PROD-HERO-45", "run_id": "P0001-R0002", "authority": "secondary_geometry_optional"},
@@ -40,17 +42,18 @@
     {"role": "REF-CHAR-CHOCOLATIERS", "run_id": "P0001-R0009"},
     {"role": "REF-PROD-HERO-45", "run_id": "P0001-R0001"},
     {"role": "REF-SCENE-GRAMMAR", "run_id": "P0001-R0014"},
-    {"role": "KF01", "run_id": "P0001-R0017"}
+    {"role": "KF01", "run_id": "P0001-R0017"},
+    {"role": "KF03", "run_id": "P0001-R0021"}
   ],
   "failed_scene_candidates": ["P0001-R0011", "P0001-R0012", "P0001-R0013", "P0001-R0018", "P0001-R0019"],
   "best_diagnostic_scene_candidate": "P0001-R0012",
   "selected_scene_master": "P0001-R0015",
   "selected_kf01": "P0001-R0016",
-  "selected_kf03": null,
+  "selected_kf03": "P0001-R0020",
   "selected_final_run": null,
   "latest_runs": [
-    "P0001-R0001", "P0001-R0002", "P0001-R0003", "P0001-R0004", "P0001-R0005", "P0001-R0006", "P0001-R0007", "P0001-R0008", "P0001-R0009", "P0001-R0010", "P0001-R0011", "P0001-R0012", "P0001-R0013", "P0001-R0014", "P0001-R0015", "P0001-R0016", "P0001-R0017", "P0001-R0018", "P0001-R0019"
+    "P0001-R0001", "P0001-R0002", "P0001-R0003", "P0001-R0004", "P0001-R0005", "P0001-R0006", "P0001-R0007", "P0001-R0008", "P0001-R0009", "P0001-R0010", "P0001-R0011", "P0001-R0012", "P0001-R0013", "P0001-R0014", "P0001-R0015", "P0001-R0016", "P0001-R0017", "P0001-R0018", "P0001-R0019", "P0001-R0020", "P0001-R0021"
   ],
-  "next_planned_task": "KF03_V05_MASTER_ONLY_DERIVATION_FROM_R0015",
+  "next_planned_task": "FLOW_OMNI_BASELINE_VIDEO_RUNS_R0022_R0023",
   "tags": ["food", "chocolate", "truffle", "miniature", "tiny_chocolatiers", "product_ad"]
 }
