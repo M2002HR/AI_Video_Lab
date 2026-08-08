@@ -1,0 +1,27 @@
+{
+  "run_id": "P0001-R0010",
+  "project_id": "P0001",
+  "stage": "STAGE_04_REFERENCE_ASSET_CREATION",
+  "task": "character_reference_generation",
+  "execution_mode": "external_manual",
+  "tool": "ChatGPT Image",
+  "model": "unknown",
+  "prompt_package": "PKG_CHARACTER_REFERENCE_V01",
+  "prompt_language": "en",
+  "reference_assets": ["user-provided old tiny-chef cheesecake creative reference — character-style authority only"],
+  "settings": {},
+  "outputs": [
+    {
+      "filename": "1000015976.png",
+      "attachment_file_id": "file_00000000bc68820aab27bb52f1223114",
+      "sha256": "19283b1a5eef918b186d6ad1ea29ccbbc80b141f36ef25ae3cb8d6627072fe62"
+    }
+  ],
+  "evaluation": {
+    "status": "passed",
+    "overall_score": 4.8
+  },
+  "failure_tags": [],
+  "selected": true,
+  "notes": "Selected REF-CHAR-CHOCOLATIERS. Exactly three coherent recurring characters, consistent red uniforms, clean anatomy, separate silhouettes, no dessert contamination, and stronger full-body/arm readability than R0009. Identity/style authority only; poses are not action authority."
+}
