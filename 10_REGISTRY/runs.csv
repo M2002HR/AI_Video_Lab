@@ -14,3 +14,5 @@ P0001-R0012,P0001,STAGE_10_STORYBOARD,scene_keyframe_kf01_opening_macro,ChatGPT 
 P0001-R0013,P0001,STAGE_10_STORYBOARD,scene_keyframe_kf01_opening_macro,ChatGPT Image,unknown,failed_gate,3.2,False
 P0001-R0014,P0001,STAGE_10_STORYBOARD,scene_keyframe_kf01_v02_minimal_reference,ChatGPT Image,unknown,pass_as_scene_grammar_not_final_kf01,4.1,False
 P0001-R0015,P0001,STAGE_10_STORYBOARD,scene_keyframe_kf01_v02_minimal_reference,ChatGPT Image,unknown,selected_scene_master_midframe,4.3,True
+P0001-R0016,P0001,STAGE_10_STORYBOARD,scene_keyframe_kf01_camera_derivation_v03,ChatGPT Image,unknown,passed_selected_kf01_with_caveats,4.5,True
+P0001-R0017,P0001,STAGE_10_STORYBOARD,scene_keyframe_kf01_camera_derivation_v03,ChatGPT Image,unknown,passed_alternate_with_caveats,4.4,False
