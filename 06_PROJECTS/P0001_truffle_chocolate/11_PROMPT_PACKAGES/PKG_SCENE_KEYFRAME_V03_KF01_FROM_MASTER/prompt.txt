@@ -1,0 +1,181 @@
+SCENE MASTER CAMERA-DERIVATION — KF01 V03
+
+REFERENCE ROLES
+
+REFERENCE 1 — R0015 SELECTED SCENE MASTER
+This is the highest authority for the combined physical scene.
+Preserve the SAME:
+- hero multicolor truffle;
+- exact three recurring chefs;
+- chef identities and red uniforms;
+- kraft-box interior;
+- dark fluted paper cups;
+- surrounding physical world;
+- lighting direction and visual style.
+
+REFERENCE 2 — R0003 CLEAN TOP PRODUCT REFERENCE
+Use only as secondary product-identity evidence for:
+- handmade truffle family;
+- supported coating/color language;
+- dark paper cups;
+- natural kraft cardboard.
+It must not replace the scene layout from R0015.
+
+PRIMARY TASK
+
+Create ONE 16:9 opening keyframe that looks like the camera was physically moved CLOSER and SLIGHTLY LOWER within the exact same scene shown in R0015, approximately several seconds earlier on the same continuous camera path.
+
+This is a CAMERA/FRAMING DERIVATION, not a new scene generation.
+
+Do not redesign the product.
+Do not redesign the box.
+Do not replace the chefs.
+Do not add new objects.
+Do not change the scene into a workshop.
+
+TEMPORAL ROLE
+
+This frame represents approximately 00:01 of the final 10-second video.
+
+R0015 is treated as the later mid-reveal scene state.
+This new frame must therefore reveal substantially LESS of the box and assortment than R0015 while remaining physically compatible with it.
+
+CAMERA CHANGE ONLY
+
+Move the virtual camera:
+- closer to the central hero truffle;
+- slightly lower toward the truffle's mid-height;
+- slightly tighter around the hero truffle and three chefs.
+
+Maintain the same general viewing side and spatial orientation as R0015.
+Do not reverse the scene.
+Do not rotate to the opposite side.
+Do not jump to top-down.
+
+The final video should be able to move from this new close frame toward R0015 simply by pulling backward and rising slightly.
+
+OPENING COMPOSITION
+
+The multicolor round-nonpareil hero truffle is dominant and occupies approximately 50–60% of image height.
+
+All THREE recurring chefs remain visible in the lower/front region.
+Their faces must be readable.
+
+Show only limited surrounding context:
+- partial edges of approximately 2–4 nearby truffle cups/products;
+- a small amount of kraft cardboard floor/interior;
+- at most a small partial indication of one box edge.
+
+Do NOT show most of the box.
+Do NOT show the whole assortment.
+Do NOT show all four box walls.
+
+The viewer should understand that the scene is inside the kraft box, but the full box must still remain to be revealed later.
+
+CHARACTERS
+
+Exactly THREE chefs — the same three visible in R0015.
+No additional chef.
+No missing chef.
+No character redesign.
+
+Preserve:
+- moustached foreman;
+- clean-shaven chef;
+- small-goatee chef;
+- red jackets and hats;
+- dark trousers/shoes;
+- approximate relative character scale from R0015.
+
+Do not force the static identity-reference poses.
+Use very subtle natural inspection poses with empty hands.
+However, preserving identity and scene continuity is more important than inventing new gestures.
+
+ALL HANDS EMPTY
+
+ZERO:
+- tools;
+- brushes;
+- bowls;
+- tweezers;
+- spoons;
+- ladders;
+- carts;
+- trays;
+- containers;
+- loose ingredients.
+
+No loose nonpareils on the floor.
+No chocolate crumbs or chunks.
+
+PRODUCT IDENTITY
+
+The hero product remains a handmade dark-chocolate truffle densely coated with tiny multicolor round edible nonpareils.
+
+Do not make the truffle smoother or more spherical than R0015.
+If possible, introduce only a VERY SUBTLE source-consistent handmade asymmetry without changing the recognizable scene.
+
+The nonpareils must remain small edible sugar decorations attached directly to chocolate.
+Do not enlarge them into pearls, marbles or plastic beads.
+
+The hero truffle remains seated in the same dark charcoal-gray fluted paper cup.
+Do not enlarge or redesign the cup.
+
+SCENE CONTINUITY
+
+Everything seen must plausibly belong to the exact R0015 box world.
+
+The later camera pull-back should reveal R0015 naturally.
+Therefore:
+- no temporary platform;
+- no different background;
+- no second box;
+- no new architecture;
+- no wooden workbench;
+- no product display outside the box.
+
+BACKGROUND
+
+Keep the dark premium studio environment outside the box consistent with R0015.
+No wooden planks.
+No bakery/kitchen/workshop set.
+No text, logo or watermark.
+
+LIGHTING
+
+Preserve the same soft premium lighting direction and color response as R0015.
+Do not dramatically relight the scene.
+Keep all three faces readable and the truffle texture visible.
+
+DEPTH OF FIELD
+
+Moderate macro depth of field.
+Hero truffle and all three chefs should remain sufficiently readable at the same time.
+Do not turn two chefs into heavy blur.
+
+HARD CONTENT CHECK
+
+The final frame must contain:
+- exactly ONE dominant hero truffle;
+- exactly THREE recurring chefs;
+- the SAME physical kraft-box interior as R0015;
+- limited partial neighboring truffles;
+- zero tools;
+- zero bowls;
+- zero loose ingredients;
+- zero duplicate characters;
+- zero extra product display.
+
+FINAL PRIORITY
+
+1. Preserve the exact combined-world continuity of R0015.
+2. Make the camera visibly closer than R0015.
+3. Reveal substantially less assortment/box than R0015.
+4. Preserve exact three-chef identity.
+5. Preserve product identity and dark paper cup.
+6. Keep the frame clean and physically plausible for a later pull-back.
+7. Cinematic beauty.
+
+If a change is not necessary to create a closer camera view, DO NOT CHANGE IT.
+
+The final image should feel like a genuine earlier camera position in the SAME uninterrupted scene as R0015, not a separately generated alternate scene.
