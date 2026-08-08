@@ -4,9 +4,9 @@
   "title": "Invisible-Chef Top-Down Truffle Assembly Commercial",
   "status": "active",
   "created_at": "2026-08-08T18:01:00+03:30",
-  "updated_at": "2026-08-08T18:01:00+03:30",
+  "updated_at": "2026-08-08T18:14:00+03:30",
   "system_version_started": "1.3.0",
-  "current_stage": "STAGE_11",
+  "current_stage": "STAGE_03",
   "parent_project_id": "P0001",
   "derivative_reason": "New 10-second creative direction using a user-supplied invisible-chef fixed-overhead food-commercial template, adapted to the same truffle product without overwriting P0001.",
   "deliverable": {
@@ -31,28 +31,36 @@
   "source_prompt_path": "01_INPUTS/source_prompt/source_prompt_transcription.md",
   "active_identity_lock": "03_PRODUCT_IDENTITY/identity_lock_v01.md",
   "active_reference_plan": "04_REFERENCE_STRATEGY/reference_plan.md",
-  "selected_scenario": "07_SCENARIOS/selected/scenario_v01_invisible_chef_truffle_assembly.md",
-  "active_shot_timeline": "08_SHOT_DESIGN/timeline_v01.md",
-  "active_video_prompt_package": "11_PROMPT_PACKAGES/PKG_GEMINI_VIDEO_V01",
-  "approved_reference_set": [
+  "selected_scenario": null,
+  "active_shot_timeline": null,
+  "active_storyboard_plan": null,
+  "active_video_prompt_package": null,
+  "approved_reference_set": [],
+  "reference_candidates": [
     {
       "role": "REF-PROD-CURRENT",
       "source_id": "SESSION-ASSET-P0002-IMG-001",
-      "authority": "primary_product_identity_and_final_presentation",
+      "authority": "primary_product_identity_source",
       "availability": "current_chat_only"
     },
     {
       "role": "REF-PROD-TOP-CLEAN-FALLBACK",
       "source_id": "P0001-R0003",
-      "authority": "coarse_cross_chat_identity_fallback_only",
+      "authority": "cross-project candidate for clean top-down identity support; requires explicit reuse decision for P0002",
       "source_of_truth": false
     }
+  ],
+  "premature_downstream_artifacts": [
+    "07_SCENARIOS/selected/scenario_v01_invisible_chef_truffle_assembly.md",
+    "08_SHOT_DESIGN/timeline_v01.md",
+    "11_PROMPT_PACKAGES/PKG_GEMINI_VIDEO_V01"
   ],
   "selected_final_run": null,
   "selected_run_per_clip": {},
   "handoff_path": "HANDOFF.md",
   "conversation_log_path": "18_CONVERSATION_LOG",
   "handoff_assets_path": "19_HANDOFF_ASSETS",
-  "last_session_summary_at": "2026-08-08T18:01:00+03:30",
+  "last_session_summary_at": "2026-08-08T18:14:00+03:30",
+  "next_planned_task": "Complete STAGE_03 reference strategy, then run only the required reference-generation/cleanup task and QA it before any creative/scenario/storyboard/video-prompt activation.",
   "tags": ["food", "chocolate", "truffle", "invisible_chef", "top_down", "gemini", "product_ad"]
 }
