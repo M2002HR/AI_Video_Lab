@@ -1,8 +1,8 @@
-name: English-only docs check
+name: English-only docs audit
 
+# Manual-only by design. Routine pushes and pull requests must not generate
+# notification noise for this repository-language audit.
 on:
-  push:
-  pull_request:
   workflow_dispatch:
 
 permissions:
