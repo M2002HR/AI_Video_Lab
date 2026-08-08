@@ -1,0 +1,308 @@
+REFERENCE HIERARCHY — STRICT ROLE SEPARATION
+
+Use the uploaded references with the following authority order and role boundaries.
+
+1. ORIGINAL REAL PRODUCT PHOTOGRAPH — highest authority for the real product family, handmade truffle character, supported colors/coatings, paper cups and kraft packaging language.
+
+2. SELECTED CLEAN TOP REFERENCE `P0001-R0003` — primary clean visible-identity support for the real assortment and paper cups. It may clarify the source but must not override the original photograph.
+
+3. SELECTED ASSORTMENT REFERENCE `P0001-R0008` — authority only for representing multiple supported coating/color families clearly. It does NOT define exact geometry of every truffle.
+
+4. SELECTED MACRO REFERENCE `P0001-R0006` — authority only for tiny nonpareil scale, edible particle contact/material behavior and dark fluted paper-cup material. It does NOT define the exact silhouette of the hero truffle or the whole assortment.
+
+5. SELECTED CHARACTER REFERENCE `P0001-R0010` — authority for the recurring THREE tiny chocolatier identities, red uniform design, body/head proportions, facial-hair identity cues and premium stylized miniature visual language. It does NOT define their pose, scene position or action.
+
+If references conflict, obey the higher-authority source within the relevant role.
+
+TASK
+
+Create ONE photorealistic premium cinematic storyboard/keyframe image for the OPENING MACRO MOMENT of a 10-second miniature chocolate-truffle commercial.
+
+This is a combined SCENE REFERENCE that will later guide AI video generation.
+
+The frame represents approximately 00:01.0 of the final video.
+
+The image must successfully combine the real truffle product family and the exact recurring three-chef cast into one believable physical miniature scene while preserving strict product and character identity.
+
+FORMAT / COMPOSITION TARGET
+
+- 16:9 landscape composition.
+- Premium dark-studio food-commercial world.
+- Close three-quarter macro camera.
+- One multicolor round-nonpareil HERO TRUFFLE is the dominant subject.
+- The hero truffle sits in ONE dark charcoal-gray fluted paper candy cup.
+- EXACTLY THREE recurring miniature chocolatiers appear around the near/lower side of this same hero truffle.
+- Product dominates the frame; characters provide scale and story.
+
+HERO TRUFFLE IDENTITY
+
+Choose a representative multicolor ROUND-NONPAREIL truffle consistent with the original real product assortment.
+
+The hero truffle must remain a handmade chocolate truffle:
+- dark chocolate body underneath;
+- approximately spherical but not mathematically perfect;
+- subtle organic handmade irregularity;
+- densely coated with tiny round multicolor edible nonpareils;
+- no hard candy shell;
+- no stick;
+- no cake-pop interpretation;
+- no glossy plastic-ball appearance.
+
+The nonpareils must remain physically TINY relative to the truffle, consistent with the selected macro reference.
+
+Allow small dark-chocolate glimpses through tiny natural coating gaps.
+
+Do not make the surface into large beads, pearls, marbles or gemstones.
+
+PAPER CUP
+
+The hero truffle remains seated in one small dark charcoal-gray fluted confectionery paper cup.
+
+The cup must look:
+- matte;
+- thin folded paper;
+- naturally pleated/fluted;
+- slightly rough;
+- physically supporting the truffle.
+
+Do not make it glossy plastic, translucent, metallic foil, silicone or a large cupcake liner.
+
+CHARACTER COUNT — EXACTLY THREE
+
+Use EXACTLY THREE miniature chocolatiers matching the selected character reference `P0001-R0010`.
+
+No fourth chef.
+No duplicate chef.
+No background chef.
+No reflection that appears to be another character.
+
+All three characters must remain recognizable as the same recurring trio:
+
+CHARACTER A — moustached foreman, slightly stockier broad round face.
+CHARACTER B — clean-shaven center chocolatier.
+CHARACTER C — small neat dark goatee / chin beard.
+
+Preserve:
+- deep-red double-breasted chef jackets;
+- matching rich-red chef hats;
+- dark trousers;
+- dark practical miniature shoes;
+- compact slightly chubby premium stylized proportions;
+- same facial identity cues as the reference.
+
+Do NOT copy the standing poses from the character-reference photo.
+That reference defines APPEARANCE ONLY.
+
+CHEF-TO-TRUFFLE SCALE — CRITICAL
+
+The chefs are genuinely miniature relative to the giant truffle.
+
+Target each chef's full standing height at approximately 35–45% of the hero truffle diameter.
+
+The three chefs must all use the SAME miniature scale.
+
+Do not make one chef much larger or smaller than the others.
+
+Do not let the truffle shrink to ordinary hand-held size.
+
+The hero truffle should feel like a large worksite object within the miniature world while remaining visually recognizable as the real product.
+
+CHARACTER PLACEMENT
+
+Place the trio in one coherent local region around the near/lower side of the hero truffle and paper cup.
+
+Suggested arrangement:
+- Character A at lower-left / left-front of the truffle;
+- Character B near lower-center or slightly right of center;
+- Character C at lower-right / right-front.
+
+Keep each full body readable.
+Minor natural partial overlap with the paper-cup edge is acceptable, but do not hide torsos, heads or limbs.
+
+Do not place chefs on top of the truffle.
+Do not embed feet in the chocolate.
+Do not intersect bodies with the paper cup.
+
+ACTION STATE — SIMPLE AND LOW-RISK
+
+This frame represents a quiet final-inspection moment, not chaotic cooking.
+
+Character A holds ONE tiny soft confectionery finishing brush and positions it near a small visible area of the hero truffle surface, ready for or just beginning one gentle brush pass.
+
+The brush should be simple and physically readable:
+- short handle;
+- small soft bristle head;
+- appropriate miniature scale;
+- no branding.
+
+Character B performs a restrained inspection pose, looking toward the hero truffle.
+
+Character C also observes attentively with one small natural hand gesture.
+
+No exaggerated motion.
+No flying sprinkles.
+No throwing particles.
+No ladders.
+No carts.
+No bowls.
+No trays.
+No hammers.
+No whisks.
+No knives.
+No large machinery.
+
+Exactly ONE small brush is the only active tool.
+
+ANATOMY / CONTACT
+
+All characters must have coherent anatomy:
+- one head each;
+- two arms each;
+- two hands each;
+- two legs each;
+- two feet each;
+- no merged limbs;
+- no detached hands;
+- no extra fingers emphasized into malformed shapes.
+
+Character A's brush-holding hand must connect naturally to the brush.
+
+If the brush touches the truffle, show one clean believable contact point. Do not sink the brush through the product.
+
+Do not distort the truffle surface around the brush.
+
+SCENE EXTENT
+
+The opening keyframe should remain intimate and macro.
+
+The hero truffle should occupy roughly 45–60% of the frame height and remain the strongest visual object.
+
+The three chefs should be clearly readable at the lower/near side.
+
+A FEW subtle hints of nearby product may appear near frame edges or deeper background:
+- partial dark paper cup edges;
+- small portions of one or two neighboring colored truffles;
+
+but the full box should NOT yet be revealed.
+
+Do not show the entire assortment.
+Do not show the complete box in this opening frame.
+
+The visual promise is that the camera will later pull back to reveal more.
+
+BACKGROUND / WORLD
+
+Use a premium dark-neutral studio miniature world compatible with the approved product references.
+
+Soft charcoal-gray to near-black matte environment.
+
+No wooden tabletop.
+No visible kitchen.
+No bakery.
+No cheesecake.
+No cherries.
+No old dessert scenery.
+No logos.
+No text.
+No watermark.
+No decorative graphics.
+
+A very subtle dark work surface around the paper cup is acceptable if needed to ground the chefs physically.
+
+LIGHTING
+
+Use controlled premium macro food-commercial lighting.
+
+Primary source:
+large soft diffused key from upper-front-left.
+
+Secondary:
+subtle soft fill from the opposite side.
+
+Very gentle edge/rim separation may be used to keep the red chefs and dark cup readable against the dark background.
+
+Lighting must simultaneously reveal:
+- tiny nonpareil scale;
+- dark chocolate glimpses;
+- paper-cup folds;
+- red fabric texture;
+- readable faces and hands.
+
+Do not create hard glossy highlights on sugar particles.
+Do not make skin waxy.
+Do not turn chefs into shiny plastic toys.
+Do not over-saturate the red uniforms.
+
+CAMERA / LENS CHARACTER
+
+Close three-quarter macro food-commercial camera.
+
+Natural perspective.
+No fisheye.
+No extreme wide angle.
+No dutch angle.
+No top-down flat composition.
+
+Camera should feel close to miniature eye/worksite level while still elevated enough to read the upper curvature of the truffle.
+
+Use moderate macro depth of field.
+
+The hero truffle front/center surface and all three chefs should remain sufficiently readable at the same time.
+
+Do NOT use razor-thin focus that blurs two chefs or hides the product identity.
+
+HANDMADE PRODUCT CHARACTER
+
+Do not regularize the hero truffle into a perfect CGI sphere.
+
+Preserve subtle handmade asymmetry and natural irregularity.
+
+The product is an artisan truffle, not a factory-perfect bonbon.
+
+SCENE CONTINUITY PREPARATION
+
+This image will represent the start state of a single continuous camera pull-back in the later video.
+
+Therefore:
+- all objects must look physically stable;
+- chefs must stand on a believable continuous ground plane;
+- no temporary floating props;
+- no unstable background geometry;
+- no implied scene cut;
+- no impossible perspective tricks.
+
+The scene should be easy for a video model to expand outward without needing to transform the existing product or characters.
+
+REFERENCE CLEANLINESS
+
+Exactly ONE dominant hero truffle.
+Exactly ONE paper cup for that hero truffle.
+Exactly THREE recurring chefs.
+Exactly ONE small brush.
+No duplicate characters.
+No duplicated hero truffle.
+No floating products.
+No contact sheet.
+No panels.
+No captions.
+No numbers.
+No arrows.
+No branding.
+
+FINAL QUALITY PRIORITY
+
+1. Real product identity fidelity.
+2. Exact recurring three-character identity.
+3. Correct chef-to-truffle miniature scale.
+4. Tiny edible nonpareil scale/material realism.
+5. Clean anatomy and physical contact.
+6. Handmade truffle geometry.
+7. Dark paper-cup fidelity.
+8. Premium dark-studio macro composition.
+9. Visual beauty.
+
+If cinematic drama conflicts with identity, choose identity.
+
+If a more impressive scene requires extra characters, extra props or impossible scale, reject it.
+
+The final image must look like a believable premium macro photograph of the SAME handmade truffle product and SAME recurring tiny chocolatier trio occupying one miniature physical world, ready to become the opening reference for a continuous 10-second commercial.
