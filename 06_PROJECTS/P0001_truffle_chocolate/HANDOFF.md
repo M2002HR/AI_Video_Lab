@@ -17,61 +17,64 @@
 ### Characters
 `P0001-R0010` — selected recurring three-chef character reference (~4.8/5), appearance/style authority only.
 
-### Combined scene
-`P0001-R0015` — selected `REF-SCENE-MASTER` (~4.3/5) and approximate KF02/mid-reveal anchor. It defines the coherent combined product+character world and inside-box continuity, but does not override R0003 on real product identity.
-
-R0014 is retained as alternate scene-grammar evidence (~4.1/5).
+### Combined scene / storyboard anchors
+- `P0001-R0016` — SELECTED KF01 / opening camera state (~4.5/5).
+- `P0001-R0015` — SELECTED SCENE MASTER / approximate KF02 mid-state (~4.3/5).
+- `P0001-R0017` — KF01 alternate (~4.4/5).
+- `P0001-R0014` — scene-grammar alternate (~4.1/5).
 
 ## Scene-generation history
-### KF01 v01 — failed
-R0011–R0013 used five references and repeatedly showed unwanted props/tools/loose ingredients, wrong scene anchoring, scale/readability problems and geometry regularization.
+### v01 independent combined-scene synthesis — failed
+R0011–R0013 used five references and repeatedly showed role bleed, tools/bowls/loose ingredients, wrong scene anchoring, scale/readability problems and product regularization.
 
-Evidence: `reference_qa_kf01_v01.md`, `OBS-0007`, `HYP-0002`.
+### v02 minimal-reference combined scene — passed scene grammar
+R0014–R0015 used only R0003 product + R0010 characters, with all tools/actions removed. This created a clean inside-box world. R0015 selected as scene master / KF02-like anchor.
 
-### KF01 v02 minimal-reference — strong improvement
-R0014 and R0015 used only R0003 product + R0010 characters and removed tools/actions.
+### v03 camera derivation from scene master — KF01 PASSED
+R0016–R0017 were generated from only R0015 + R0003.
 
-Both v02 outputs:
-- live physically inside the kraft box;
-- contain exactly three recognizable recurring chefs;
-- contain no tools, bowls or loose ingredients;
-- create plausible pull-back continuity.
+`R0016` selected because:
+- camera is clearly closer than R0015;
+- hero truffle dominates more strongly;
+- exact same three-chef cast remains readable and better differentiated than R0017;
+- no tools, bowls, loose ingredients or debris;
+- same kraft-box world and lighting remain coherent;
+- one continuous pull-back from R0016 to R0015 is plausible.
 
-R0015 is selected because it is the cleaner and more product-dominant combined scene.
+Caveats: some static pose language remains and more neighboring assortment is visible than ideal, but continuity stability is more valuable than forcing another independent regeneration.
 
-Important: R0015 reveals too much of the assortment for the intended 00:01 opening, so it is deliberately reassigned to `SCENE MASTER / KF02-like` instead of being forced into the wrong storyboard role. See `reference_qa_kf01_v02.md` and `OBS-0008`.
+Evidence: `13_EVALUATION/reports/reference_qa_kf01_v03.md`, `OBS-0009`.
 
-## Active scenario
-`07_SCENARIOS/selected/scenario_v02_quiet_inspection_reveal.md`
+## Storyboard mapping now
+- KF01 (~00:01): `P0001-R0016`
+- KF02 / scene master (~00:05): `P0001-R0015`
+- KF03 final hero (~00:09.2): next task
 
-Core motion remains one continuous backward + shallow upward camera reveal with exactly three tiny chefs and no tool interaction.
-
-## Exact next action — derive true KF01 from R0015
+## Exact next action — derive KF03 from R0015
 Generate exactly TWO candidates using:
-`11_PROMPT_PACKAGES/PKG_SCENE_KEYFRAME_V03_KF01_FROM_MASTER/prompt.txt`
+`11_PROMPT_PACKAGES/PKG_SCENE_KEYFRAME_V04_KF03_FROM_MASTER/prompt.txt`
 
 ### Upload only
-1. `R0015` — selected scene master and highest authority for the combined world.
-2. `R0003` — secondary product-identity backup only.
+1. `R0015` — selected scene master / combined-world authority.
+2. `R0003` — product/packaging identity backup.
 
-Do not upload R0010 in this pass unless character identity later drifts; R0015 already contains the accepted cast and direct reuse reduces static-pose pressure.
+Do NOT upload R0010 character reference, R0006 macro, R0008 assortment, R0002 hero-45 or original wooden-background source in this first KF03 pass.
 
-Expected next runs: `P0001-R0016`, `P0001-R0017`.
+Expected runs: `P0001-R0018`, `P0001-R0019`.
 
-### Desired result
-A closer/slightly lower camera view of the SAME R0015 scene:
-- hero truffle fills roughly 50–60% frame height;
-- exact same three chefs remain readable;
-- only limited neighboring truffle/box context visible;
-- much less assortment revealed than R0015;
-- no props or loose ingredients;
-- later camera pull-back can naturally reach R0015.
+### Desired KF03
+A farther + moderately higher camera state of the SAME world:
+- complete kraft box readable;
+- colorful assortment becomes primary hero;
+- same three chefs remain present but visually smaller;
+- hero-truffle region remains traceable;
+- no props, bowls, tools, loose ingredients or debris;
+- deeper/moderate focus suitable for product reveal;
+- dark studio breathing room suitable for final ~1 second hold and post-production branding;
+- same path continuity: R0016 → R0015 → KF03.
 
-## Scale note
-The original 1:3 chef-height/truffle-diameter target was not reached, but R0015 still communicates a strong miniature-world cue. For this project, continuity/stability takes priority over forcing an arbitrary ratio that repeatedly destabilizes generation. Do not promote this as a global scale rule.
-
-## After KF01 passes
-Use the same scene-master world to derive the wider final KF03/full-box hero view. Avoid independently synthesizing unrelated keyframes.
+## Important current learning
+For this project, `stable scene master → derive adjacent camera states` is outperforming independent keyframe synthesis. This is recorded as `OBS-0009`; it remains project/provisional until repeated elsewhere.
 
 ## Cross-chat continuity
-A new ChatGPT session should read `AI_START_HERE.md`, this HANDOFF, STATUS, `reference_qa_kf01_v02.md`, `OBS-0008`, and the active v03 prompt. Ask only for media that is visually unavailable; never ask the user to re-explain the project.
+A new ChatGPT session should read `AI_START_HERE.md`, this HANDOFF, STATUS, `reference_qa_kf01_v03.md`, `OBS-0009`, and the active KF03 prompt. Ask only for media that is visually unavailable; never ask the user to re-explain the project.
