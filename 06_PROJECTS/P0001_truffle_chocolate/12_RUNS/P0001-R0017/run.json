@@ -1,0 +1,25 @@
+{
+  "run_id": "P0001-R0017",
+  "project_id": "P0001",
+  "stage": "STAGE_10_STORYBOARD",
+  "task": "scene_keyframe_kf01_camera_derivation_v03",
+  "execution_mode": "external_manual",
+  "tool": "ChatGPT Image",
+  "model": "unknown",
+  "prompt_version": "PKG_SCENE_KEYFRAME_V03_KF01_CAMERA_DERIVATION",
+  "prompt_language": "en",
+  "reference_assets": ["P0001-R0015", "P0001-R0003"],
+  "settings": {},
+  "outputs": [{
+    "filename": "1000015999.png",
+    "sha256": "189ee13f7bb895903a0c591a19885fe121e5fc1ae80b5f18d599020dc80d07fc",
+    "width": 1672,
+    "height": 941,
+    "bytes": 3326555,
+    "storage": "chat_attachment_not_committed"
+  }],
+  "evaluation": {"status": "passed_alternate_with_caveats", "overall_score": 4.4},
+  "failure_tags": ["pose_repetition", "mild_geometry_regularization", "more_neighbor_context_than_target"],
+  "selected": false,
+  "notes": "Strong alternate KF01. Camera is close and scene continuity is good, but Character B and C both use similar hand-on-chin poses, reducing cast differentiation. Product and box continuity remain strong; retain as alternate evidence."
+}
