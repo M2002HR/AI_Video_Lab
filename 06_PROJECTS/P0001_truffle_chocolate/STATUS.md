@@ -1,83 +1,65 @@
 # Project status — P0001
 
-- Current stage: `STAGE_16_VIDEO_GENERATION` — storyboard/keyframe gate passed; final Flow/Omni prompt package and preflight are ready.
+- Current stage: `STAGE_18_REPAIR_DECISION` — first Flow/Omni V01 baseline evaluated; one strong pass and one hard character-count failure.
 - Product identity: `product_identity.md` + active injection `identity_lock_v02.md`.
-- Source prompt analysis: completed v1.
-- Active reference strategy: `04_REFERENCE_STRATEGY/reference_plan.md`.
 - Active scenario: `07_SCENARIOS/selected/scenario_v02_quiet_inspection_reveal.md`.
 - Active timing: `08_SHOT_DESIGN/timeline_v02.md`.
-- Active video package: `11_PROMPT_PACKAGES/PKG_FLOW_OMNI_VIDEO_V01/`.
-
-## Approved / selected references
-- `P0001-R0003` → SELECTED `REF-PROD-TOP-CLEAN`, primary clean product/packaging identity, ~4.8/5.
-- `P0001-R0008` → SELECTED `REF-PROD-ASSORTMENT-DETAIL`, diversity/color/coating-family authority, ~4.5/5.
-- `P0001-R0006` → SELECTED `REF-PROD-MACRO`, texture/material/particle-scale authority only, ~4.5/5.
-- `P0001-R0010` → SELECTED `REF-CHAR-CHOCOLATIERS`, exact recurring three-chef appearance/style authority, ~4.8/5.
-- `P0001-R0015` → SELECTED `REF-SCENE-MASTER`, stable combined inside-box world / KF02-like mid-state, ~4.3/5.
-- `P0001-R0016` → SELECTED `KF01`, opening camera state derived from scene master, ~4.5/5.
-- `P0001-R0020` → SELECTED `KF03`, final wide camera state derived from scene master only, ~4.5/5.
-- `P0001-R0002` → provisional optional `REF-PROD-HERO-45`, lower-authority inferred geometry/depth, ~4.3/5.
-- `P0001-R0018` → standalone final-product/aesthetic hero candidate only; not a sequence endpoint.
+- Base video package: `11_PROMPT_PACKAGES/PKG_FLOW_OMNI_VIDEO_V01/`.
 
 ## Locked storyboard anchors
-- `KF01` (~00:01): `P0001-R0016` — APPROVED.
-- `KF02` / scene master (~00:05): `P0001-R0015` — APPROVED.
-- `KF03` / final hero (~00:09.2): `P0001-R0020` — APPROVED.
+- `KF01` ~00:01: `R0016` — approved.
+- `KF02` / scene master ~00:05: `R0015` — approved.
+- `KF03` ~00:09.2: `R0020` — approved.
 
-## KF03 v05 — PASSED
-Input:
-- `R0015` scene master only.
+## Flow V01 baseline — completed
+Identical setup for both runs:
+1. R0016
+2. R0015
+3. R0020
+4. R0003
+5. R0010
 
-Results:
-- `R0020` ~4.5/5 — SELECTED. Preserves the central multicolor hero, same three chefs inside the box, zero props, and a plausible farther/higher camera state while extrapolating more of the same world.
-- `R0021` ~4.2/5 — approved alternate. Core continuity survives but newly extrapolated assortment/box geometry drifts more than R0020.
+Google Flow / Gemini Omni Flash / 10s / 16:9 / 5 ingredients / same V01 prompt.
 
-Evidence:
-- `13_EVALUATION/reports/reference_qa_kf03_v05.md`
-- `OBS-0011`
+### R0022 — SELECTED CURRENT BEST
+Score ~4.6/5. Passed with caveats.
+- exactly three chefs remain stable through sampled timeline;
+- central multicolor hero remains traceable;
+- smooth continuous backward + upward reveal;
+- no props/bowls/loose ingredients;
+- box/product world remains coherent;
+- stable final hero hold.
 
-Key project-level finding: after a stable combined scene exists, adjacent camera-state derivation can be more stable when the scene master is the only image reference. A globally complete secondary product reference can otherwise act as a competing layout attractor. Keep provisional until cross-project validation.
+Caveats: hero remains somewhat too regular/spherical versus the real handmade source; final arrangement is not a literal KF03 spatial match although continuity inside the generated clip is strong.
 
-## Final Flow ingredient stack — v01
-Use exactly FIVE uploaded images, in this order:
-1. `R0016` — opening KF01.
-2. `R0015` — scene master / mid state.
-3. `R0020` — final KF03.
-4. `R0003` — product/packaging identity only.
-5. `R0010` — character identity only.
+### R0023 — REJECT
+Score ~3.6/5. Hard failure: `duplicate_character`.
+- begins with intended three chefs;
+- an additional red-uniform chef becomes partially visible from the far-right edge around ~2.4s and is clearly present by ~3.0s;
+- fourth chef persists through final reveal.
 
-Do NOT fill slots 6–7 on the first video pass.
-Do NOT upload macro, assortment, hero-45, original wooden-background source or R0018 unless video QA later identifies a specific failure those images are expected to fix.
+Camera/product continuity is otherwise good, so this is interpreted as stochastic off-screen population hallucination during reveal.
 
-Reference rationale: `11_PROMPT_PACKAGES/PKG_FLOW_OMNI_VIDEO_V01/references.md`.
+Evidence: `13_EVALUATION/reports/video_qa_flow_v01_r0022_r0023.md`.
+Learning: `OBS-0012`.
 
-## Video preflight
-`11_PROMPT_PACKAGES/PKG_FLOW_OMNI_VIDEO_V01/preflight_checklist.md` → PASS.
+## Decision
+Do NOT change ingredients yet. V01 demonstrated the architecture can produce a strong result.
 
-Primary prompt:
-`11_PROMPT_PACKAGES/PKG_FLOW_OMNI_VIDEO_V01/prompt.txt`.
+Next perform a controlled prompt-only repair: same five ingredients, same order, same settings, same base prompt plus one explicit OFF-SCREEN POPULATION LOCK. This changes only the character-count constraint and preserves experiment interpretability.
 
-Recommended run setup:
-`11_PROMPT_PACKAGES/PKG_FLOW_OMNI_VIDEO_V01/recommended_settings.md`.
+V02 delta:
+`11_PROMPT_PACKAGES/PKG_FLOW_OMNI_VIDEO_V02_COUNT_LOCK/prompt_delta.md`
 
-## Exact next action — first controlled Flow baseline
-Target:
-- Google Flow
-- Gemini Omni Flash
-- Ingredients / references to video
-- 10 seconds
-- 16:9
+## Exact next action
+Generate exactly TWO V02 videos with the same five-image stack and all settings unchanged.
+Expected Runs:
+- `P0001-R0024`
+- `P0001-R0025`
 
-Generate exactly TWO videos with IDENTICAL:
-- five-image ingredient stack;
-- upload order;
-- prompt;
-- exposed settings/defaults.
+Success target:
+- exactly three chefs for the full clip;
+- no new human/chef revealed as the camera widens;
+- retain R0022-level camera continuity, hero traceability and clean final hold.
 
-Expected next Run IDs:
-- `P0001-R0022`
-- `P0001-R0023`
-
-Do not optimize between these two runs. Their purpose is baseline stability measurement.
-
-After generation, provide/export both videos for frame-by-frame QA before changing prompt or ingredients.
+If both V02 runs preserve three characters without degrading the rest, promote the count-lock wording into the project video prompt. If duplication persists, next controlled experiment should change ingredient architecture rather than making the prompt longer.
