@@ -9,3 +9,6 @@ P0001-R0007,P0001,STAGE_04_REFERENCE_ASSET_CREATION,product_reference_generation
 P0001-R0008,P0001,STAGE_04_REFERENCE_ASSET_CREATION,product_reference_generation_assortment_detail,ChatGPT Image,unknown,passed,4.5,True
 P0001-R0009,P0001,STAGE_04_REFERENCE_ASSET_CREATION,character_reference_generation,ChatGPT Image,unknown,passed,4.7,False
 P0001-R0010,P0001,STAGE_04_REFERENCE_ASSET_CREATION,character_reference_generation,ChatGPT Image,unknown,passed,4.8,True
+P0001-R0011,P0001,STAGE_10_STORYBOARD,scene_keyframe_kf01_opening_macro,ChatGPT Image,unknown,failed_gate,2.9,False
+P0001-R0012,P0001,STAGE_10_STORYBOARD,scene_keyframe_kf01_opening_macro,ChatGPT Image,unknown,failed_gate_best_diagnostic,3.4,False
+P0001-R0013,P0001,STAGE_10_STORYBOARD,scene_keyframe_kf01_opening_macro,ChatGPT Image,unknown,failed_gate,3.2,False
