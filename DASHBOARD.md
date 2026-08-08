@@ -5,17 +5,19 @@
 - Current system focus: sequential stage-gated production + adaptive scenario architecture + 2/3/4 clip production + documented cross-chat media handling
 
 ## P0003 — invisible-chef truffle box assembly
-- Current stage: `STAGE_03` — Reference Strategy / first reference task prepared.
+- Current stage: `STAGE_10` — Storyboard generation prepared.
 - Parent project: none; fresh independent project by explicit user request.
 - Objective: adapt the supplied 10s / 16:9 invisible-chef Gemini food-video template to the supplied colorful handmade truffle gift box.
 - Source-template DNA: fixed 90-degree overhead, invisible chef, pure-white premium food-commercial grammar, realistic physics, compressed timecoded transformation.
-- Product authority: current uploaded real truffle-box photograph.
-- Active identity lock: `06_PROJECTS/P0003_truffle_box_invisible_chef/03_PRODUCT_IDENTITY/identity_lock_v01.md`.
-- Active reference plan: `06_PROJECTS/P0003_truffle_box_invisible_chef/04_REFERENCE_STRATEGY/reference_plan.md`.
-- Current-stage prompt: `PKG_GEMINI_IMAGE_REF_001` for one clean top-down white-studio product reference.
+- Product authority: original uploaded real truffle-box photograph.
+- Approved clean derivative: `REF-P0003-001` — 90-degree top-down white-studio product/packaging/composition support.
+- Reference Readiness: **PASS**.
+- Creative direction: locked.
+- Selected scenario: invisible-chef truffle assembly ending with lifted rainbow truffle and bite gag.
+- Selected timing: `08_SHOT_DESIGN/timeline_v01.md`.
+- Current-stage prompt: `PKG_CHATGPT_STORYBOARD_001` for one eight-panel storyboard contact sheet.
 - Active video prompt: **none**.
-- Approved P0003 derivative reference set: **none yet**.
-- Next action: generate `REF-P0003-001`, return it for Reference QA, then approve/reject before Creative Direction.
+- Next action: generate `SB-P0003-001` in ChatGPT using `REF-P0003-001`, then return it for Storyboard QA.
 - Current attachments are metadata-only in Git; no attachment binaries were published.
 
 ## P0002 — invisible-chef truffle assembly
