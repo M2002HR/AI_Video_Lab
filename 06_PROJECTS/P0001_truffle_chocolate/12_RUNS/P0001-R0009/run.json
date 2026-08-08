@@ -1,0 +1,27 @@
+{
+  "run_id": "P0001-R0009",
+  "project_id": "P0001",
+  "stage": "STAGE_04_REFERENCE_ASSET_CREATION",
+  "task": "character_reference_generation",
+  "execution_mode": "external_manual",
+  "tool": "ChatGPT Image",
+  "model": "unknown",
+  "prompt_package": "PKG_CHARACTER_REFERENCE_V01",
+  "prompt_language": "en",
+  "reference_assets": ["user-provided old tiny-chef cheesecake creative reference — character-style authority only"],
+  "settings": {},
+  "outputs": [
+    {
+      "filename": "1000015975.png",
+      "attachment_file_id": "file_000000004e58820a944f3a0f4601bcc8",
+      "sha256": "69179d47bcd6bcd89f5ff42b3ec59b0a3061f48e728a509dfad9d09f71740925"
+    }
+  ],
+  "evaluation": {
+    "status": "passed",
+    "overall_score": 4.7
+  },
+  "failure_tags": [],
+  "selected": false,
+  "notes": "Strong clean trio with no dessert contamination. Retained as approved alternate character reference. Slightly less useful than R0010 because Character C hides one arm behind the body and the group carries slightly more pose-specific action bias."
+}
