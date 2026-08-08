@@ -5,7 +5,7 @@
   "status": "draft",
   "created_at": null,
   "updated_at": null,
-  "system_version_started": "1.2.0",
+  "system_version_started": "1.3.0",
   "current_stage": "STAGE_00",
   "parent_project_id": null,
   "derivative_reason": null,
@@ -16,6 +16,16 @@
     "clip_count": 1,
     "clip_duration_seconds": 10,
     "architecture_mode": null
+  },
+  "media_storage": {
+    "mode": "git_previews",
+    "auto_proxy_commit": true,
+    "originals_in_git": false,
+    "image_profile": "IMG-PROXY-1280-WEBP-Q72",
+    "video_profile": "VID-PROXY-H264-MAX1280-CRF30-24FPS",
+    "proxy_root": "19_HANDOFF_ASSETS/git_previews",
+    "manifest_path": "19_HANDOFF_ASSETS/proxy_manifest.json",
+    "public_repo_policy": "non_sensitive_only"
   },
   "primary_product_reference": null,
   "source_prompt_path": null,
