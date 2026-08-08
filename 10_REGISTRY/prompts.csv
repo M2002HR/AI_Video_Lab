@@ -12,6 +12,7 @@ PRM-LRN-POSTMORTEM-001,1.0.0,validated,postmortem,02_PROMPT_SYSTEM/library/PRM-L
 PRM-QA-KEYFRAME-001,1.0.0,validated,keyframe_QA,02_PROMPT_SYSTEM/library/PRM-QA-KEYFRAME-001_v1.0.0.md
 PRM-QA-REFERENCE-001,1.0.0,validated,product_reference_QA,02_PROMPT_SYSTEM/library/PRM-QA-REFERENCE-001_v1.0.0.md
 PRM-REF-PLAN-001,1.0.0,validated,product_reference_planning,02_PROMPT_SYSTEM/library/PRM-REF-PLAN-001_v1.0.0.md
+PRM-SCN-ARCH-001,1.0.0,candidate,scenario_architecture_menu,02_PROMPT_SYSTEM/library/PRM-SCN-ARCH-001_v1.0.0.md
 PRM-SCN-CRITIQUE-001,1.0.0,validated,scenario_critique,02_PROMPT_SYSTEM/library/PRM-SCN-CRITIQUE-001_v1.0.0.md
 PRM-SCN-IDEATE-001,1.0.0,validated,scenario_ideation,02_PROMPT_SYSTEM/library/PRM-SCN-IDEATE-001_v1.0.0.md
 PRM-SCN-SELECT-001,1.0.0,validated,scenario_selection,02_PROMPT_SYSTEM/library/PRM-SCN-SELECT-001_v1.0.0.md
