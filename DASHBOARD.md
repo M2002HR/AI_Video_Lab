@@ -5,7 +5,7 @@
 - Current system focus: sequential stage-gated production + adaptive scenario architecture + 2/3/4 clip production + documented cross-chat media handling
 
 ## P0003 — invisible-chef truffle box assembly
-- Current stage: `STAGE_10` — Storyboard generation prepared.
+- Current stage: `STAGE_11` — Storyboard QA / local repair required.
 - Parent project: none; fresh independent project by explicit user request.
 - Objective: adapt the supplied 10s / 16:9 invisible-chef Gemini food-video template to the supplied colorful handmade truffle gift box.
 - Source-template DNA: fixed 90-degree overhead, invisible chef, pure-white premium food-commercial grammar, realistic physics, compressed timecoded transformation.
@@ -15,9 +15,11 @@
 - Creative direction: locked.
 - Selected scenario: invisible-chef truffle assembly ending with lifted rainbow truffle and bite gag.
 - Selected timing: `08_SHOT_DESIGN/timeline_v01.md`.
-- Current-stage prompt: `PKG_CHATGPT_STORYBOARD_001` for one eight-panel storyboard contact sheet.
+- Storyboard candidate: `SB-P0003-001` generated; Panels 1–6 broadly pass.
+- Storyboard blocker: Panels 7–8 do not clearly vacate one cup when the rainbow truffle lifts, creating an extra-object / count-continuity risk.
+- Active repair prompt: `PKG_CHATGPT_STORYBOARD_REPAIR_001`.
 - Active video prompt: **none**.
-- Next action: generate `SB-P0003-001` in ChatGPT using `REF-P0003-001`, then return it for Storyboard QA.
+- Next action: repair only Panels 7–8, return `SB-P0003-001R1`, and re-run focused Storyboard QA before keyframes.
 - Current attachments are metadata-only in Git; no attachment binaries were published.
 
 ## P0002 — invisible-chef truffle assembly
