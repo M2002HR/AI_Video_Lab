@@ -4,9 +4,9 @@
   "title": "Invisible-Chef Truffle Box Assembly Commercial",
   "status": "active",
   "created_at": "2026-08-08T18:24:00+03:30",
-  "updated_at": "2026-08-08T18:24:00+03:30",
+  "updated_at": "2026-08-08T18:34:00+03:30",
   "system_version_started": "1.4.0",
-  "current_stage": "STAGE_03",
+  "current_stage": "STAGE_10",
   "parent_project_id": null,
   "derivative_reason": "Fresh independent project created at the user's request from the current product photograph and source/template prompt. No approvals, stage completion, or downstream artifacts are inherited from P0001 or P0002.",
   "deliverable": {
@@ -31,31 +31,30 @@
   "source_prompt_path": "01_INPUTS/source_prompt/source_prompt_transcription.md",
   "active_identity_lock": "03_PRODUCT_IDENTITY/identity_lock_v01.md",
   "active_reference_plan": "04_REFERENCE_STRATEGY/reference_plan.md",
-  "selected_scenario": null,
-  "active_shot_timeline": null,
-  "active_storyboard_plan": null,
-  "active_video_prompt_package": null,
-  "approved_reference_set": [],
-  "reference_candidates": [
+  "approved_reference_set": [
     {
-      "role": "SOURCE-PROD-CURRENT",
-      "source_id": "SESSION-ASSET-P0003-IMG-001",
-      "authority": "highest product identity and final-assortment authority",
-      "availability": "current_chat_only"
-    },
-    {
+      "reference_id": "REF-P0003-001",
       "role": "REF-PROD-TOP-CLEAN-WHITE",
-      "source_id": null,
-      "authority": "pending derivative reference for clean top-down product/packaging support only",
-      "availability": "not_generated"
+      "authority": "approved clean top-down product/packaging/composition support; original real photograph remains ultimate identity authority",
+      "qa_path": "05_REFERENCE_ASSETS/REF-P0003-001/qa.md",
+      "sha256": "665626e7bee88cf5ca5beec16975260246edad43837c214993f1b13145fa33fb",
+      "dimensions": [1672, 941],
+      "availability": "current_chat_attachment"
     }
   ],
+  "reference_candidates": [],
+  "active_creative_direction": "06_CREATIVE_DIRECTION/creative_direction_v01.md",
+  "selected_scenario": "07_SCENARIOS/selected/scenario_v01_invisible_chef_truffle_assembly.md",
+  "active_shot_timeline": "08_SHOT_DESIGN/timeline_v01.md",
+  "active_storyboard_plan": "09_STORYBOARD/storyboard_plan_v01.md",
+  "active_storyboard_prompt_package": "11_PROMPT_PACKAGES/PKG_CHATGPT_STORYBOARD_001",
+  "active_video_prompt_package": null,
   "selected_final_run": null,
   "selected_run_per_clip": {},
   "handoff_path": "HANDOFF.md",
   "conversation_log_path": "18_CONVERSATION_LOG",
   "handoff_assets_path": "19_HANDOFF_ASSETS",
-  "last_session_summary_at": "2026-08-08T18:24:00+03:30",
-  "next_planned_task": "Generate exactly one clean 90-degree top-down white-studio derivative reference from the original product photograph, then QA and approve/reject it before Creative Direction.",
-  "tags": ["food", "chocolate", "truffle", "gift_box", "invisible_chef", "top_down", "gemini", "product_ad"]
+  "last_session_summary_at": "2026-08-08T18:34:00+03:30",
+  "next_planned_task": "Generate storyboard candidate SB-P0003-001 in ChatGPT using the approved clean product reference and the active storyboard prompt, then QA the storyboard before keyframe or final video prompting.",
+  "tags": ["food", "chocolate", "truffle", "gift_box", "invisible_chef", "top_down", "gemini", "chatgpt_image", "product_ad"]
 }
