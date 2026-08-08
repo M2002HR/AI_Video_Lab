@@ -4,7 +4,7 @@
   "title": "Colorful Chocolate Truffle Miniature Commercial",
   "status": "active",
   "created_at": "2026-08-07T21:41:00+03:30",
-  "updated_at": "2026-08-08T10:41:00+03:30",
+  "updated_at": "2026-08-08T10:51:00+03:30",
   "system_version_started": "1.1.0",
   "current_stage": "STAGE_10",
   "deliverable": {
@@ -30,7 +30,8 @@
     {"role": "KF01", "run_id": "P0001-R0016", "authority": "opening_camera_state_from_scene_master"}
   ],
   "provisional_reference_set": [
-    {"role": "REF-PROD-HERO-45", "run_id": "P0001-R0002", "authority": "secondary_geometry_optional"}
+    {"role": "REF-PROD-HERO-45", "run_id": "P0001-R0002", "authority": "secondary_geometry_optional"},
+    {"role": "FINAL_PRODUCT_HERO_AESTHETIC", "run_id": "P0001-R0018", "authority": "standalone_final_visual_target_not_sequence_endpoint"}
   ],
   "approved_alternates": [
     {"role": "REF-PROD-TOP-CLEAN", "run_id": "P0001-R0004"},
@@ -41,15 +42,15 @@
     {"role": "REF-SCENE-GRAMMAR", "run_id": "P0001-R0014"},
     {"role": "KF01", "run_id": "P0001-R0017"}
   ],
-  "failed_scene_candidates": ["P0001-R0011", "P0001-R0012", "P0001-R0013"],
+  "failed_scene_candidates": ["P0001-R0011", "P0001-R0012", "P0001-R0013", "P0001-R0018", "P0001-R0019"],
   "best_diagnostic_scene_candidate": "P0001-R0012",
   "selected_scene_master": "P0001-R0015",
   "selected_kf01": "P0001-R0016",
   "selected_kf03": null,
   "selected_final_run": null,
   "latest_runs": [
-    "P0001-R0001", "P0001-R0002", "P0001-R0003", "P0001-R0004", "P0001-R0005", "P0001-R0006", "P0001-R0007", "P0001-R0008", "P0001-R0009", "P0001-R0010", "P0001-R0011", "P0001-R0012", "P0001-R0013", "P0001-R0014", "P0001-R0015", "P0001-R0016", "P0001-R0017"
+    "P0001-R0001", "P0001-R0002", "P0001-R0003", "P0001-R0004", "P0001-R0005", "P0001-R0006", "P0001-R0007", "P0001-R0008", "P0001-R0009", "P0001-R0010", "P0001-R0011", "P0001-R0012", "P0001-R0013", "P0001-R0014", "P0001-R0015", "P0001-R0016", "P0001-R0017", "P0001-R0018", "P0001-R0019"
   ],
-  "next_planned_task": "KF03_V04_DERIVE_FINAL_HERO_FROM_R0015",
+  "next_planned_task": "KF03_V05_MASTER_ONLY_DERIVATION_FROM_R0015",
   "tags": ["food", "chocolate", "truffle", "miniature", "tiny_chocolatiers", "product_ad"]
 }
